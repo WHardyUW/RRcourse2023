@@ -1,6 +1,7 @@
 
 # Sets the path to the parent directory of RR classes
-setwd("Z:\\File folders\\Teaching\\Reproducible Research\\2023\\Repository\\RRcourse2023\\6. Coding and documentation")
+setwd("D:/RR/RRcourse2023/6. Coding and documentation")
+
 
 #   Import data from the O*NET database, at ISCO-08 occupation level.
 # The original data uses a version of SOC classification, but the data we load here
@@ -16,7 +17,12 @@ task_data = read.csv("Data\\onet_tasks.csv")
 # read employment data from Eurostat
 # These datasets include quarterly information on the number of workers in specific
 # 1-digit ISCO occupation categories. (Check here for details: https://www.ilo.org/public/english/bureau/stat/isco/isco08/)
-library(readxl)                     
+library(readxl)   
+
+for(i in 1:9){
+  sheet.num=paste0('ISCO',i)
+  is.data=read_excel("Data\\Eurostat_employment_isco.xlsx", sheet=sheet.num)
+}
 
 isco1 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO1")
 isco2 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO2")
@@ -47,24 +53,45 @@ isco7$ISCO <- 7
 isco8$ISCO <- 8
 isco9$ISCO <- 9
 
+
 # and this gives us one large file with employment in all occupations.
 all_data <- rbind(isco1, isco2, isco3, isco4, isco5, isco6, isco7, isco8, isco9)
 
-# We have 9 occupations and the same time range for each, so we an add the totals by
-# adding a vector that is 9 times the previously calculated totals
-all_data$total_Belgium <- c(total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium) 
-all_data$total_Spain <- c(total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain) 
-all_data$total_Poland <- c(total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland) 
+##my way-step1: to get all name of countries
+setwd("D:/RR/RRcourse2023/6. Coding and documentation")
+country.name=colnames(isco1)[3:11]
+#using for loop to generate all_data
+countries <- c("Belgium", "Spain", "Poland")
+# Create an empty list to store the data for each country
 
-# And this will give us shares of each occupation among all workers in a period-country
-all_data$share_Belgium = all_data$Belgium/all_data$total_Belgium
-all_data$share_Spain = all_data$Spain/all_data$total_Spain
-all_data$share_Poland = all_data$Poland/all_data$total_Poland
+# Loop for all data
+data.all=as_tibble()
+for (i in 1:9){
+  intermediate=read_excel("Data\\Eurostat_employment_isco.xlsx", sheet = paste0('ISCO',i))
+  intermediate$occupation=i
+  assign(paste0('isconew',i),intermediate)
+  data.all=rbind(data.all,intermediate)
+}
+
+
+
+
+for (country in country.name){
+  intermediate=isconew1[country]+isconew2[country]+isconew3[country]+isconew4[country]+
+            isconew5[country]+isconew6[country]+isconew7[country]+isconew8[country]+isconew9[country]
+  total=rbind(intermediate,intermediate,intermediate,intermediate,intermediate,intermediate,intermediate,intermediate,intermediate)
+  data.all[paste0(country,'_total')]=total
+  data.all[paste0(country,'_share')]=data.all[country]/total
+}
+
+View(data.all)
+
 
 # Now let's look at the task data. We want the first digit of the ISCO variable only
 library(stringr)
 
 task_data$isco08_1dig <- str_sub(task_data$isco08, 1, 1) %>% as.numeric()
+
 
 # And we'll calculate the mean task values at a 1-digit level 
 # (more on what these tasks are below)
@@ -85,8 +112,8 @@ aggdata$isco08 <- NULL
 #Let's combine the data.
 library(dplyr)
 
-combined <- left_join(all_data, aggdata, by = c("ISCO" = "isco08_1dig"))
-
+combined <- left_join(data.all, aggdata, by = c("occupation" = "isco08_1dig"))
+View(combined)
 # Traditionally, the first step is to standardise the task values using weights 
 # defined by share of occupations in the labour force. This should be done separately
 # for each country. Standardisation -> getting the mean to 0 and std. dev. to 1.
@@ -95,7 +122,6 @@ combined <- left_join(all_data, aggdata, by = c("ISCO" = "isco08_1dig"))
 #install.packages("Hmisc")
 library(Hmisc)
 
-# first task item
 temp_mean <- wtd.mean(combined$t_4A2a4, combined$share_Belgium)
 temp_sd <- wtd.var(combined$t_4A2a4, combined$share_Belgium) %>% sqrt()
 combined$std_Belgium_t_4A2a4 = (combined$t_4A2a4-temp_mean)/temp_sd

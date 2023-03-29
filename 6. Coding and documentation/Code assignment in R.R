@@ -1,8 +1,8 @@
 
 # Sets the path to the parent directory of RR classes
-setwd("Z:\\File folders\\Teaching\\Reproducible Research\\2023\\Repository\\RRcourse2023\\6. Coding and documentation")
+setwd("..\\6. Coding and documentation")
 
-#   Import data from the O*NET database, at ISCO-08 occupation level.
+# Import data from the O*NET database, at ISCO-08 occupation level.
 # The original data uses a version of SOC classification, but the data we load here
 # are already cross-walked to ISCO-08 using: https://ibs.org.pl/en/resources/occupation-classifications-crosswalks-from-onet-soc-to-isco/
 
@@ -17,6 +17,10 @@ task_data = read.csv("Data\\onet_tasks.csv")
 # These datasets include quarterly information on the number of workers in specific
 # 1-digit ISCO occupation categories. (Check here for details: https://www.ilo.org/public/english/bureau/stat/isco/isco08/)
 library(readxl)                     
+library(stringr)
+library(dplyr)
+#install.packages("Hmisc")
+library(Hmisc)
 
 isco1 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO1")
 isco2 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO2")
@@ -32,9 +36,9 @@ isco9 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO9")
 # to easily run for all the countries in the sample?
 
 # This will calculate worker totals in each of the chosen countries.
-total_Belgium = isco1$Belgium + isco2$Belgium + isco3$Belgium + isco4$Belgium + isco5$Belgium + isco6$Belgium + isco7$Belgium + isco8$Belgium + isco9$Belgium
-total_Spain = isco1$Spain + isco2$Spain + isco3$Spain + isco4$Spain + isco5$Spain + isco6$Spain + isco7$Spain + isco8$Spain + isco9$Spain
-total_Poland = isco1$Poland + isco2$Poland + isco3$Poland + isco4$Poland + isco5$Poland + isco6$Poland + isco7$Poland + isco8$Poland + isco9$Poland
+total_Belgium <- isco1$Belgium + isco2$Belgium + isco3$Belgium + isco4$Belgium + isco5$Belgium + isco6$Belgium + isco7$Belgium + isco8$Belgium + isco9$Belgium
+total_Spain <- isco1$Spain + isco2$Spain + isco3$Spain + isco4$Spain + isco5$Spain + isco6$Spain + isco7$Spain + isco8$Spain + isco9$Spain
+total_Poland <- isco1$Poland + isco2$Poland + isco3$Poland + isco4$Poland + isco5$Poland + isco6$Poland + isco7$Poland + isco8$Poland + isco9$Poland
 
 # Let's merge all these datasets. We'll need a column that stores the occupation categories:
 isco1$ISCO <- 1
@@ -57,20 +61,23 @@ all_data$total_Spain <- c(total_Spain, total_Spain, total_Spain, total_Spain, to
 all_data$total_Poland <- c(total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland) 
 
 # And this will give us shares of each occupation among all workers in a period-country
-all_data$share_Belgium = all_data$Belgium/all_data$total_Belgium
-all_data$share_Spain = all_data$Spain/all_data$total_Spain
-all_data$share_Poland = all_data$Poland/all_data$total_Poland
+all_data$share_Belgium <- all_data$Belgium/all_data$total_Belgium
+all_data$share_Spain <- all_data$Spain/all_data$total_Spain
+all_data$share_Poland <- all_data$Poland/all_data$total_Poland
 
 # Now let's look at the task data. We want the first digit of the ISCO variable only
-library(stringr)
 
-task_data$isco08_1dig <- str_sub(task_data$isco08, 1, 1) %>% as.numeric()
+
+task_data$isco08_1dig <- str_sub(task_data$isco08, 1, 1) %>% 
+  as.numeric()
 
 # And we'll calculate the mean task values at a 1-digit level 
 # (more on what these tasks are below)
 
-aggdata <-aggregate(task_data, by=list(task_data$isco08_1dig),
-                    FUN=mean, na.rm=TRUE)
+aggdata <- aggregate(task_data, 
+                     by=list(task_data$isco08_1dig),
+                     FUN=mean, 
+                     na.rm=TRUE)
 aggdata$isco08 <- NULL
 
 # We'll be interested in tracking the intensity of Non-routine cognitive analytical tasks
@@ -83,56 +90,65 @@ aggdata$isco08 <- NULL
 # 4.A.4.a.1	Interpreting the Meaning of Information for Others
 
 #Let's combine the data.
-library(dplyr)
-
-combined <- left_join(all_data, aggdata, by = c("ISCO" = "isco08_1dig"))
+combined <- left_join(all_data, 
+                      aggdata, 
+                      by = c("ISCO" = "isco08_1dig"))
 
 # Traditionally, the first step is to standardise the task values using weights 
 # defined by share of occupations in the labour force. This should be done separately
 # for each country. Standardisation -> getting the mean to 0 and std. dev. to 1.
 # Let's do this for each of the variables that interests us:
 
-#install.packages("Hmisc")
-library(Hmisc)
+
+
 
 # first task item
 temp_mean <- wtd.mean(combined$t_4A2a4, combined$share_Belgium)
-temp_sd <- wtd.var(combined$t_4A2a4, combined$share_Belgium) %>% sqrt()
-combined$std_Belgium_t_4A2a4 = (combined$t_4A2a4-temp_mean)/temp_sd
+temp_sd <- wtd.var(combined$t_4A2a4, combined$share_Belgium) %>% 
+  sqrt()
+combined$std_Belgium_t_4A2a4 <- (combined$t_4A2a4-temp_mean)/temp_sd
 
 temp_mean <- wtd.mean(combined$t_4A2a4, combined$share_Poland)
-temp_sd <- wtd.var(combined$t_4A2a4, combined$share_Poland) %>% sqrt()
-combined$std_Poland_t_4A2a4 = (combined$t_4A2a4-temp_mean)/temp_sd
+temp_sd <- wtd.var(combined$t_4A2a4, combined$share_Poland) %>% 
+  sqrt()
+combined$std_Poland_t_4A2a4 <- (combined$t_4A2a4-temp_mean)/temp_sd
 
 temp_mean <- wtd.mean(combined$t_4A2a4, combined$share_Spain)
-temp_sd <- wtd.var(combined$t_4A2a4, combined$share_Spain) %>% sqrt()
-combined$std_Spain_t_4A2a4 = (combined$t_4A2a4-temp_mean)/temp_sd
+temp_sd <- wtd.var(combined$t_4A2a4, combined$share_Spain) %>% 
+  sqrt()
+combined$std_Spain_t_4A2a4 <- (combined$t_4A2a4-temp_mean)/temp_sd
 
 # second task item
 temp_mean <- wtd.mean(combined$t_4A2b2, combined$share_Belgium)
-temp_sd <- wtd.var(combined$t_4A2b2, combined$share_Belgium) %>% sqrt()
-combined$std_Belgium_t_4A2b2 = (combined$t_4A2b2-temp_mean)/temp_sd
+temp_sd <- wtd.var(combined$t_4A2b2, combined$share_Belgium) %>% 
+  sqrt()
+combined$std_Belgium_t_4A2b2 <- (combined$t_4A2b2-temp_mean)/temp_sd
 
 temp_mean <- wtd.mean(combined$t_4A2b2, combined$share_Poland)
-temp_sd <- wtd.var(combined$t_4A2b2, combined$share_Poland) %>% sqrt()
-combined$std_Poland_t_4A2b2 = (combined$t_4A2b2-temp_mean)/temp_sd
+temp_sd <- wtd.var(combined$t_4A2b2, combined$share_Poland) %>% 
+  sqrt()
+combined$std_Poland_t_4A2b2 <- (combined$t_4A2b2-temp_mean)/temp_sd
 
 temp_mean <- wtd.mean(combined$t_4A2b2, combined$share_Spain)
-temp_sd <- wtd.var(combined$t_4A2b2, combined$share_Spain) %>% sqrt()
-combined$std_Spain_t_4A2b2 = (combined$t_4A2b2-temp_mean)/temp_sd
+temp_sd <- wtd.var(combined$t_4A2b2, combined$share_Spain) %>% 
+  sqrt()
+combined$std_Spain_t_4A2b2 <- (combined$t_4A2b2-temp_mean)/temp_sd
 
 # third task item
 temp_mean <- wtd.mean(combined$t_4A4a1 , combined$share_Belgium)
-temp_sd <- wtd.var(combined$t_4A4a1 , combined$share_Belgium) %>% sqrt()
-combined$std_Belgium_t_4A4a1  = (combined$t_4A4a1 -temp_mean)/temp_sd
+temp_sd <- wtd.var(combined$t_4A4a1 , combined$share_Belgium) %>% 
+  sqrt()
+combined$std_Belgium_t_4A4a1 <- (combined$t_4A4a1 -temp_mean)/temp_sd
 
 temp_mean <- wtd.mean(combined$t_4A4a1 , combined$share_Poland)
-temp_sd <- wtd.var(combined$t_4A4a1 , combined$share_Poland) %>% sqrt()
-combined$std_Poland_t_4A4a1  = (combined$t_4A4a1 -temp_mean)/temp_sd
+temp_sd <- wtd.var(combined$t_4A4a1 , combined$share_Poland) %>% 
+  sqrt()
+combined$std_Poland_t_4A4a1 <- (combined$t_4A4a1 -temp_mean)/temp_sd
 
 temp_mean <- wtd.mean(combined$t_4A4a1 , combined$share_Spain)
-temp_sd <- wtd.var(combined$t_4A4a1 , combined$share_Spain) %>% sqrt()
-combined$std_Spain_t_4A4a1  = (combined$t_4A4a1 -temp_mean)/temp_sd
+temp_sd <- wtd.var(combined$t_4A4a1 , combined$share_Spain) %>%
+  sqrt()
+combined$std_Spain_t_4A4a <- (combined$t_4A4a1 -temp_mean)/temp_sd
 
 # The next step is to calculate the `classic` task content intensity, i.e.
 # how important is a particular general task content category in the workforce

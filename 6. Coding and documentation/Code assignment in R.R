@@ -1,70 +1,4 @@
-
-# Sets the path to the parent directory of RR classes
-setwd("D:/RR/RRcourse2023/6. Coding and documentation")
-
-
-#   Import data from the O*NET database, at ISCO-08 occupation level.
-# The original data uses a version of SOC classification, but the data we load here
-# are already cross-walked to ISCO-08 using: https://ibs.org.pl/en/resources/occupation-classifications-crosswalks-from-onet-soc-to-isco/
-
-# The O*NET database contains information for occupations in the USA, including
-# the tasks and activities typically associated with a specific occupation.
-
-task_data = read.csv("Data\\onet_tasks.csv")
-# isco08 variable is for occupation codes
-# the t_* variables are specific tasks conducted on the job
-
-# read employment data from Eurostat
-# These datasets include quarterly information on the number of workers in specific
-# 1-digit ISCO occupation categories. (Check here for details: https://www.ilo.org/public/english/bureau/stat/isco/isco08/)
-library(readxl)   
-
-for(i in 1:9){
-  sheet.num=paste0('ISCO',i)
-  is.data=read_excel("Data\\Eurostat_employment_isco.xlsx", sheet=sheet.num)
-}
-
-isco1 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO1")
-isco2 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO2")
-isco3 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO3")
-isco4 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO4")
-isco5 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO5")
-isco6 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO6")
-isco7 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO7")
-isco8 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO8")
-isco9 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO9")
-
-# We will focus on three countries, but perhaps we could clean this code to allow it
-# to easily run for all the countries in the sample?
-
-# This will calculate worker totals in each of the chosen countries.
-total_Belgium = isco1$Belgium + isco2$Belgium + isco3$Belgium + isco4$Belgium + isco5$Belgium + isco6$Belgium + isco7$Belgium + isco8$Belgium + isco9$Belgium
-total_Spain = isco1$Spain + isco2$Spain + isco3$Spain + isco4$Spain + isco5$Spain + isco6$Spain + isco7$Spain + isco8$Spain + isco9$Spain
-total_Poland = isco1$Poland + isco2$Poland + isco3$Poland + isco4$Poland + isco5$Poland + isco6$Poland + isco7$Poland + isco8$Poland + isco9$Poland
-
-# Let's merge all these datasets. We'll need a column that stores the occupation categories:
-isco1$ISCO <- 1
-isco2$ISCO <- 2
-isco3$ISCO <- 3
-isco4$ISCO <- 4
-isco5$ISCO <- 5
-isco6$ISCO <- 6
-isco7$ISCO <- 7
-isco8$ISCO <- 8
-isco9$ISCO <- 9
-
-
-# and this gives us one large file with employment in all occupations.
-all_data <- rbind(isco1, isco2, isco3, isco4, isco5, isco6, isco7, isco8, isco9)
-
-##my way-step1: to get all name of countries
-setwd("D:/RR/RRcourse2023/6. Coding and documentation")
-country.name=colnames(isco1)[3:11]
-#using for loop to generate all_data
-countries <- c("Belgium", "Spain", "Poland")
-# Create an empty list to store the data for each country
-
-# Loop for all data
+# for loop to generate data.all
 data.all=as_tibble()
 for (i in 1:9){
   intermediate=read_excel("Data\\Eurostat_employment_isco.xlsx", sheet = paste0('ISCO',i))
@@ -73,9 +7,7 @@ for (i in 1:9){
   data.all=rbind(data.all,intermediate)
 }
 
-
-
-
+# for loop to generate all country_total and country_share
 for (country in country.name){
   intermediate=isconew1[country]+isconew2[country]+isconew3[country]+isconew4[country]+
             isconew5[country]+isconew6[country]+isconew7[country]+isconew8[country]+isconew9[country]

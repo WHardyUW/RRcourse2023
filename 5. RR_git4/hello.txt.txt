@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 Adnan Sevinc 437971 3/23/2023
-=======
-add some textsomething
->>>>>>> courseRepo/main
+

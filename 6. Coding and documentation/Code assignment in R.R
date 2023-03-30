@@ -1,7 +1,10 @@
+library(readxl)
+library(stringr)
+library(dplyr)
+library(Hmisc)
 
 # Sets the path to the parent directory of RR classes
-setwd("Z:\\File folders\\Teaching\\Reproducible Research\\2023\\Repository\\RRcourse2023\\6. Coding and documentation")
-
+setwd("")
 #   Import data from the O*NET database, at ISCO-08 occupation level.
 # The original data uses a version of SOC classification, but the data we load here
 # are already cross-walked to ISCO-08 using: https://ibs.org.pl/en/resources/occupation-classifications-crosswalks-from-onet-soc-to-isco/
@@ -16,17 +19,13 @@ task_data = read.csv("Data\\onet_tasks.csv")
 # read employment data from Eurostat
 # These datasets include quarterly information on the number of workers in specific
 # 1-digit ISCO occupation categories. (Check here for details: https://www.ilo.org/public/english/bureau/stat/isco/isco08/)
-library(readxl)                     
-
-isco1 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO1")
-isco2 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO2")
-isco3 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO3")
-isco4 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO4")
-isco5 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO5")
-isco6 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO6")
-isco7 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO7")
-isco8 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO8")
-isco9 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO9")
+                  
+# Looping through the excel file sheets
+for (i in 1:9) {
+  filename <- paste0("isco", i)
+  wd <- paste0("ISCO", i)
+  assign(filename, read_excel("Data\\Eurostat_employment_isco.xlsx", sheet=wd))
+}
 
 # We will focus on three countries, but perhaps we could clean this code to allow it
 # to easily run for all the countries in the sample?
@@ -62,7 +61,7 @@ all_data$share_Spain = all_data$Spain/all_data$total_Spain
 all_data$share_Poland = all_data$Poland/all_data$total_Poland
 
 # Now let's look at the task data. We want the first digit of the ISCO variable only
-library(stringr)
+
 
 task_data$isco08_1dig <- str_sub(task_data$isco08, 1, 1) %>% as.numeric()
 
@@ -83,7 +82,7 @@ aggdata$isco08 <- NULL
 # 4.A.4.a.1	Interpreting the Meaning of Information for Others
 
 #Let's combine the data.
-library(dplyr)
+
 
 combined <- left_join(all_data, aggdata, by = c("ISCO" = "isco08_1dig"))
 
@@ -93,7 +92,7 @@ combined <- left_join(all_data, aggdata, by = c("ISCO" = "isco08_1dig"))
 # Let's do this for each of the variables that interests us:
 
 #install.packages("Hmisc")
-library(Hmisc)
+
 
 # first task item
 temp_mean <- wtd.mean(combined$t_4A2a4, combined$share_Belgium)

@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+add some textuvgyt
+=======
+add some textsomething
+>>>>>>> CouresRepo/main

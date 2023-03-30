@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 blabla
 =======
 a different line
 a first line
 Adnan Sevinc 437971
 >>>>>>> 248cf95f4ee13cf78d4aa472aebb3a85eb822ca9
+=======
+first version
+>>>>>>> courseRepo/main

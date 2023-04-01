@@ -17,19 +17,25 @@ task_data <- read.csv("Data//onet_tasks.csv")
 # These datasets include quarterly information on the number of workers in specific
 # 1-digit ISCO occupation categories. (Check here for details: https://www.ilo.org/public/english/bureau/stat/isco/isco08/)
 library(readxl)
-
-isco <- list()
+library(data.table)
+dataframe_list <- list()
 for (x in 1:9) {
-    isco <- append(isco, read_excel("Data//Eurostat_employment_isco.xlsx", sheet = cat("ISCO", x, sep = "")))
+  new_part = read_excel( "Data//Eurostat_employment_isco.xlsx", sheet = cat("ISCO", x, sep = "") )
+  data_frame = data.frame(new_part)
+  index = rep(x, nrow(new_part) )
+  new_part = cbind( data_frame, index )
+  dataframe_list <- append( dataframe_list, list( new_part ) )
 }
+
+isco <- rbindlist( dataframe_list )
 
 # We will focus on three countries, but perhaps we could clean this code to allow it
 # to easily run for all the countries in the sample?
 
 # This will calculate worker totals in each of the chosen countries.
-total_Belgium <- isco1$Belgium + isco2$Belgium + isco3$Belgium + isco4$Belgium + isco5$Belgium + isco6$Belgium + isco7$Belgium + isco8$Belgium + isco9$Belgium
-total_Spain <- isco1$Spain + isco2$Spain + isco3$Spain + isco4$Spain + isco5$Spain + isco6$Spain + isco7$Spain + isco8$Spain + isco9$Spain
-total_Poland <- isco1$Poland + isco2$Poland + isco3$Poland + isco4$Poland + isco5$Poland + isco6$Poland + isco7$Poland + isco8$Poland + isco9$Poland
+total_Belgium <- sum(isco$Belgium)
+total_Spain <- sum(isco$Spain)
+total_Poland <- sum(isco$Poland)
 
 # Let's merge all these datasets. We'll need a column that stores the occupation categories:
 isco1$ISCO <- 1

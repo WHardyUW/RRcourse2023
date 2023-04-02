@@ -1,6 +1,12 @@
 
 # Sets the path to the parent directory of RR classes
-setwd("Z:\\File folders\\Teaching\\Reproducible Research\\2023\\Repository\\RRcourse2023\\6. Coding and documentation")
+# setwd("Z:\\File folders\\Teaching\\Reproducible Research\\2023\\Repository\\RRcourse2023\\6. Coding and documentation")
+
+setwd("~/Desktop/RR/6. Coding and documentation")
+
+install.packages("dpylr")
+library(magrittr)
+library(dplyr)
 
 #   Import data from the O*NET database, at ISCO-08 occupation level.
 # The original data uses a version of SOC classification, but the data we load here
@@ -9,7 +15,12 @@ setwd("Z:\\File folders\\Teaching\\Reproducible Research\\2023\\Repository\\RRco
 # The O*NET database contains information for occupations in the USA, including
 # the tasks and activities typically associated with a specific occupation.
 
-task_data = read.csv("Data\\onet_tasks.csv")
+#task_data = read.csv("Data\\onet_tasks.csv")
+
+install.packages("readxl")
+library(readr)
+task_data <- read_csv("Data/onet_tasks.csv")
+
 # isco08 variable is for occupation codes
 # the t_* variables are specific tasks conducted on the job
 
@@ -17,24 +28,54 @@ task_data = read.csv("Data\\onet_tasks.csv")
 # These datasets include quarterly information on the number of workers in specific
 # 1-digit ISCO occupation categories. (Check here for details: https://www.ilo.org/public/english/bureau/stat/isco/isco08/)
 library(readxl)                     
+Eurostat_employment_isco <- read_excel("Data/Eurostat_employment_isco.xlsx")
+View(Eurostat_employment_isco)
 
-isco1 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO1")
-isco2 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO2")
-isco3 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO3")
-isco4 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO4")
-isco5 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO5")
-isco6 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO6")
-isco7 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO7")
-isco8 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO8")
-isco9 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO9")
+
+isco1 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO1")
+isco2 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO2")
+isco3 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO3")
+isco4 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO4")
+isco5 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO5")
+isco6 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO6")
+isco7 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO7")
+isco8 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO8")
+isco9 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO9")
 
 # We will focus on three countries, but perhaps we could clean this code to allow it
 # to easily run for all the countries in the sample?
 
 # This will calculate worker totals in each of the chosen countries.
-total_Belgium = isco1$Belgium + isco2$Belgium + isco3$Belgium + isco4$Belgium + isco5$Belgium + isco6$Belgium + isco7$Belgium + isco8$Belgium + isco9$Belgium
-total_Spain = isco1$Spain + isco2$Spain + isco3$Spain + isco4$Spain + isco5$Spain + isco6$Spain + isco7$Spain + isco8$Spain + isco9$Spain
-total_Poland = isco1$Poland + isco2$Poland + isco3$Poland + isco4$Poland + isco5$Poland + isco6$Poland + isco7$Poland + isco8$Poland + isco9$Poland
+#total_Belgium <-  isco1$Belgium + isco2$Belgium + isco3$Belgium + isco4$Belgium + isco5$Belgium + isco6$Belgium + isco7$Belgium + isco8$Belgium + isco9$Belgium
+#total_Spain = isco1$Spain + isco2$Spain + isco3$Spain + isco4$Spain + isco5$Spain + isco6$Spain + isco7$Spain + isco8$Spain + isco9$Spain
+#total_Poland = isco1$Poland + isco2$Poland + isco3$Poland + isco4$Poland + isco5$Poland + isco6$Poland + isco7$Poland + isco8$Poland + isco9$Poland
+
+isco <- c("isco1", "isco2", "isco3", "isco4", "isco5", "isco6", "isco7", "isco8", "isco9")
+class(isco)
+
+total_Belgium <- 0
+total_Spain <- 0
+total_Poland <- 0
+total_Czechia <- 0
+total_Denmark <- 0
+total_Italy <- 0
+total_Lithuania <- 0
+total_Finland <- 0
+total_Sweden <- 0
+
+for (i in isco) {
+  total_Belgium <- total_Belgium + get(i)$Belgium
+  total_Spain <- total_Spain + get(i)$Spain
+  total_Poland <- total_Poland + get(i)$Poland
+  total_Czechia <- total_Czechia + get(i)$Czechia
+  total_Denmark <- total_Denmark + get(i)$Denmark
+  total_Italy <- total_Italy + get(i)$Italy
+  total_Lithuania <- total_Lithuania + get(i)$Lithuania
+  total_Finland <- total_Finland + get(i)$Finland
+  total_Sweden <- total_Sweden + get(i)$Sweden
+  
+}
+
 
 # Let's merge all these datasets. We'll need a column that stores the occupation categories:
 isco1$ISCO <- 1
@@ -52,14 +93,38 @@ all_data <- rbind(isco1, isco2, isco3, isco4, isco5, isco6, isco7, isco8, isco9)
 
 # We have 9 occupations and the same time range for each, so we an add the totals by
 # adding a vector that is 9 times the previously calculated totals
-all_data$total_Belgium <- c(total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium) 
-all_data$total_Spain <- c(total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain) 
-all_data$total_Poland <- c(total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland) 
+#all_data$total_Belgium <- c(total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium) 
+#all_data$total_Spain <- c(total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain) 
+#all_data$total_Poland <- c(total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland) 
+
+all_data$total_Belgium <- rep(total_Belgium, 9)
+all_data$total_Italy <- rep(total_Italy, 9)
+all_data$total_Spain <- rep(total_Spain, 9)
+all_data$total_Poland <- rep(total_Poland, 9)
+all_data$total_Czechia <- rep(total_Czechia, 9)
+all_data$total_Denmark <- rep(total_Denmark, 9)
+all_data$total_Lithuania <- rep(total_Lithuania, 9)
+all_data$total_Finland <- rep(total_Finland, 9)
+all_data$total_Sweden <- rep(total_Sweden, 9)
+
 
 # And this will give us shares of each occupation among all workers in a period-country
-all_data$share_Belgium = all_data$Belgium/all_data$total_Belgium
-all_data$share_Spain = all_data$Spain/all_data$total_Spain
-all_data$share_Poland = all_data$Poland/all_data$total_Poland
+#all_data$share_Belgium = all_data$Belgium/all_data$total_Belgium
+#all_data$share_Spain = all_data$Spain/all_data$total_Spain
+#all_data$share_Poland = all_data$Poland/all_data$total_Poland
+
+
+all_data <- all_data %>%
+  mutate(share_Belgium = Belgium / total_Belgium,
+         share_Spain = Spain / total_Spain,
+         share_Poland = Poland / total_Poland,
+         share_Italy = Italy / total_Italy,
+         share_Czechia = Czechia / total_Czechia,
+         share_Denmark = Denmark / total_Denmark,
+         share_Lithuania = Lithuania / total_Lithuania,
+         share_Finland = Finland / total_Finland,
+         share_Sweden = Sweden / total_Sweden)
+
 
 # Now let's look at the task data. We want the first digit of the ISCO variable only
 library(stringr)
@@ -96,30 +161,61 @@ combined <- left_join(all_data, aggdata, by = c("ISCO" = "isco08_1dig"))
 library(Hmisc)
 
 # first task item
-temp_mean <- wtd.mean(combined$t_4A2a4, combined$share_Belgium)
-temp_sd <- wtd.var(combined$t_4A2a4, combined$share_Belgium) %>% sqrt()
-combined$std_Belgium_t_4A2a4 = (combined$t_4A2a4-temp_mean)/temp_sd
+#temp_mean <- wtd.mean(combined$t_4A2a4, combined$share_Belgium)
+#temp_sd <- wtd.var(combined$t_4A2a4, combined$share_Belgium) %>% sqrt()
+#combined$std_Belgium_t_4A2a4 = (combined$t_4A2a4-temp_mean)/temp_sd
 
-temp_mean <- wtd.mean(combined$t_4A2a4, combined$share_Poland)
-temp_sd <- wtd.var(combined$t_4A2a4, combined$share_Poland) %>% sqrt()
-combined$std_Poland_t_4A2a4 = (combined$t_4A2a4-temp_mean)/temp_sd
+combined <- combined %>% 
+  mutate(temp_mean <- wtd.mean(t_4A2a4, share_Belgium),
+         temp_sd <- wtd.var(t_4A2a4, share_Belgium) %>% sqrt(),
+         std_Belgium_t_4A2a4 <- (t_4A2a4 - temp_mean) / temp_sd)
 
-temp_mean <- wtd.mean(combined$t_4A2a4, combined$share_Spain)
-temp_sd <- wtd.var(combined$t_4A2a4, combined$share_Spain) %>% sqrt()
-combined$std_Spain_t_4A2a4 = (combined$t_4A2a4-temp_mean)/temp_sd
+#temp_mean <- wtd.mean(combined$t_4A2a4, combined$share_Poland)
+#temp_sd <- wtd.var(combined$t_4A2a4, combined$share_Poland) %>% sqrt()
+#combined$std_Poland_t_4A2a4 = (combined$t_4A2a4-temp_mean)/temp_sd
+
+combined <- combined %>% 
+  mutate(temp_mean <- wtd.mean(t_4A2a4, share_Poland),
+         temp_sd <- wtd.var(t_4A2a4, share_Poland) %>% sqrt(),
+         std_Poland_t_4A2a4 <- (t_4A2a4 - temp_mean) / temp_sd)
+
+#temp_mean <- wtd.mean(combined$t_4A2a4, combined$share_Spain)
+#temp_sd <- wtd.var(combined$t_4A2a4, combined$share_Spain) %>% sqrt()
+#combined$std_Spain_t_4A2a4 = (combined$t_4A2a4-temp_mean)/temp_sd
+
+combined <- combined %>% 
+  mutate(temp_mean <- wtd.mean(t_4A2a4, share_Spain),
+         temp_sd <- wtd.var(t_4A2a4, share_Spain) %>% sqrt(),
+         std_Spain_t_4A2a4 <- (t_4A2a4 - temp_mean) / temp_sd)
 
 # second task item
-temp_mean <- wtd.mean(combined$t_4A2b2, combined$share_Belgium)
-temp_sd <- wtd.var(combined$t_4A2b2, combined$share_Belgium) %>% sqrt()
-combined$std_Belgium_t_4A2b2 = (combined$t_4A2b2-temp_mean)/temp_sd
 
-temp_mean <- wtd.mean(combined$t_4A2b2, combined$share_Poland)
-temp_sd <- wtd.var(combined$t_4A2b2, combined$share_Poland) %>% sqrt()
-combined$std_Poland_t_4A2b2 = (combined$t_4A2b2-temp_mean)/temp_sd
+#temp_mean <- wtd.mean(combined$t_4A2b2, combined$share_Belgium)
+#temp_sd <- wtd.var(combined$t_4A2b2, combined$share_Belgium) %>% sqrt()
+#combined$std_Belgium_t_4A2b2 = (combined$t_4A2b2-temp_mean)/temp_sd
+
+combined <- combined %>% 
+  mutate(temp_mean <- wtd.mean(t_4A2b2, share_Belgium),
+         temp_sd <- wtd.var(t_4A2b2, share_Belgium) %>% sqrt(),
+         std_Belgium_t_4A2b2 <- (t_4A2b2 - temp_mean) / temp_sd)
+
+#temp_mean <- wtd.mean(combined$t_4A2b2, combined$share_Poland)
+#temp_sd <- wtd.var(combined$t_4A2b2, combined$share_Poland) %>% sqrt()
+#combined$std_Poland_t_4A2b2 = (combined$t_4A2b2-temp_mean)/temp_sd
+
+combined <- combined %>% 
+  mutate(temp_mean <- wtd.mean(t_4A2b2, share_Poland),
+         temp_sd <- wtd.var(t_4A2b2, share_Poland) %>% sqrt(),
+         std_Poland_t_4A2b2 <- (t_4A2b2 - temp_mean) / temp_sd)
+
 
 temp_mean <- wtd.mean(combined$t_4A2b2, combined$share_Spain)
 temp_sd <- wtd.var(combined$t_4A2b2, combined$share_Spain) %>% sqrt()
 combined$std_Spain_t_4A2b2 = (combined$t_4A2b2-temp_mean)/temp_sd
+
+
+
+
 
 # third task item
 temp_mean <- wtd.mean(combined$t_4A4a1 , combined$share_Belgium)

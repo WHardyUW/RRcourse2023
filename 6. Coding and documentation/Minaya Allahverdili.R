@@ -40,7 +40,7 @@ all_data$share_Poland <- all_data$Poland / all_data$total_employment[3]
 # Extract first digit of ISCO-08 occupation codes
 library(stringr)
 task_data$isco08_1dig <- as.integer(str_sub(task_data$isco08, 1, 1))
-
+ 
 print(colnames(task_data))
 
 # Aggregate task data at 1-digit ISCO-08 occupation level

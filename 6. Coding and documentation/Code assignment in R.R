@@ -1,11 +1,18 @@
+# Install packages
+options(repos = c(yihui = "https://yihui.r-universe.dev", CRAN = "https://cloud.r-project.org"))
+install.packages("formatR")
+install.packages("formatR", repos = "http://cran.rstudio.com")
+options(repos = c(yihui = "https://yihui.r-universe.dev", CRAN = "https://cloud.r-project.org"))
+install.packages("formatR")
+library(formatR)
+sessionInfo()
 
 # Sets the path to the parent directory of RR classes
-setwd("Z:\\File folders\\Teaching\\Reproducible Research\\2023\\Repository\\RRcourse2023\\6. Coding and documentation")
+setwd("C:/Users/adria/Desktop/RR/RRcourse2023-1/6. Coding and documentation")
 
-#   Import data from the O*NET database, at ISCO-08 occupation level.
+# Import data from the O*NET database, at ISCO-08 occupation level.
 # The original data uses a version of SOC classification, but the data we load here
 # are already cross-walked to ISCO-08 using: https://ibs.org.pl/en/resources/occupation-classifications-crosswalks-from-onet-soc-to-isco/
-
 # The O*NET database contains information for occupations in the USA, including
 # the tasks and activities typically associated with a specific occupation.
 
@@ -18,19 +25,7 @@ task_data = read.csv("Data\\onet_tasks.csv")
 # 1-digit ISCO occupation categories. (Check here for details: https://www.ilo.org/public/english/bureau/stat/isco/isco08/)
 library(readxl)                     
 
-isco1 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO1")
-isco2 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO2")
-isco3 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO3")
-isco4 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO4")
-isco5 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO5")
-isco6 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO6")
-isco7 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO7")
-isco8 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO8")
-isco9 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO9")
-
-# We will focus on three countries, but perhaps we could clean this code to allow it
-# to easily run for all the countries in the sample?
-
+# We will focus on three countries
 # This will calculate worker totals in each of the chosen countries.
 total_Belgium = isco1$Belgium + isco2$Belgium + isco3$Belgium + isco4$Belgium + isco5$Belgium + isco6$Belgium + isco7$Belgium + isco8$Belgium + isco9$Belgium
 total_Spain = isco1$Spain + isco2$Spain + isco3$Spain + isco4$Spain + isco5$Spain + isco6$Spain + isco7$Spain + isco8$Spain + isco9$Spain
@@ -179,14 +174,3 @@ axis(1, at=seq(1, 40, 3), labels=agg_Spain$Group.1[seq(1, 40, 3)])
 
 plot(agg_Belgium$x, xaxt="n")
 axis(1, at=seq(1, 40, 3), labels=agg_Belgium$Group.1[seq(1, 40, 3)])
-
-
-# If this code gets automated and cleaned properly,
-#  you should be able to easily add other countries as well as other tasks.
-# E.g.:
-
-# Routine manual
-# 4.A.3.a.3	Controlling Machines and Processes
-# 4.C.2.d.1.i	Spend Time Making Repetitive Motions
-# 4.C.3.d.3	Pace Determined by Speed of Equipment
-

@@ -1,4 +1,3 @@
-
 # Sets the path to the parent directory of RR classes
 setwd("Z:\\File folders\\Teaching\\Reproducible Research\\2023\\Repository\\RRcourse2023\\6. Coding and documentation")
 
@@ -142,25 +141,24 @@ combined$std_Spain_t_4A4a1  = (combined$t_4A4a1 -temp_mean)/temp_sd
 combined$Belgium_NRCA <- combined$std_Belgium_t_4A2a4 + combined$std_Belgium_t_4A2b2 + combined$std_Belgium_t_4A4a1 
 combined$Poland_NRCA <- combined$std_Poland_t_4A2a4 + combined$std_Poland_t_4A2b2 + combined$std_Poland_t_4A4a1 
 combined$Spain_NRCA <- combined$std_Spain_t_4A2a4 + combined$std_Spain_t_4A2b2 + combined$std_Spain_t_4A4a1 
-
-# And we standardise NRCA in a similar way.
+# Calculate the weighted mean and standard deviation for each country's NRCA.
 temp_mean <- wtd.mean(combined$Belgium_NRCA, combined$share_Belgium)
 temp_sd <- wtd.var(combined$Belgium_NRCA, combined$share_Belgium) %>% sqrt()
-combined$std_Belgium_NRCA = (combined$Belgium_NRCA-temp_mean)/temp_sd
+combined$std_Belgium_NRCA <- (combined$Belgium_NRCA - temp_mean) / temp_sd
 
 temp_mean <- wtd.mean(combined$Poland_NRCA, combined$share_Poland)
 temp_sd <- wtd.var(combined$Poland_NRCA, combined$share_Poland) %>% sqrt()
-combined$std_Poland_NRCA = (combined$Poland_NRCA-temp_mean)/temp_sd
+combined$std_Poland_NRCA <- (combined$Poland_NRCA - temp_mean) / temp_sd
 
 temp_mean <- wtd.mean(combined$Spain_NRCA, combined$share_Spain)
 temp_sd <- wtd.var(combined$Spain_NRCA, combined$share_Spain) %>% sqrt()
-combined$std_Spain_NRCA = (combined$Spain_NRCA-temp_mean)/temp_sd
+combined$std_Spain_NRCA <- (combined$Spain_NRCA - temp_mean) / temp_sd
 
-# Finally, to track the changes over time, we have to calculate a country-level mean
-# Step 1: multiply the value by the share of such workers.
-combined$multip_Spain_NRCA <- (combined$std_Spain_NRCA*combined$share_Spain)
-combined$multip_Belgium_NRCA <- (combined$std_Belgium_NRCA*combined$share_Belgium)
-combined$multip_Poland_NRCA <- (combined$std_Poland_NRCA*combined$share_Poland)
+# Calculate the product of standardized NRCA and the share of such workers for each country.
+combined$multip_Spain_NRCA <- combined$std_Spain_NRCA * combined$share_Spain
+combined$multip_Belgium_NRCA <- combined$std_Belgium_NRCA * combined$share_Belgium
+combined$multip_Poland_NRCA <- combined$std_Poland_NRCA * combined$share_Poland
+
 
 # Step 2: sum it up (it basically becomes another weighted mean)
 agg_Spain <-aggregate(combined$multip_Spain_NRCA, by=list(combined$TIME),

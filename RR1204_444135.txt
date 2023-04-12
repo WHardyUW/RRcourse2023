@@ -1,0 +1,6 @@
+kh_nguyen@khonnguyen444135:~$ uname -a
+Linux khonnguyen444135 5.15.0-1030-gcp #37-Ubuntu SMP Tue Feb 14 19:37:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+kh_nguyen@khonnguyen444135:~$ touch test.txt
+kh_nguyen@khonnguyen444135:~$ ls -l
+total 0
+-rw-rw-r-- 1 kh_nguyen kh_nguyen 0 Apr 12 08:37 test.txt

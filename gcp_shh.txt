@@ -1,0 +1,7 @@
+mw_zdanowicz2@instance-1:~$ uname -a
+Linux instance-1 5.15.0-1030-gcp #37-Ubuntu SMP Tue Feb 14 19:37:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+mw_zdanowicz2@instance-1:~$ touch text.txt
+mw_zdanowicz2@instance-1:~$ ls -l
+total 0
+-rw-rw-r-- 1 mw_zdanowicz2 mw_zdanowicz2 0 Apr 12 10:00 text.txt
+mw_zdanowicz2@instance-1:~$ 

@@ -1,0 +1,6 @@
+d_pacholleck@repo1:~$ uname -a
+Linux repo1 5.15.0-1030-gcp #37-Ubuntu SMP Tue Feb 14 19:37:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+d_pacholleck@repo1:~$ touch test.txt
+d_pacholleck@repo1:~$ ls -l
+total 0
+-rw-rw-r-- 1 d_pacholleck d_pacholleck 0 Apr 12 08:37 test.txt

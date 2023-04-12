@@ -18,6 +18,7 @@ drwxrwxr-x 2 hsdxyq hsdxyq 4096 Apr 12 10:10 rr/
 -rw-rw-r-- 1 hsdxyq hsdxyq    0 Apr 12 10:26 test.txt
 
 ---------------exercise2----------------
+hsdxyq@instance-hyq-1:~/rr$ touch test.txt
 hsdxyq@instance-hyq-1:~/rr$ touch new.txt
 hsdxyq@instance-hyq-1:~/rr$ vim new.txt
 hsdxyq@instance-hyq-1:~/rr$ ls -ltSr

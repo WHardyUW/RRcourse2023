@@ -1,0 +1,19 @@
+Loading...
+ 
+Welcome to JS/Linux (i586)
+ 
+Use 'vflogin username' to connect to your account.
+You can create a new account at https://vfsync.org/signup .
+Use 'export_file filename' to export a file to your computer.
+Imported files are written to the home directory.
+ 
+localhost:~# uname -a
+Linux localhost 4.12.0-rc6-g48ec1f0-dirty #21 Fri Aug 4 21:02:28 CEST 2017 i586
+Linux
+localhost:~# touch test.txt
+localhost:~# ls -1
+bench.py
+hello.c
+hello.js
+readme.txt
+test.txt

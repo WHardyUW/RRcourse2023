@@ -34,3 +34,23 @@ Then create a short report (you can copy the content from Wikipedia or other pag
 
 ![Vikings Logo](Vikings_Title.png)
 
+------------------------------------------------------------------------
+
+# Rating Statistics
+
+The show has an 8.5/10 rating on IMDB.
+
+Rotten Tomatoes assign it 93% with the following breakdown.
+
+| Season    | Score |
+|:----------|:-----:|
+| 1         | 82%   |
+| 2         | 93%   |
+| 3         | 100%  |
+| 4         | 92%   |
+| 5         | 92%   |
+| 6         | 100%  |
+
+------------------------------------------------------------------------
+
+

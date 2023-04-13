@@ -60,7 +60,7 @@ import matplotlib.pyplot as plt
 reviews = pd.read_csv('reviews.csv', sep='\t')
 
 # Create a bar plot
-ax = reviews[["Rotten Tomatoes Score"]].plot(kind='bar', title ="Rotten Tomatoes Score", figsize=(15, 10), legend=True, fontsize=12)
+ax = reviews[["Rotten Tomatoes Score"]].plot(x='Season', kind='bar', title ="Rotten Tomatoes Score", figsize=(15, 10), legend=True, fontsize=12)
 
 # Set axis labels
 ax.set_xlabel("Season", fontsize=12)
@@ -87,7 +87,7 @@ import matplotlib.pyplot as plt
 viewers = pd.read_csv('viewers.csv', sep='\t')
 
 # Create a bar plot
-ax = viewers[["Average Viewership"]].plot(kind='bar', title ="Average Viewership", figsize=(15, 10), legend=True, fontsize=12)
+ax = viewers[["Average Viewership"]].plot(x='Season', kind='bar', title ="Average Viewership", figsize=(15, 10), legend=True, fontsize=12)
 
 # Set axis labels
 ax.set_xlabel("Season", fontsize=12)
@@ -112,13 +112,14 @@ import matplotlib.pyplot as plt
 
 # Load reviews from a static csv file
 overtime = pd.read_csv('over-time.csv', sep='\t')
+overtime.set_index('Season')
 
 # Create a bar plot
-ax = viewers[["Increase"]].plot(kind='bar', title ="Viewership Increase", figsize=(15, 10), legend=True, fontsize=12)
+ax = overtime[['Season', 'Increase']].plot(x='Season', kind='bar', title ="Viewership Increase", figsize=(15, 10), legend=True, fontsize=12)
 
 # Set axis labels
 ax.set_xlabel("Season", fontsize=12)
-ax.set_ylabel("Viewers Increase (in millions, with respect to the previous season)", fontsize=12)
+ax.set_ylabel("Viewers Increase (in millions, w.r.t previous season)", fontsize=12)
 
 # Show the plot
 plt.show()

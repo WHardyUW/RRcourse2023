@@ -1,0 +1,36 @@
+tjstarak@mbook ~ % ssh -i ~/Documents/GitHub/DSBA-reproducible-research/gcp/key tjstarak@34.116.157.211
+Enter passphrase for key '/Users/tjstarak/Documents/GitHub/DSBA-reproducible-research/gcp/key':
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-1030-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Apr 13 13:55:47 UTC 2023
+
+  System load:  0.080078125       Processes:             104
+  Usage of /:   19.5% of 9.51GB   Users logged in:       1
+  Memory usage: 25%               IPv4 address for ens4: 10.186.0.3
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Thu Apr 13 13:40:01 2023 from 193.0.77.7
+tjstarak@rr-2:~$ uname -a
+Linux rr-2 5.15.0-1030-gcp #37-Ubuntu SMP Tue Feb 14 19:37:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+tjstarak@rr-2:~$ touch test.txt
+tjstarak@rr-2:~$ ls -l
+total 0
+-rw-rw-r-- 1 tjstarak tjstarak 0 Apr 13 13:44 file.txt
+-rw-rw-r-- 1 tjstarak tjstarak 0 Apr 13 13:56 test.txt
+tjstarak@rr-2:~$

@@ -59,5 +59,9 @@ Vikings ratings have decreased with every season, but remained strong, averaging
 
 ![Vikings Ratings over Time](Vikings_Rating_Time.png)
 
+Average ratings decreased from 8.3m to 7.7m.
+Rating dispersion increased over time as interest in the show varied.
+Overall, ratings remained strong well into the maturity of the show, unlike many others.
+
 ------------------------------------------------------------------------
 

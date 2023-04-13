@@ -55,6 +55,9 @@ Rotten Tomatoes assign it 93% with the following breakdown.
 
 Viewership numbers are not easily accessible - one estimate places the total view count up to 4.36m.
 
-------------------------------------------------------------------------
+Vikings ratings have decreased with every season, but remained strong, averaging above 7.5.
 
+![Vikings Ratings over Time](Vikings_Rating_Time.png)
+
+------------------------------------------------------------------------
 

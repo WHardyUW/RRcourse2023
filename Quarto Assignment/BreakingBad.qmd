@@ -47,7 +47,6 @@ def install(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 install("pandas")
-install("seaborn")
 install("matplotlib")
 ```
 
@@ -55,7 +54,6 @@ Different *Breaking Bad* seasons received different ratings. Data from *Rotten T
 
 ```{python}
 import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load reviews from a static csv file
@@ -65,9 +63,41 @@ reviews = pd.read_csv('reviews.csv', sep='\t')
 ax = reviews[["Rotten Tomatoes Score"]].plot(kind='bar', title ="Rotten Tomatoes Score", figsize=(15, 10), legend=True, fontsize=12)
 
 # Set axis labels
-ax.set_xlabel("Score", fontsize=12)
+ax.set_xlabel("Season", fontsize=12)
 ax.set_ylabel("Rotten Tomatoes Score", fontsize=12)
 
 # Show the plot
 plt.show()
+
+# Flush plot data
+plt.clf()
+plt.cla()
+plt.close()
+```
+
+# Viewership Over Time
+
+Similarly to before, we're loading viewership data from a `.csv` file and using a bar plot to show the trend:
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load reviews from a static csv file
+viewers = pd.read_csv('viewers.csv', sep='\t')
+
+# Create a bar plot
+ax = viewers[["Average Viewership"]].plot(kind='bar', title ="Average Viewership", figsize=(15, 10), legend=True, fontsize=12)
+
+# Set axis labels
+ax.set_xlabel("Season", fontsize=12)
+ax.set_ylabel("Average Viewership (in millions)", fontsize=12)
+
+# Show the plot
+plt.show()
+
+# Flush plot data
+plt.clf()
+plt.cla()
+plt.close()
 ```

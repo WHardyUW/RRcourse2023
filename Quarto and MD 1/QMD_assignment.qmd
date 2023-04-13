@@ -1,0 +1,17 @@
+---
+title: "Assignment"
+author: "Nichakorn Pansailom"
+format: html
+editor: visual
+execute:
+  echo: fenced
+---
+
+
+------------------------------------------------------------------------
+
+# TV Show: *The Big Bang Theory*
+
+## An American television sitcom 
+
+The Big Bang Theory is an American television sitcom created by **Chuck Lorre** and **Bill Prady**, both of whom served as executive producers on the series, along with Steven Molaro. The three of them also served as head writers. It premiered on CBS on September 24, 2007, and concluded on May 16, 2019, having broadcast 279 episodes over 12 seasons.

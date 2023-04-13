@@ -101,3 +101,30 @@ plt.clf()
 plt.cla()
 plt.close()
 ```
+
+# Season-to-Season Changes
+
+Changes across seasons can be visualized similarly:
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load reviews from a static csv file
+overtime = pd.read_csv('over-time.csv', sep='\t')
+
+# Create a bar plot
+ax = viewers[["Increase"]].plot(kind='bar', title ="Viewership Increase", figsize=(15, 10), legend=True, fontsize=12)
+
+# Set axis labels
+ax.set_xlabel("Season", fontsize=12)
+ax.set_ylabel("Viewers Increase (in millions, with respect to the previous season)", fontsize=12)
+
+# Show the plot
+plt.show()
+
+# Flush plot data
+plt.clf()
+plt.cla()
+plt.close()
+```

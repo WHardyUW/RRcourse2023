@@ -1,0 +1,35 @@
+---
+title: "Big Bang Theory"
+format: html
+editor: visual
+---
+
+## *Big Bang Theory*
+
+### 1. Brief description
+
+The Big Bang Theory is an American television sitcom created by Chuck Lorre and Bill Prady, both of whom served as executive producers on the series, along with Steven Molaro. The three of them also served as head writers. It premiered on CBS on September 24, 2007, and concluded on May 16, 2019, having broadcast 279 episodes over 12 seasons.
+
+### 2. Photo of the TV show
+
+![Big Bang Theory](The_Big_Bang_Theory.png)
+
+### 3. A summary of viewership
+
+| Season | Epi. | U.S. Viewers(millions) |
+|:-------|:----:|-----------------------:|
+| 1      |  17  |                   8.31 |
+| 2      |  23  |                  10.03 |
+| 3      |  23  |                  14.22 |
+| 4      |  24  |                  13.21 |
+| 5      |  24  |                  15.82 |
+| 6      |  24  |                  18.68 |
+| 7      |  24  |                  19.96 |
+| 8      |  24  |                  19.05 |
+| 9      |  24  |                  20.36 |
+| 10     |  24  |                  18.99 |
+| 11     |  24  |                  18.63 |
+| 12     |  24  |                  17.31 |
+
+### 4. A graph of the viewership over time
+

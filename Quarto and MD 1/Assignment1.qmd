@@ -31,5 +31,10 @@ The Big Bang Theory is an American television sitcom created by Chuck Lorre and 
 | 11     |  24  |                  18.63 |
 | 12     |  24  |                  17.31 |
 
-### 4. A graph of the viewership over time
+### 4. A graph of the viewership per season
+
+```{r}
+data = list(x = 1:12, )
+plot(U.S.Viewers)
+```
 

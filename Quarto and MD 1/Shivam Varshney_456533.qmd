@@ -1,0 +1,68 @@
+---
+title: "A crisp report on Suits"
+author: "Shivam Varshney (456533)"
+format: html
+editor: visual
+---
+
+# Table of contents
+
+`1. Introduction`  `2. Theme Picture`   `3. Some cool stats`  `4. Some cool graphs part 1` `5. Some cool graphs part 2` `6. Inferences`
+
+# 1. Introduction
+
+*Suits* is an American television drama series created by Aaron Korsh, which premiered on June 23, 2011 on the USA Network. It revolves around Mike Ross (Patrick J. Adams), who begins working as a law associate for Harvey Specter (Gabriel Macht), despite never attending law school. The show focuses on Harvey and Mike managing to close cases, while maintaining Mike's secret.
+
+The series was renewed for an eighth season on January 30, 2018.\[1\] In January 2019, the series was renewed for a ninth and final season which premiered on July 17, 2019.\[2\] During the course of the series, 134 episodes of Suits aired over nine seasons, between June 23, 2011, and September 25, 2019.
+
+# 2. Theme Picture
+
+![Theme Picture](suits.jpg){#fig-suits}
+
+`> Sometimes good guys gotta do bad things to make the bad guys pay. -- Harvey Specter`
+
+# 3. Some cool stats:
+
+| Agency          | Rating |
+|:----------------|:------:|
+| IMDB            |  8.5   |
+| Rotten Tomatoes |  90%   |
+| Filmweb         |  8.1   |
+
+```{r}
+install.packages("ggplot2")
+```
+
+```{r}
+library(ggplot2)
+
+```
+
+# 4 Some cool graph
+
+```{r}
+x <- c(4.28, 3.6, 2.73, 2.26, 2.01, 1.6, 1.3, 1.02)
+y <- c(1,2,3,4,5,6,7,8)
+df <- data.frame(x,y)
+plot(df$y, df$x, xlab = "y", ylab = "x", main = "Scatter Plot of x and y")
+
+```
+
+# 5. Some cool graphs part 2
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+d = pd.read_excel("suits.xlsx")
+d['pct_change'] = d['viewership in Million'].pct_change()*100
+d.plot(x='Season', y='pct_change', kind='line', marker='o', color='blue')
+plt.xlabel('Season')
+plt.ylabel('% Change in Viewership')
+plt.title('Percentage Change in Viewership Over Time')
+plt.show()
+
+```
+
+# 6. Inferences
+
+The viewrship has been declining each and every season. Season 1 had the best viewership while season 8 had the worst

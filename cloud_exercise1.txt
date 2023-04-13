@@ -1,0 +1,9 @@
+k_nagiel@instance-1:/home$ uname -a
+Linux instance-1 5.15.0-1030-gcp #37-Ubuntu SMP Tue Feb 14 19:37:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+k_nagiel@instance-1:/home$ touch test.txt
+touch: cannot touch 'test.txt': Permission denied
+k_nagiel@instance-1:/home$ ls -l
+total 8
+drwxr-x--- 4 k_nagiel k_nagiel 4096 Apr 13 13:45 k_nagiel
+drwxr-x--- 4 ubuntu   ubuntu   4096 Apr 13 13:49 ubuntu
+k_nagiel@instance-1:/home$ 

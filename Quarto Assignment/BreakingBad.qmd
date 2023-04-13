@@ -35,4 +35,39 @@ Logo taken from Wikipedia, scaled:
 
 ![Breaking Bad Logo](Breaking_Bad_logo.png){width="60%"}
 
+# Summary of Ratings
 
+To produce python plots we first need to install relevant packages using `pip`.
+
+```{python}
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+install("pandas")
+install("seaborn")
+install("matplotlib")
+```
+
+Different *Breaking Bad* seasons received different ratings. Data from *Rotten Tomatoes* taken from Wikipedia is presented below:
+
+```{python}
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load reviews from a static csv file
+reviews = pd.read_csv('reviews.csv', sep='\t')
+
+# Create a bar plot
+ax = reviews[["Rotten Tomatoes Score"]].plot(kind='bar', title ="Rotten Tomatoes Score", figsize=(15, 10), legend=True, fontsize=12)
+
+# Set axis labels
+ax.set_xlabel("Score", fontsize=12)
+ax.set_ylabel("Rotten Tomatoes Score", fontsize=12)
+
+# Show the plot
+plt.show()
+```

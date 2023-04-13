@@ -1,0 +1,59 @@
+---
+title: "assignment"
+author: "runanzhang"
+format: html
+editor: visual
+---
+
+\## task 1
+
+From Wikipedia, the free encyclopedia
+
+Suits
+
+Season 1
+
+SuitsSeasn1DVDCover.jpg
+
+DVD cover
+
+Starring	
+
+Gabriel Macht
+
+Patrick J. Adams
+
+Rick Hoffman
+
+Meghan Markle
+
+Sarah Rafferty
+
+Gina Torres
+
+Country of origin	United States
+
+No. of episodes	12
+
+Release
+
+Original network	USA Network
+
+Original release	June 23 --
+
+September 8, 2011
+
+Season chronology
+
+Next →
+
+Season 2
+
+List of episodes
+
+The first season of the American legal comedy-drama Suits originally aired on USA Network in the United States between June 23, 2011 and September 8, 2011. The season was produced by Hypnotic Films & Television and Universal Cable Productions, and the executive producers were Doug Liman, David Bartis and series creator Aaron Korsh.
+
+The series revolves around corporate lawyer Harvey Specter and his associate attorney Mike Ross, the latter practicing without a law degree. The season had six series regulars playing employees at the fictional Pearson Hardman law firm in Manhattan: Gabriel Macht, Patrick J. Adams, Rick Hoffman, Meghan Markle, Sarah Rafferty, and Gina Torres.
+
+```{## task2}
+```

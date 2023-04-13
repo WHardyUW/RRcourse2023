@@ -1,0 +1,8 @@
+j_dudzik2@instance-1:~$ uname -a
+Linux instance-1 5.15.0-1030-gcp #37-Ubuntu SMP Tue Feb 14 19:37:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+j_dudzik2@instance-1:~$ touch test.txt
+j_dudzik2@instance-1:~$ ls -l
+total 0
+-rw-rw-r-- 1 j_dudzik2 j_dudzik2 0 Apr 13 13:45 file.txt
+-rw-rw-r-- 1 j_dudzik2 j_dudzik2 0 Apr 13 13:59 test.txt
+j_dudzik2@instance-1:~$ 

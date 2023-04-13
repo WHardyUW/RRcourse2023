@@ -1,0 +1,7 @@
+e_shirinov@instance1:/home/ubuntu$ uname -a
+Linux instance1 5.15.0-1030-gcp #37-Ubuntu SMP Tue Feb 14 19:37:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+e_shirinov@instance1:/home/ubuntu$ touch test.txt
+touch: cannot touch 'test.txt': Permission denied
+e_shirinov@instance1:/home/ubuntu$ ls -l
+total 4
+drwxr-xr-x 2 root root 4096 Apr 13 13:49 dirname

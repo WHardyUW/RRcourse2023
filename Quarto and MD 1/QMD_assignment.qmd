@@ -18,3 +18,24 @@ The Big Bang Theory is an American television sitcom created by **Chuck Lorre** 
 
 
 ![](https://upload.wikimedia.org/wikipedia/en/7/7b/The_Big_Bang_Theory_%28Official_Title_Card%29.png)
+
+# Shows Statistics
+
+| Season   | Episodes | U.S. Viewer |
+|:---------|:--------:|------------:|
+| 1        | 17       |      8.31m  |
+| 2        | 23       |     10.03m  |
+| 3        | 23       |     14.22m  |
+| 4        | 24       |     13.21m  |
+| 5        | 24       |     15.82m  |
+| 6        | 24       |     18.68m  |
+| 7        | 24       |     19.96m  |
+| 8        | 24       |     19.05m  |
+| 9        | 24       |     20.36m  |
+| 10       | 24       |     18.99m  |
+| 11       | 24       |     18.63m  |
+| 12       | 24       |     17.31m  |
+
+
+
+

@@ -1,0 +1,14 @@
+wmisiura@instance-2:~$ uname -a
+Linux instance-2 5.15.0-1030-gcp #37-Ubuntu SMP Tue Feb 14 19:37:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+wmisiura@instance-2:~$ touach test.txt
+Command 'touach' not found, did you mean:
+  command 'touch' from deb coreutils (8.32-4.1ubuntu1)
+Try: apt install <deb name>
+wmisiura@instance-2:~$ 
+wmisiura@instance-2:~$ touch test.txt
+wmisiura@instance-2:~$ ls -l
+total 8
+drwxrwxr-x 2 wmisiura wmisiura 4096 Apr 13 17:13 dirname
+drwxrwxr-x 2 wmisiura wmisiura 4096 Apr 13 17:13 ss
+-rw-rw-r-- 1 wmisiura wmisiura    0 Apr 13 17:28 test.txt
+wmisiura@instance-2:~$ 

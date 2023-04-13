@@ -27,4 +27,12 @@ Then create a short report (you can copy the content from Wikipedia or other pag
 
 # Breaking Bad
 
-*Breaking Bad* is an American neo-Western crime drama television series created and produced by Vince Gilligan for AMC. Set and filmed in **Albuquerque, New Mexico**, the series follows Walter White (Bryan Cranston), an underpaid, overqualified, and dispirited high-school chemistry teacher who is struggling with a recent diagnosis of stage-three lung cancer. 
+*Breaking Bad* is an American neo-Western crime drama television series created and produced by Vince Gilligan for AMC. Set and filmed in **Albuquerque, New Mexico**, the series follows Walter White (Bryan Cranston), an underpaid, overqualified, and dispirited high-school chemistry teacher who is struggling with a recent diagnosis of stage-three lung cancer.
+
+# Logo
+
+Logo taken from Wikipedia, scaled:
+
+![Breaking Bad Logo](Breaking_Bad_logo.png){width="60%"}
+
+

@@ -1,0 +1,10 @@
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+aj_skowronski2@instance-1:~$ uname -a
+Linux instance-1 5.15.0-1030-gcp #37-Ubuntu SMP Tue Feb 14 19:37:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+aj_skowronski2@instance-1:~$ touch test.txt
+aj_skowronski2@instance-1:~$ ls -l
+total 0
+-rw-rw-r-- 1 aj_skowronski2 aj_skowronski2 0 Apr 13 16:52 test.txt
+aj_skowronski2@instance-1:~$ 

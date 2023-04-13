@@ -1,0 +1,28 @@
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Thu Apr 13 16:52:23 2023 from 35.235.241.18
+aj_skowronski2@instance-1:~$ mkdir rr
+aj_skowronski2@instance-1:~$ cd rr
+aj_skowronski2@instance-1:~/rr$ touch test.txt
+aj_skowronski2@instance-1:~/rr$ nano new.txt
+aj_skowronski2@instance-1:~/rr$ cp /etc/modules .
+aj_skowronski2@instance-1:~/rr$ ls -ltr
+total 8
+-rw-rw-r-- 1 aj_skowronski2 aj_skowronski2   0 Apr 13 16:56 test.txt
+-rw-rw-r-- 1 aj_skowronski2 aj_skowronski2  30 Apr 13 16:58 new.txt
+-rw-r--r-- 1 aj_skowronski2 aj_skowronski2 195 Apr 13 16:59 modules
+aj_skowronski2@instance-1:~/rr$ rmdir rr
+rmdir: failed to remove 'rr': No such file or directory
+aj_skowronski2@instance-1:~/rr$ cd ..
+aj_skowronski2@instance-1:~$ rmdir rr
+rmdir: failed to remove 'rr': Directory not empty
+aj_skowronski2@instance-1:~$ rmdir -f rr
+rmdir: invalid option -- 'f'
+Try 'rmdir --help' for more information.
+aj_skowronski2@instance-1:~$ man rmdir
+aj_skowronski2@instance-1:~$ rm -r rr
+aj_skowronski2@instance-1:~$ ls -l
+total 0
+-rw-rw-r-- 1 aj_skowronski2 aj_skowronski2 0 Apr 13 16:52 test.txt
+aj_skowronski2@instance-1:~$ 

@@ -186,10 +186,10 @@ Subscripts can be done like so: `H~2~O` H~2~O
 You can also just use html to write stuff within the Markdown document (when rendering into html). Here's something copied and pasted directly from YAML Wikipedia page source code:
 
 |                                                                                                                                                                                                          |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|------------------------------------------------------------------------|
 | [![Official YAML Logo.svg](//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Official_YAML_Logo.svg/64px-Official_YAML_Logo.svg.png){alt="Official YAML Logo.svg"}](/wiki/File:Official_YAML_Logo.svg) |
 | [Filename extensions](/wiki/Filename_extension "Filename extension")                                                                                                                                     |
-| [Internet media type](/wiki/Media_type "Media type")                                                                                                                                                    |
+| [Internet media type](/wiki/Media_type "Media type")                                                                                                                                                     |
 | Initial release                                                                                                                                                                                          |
 | [Latest release](/wiki/Software_release_life_cycle "Software release life cycle")                                                                                                                        |
 | Type of format                                                                                                                                                                                           |
@@ -387,7 +387,7 @@ Other stuff:
 ### Hide the source code with `echo=FALSE`
 
 ```{r}
-#| echo = FALSE
+ echo = FALSE
 
 1+1
 

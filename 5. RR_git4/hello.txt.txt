@@ -1,1 +1,1 @@
-add some textsomething
+update the text to resolve the merge conflict

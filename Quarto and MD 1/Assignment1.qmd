@@ -1,0 +1,52 @@
+---
+title: "Big Bang Theory"
+format: html
+editor: visual
+---
+
+^*This report will summarize and analyze the Big Bag Theory's viewership.*^
+
+## 1. Brief Description
+
+The Big Bang Theory is an American television sitcom created by Chuck Lorre and Bill Prady, both of whom served as executive producers on the series, along with Steven Molaro. The three of them also served as head writers. It premiered on CBS on September 24, 2007, and concluded on May 16, 2019, having broadcast 279 episodes over 12 seasons.
+
+## 2. Photo Of The Show
+
+![Big Bang Theory](The_Big_Bang_Theory.png)
+
+## 3. A Summary Of Viewership
+
+| Season | Epi. | U.S. Viewers(millions) |
+|:-------|:----:|-----------------------:|
+| 1      |  17  |                   8.31 |
+| 2      |  23  |                  10.03 |
+| 3      |  23  |                  14.22 |
+| 4      |  24  |                  13.21 |
+| 5      |  24  |                  15.82 |
+| 6      |  24  |                  18.68 |
+| 7      |  24  |                  19.96 |
+| 8      |  24  |                  19.05 |
+| 9      |  24  |                  20.36 |
+| 10     |  24  |                  18.99 |
+| 11     |  24  |                  18.63 |
+| 12     |  24  |                  17.31 |
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/The_Big_Bang_Theory)
+
+## 4 & 5. A Graph Of The Viewership Per Season
+
+```{r, echo= FALSE}
+
+us_view <- list(
+  x =c(1:12),
+  y=c(8.31,10.03,14.22,13.21,15.82,18.68,19.96,19.05, 20.36,18.99,18.63,17.31)
+)
+
+plot(us_view,type = "o", xlab = "Season", ylab = "US Viewership (mil.)", main = "Viewership per season")
+```
+
+## 6. Viewership Analysis
+
+*Big Bang Theory* is the best sitcom of the recent decade.
+
+In general, the viewership was on an upward trend. Viewership nearly doubled, reaching **15.82 mil.** views by season 5. Before, peaking at **20.36 mil.** views in season 9. Then, the viewership slightly decreased, making up to **17.31 mil.** views at final season.

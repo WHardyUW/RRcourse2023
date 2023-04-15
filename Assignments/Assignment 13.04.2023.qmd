@@ -1,0 +1,71 @@
+---
+title: "TV show"
+author: "Arshad"
+format: html
+editor: visual
+---
+
+```{r}
+#| label = "setup",
+#| include = FALSE
+library(chron)
+library(reticulate)
+```
+
+# Game of Thrones
+
+## About GOT
+
+***Game of Thrones*** is an American fantasy drama television series created by **David Benioff** and **D. B. Weiss** for **HBO**. It is an adaptation of *A Song of Ice and Fire*, a series of fantasy novels by **George R. R. Martin**, the first of which is ***A Game of Thrones***. The show was shot in the United Kingdom, Canada, Croatia, Iceland, Malta, Morocco, and Spain. It premiered on HBO in the United States on April 17, 2011, and concluded on May 19, 2019, with 73 episodes broadcast over eight seasons. [Wikipedia](https://en.wikipedia.org/wiki/Game_of_Thrones)
+
+<img src="https://static.posters.cz/image/750/plakaty/gra-o-tron-game-of-thrones-logo-i21034.jpg" title="Title: An elephant" alt="GOT title card"/>
+
+## Basic facts about GOT
+
+-   The show consists of **73 episodes**, with a total runtime of approximately 73 hours and 55 minutes.
+-   The series was filmed in various locations around the world, including ***Northern Ireland, Croatia, Spain, and Iceland***.
+-   The show's cast includes many notable actors, including **Emilia Clarke, Kit Harington, Peter Dinklage, Lena Headey**, and **Maisie Williams**, among others.
+-   *"Game of Thrones"* has won numerous awards, including **59 Primetime Emmy Awards**, which is the most won by any scripted television series.
+-   According to Wikipedia, the show's viewership increased over time, with the final season averaging **44.2 million** viewers per episode across all platforms.
+-   The series has been widely praised for its production values, storytelling, and performances, although its final season was controversial among some fans and critics.
+
+```{python echo=FALSE}
+import pandas
+Got = pandas.read_csv("C:\\Users\\Arshad\\Documents\\GitHub\\RRcourse2023\\Assignments\\got_data.csv")
+import matplotlib.pyplot as plt
+plt.plot(Got["Episode Number"], Got["US viewers (million)"])
+plt.xlabel('Number of episodes')
+plt.ylabel('Viewers (mln)')
+plt.legend()
+plt.title('Game of Thrones viewer statistics over time')
+plt.show()
+```
+
+
+```{python echo=FALSE}
+import pandas
+Got = pandas.read_csv("C:\\Users\\Arshad\\Documents\\GitHub\\RRcourse2023\\Assignments\\got_data.csv")
+import matplotlib.pyplot as plt
+plt.scatter(Got["Season"], Got["US viewers (million)"])
+plt.xlabel('Seasons')
+plt.ylabel('Viewers (mln)')
+plt.legend()
+plt.title('Game of Thrones viewer statistics by  seasons')
+plt.show()
+```
+
+
+## Game of thrones viewers overview
+
+The summary of Game of Thrones viewership data per season in the US is as follows:
+
+- Season 1: 25.15 million viewers
+- Season 2: 37.95 million viewers
+- Season 3: 49.66 million viewers
+- Season 4: 68.46 million viewers
+- Season 5: 68.8 million viewers
+- Season 6: 76.88 million viewers
+- Season 7: 71.83 million viewers
+- Season 8: 71.88 million viewers
+
+This data shows that the viewership of Game of Thrones grew steadily from season to season, with the largest increase occurring between seasons 1 and 2. The show's peak viewership in the US occurred during seasons 5 and 6, and remained relatively consistent during seasons 7 and 8.

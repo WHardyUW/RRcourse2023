@@ -1,0 +1,7 @@
+mmasood@instance:~$ uname -a
+Linux instance 5.15.0-1030-gcp #37-Ubuntu SMP Tue Feb 14 19:37:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+mmasood@instance:~$ touch test.txt
+mmasood@instance:~$ ls -l
+total 2
+-rw-rw-r-- 1 mmasood mmasood    0 Apr 13 17:35 test.txt
+mmasood@instance:~$ 

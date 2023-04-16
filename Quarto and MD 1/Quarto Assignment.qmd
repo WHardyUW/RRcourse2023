@@ -1,0 +1,28 @@
+---
+title: "Breaking Bad Tv Show"
+author: "Sabriye Sever"
+format: html
+editor: visual
+---
+
+## Breaking Bad
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+(https://www.markdownguide.org/cheat-sheet/)
+
+
+
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).

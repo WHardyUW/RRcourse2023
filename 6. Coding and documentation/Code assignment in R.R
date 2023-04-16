@@ -9,6 +9,8 @@ setwd("Z:\\File folders\\Teaching\\Reproducible Research\\2023\\Repository\\RRco
 # The O*NET database contains information for occupations in the USA, including
 # the tasks and activities typically associated with a specific occupation.
 
+#this is a comment
+
 task_data = read.csv("Data\\onet_tasks.csv")
 # isco08 variable is for occupation codes
 # the t_* variables are specific tasks conducted on the job

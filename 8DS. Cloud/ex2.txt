@@ -1,0 +1,18 @@
+a_nowak64@instance-1:~$ mkdir rr
+a_nowak64@instance-1:~$ cd rr
+a_nowak64@instance-1:~/rr$ touch test.txt
+a_nowak64@instance-1:~/rr$ touch new.txt
+a_nowak64@instance-1:~/rr$ echo "abc" > new.txt
+a_nowak64@instance-1:~/rr$ 
+a_nowak64@instance-1:~/rr$ ls -S -r -l
+total 4
+-rw-rw-r-- 1 a_nowak64 a_nowak64 0 Apr 18 20:31 test.txt
+-rw-rw-r-- 1 a_nowak64 a_nowak64 4 Apr 18 20:32 new.txt
+a_nowak64@instance-1:~/rr$ rmdir rr
+rmdir: failed to remove 'rr': No such file or directory
+a_nowak64@instance-1:~/rr$ cd ..
+a_nowak64@instance-1:~$ rmdir rr
+rmdir: failed to remove 'rr': Directory not empty
+a_nowak64@instance-1:~$ rm rr/test.txt
+a_nowak64@instance-1:~$ rm rr/new.txt
+a_nowak64@instance-1:~$ rmdir rr

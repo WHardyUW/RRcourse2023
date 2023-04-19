@@ -1,0 +1,239 @@
+kh_nguyen@khonnguyen444135:~$ ps -ef | grep cpu
+root          10       2  0 07:51 ?        00:00:00 [mm_percpu_wq]
+root          18       2  0 07:51 ?        00:00:00 [cpuhp/0]
+root          19       2  0 07:51 ?        00:00:00 [cpuhp/1]
+root        1261       2  0 08:06 ?        00:00:00 [kworker/1:2-mm_percpu_wq]
+kh_nguy+    1360    1176  0 08:34 pts/0    00:00:00 grep --color=auto cpu
+kh_nguy+    1362    1176  0 08:35 pts/0    00:00:00 grep --color=auto cpu
+kh_nguyen@khonnguyen444135:~$ ifconfig | tail -n 3
+Command 'ifconfig' not found, but can be installed with:
+apt install net-tools
+Please ask your administrator.
+kh_nguyen@khonnguyen444135:~$ sudo ifconfig | tail -n 3
+sudo: ifconfig: command not found
+kh_nguyen@khonnguyen444135:~$ ip addr show | tail -n 3
+       valid_lft 83624sec preferred_lft 83624sec
+    inet6 fe80::4001:aff:fe80:2/64 scope link 
+       valid_lft forever preferred_lft forever
+kh_nguyen@khonnguyen444135:~$ ls -l
+total 12
+drwxrwxr-x 2 kh_nguyen kh_nguyen 4096 Apr 19 07:59 dirname
+-rw-rw-r-- 1 kh_nguyen kh_nguyen    0 Apr 19 07:52 file.txt
+-rw-rw-r-- 1 kh_nguyen kh_nguyen    0 Apr 19 08:00 new.txt
+drwxrwxr-x 2 kh_nguyen kh_nguyen 4096 Apr 19 07:59 rr
+-rw-rw-r-- 1 kh_nguyen kh_nguyen   14 Apr 19 08:16 script.sh
+-rw-rw-r-- 1 kh_nguyen kh_nguyen    0 Apr 19 08:00 something
+-rw-rw-r-- 1 kh_nguyen kh_nguyen    0 Apr 19 07:59 test.txt
+-rw-rw-r-- 1 kh_nguyen kh_nguyen    0 Apr 19 08:00 testing
+kh_nguyen@khonnguyen444135:~$ cd ..
+kh_nguyen@khonnguyen444135:/home$ ls -l
+total 8
+drwxr-x--- 7 kh_nguyen kh_nguyen 4096 Apr 19 08:16 kh_nguyen
+drwxr-x--- 4 ubuntu    ubuntu    4096 Apr 12 08:57 ubuntu
+kh_nguyen@khonnguyen444135:/home$ cd etc
+-bash: cd: etc: No such file or directory
+kh_nguyen@khonnguyen444135:/home$ cd ubuntu
+kh_nguyen@khonnguyen444135:/home/ubuntu$ ls -l
+total 4
+drwxr-xr-x 2 root root 4096 Apr 12 08:57 dirname
+kh_nguyen@khonnguyen444135:/home/ubuntu$ cd ../kh_nguyen
+kh_nguyen@khonnguyen444135:~$ cd dirname
+kh_nguyen@khonnguyen444135:~/dirname$ ls -l
+total 0
+-rw-rw-r-- 1 kh_nguyen kh_nguyen 0 Apr 19 07:59 file.txt
+kh_nguyen@khonnguyen444135:~/dirname$ cd ..
+kh_nguyen@khonnguyen444135:~$ cd etc/
+-bash: cd: etc/: No such file or directory
+kh_nguyen@khonnguyen444135:~$ cd /etc
+kh_nguyen@khonnguyen444135:/etc$ pwd
+/etc
+kh_nguyen@khonnguyen444135:/etc$ ls -l
+total 860
+drwxr-xr-x 3 root root       4096 Mar  2 02:09 NetworkManager
+drwxr-xr-x 2 root root       4096 Mar  2 02:10 PackageKit
+drwxr-xr-x 4 root root       4096 Mar  2 02:09 X11
+-rw-r--r-- 1 root root       3028 Mar  2 02:08 adduser.conf
+drwxr-xr-x 2 root root       4096 Mar  2 02:11 alternatives
+drwxr-xr-x 3 root root       4096 Mar  2 02:09 apparmor
+drwxr-xr-x 8 root root       4096 Mar  2 02:13 apparmor.d
+drwxr-xr-x 3 root root       4096 Mar  2 02:10 apport
+drwxr-xr-x 8 root root       4096 Mar  2 02:13 apt
+-rw-r--r-- 1 root root       2319 Jan  6  2022 bash.bashrc
+-rw-r--r-- 1 root root         45 Nov 11  2021 bash_completion
+drwxr-xr-x 2 root root       4096 Mar  2 02:10 bash_completion.d
+-rw-r--r-- 1 root root        367 Dec 16  2020 bindresvport.blacklist
+drwxr-xr-x 2 root root       4096 Apr  7  2022 binfmt.d
+-rw-r--r-- 1 root root        112 Apr 12 08:23 boto.cfg
+drwxr-xr-x 2 root root       4096 Mar  2 02:09 byobu
+drwxr-xr-x 3 root root       4096 Mar  2 02:08 ca-certificates
+-rw-r--r-- 1 root root       5532 Mar  2 02:09 ca-certificates.conf
+-rw-r--r-- 1 root root       5529 Mar  2 02:08 ca-certificates.conf.dpkg-old
+drwxr-xr-x 4 root root       4096 Apr 12 08:24 chrony
+drwxr-xr-x 5 root root       4096 Mar  2 02:10 cloud
+drwxr-xr-x 2 root root       4096 Mar  2 02:10 console-setup
+drwxr-xr-x 2 root root       4096 Mar  2 02:09 cron.d
+drwxr-xr-x 2 root root       4096 Mar  2 02:10 cron.daily
+drwxr-xr-x 2 root root       4096 Mar  2 02:08 cron.hourly
+drwxr-xr-x 2 root root       4096 Mar  2 02:08 cron.monthly
+drwxr-xr-x 2 root root       4096 Mar  2 02:10 cron.weekly
+-rw-r--r-- 1 root root       1136 Mar 23  2022 crontab
+drwxr-xr-x 2 root root       4096 Mar  2 02:10 cryptsetup-initramfs
+-rw-r--r-- 1 root root         54 Mar  2 02:09 crypttab
+drwxr-xr-x 4 root root       4096 Mar  2 02:08 dbus-1
+-rw-r--r-- 1 root root       2969 Feb 20  2022 debconf.conf
+-rw-r--r-- 1 root root         13 Aug 22  2021 debian_version
+drwxr-xr-x 3 root root       4096 Mar  2 02:13 default
+-rw-r--r-- 1 root root        604 Sep 15  2018 deluser.conf
+drwxr-xr-x 2 root root       4096 Mar  2 02:08 depmod.d
+drwxr-xr-x 4 root root       4096 Mar  2 02:09 dhcp
+drwxr-xr-x 4 root root       4096 Mar  2 02:09 dpkg
+-rw-r--r-- 1 root root        685 Jan  8  2022 e2scrub.conf
+-rw-r--r-- 1 root root         37 Mar  2 02:10 ec2_version
+-rw-r--r-- 1 root root        106 Mar  2 02:08 environment
+-rw-r--r-- 1 root root       1816 Dec 27  2019 ethertypes
+-rw-r--r-- 1 root root        101 Mar  2 02:11 fstab
+-rw-r--r-- 1 root root        694 Mar 23  2022 fuse.conf
+-rw-r--r-- 1 root root       2584 Feb  3  2022 gai.conf
+-rw-r--r-- 1 root root         20 Apr 12 08:23 google_instance_id
+drwxr-xr-x 2 root root       4096 Mar  2 02:09 groff
+-rw-r--r-- 1 root root       1015 Apr 19 07:55 group
+-rw-r--r-- 1 root root       1024 Apr 19 07:52 group-
+drwxr-xr-x 2 root root       4096 Mar  2 02:13 grub.d
+-rw-r----- 1 root shadow      868 Apr 19 07:55 gshadow
+-rw-r----- 1 root shadow      877 Apr 19 07:52 gshadow-
+drwxr-xr-x 3 root root       4096 Feb 21  2022 gss
+-rw-r--r-- 1 root root       4436 Dec 15  2020 hdparm.conf
+-rw-r--r-- 1 root root         92 Oct 15  2021 host.conf
+-rw-r--r-- 1 root root         17 Apr 12 08:23 hostname
+-rw-r--r-- 1 root root        271 Mar  2 02:13 hosts
+-rw-r--r-- 1 root root        411 Mar  2 02:09 hosts.allow
+-rw-r--r-- 1 root root        711 Mar  2 02:09 hosts.deny
+drwxr-xr-x 2 root root       4096 Mar  2 02:13 init.d
+drwxr-xr-x 5 root root       4096 Mar  2 02:09 initramfs-tools
+-rw-r--r-- 1 root root       1748 Jan  6  2022 inputrc
+drwxr-xr-x 4 root root       4096 Mar  2 02:08 iproute2
+drwxr-xr-x 2 root root       4096 Mar  2 02:09 iscsi
+-rw-r--r-- 1 root root         26 Feb 16 16:02 issue
+-rw-r--r-- 1 root root         19 Feb 16 16:02 issue.net
+drwxr-xr-x 5 root root       4096 Mar  2 02:09 kernel
+-rw-r--r-- 1 root root        110 Mar  2 02:09 kernel-img.conf
+drwxrwxr-x 2 root landscape  4096 Mar 30  2022 landscape
+-rw-r--r-- 1 root root      18751 Mar  2 02:13 ld.so.cache
+-rw-r--r-- 1 root root         34 Dec 16  2020 ld.so.conf
+drwxr-xr-x 2 root root       4096 Mar  2 02:09 ld.so.conf.d
+drwxr-xr-x 2 root root       4096 Mar  2 02:09 ldap
+-rw-r--r-- 1 root root        267 Oct 15  2021 legal
+-rw-r--r-- 1 root root        191 Mar 17  2022 libaudit.conf
+drwxr-xr-x 3 root root       4096 Mar  2 02:09 libblockdev
+drwxr-xr-x 2 root root       4096 Mar  2 02:09 libnl-3
+-rw-r--r-- 1 root root       2996 Mar  4  2022 locale.alias
+-rw-r--r-- 1 root root       9456 Mar  2 02:10 locale.gen
+lrwxrwxrwx 1 root root         27 Mar  2 02:09 localtime -> /usr/share/zoneinfo/Etc/UTC
+drwxr-xr-x 4 root root       4096 Mar  2 02:09 logcheck
+-rw-r--r-- 1 root root      10734 Nov 11  2021 login.defs
+-rw-r--r-- 1 root root        592 Jan 24  2022 logrotate.conf
+drwxr-xr-x 2 root root       4096 Mar  2 02:13 logrotate.d
+-rw-r--r-- 1 root root        104 Feb 16 16:02 lsb-release
+drwxr-xr-x 3 root root       4096 Mar  2 02:10 lvm
+-r--r--r-- 1 root root         33 Apr 12 08:23 machine-id
+-rw-r--r-- 1 root root        111 Mar 24  2022 magic
+-rw-r--r-- 1 root root        111 Mar 24  2022 magic.mime
+-rw-r--r-- 1 root root       5217 Mar 17  2022 manpath.config
+drwxr-xr-x 2 root root       4096 Mar  2 02:09 mdadm
+-rw-r--r-- 1 root root      72029 Mar 21  2022 mime.types
+-rw-r--r-- 1 root root        744 Jan  8  2022 mke2fs.conf
+drwxr-xr-x 2 root root       4096 Mar  2 02:13 modprobe.d
+-rw-r--r-- 1 root root        195 Mar  2 02:08 modules
+drwxr-xr-x 2 root root       4096 Mar  2 02:09 modules-load.d
+lrwxrwxrwx 1 root root         19 Mar  2 02:08 mtab -> ../proc/self/mounts
+drwx------ 2 root root       4096 Apr 12 08:23 multipath
+-rw-r--r-- 1 root root         41 Oct 28 18:43 multipath.conf
+-rw-r--r-- 1 root root      11204 Feb  9  2022 nanorc
+drwxr-xr-x 6 root root       4096 Mar  2 02:10 needrestart
+-rw-r--r-- 1 root root        767 Mar 24  2022 netconfig
+drwxr-xr-x 2 root root       4096 Apr 12 08:23 netplan
+drwxr-xr-x 5 root root       4096 Mar  2 02:13 network
+drwxr-xr-x 8 root root       4096 Mar  2 02:08 networkd-dispatcher
+-rw-r--r-- 1 root root         91 Oct 15  2021 networks
+drwxr-xr-x 2 root root       4096 Mar  2 02:08 newt
+-rwxr-xr-x 1 root root        228 Mar 23  2022 nftables.conf
+-rw-r--r-- 1 root root        510 Mar  2 02:08 nsswitch.conf
+drwxr-xr-x 2 root root       4096 Mar  2 02:13 nvme
+drwxr-xr-x 2 root root       4096 Mar  2 02:08 opt
+lrwxrwxrwx 1 root root         21 Feb 16 16:02 os-release -> ../usr/lib/os-release
+-rw-r--r-- 1 root root       6920 Aug 17  2020 overlayroot.conf
+-rw-r--r-- 1 root root        112 Mar  2 02:10 overlayroot.local.conf
+-rw-r--r-- 1 root root        552 Aug 12  2020 pam.conf
+drwxr-xr-x 2 root root       4096 Mar  2 02:09 pam.d
+-rw-r--r-- 1 root root       1884 Apr 12 08:29 passwd
+-rw-r--r-- 1 root root       1835 Apr 12 08:24 passwd-
+drwxr-xr-x 3 root root       4096 Mar  2 02:09 perl
+drwxr-xr-x 3 root root       4096 Mar  2 02:09 pm
+drwxr-xr-x 4 root root       4096 Mar  2 02:09 polkit-1
+drwxr-xr-x 2 root root       4096 Mar  2 02:13 pollinate
+drwxr-xr-x 4 root root       4096 Mar  2 02:13 ppp
+-rw-r--r-- 1 root root        582 Oct 15  2021 profile
+drwxr-xr-x 2 root root       4096 Mar  2 02:10 profile.d
+-rw-r--r-- 1 root root       2932 Apr  1  2013 protocols
+drwxr-xr-x 2 root root       4096 Mar  2 02:08 python3
+drwxr-xr-x 2 root root       4096 Mar  2 02:09 python3.10
+drwxr-xr-x 2 root root       4096 Mar  2 02:13 rc0.d
+drwxr-xr-x 2 root root       4096 Mar  2 02:13 rc1.d
+drwxr-xr-x 2 root root       4096 Mar  2 02:13 rc2.d
+drwxr-xr-x 2 root root       4096 Mar  2 02:13 rc3.d
+drwxr-xr-x 2 root root       4096 Mar  2 02:13 rc4.d
+drwxr-xr-x 2 root root       4096 Mar  2 02:13 rc5.d
+drwxr-xr-x 2 root root       4096 Mar  2 02:13 rc6.d
+drwxr-xr-x 2 root root       4096 Mar  2 02:10 rcS.d
+lrwxrwxrwx 1 root root         39 Mar  2 02:08 resolv.conf -> ../run/systemd/resolve/stub-resolv.conf
+lrwxrwxrwx 1 root root         13 Feb 15 15:45 rmt -> /usr/sbin/rmt
+-rw-r--r-- 1 root root        887 Apr  1  2013 rpc
+-rw-r--r-- 1 root root       1382 Dec 23  2021 rsyslog.conf
+drwxr-xr-x 2 root root       4096 Mar  2 02:13 rsyslog.d
+-rw-r--r-- 1 root root       3663 Jun 20  2016 screenrc
+drwxr-xr-x 4 root root       4096 Mar  2 02:09 security
+drwxr-xr-x 2 root root       4096 Mar  2 02:08 selinux
+-rw-r--r-- 1 root root      12813 Mar 27  2021 services
+-rw-r----- 1 root shadow      983 Apr 12 08:29 shadow
+-rw-r----- 1 root shadow      952 Apr 12 08:24 shadow-
+-rw-r--r-- 1 root root        158 Mar  2 02:09 shells
+drwxr-xr-x 2 root root       4096 Mar  2 02:08 skel
+drwxr-xr-x 6 root root       4096 Mar  2 02:09 sos
+drwxr-xr-x 4 root root       4096 Apr 12 08:23 ssh
+drwxr-xr-x 4 root root       4096 Mar  2 02:09 ssl
+-rw-r--r-- 1 root root         43 Apr 12 08:29 subgid
+-rw-r--r-- 1 root root         20 Apr 12 08:23 subgid-
+-rw-r--r-- 1 root root         43 Apr 12 08:29 subuid
+-rw-r--r-- 1 root root         20 Apr 12 08:23 subuid-
+-rw-r--r-- 1 root root       4573 Feb 14  2022 sudo.conf
+-rw-r--r-- 1 root root       9390 Feb 14  2022 sudo_logsrvd.conf
+-r--r----- 1 root root       1671 Feb  8  2022 sudoers
+drwxr-x--- 2 root root       4096 Apr 12 08:29 sudoers.d
+-rw-r--r-- 1 root root       2355 Feb 25  2022 sysctl.conf
+drwxr-xr-x 2 root root       4096 Mar  2 02:13 sysctl.d
+drwxr-xr-x 5 root root       4096 Mar  2 02:08 systemd
+drwxr-xr-x 2 root root       4096 Mar  2 02:08 terminfo
+-rw-r--r-- 1 root root          8 Mar  2 02:09 timezone
+drwxr-xr-x 2 root root       4096 Mar  2 02:09 tmpfiles.d
+drwxr-xr-x 2 root root       4096 Mar  2 02:09 ubuntu-advantage
+-rw-r--r-- 1 root root       1260 Jun 16  2020 ucf.conf
+drwxr-xr-x 4 root root       4096 Mar  2 02:09 udev
+drwxr-xr-x 3 root root       4096 Mar  2 02:10 ufw
+drwxr-xr-x 3 root root       4096 Mar  2 02:10 update-manager
+drwxr-xr-x 2 root root       4096 Mar  2 02:10 update-motd.d
+drwxr-xr-x 2 root root       4096 Jan 20 18:50 update-notifier
+-rw-r--r-- 1 root root       1523 Mar 25  2022 usb_modeswitch.conf
+drwxr-xr-x 2 root root       4096 Sep  6  2021 usb_modeswitch.d
+drwxr-xr-x 2 root root       4096 Mar  2 02:09 vim
+drwxr-xr-x 4 root root       4096 Mar  2 02:09 vmware-tools
+lrwxrwxrwx 1 root root         23 Mar  2 02:08 vtrgb -> /etc/alternatives/vtrgb
+-rw-r--r-- 1 root root       4942 Jan 24  2022 wgetrc
+-rw-r--r-- 1 root root        681 Mar 23  2022 xattr.conf
+drwxr-xr-x 4 root root       4096 Mar  2 02:08 xdg
+-rw-r--r-- 1 root root        460 Dec  8  2021 zsh_command_not_found
+kh_nguyen@khonnguyen444135:/etc$ ^C
+kh_nguyen@khonnguyen444135:/etc$ head -n 3 profile
+# /etc/profile: system-wide .profile file for the Bourne shell (sh(1))
+# and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).
+
+kh_nguyen@khonnguyen444135:/etc$ 

@@ -1,0 +1,1421 @@
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-1030-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Apr 19 10:06:04 UTC 2023
+
+  System load:  0.0               Processes:             103
+  Usage of /:   20.7% of 9.51GB   Users logged in:       1
+  Memory usage: 27%               IPv4 address for ens4: 10.128.0.2
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Wed Apr 19 09:47:28 2023 from 35.235.244.33
+a_ayetigbo@instance-1:~$ pwd
+/home/a_ayetigbo
+a_ayetigbo@instance-1:~$ tasklist /FI "IMAGENAME eq *cpu*" /V
+tasklist: command not found
+a_ayetigbo@instance-1:~$ tasklist /FI "IMAGENAME eq *cpu*" /V
+tasklist: command not found
+a_ayetigbo@instance-1:~$ pgrep -a cpu
+10 mm_percpu_wq
+18 cpuhp/0
+19 cpuhp/1
+1157 kworker/0:0-mm_percpu_wq
+a_ayetigbo@instance-1:~$ ifconfig | tail -n 3
+Command 'ifconfig' not found, but can be installed with:
+apt install net-tools
+Please ask your administrator.
+a_ayetigbo@instance-1:~$ ip addr | tail -n 3
+       valid_lft 84882sec preferred_lft 84882sec
+    inet6 fe80::4001:aff:fe80:2/64 scope link 
+       valid_lft forever preferred_lft forever
+a_ayetigbo@instance-1:~$ cd /etc && find . -type f -readable -printf '%h\n' | sort -u | shuf -n 1 | xargs cd 
+find: ‘./multipath’: Permission denied
+find: ‘./ssl/private’: Permission denied
+find: ‘./sudoers.d’: Permission denied
+find: ‘./polkit-1/localauthority’: Permission denied
+xargs: cd: No such file or directory
+a_ayetigbo@instance-1:/etc$ pwd
+/etc
+a_ayetigbo@instance-1:/etc$ head -n 3 *
+==> NetworkManager <==
+head: error reading 'NetworkManager': Is a directory
+
+==> PackageKit <==
+head: error reading 'PackageKit': Is a directory
+
+==> X11 <==
+head: error reading 'X11': Is a directory
+
+==> adduser.conf <==
+# /etc/adduser.conf: `adduser' configuration.
+# See adduser(8) and adduser.conf(5) for full documentation.
+
+
+==> alternatives <==
+head: error reading 'alternatives': Is a directory
+
+==> apparmor <==
+head: error reading 'apparmor': Is a directory
+
+==> apparmor.d <==
+head: error reading 'apparmor.d': Is a directory
+
+==> apport <==
+head: error reading 'apport': Is a directory
+
+==> apt <==
+head: error reading 'apt': Is a directory
+
+==> bash.bashrc <==
+# System-wide .bashrc file for interactive bash(1) shells.
+
+# To enable the settings / commands in this file for login shells as well,
+
+==> bash_completion <==
+. /usr/share/bash-completion/bash_completion
+
+==> bash_completion.d <==
+head: error reading 'bash_completion.d': Is a directory
+
+==> bindresvport.blacklist <==
+#
+# This file contains a list of port numbers between 600 and 1024,
+# which should not be used by bindresvport. bindresvport is mostly
+
+==> binfmt.d <==
+head: error reading 'binfmt.d': Is a directory
+
+==> boto.cfg <==
+[GSUtil]
+default_project_id  = 1082737547444
+default_api_version = 2
+
+==> byobu <==
+head: error reading 'byobu': Is a directory
+
+==> ca-certificates <==
+head: error reading 'ca-certificates': Is a directory
+
+==> ca-certificates.conf <==
+# This file lists certificates that you wish to use or to ignore to be
+# installed in /etc/ssl/certs.
+# update-ca-certificates(8) will update /etc/ssl/certs by reading this file.
+
+==> ca-certificates.conf.dpkg-old <==
+# This file lists certificates that you wish to use or to ignore to be
+# installed in /etc/ssl/certs.
+# update-ca-certificates(8) will update /etc/ssl/certs by reading this file.
+
+==> chrony <==
+head: error reading 'chrony': Is a directory
+
+==> cloud <==
+head: error reading 'cloud': Is a directory
+
+==> console-setup <==
+head: error reading 'console-setup': Is a directory
+
+==> cron.d <==
+head: error reading 'cron.d': Is a directory
+
+==> cron.daily <==
+head: error reading 'cron.daily': Is a directory
+
+==> cron.hourly <==
+head: error reading 'cron.hourly': Is a directory
+
+==> cron.monthly <==
+head: error reading 'cron.monthly': Is a directory
+
+==> cron.weekly <==
+head: error reading 'cron.weekly': Is a directory
+
+==> crontab <==
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+
+==> cryptsetup-initramfs <==
+head: error reading 'cryptsetup-initramfs': Is a directory
+
+==> crypttab <==
+# <target name> <source device>         <key file>      <options>
+
+==> dbus-1 <==
+head: error reading 'dbus-1': Is a directory
+
+==> debconf.conf <==
+# This is the main config file for debconf. It tells debconf where to
+# store data. The format of this file is a set of stanzas. Each stanza
+# except the first sets up a database for debconf to use. For details, see
+
+==> debian_version <==
+bookworm/sid
+
+==> default <==
+head: error reading 'default': Is a directory
+
+==> deluser.conf <==
+# /etc/deluser.conf: `deluser' configuration.
+
+# Remove home directory and mail spool when user is removed
+
+==> depmod.d <==
+head: error reading 'depmod.d': Is a directory
+
+==> dhcp <==
+head: error reading 'dhcp': Is a directory
+
+==> dpkg <==
+head: error reading 'dpkg': Is a directory
+
+==> e2scrub.conf <==
+# e2scrub configuration file
+
+# Uncomment to enable automatic periodic runs of e2scrub_all
+
+==> ec2_version <==
+Ubuntu 22.04.2 LTS (Jammy Jellyfish)
+
+==> environment <==
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+
+==> ethertypes <==
+# Ethernet frame types
+#
+# The EtherType is a two-octet field of Ethernet frames used to indicate
+
+==> fstab <==
+LABEL=cloudimg-rootfs   /        ext4   discard,errors=remount-ro       0 1
+LABEL=UEFI      /boot/efi       vfat    umask=0077      0 1
+
+==> fuse.conf <==
+# The file /etc/fuse.conf allows for the following parameters:
+#
+# user_allow_other - Using the allow_other mount option works fine as root, in
+
+==> gai.conf <==
+# Configuration for getaddrinfo(3).
+#
+# So far only configuration for the destination address sorting is needed.
+
+==> google_instance_id <==
+3639658119868136997
+
+==> groff <==
+head: error reading 'groff': Is a directory
+
+==> group <==
+root:x:0:
+daemon:x:1:
+bin:x:2:
+
+==> group- <==
+root:x:0:
+daemon:x:1:
+bin:x:2:
+
+==> grub.d <==
+head: error reading 'grub.d': Is a directory
+head: cannot open 'gshadow' for reading: Permission denied
+head: cannot open 'gshadow-' for reading: Permission denied
+
+==> gss <==
+head: error reading 'gss': Is a directory
+
+==> hdparm.conf <==
+## This is the default configuration for hdparm for Debian.
+## Any line that begins with a comment is ignored - add as many as you
+## like.  Note that an in-line comment is not supported.  If a line
+
+==> host.conf <==
+# The "order" line is only used by old versions of the C library.
+order hosts,bind
+multi on
+
+==> hostname <==
+instance-1
+
+==> hosts <==
+127.0.0.1 localhost
+
+# The following lines are desirable for IPv6 capable hosts
+
+==> hosts.allow <==
+# /etc/hosts.allow: list of hosts that are allowed to access the system.
+#                   See the manual pages hosts_access(5) and hosts_options(5).
+#
+
+==> hosts.deny <==
+# /etc/hosts.deny: list of hosts that are _not_ allowed to access the system.
+#                  See the manual pages hosts_access(5) and hosts_options(5).
+#
+
+==> init.d <==
+head: error reading 'init.d': Is a directory
+
+==> initramfs-tools <==
+head: error reading 'initramfs-tools': Is a directory
+
+==> inputrc <==
+# /etc/inputrc - global inputrc for libreadline
+# See readline(3readline) and `info rluserman' for more information.
+
+
+==> iproute2 <==
+head: error reading 'iproute2': Is a directory
+
+==> iscsi <==
+head: error reading 'iscsi': Is a directory
+
+==> issue <==
+Ubuntu 22.04.2 LTS \n \l
+
+
+==> issue.net <==
+Ubuntu 22.04.2 LTS
+
+==> kernel <==
+head: error reading 'kernel': Is a directory
+
+==> kernel-img.conf <==
+# Kernel Image management overrides
+# See kernel-img.conf(5) for details
+do_symlinks = yes
+
+==> landscape <==
+head: error reading 'landscape': Is a directory
+
+==> ld.so.cache <==
+glibc-ld.so.cache1.1+,H9944P4:4AA--66   43;;I8383::@|@??A{A&559988=@'@GG4"""f"""##I$3$CBd@N@11wEaEG515_?I?,,z&d&u'_':: ''PC:C!z!''  2,,**/.QE;E9+#+J!4!6q611A.+.A3+31m12144U0?0337z75w5..g#Q#E)/)9?#?xHbHCC((W"A">>EEEE$$N(8(((((p(Z(2  v ` i9S9)y)DD++,,U?,p,$$22BB%j%'&"D
+                                                   DCC@@!!HGB;,;!!  ! 2q200^2H2//!/
+                                                                                   /..00T > a1K1w8a8AA.>>>=)&%:o:AA/*FA0A3&&,,-i-B>=>eC`C55@@lDVD%$%%{eCvC+*DDa:K:&&e;O;33l)V)_+I+D|D*EEED
+                                                                              ,+&$$m>W>-,;2%266 )
+)W*A*?p?mW4"(
+             (N82222$99EE==<o<<<<<<<B=,=O'9'"!??9z9ED/D>>FFGFFF<G&GlGVGGGm3W3?1)1@?FFi=S===lFVFFF;;FF0F*)&&=y=666- -,44kAUA(''&!!  \%F%&&"8
+                               8;q;E#/#98}*g*00/|/?>44c6M6$$??G919k7U755..;;5411q==-H(HZU11X<B<%<<{e4+r+>>Z-D-m!W!**-**ByBCC--++55  0/u$_$00BB,BBA''TH>H.CC9:#:::77BBg.Q.:9G/1/{0e0//.x./00n/X/?6)6!7
+                                                                                         787))@@;;HHGG**D7.7887788''j5T5%%V&@&%%gBQB9933/lib/x86_64-linux-gnu/libirs-9.18.1-1ubuntu1.3-Ubuntu.so/lib/x86_64-linux-gnu/libdns-9.18.1-1ubuntu1.3-Ubuntu.so/lib/x86_64-linux-gnu/libns-9.18.1-1ubuntu1.3-Ubuntu.so/lib/x86_64-linux-gnu/libisccfg-9.18.1-1ubuntu1.3-Ubuntu.so/lib/x86_64-linux-gnu/libisc-9.18.1-1ubuntu1.3-Ubuntu.so/lib/x86_64-linux-gnu/libisccc-9.18.1-1ubuntu1.3-Ubuntu.so/lib/x86_64-linux-gnu/libbind9-9.18.1-1ubuntu1.3-Ubuntu.so/lib/libmpathpersist.so/lib/x86_64-linux-gnu/libdevmapper-event-lvm2snapshot.so/lib/x86_64-linux-gnu/libdevmapper-event-lvm2mirror.so/lib/libdmmp.so/lib/x86_64-linux-gnu/libdevmapper-event-lvm2vdo.so/lib/x86_64-linux-gnu/libdevmapper-event-lvm2thin.so/lib/x86_64-linux-gnu/libopcodes-2.38-system.so/lib/x86_64-linux-gnu/libbfd-2.38-system.so/lib/libmultipath.so/lib/x86_64-linux-gnu/libpcprofile.so/lib/x86_64-linux-gnu/libmemusage.so/lib/libmpathcmd.so/lib/x86_64-linux-gnu/libdevmapper-event-lvm2raid.so/lib/x86_64-linux-gnu/libeatmydata.so/lib/x86_64-linux-gnu/libtcl8.6.so/lib/x86_64-linux-gnu/libplds4.so/lib/x86_64-linux-gnu/libnspr4.so/lib/x86_64-linux-gnu/libplc4.so/lib/x86_64-linux-gnu/libfreeblpriv3.so/lib/x86_64-linux-gnu/libnss3.so/lib/x86_64-linux-gnu/libssl3.so/lib/x86_64-linux-gnu/libnssutil3.so/lib/x86_64-linux-gnu/libfreebl3.so/lib/x86_64-linux-gnu/libsmime3.so/lib/x86_64-linux-gnu/libdb-5.3.so/lib/x86_64-linux-gnu/libstemmer.so.0d/lib/x86_64-linux-gnu/libntfs-3g.so.89/lib/x86_64-linux-gnu/libpackagekit-glib2.so.18/lib/x86_64-linux-gnu/libhistory.so.8/lib/x86_64-linux-gnu/liburcu.so.8/lib/x86_64-linux-gnu/libprocps.so.8/lib/x86_64-linux-gnu/liburcu-cds.so.8/lib/x86_64-linux-gnu/liburcu-qsbr.so.8/lib/x86_64-linux-gnu/liburcu-bp.so.8/lib/x86_64-linux-gnu/liburcu-common.so.8/lib/x86_64-linux-gnu/liburcu-signal.so.8/lib/x86_64-linux-gnu/libffi.so.8/lib/x86_64-linux-gnu/libreadline.so.8/lib/x86_64-linux-gnu/libnettle.so.8/lib/x86_64-linux-gnu/libunwind.so.8/lib/x86_64-linux-gnu/liburcu-memb.so.8/lib/x86_64-linux-gnu/liburcu-mb.so.8/lib/x86_64-linux-gnu/libksba.so.8/lib/x86_64-linux-gnu/libunwind-x86_64.so.8/lib/x86_64-linux-gnu/libcbor.so.0.8/lib/x86_64-linux-gnu/libpcap.so.0.8/lib/x86_64-linux-gnu/libevent_core-2.1.so.7/lib/x86_64-linux-gnu/libpng16.so.16/lib/x86_64-linux-gnu/libmenuw.so.6/lib/x86_64-linux-gnu/libncursesw.so.6/lib/x86_64-linux-gnu/libformw.so.6/lib/x86_64-linux-gnu/libpanelw.so.6/lib/x86_64-linux-gnu/libmenu.so.6/lib/x86_64-linux-gnu/libXau.so.6/lib/x86_64-linux-gnu/libXext.so.6/lib/x86_64-linux-gnu/libncurses.so.6/lib/x86_64-linux-gnu/libmpfr.so.6/lib/x86_64-linux-gnu/libXdmcp.so.6/lib/x86_64-linux-gnu/libtinfo.so.6/lib/x86_64-linux-gnu/libform.so.6/lib/x86_64-linux-gnu/libm.so.6/lib/x86_64-linux-gnu/libgdbm.so.6/lib/x86_64-linux-gnu/libpanel.so.6/lib/x86_64-linux-gnu/libfreetype.so.6/lib/x86_64-linux-gnu/libhogweed.so.6/lib/x86_64-linux-gnu/libtic.so.6/lib/x86_64-linux-gnu/libc.so.6/lib/x86_64-linux-gnu/libtasn1.so.6/lib/x86_64-linux-gnu/libX11.so.6/lib/x86_64-linux-gnu/libstdc++.so.6/lib/x86_64-linux-gnu/libisc-export.so.1105/lib/x86_64-linux-gnu/libply.so.5/lib/x86_64-linux-gnu/libply-boot-client.so.5/lib/x86_64-linux-gnu/libply-splash-graphics.so.5/lib/x86_64-linux-gnu/libpsl.so.5/lib/x86_64-linux-gnu/libply-splash-core.so.5/lib/x86_64-linux-gnu/libjson-c.so.5/lib/x86_64-linux-gnu/libqmi-glib.so.5/lib/x86_64-linux-gnu/liblzma.so.5/lib/x86_64-linux-gnu/libperl.so.5.34/lib/x86_64-linux-gnu/libnghttp2.so.14/lib/x86_64-linux-gnu/libatasmart.so.4/lib/x86_64-linux-gnu/libgdbm_compat.so.4/lib/x86_64-linux-gnu/libcurl-gnutls.so.4/lib/x86_64-linux-gnu/libjansson.so.4/lib/x86_64-linux-gnu/libfastjson.so.4/lib/x86_64-linux-gnu/libappstream.so.4/lib/x86_64-linux-gnu/libcurl.so.4/lib/x86_64-linux-gnu/libssh.so.4/lib/x86_64-linux-gnu/libmbim-glib.so.4/lib/x86_64-linux-gnu/libsodium.so.23/lib/x86_64-linux-gnu/liblvm2cmd.so.2.03/lib/x86_64-linux-gnu/libdevmapper-event-lvm2.so.2.03/lib/x86_64-linux-gnu/libpcreposix.so.3/lib/x86_64-linux-gnu/libcrypto.so.3/lib/x86_64-linux-gnu/libk5crypto.so.3/lib/x86_64-linux-gnu/libssl.so.3/lib/x86_64-linux-gnu/libnetfilter_conntrack.so.3/lib/x86_64-linux-gnu/libpci.so.3/lib/x86_64-linux-gnu/libpcre.so.3/lib/x86_64-linux-gnu/libtirpc.so.3/lib/x86_64-linux-gnu/libmpdec.so.3/lib/x86_64-linux-gnu/libkrb5.so.3/lib/x86_64-linux-gnu/libfuse3.so.3/lib/x86_64-linux-gnu/libdbus-1.so.3/lib/x86_64-linux-gnu/libmpdec++.so.3/lib/x86_64-linux-gnu/libnewt.so.0.52/lib/x86_64-linux-gnu/libxtables.so.12/lib/x86_64-linux-gnu/libcryptsetup.so.12/lib/x86_64-linux-gnu/libresolv.so.2/lib/x86_64-linux-gnu/libsigsegv.so.2/lib/x86_64-linux-gnu/libblockdev.so.2/lib/x86_64-linux-gnu/libbd_part.so.2/lib/x86_64-linux-gnu/libedit.so.2/lib/x86_64-linux-gnu/libnss_compat.so.2/lib/x86_64-linux-gnu/libss.so.2/lib/x86_64-linux-gnu/libnss_dns.so.2/lib/x86_64-linux-gnu/libbd_utils.so.2/lib/x86_64-linux-gnu/libbd_fs.so.2/lib/x86_64-linux-gnu/libext2fs.so.2/lib/x86_64-linux-gnu/libnss_files.so.2/lib/x86_64-linux-gnu/libbd_part_err.so.2/lib/x86_64-linux-gnu/libcom_err.so.2/lib/x86_64-linux-gnu/libbd_loop.so.2/lib/x86_64-linux-gnu/libseccomp.so.2/lib/x86_64-linux-gnu/libbd_swap.so.2/lib/x86_64-linux-gnu/libcap.so.2/lib/x86_64-linux-gnu/libe2p.so.2/lib/libnss_oslogin.so.2/lib/libnss_cache_oslogin.so.2/lib/x86_64-linux-gnu/libdrm.so.2/lib/x86_64-linux-gnu/libgpm.so.2/lib/x86_64-linux-gnu/libnsl.so.2/lib/x86_64-linux-gnu/libsepol.so.2/lib/x86_64-linux-gnu/libdl.so.2/lib/x86_64-linux-gnu/libunistring.so.2/lib/x86_64-linux-gnu/libslang.so.2/lib/x86_64-linux-gnu/libsemanage.so.2/lib/x86_64-linux-gnu/libkmod.so.2/lib/x86_64-linux-gnu/libnss_hesiod.so.2/lib/x86_64-linux-gnu/libnss_systemd.so.2/lib/x86_64-linux-gnu/libparted.so.2/lib/x86_64-linux-gnu/libip6tc.so.2/lib/x86_64-linux-gnu/libip4tc.so.2/lib/x86_64-linux-gnu/libxmlb.so.2/lib/x86_64-linux-gnu/libsgutils2-1.46.so.2/lib/x86_64-linux-gnu/libgssapi_krb5.so.2/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2/lib/x86_64-linux-gnu/liblzo2.so.2/lib/x86_64-linux-gnu/libsasl2.so.2/lib/x86_64-linux-gnu/libxml2.so.2/lib/x86_64-linux-gnu/libftdi1.so.2/lib/x86_64-linux-gnu/libyaml-0.so.2/lib/x86_64-linux-gnu/libnftnl.so.11/lib/x86_64-linux-gnu/libz.so.1/lib/x86_64-linux-gnu/libselinux.so.1/lib/x86_64-linux-gnu/libexpatw.so.1/lib/x86_64-linux-gnu/libdw.so.1/lib/x86_64-linux-gnu/libuv.so.1/lib/x86_64-linux-gnu/libudev.so.1/lib/x86_64-linux-gnu/libXmuu.so.1/lib/x86_64-linux-gnu/librt.so.1/lib/x86_64-linux-gnu/libcrypt.so.1/lib/x86_64-linux-gnu/libefiboot.so.1/lib/x86_64-linux-gnu/libmount.so.1/lib/x86_64-linux-gnu/libxslt.so.1/lib/x86_64-linux-gnu/libaudit.so.1/lib/x86_64-linux-gnu/libexpat.so.1/lib/x86_64-linux-gnu/libsmartcols.so.1/lib/x86_64-linux-gnu/libkeyutils.so.1/lib/x86_64-linux-gnu/libnftables.so.1/lib/x86_64-linux-gnu/libgcc_s.so.1/lib/x86_64-linux-gnu/libattr.so.1/lib/x86_64-linux-gnu/libapparmor.so.1/lib/x86_64-linux-gnu/libefivar.so.1/lib/x86_64-linux-gnu/librtmp.so.1/lib/x86_64-linux-gnu/libaio.so.1/lib/x86_64-linux-gnu/libbrotlicommon.so.1/lib/x86_64-linux-gnu/libatm.so.1/lib/x86_64-linux-gnu/libflashrom.so.1/lib/x86_64-linux-gnu/libxmlsec1-openssl.so.1/lib/x86_64-linux-gnu/libnsl.so.1/lib/x86_64-linux-gnu/libanl.so.1/lib/x86_64-linux-gnu/libutil.so.1/lib/x86_64-linux-gnu/libacl.so.1/lib/x86_64-linux-gnu/libfdisk.so.1/lib/x86_64-linux-gnu/libinih.so.1/lib/x86_64-linux-gnu/libelf.so.1/lib/x86_64-linux-gnu/libpipeline.so.1/lib/libhandle.so.1/lib/x86_64-linux-gnu/libBrokenLocale.so.1/lib/x86_64-linux-gnu/libzstd.so.1/lib/x86_64-linux-gnu/libuuid.so.1/lib/x86_64-linux-gnu/libblkid.so.1/lib/x86_64-linux-gnu/libbrotlienc.so.1/lib/x86_64-linux-gnu/libmagic.so.1/lib/x86_64-linux-gnu/libmvec.so.1/lib/x86_64-linux-gnu/libbrotlidec.so.1/lib/x86_64-linux-gnu/libthread_db.so.1/lib/x86_64-linux-gnu/libxcb.so.1/lib/x86_64-linux-gnu/libeatmydata.so.1/lib/x86_64-linux-gnu/libnuma.so.1/lib/x86_64-linux-gnu/liblz4.so.1/lib/x86_64-linux-gnu/libfido2.so.1/lib/x86_64-linux-gnu/libargon2.so.1/lib/x86_64-linux-gnu/libxmlsec1.so.1/lib/x86_64-linux-gnu/libgirepository-1.0.so.1/lib/x86_64-linux-gnu/libdevmapper-event.so.1.02.1/lib/x86_64-linux-gnu/libdevmapper.so.1.02.1/lib/x86_64-linux-gnu/libicutu.so.70/lib/x86_64-linux-gnu/libicutest.so.70/lib/x86_64-linux-gnu/libicuio.so.70/lib/x86_64-linux-gnu/libicui18n.so.70/lib/x86_64-linux-gnu/libicuuc.so.70/lib/x86_64-linux-gnu/libicudata.so.70/lib/x86_64-linux-gnu/libgnutls.so.30/lib/x86_64-linux-gnu/libgcrypt.so.20/lib/x86_64-linux-gnu/libdns-export.so.1110/lib/x86_64-linux-gnu/libgmp.so.10/lib/x86_64-linux-gnu/libnl-genl-3.so.200/lib/x86_64-linux-gnu/libnl-3.so.200/lib/libmpathpersist.so.0/lib/x86_64-linux-gnu/libkrb5support.so.0/lib/x86_64-linux-gnu/libpopt.so.0/lib/x86_64-linux-gnu/libdebconfclient.so.0/lib/x86_64-linux-gnu/libguestStoreClient.so.0/lib/x86_64-linux-gnu/libexslt.so.0/lib/x86_64-linux-gnu/libp11-kit.so.0/lib/x86_64-linux-gnu/libuchardet.so.0/lib/x86_64-linux-gnu/libisns.so.0/lib/x86_64-linux-gnu/libvmtools.so.0/lib/x86_64-linux-gnu/libhgfs.so.0/lib/x86_64-linux-gnu/libestr.so.0/lib/x86_64-linux-gnu/libgpg-error.so.0/lib/x86_64-linux-gnu/libutempter.so.0/lib/x86_64-linux-gnu/libunwind-coredump.so.0/lib/x86_64-linux-gnu/libwrap.so.0/lib/x86_64-linux-gnu/libassuan.so.0/lib/x86_64-linux-gnu/libpam.so.0/lib/x86_64-linux-gnu/libmnl.so.0/lib/x86_64-linux-gnu/libnfnetlink.so.0/lib/x86_64-linux-gnu/libmspack.so.0/lib/x86_64-linux-gnu/libfribidi.so.0/lib/x86_64-linux-gnu/libvgauth.so.0/lib/x86_64-linux-gnu/libnpth.so.0/lib/libmultipath.so.0/lib/x86_64-linux-gnu/libxxhash.so.0/lib/x86_64-linux-gnu/libc_malloc_debug.so.0/lib/x86_64-linux-gnu/libcap-ng.so.0/lib/x86_64-linux-gnu/libDeployPkg.so.0/lib/x86_64-linux-gnu/libctf.so.0/lib/x86_64-linux-gnu/libbpf.so.0/lib/x86_64-linux-gnu/libparted-fs-resize.so.0/lib/x86_64-linux-gnu/libunwind-ptrace.so.0/lib/x86_64-linux-gnu/libbsd.so.0/lib/x86_64-linux-gnu/libsystemd.so.0/lib/libmpathcmd.so.0/lib/x86_64-linux-gnu/libmd.so.0/lib/x86_64-linux-gnu/libctf-nobfd.so.0/lib/x86_64-linux-gnu/libpthread.so.0/lib/x86_64-linux-gnu/libpam_misc.so.0/lib/x86_64-linux-gnu/libpamc.so.0/lib/x86_64-linux-gnu/libguestlib.so.0/lib/x86_64-linux-gnu/libmm-glib.so.0/lib/x86_64-linux-gnu/liblmdb.so.0/lib/x86_64-linux-gnu/libmaxminddb.so.0/lib/x86_64-linux-gnu/libpcre2-8.so.0/lib/x86_64-linux-gnu/liblber-2.5.so.0/lib/x86_64-linux-gnu/libldap-2.5.so.0/lib/x86_64-linux-gnu/libsqlite3.so.0/lib/x86_64-linux-gnu/libudisks2.so.0/lib/x86_64-linux-gnu/libidn2.so.0/lib/x86_64-linux-gnu/libpolkit-agent-1.so.0/lib/x86_64-linux-gnu/libpolkit-gobject-1.so.0/lib/x86_64-linux-gnu/libgobject-2.0.so.0/lib/x86_64-linux-gnu/libgio-2.0.so.0/lib/x86_64-linux-gnu/libgmodule-2.0.so.0/lib/x86_64-linux-gnu/libgthread-2.0.so.0/lib/x86_64-linux-gnu/libglib-2.0.so.0/lib/x86_64-linux-gnu/libgstnet-1.0.so.0/lib/x86_64-linux-gnu/libgstreamer-1.0.so.0/lib/x86_64-linux-gnu/libgstcontroller-1.0.so.0/lib/x86_64-linux-gnu/libgstcheck-1.0.so.0/lib/x86_64-linux-gnu/libgstbase-1.0.so.0/lib/x86_64-linux-gnu/libusb-1.0.so.0/lib/x86_64-linux-gnu/libapt-pkg.so.6.0/lib/x86_64-linux-gnu/libopeniscsiusr.so.0.2.0/lib/libdmmp.so.0.2.0/lib/x86_64-linux-gnu/libbz2.so.1.0/lib/x86_64-linux-gnu/libpython3.10.so.1.0/lib/x86_64-linux-gnu/libnetplan.so.0.0/lib/x86_64-linux-gnu/libapt-private.so.0.0t!HCldconfig (Ubuntu GLIBC 2.35-0ubuntu3.1) stable release version 2.35
+==> ld.so.conf <==
+include /etc/ld.so.conf.d/*.conf
+
+
+==> ld.so.conf.d <==
+head: error reading 'ld.so.conf.d': Is a directory
+
+==> ldap <==
+head: error reading 'ldap': Is a directory
+
+==> legal <==
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+
+==> libaudit.conf <==
+# This is the configuration file for libaudit tunables.
+# It is currently only used for the failure_action tunable.
+
+
+==> libblockdev <==
+head: error reading 'libblockdev': Is a directory
+
+==> libnl-3 <==
+head: error reading 'libnl-3': Is a directory
+
+==> locale.alias <==
+# Locale name alias data base.
+# Copyright (C) 1996-2022 Free Software Foundation, Inc.
+#
+
+==> locale.gen <==
+# This file lists locales that you wish to have built. You can find a list
+# of valid supported locales at /usr/share/i18n/SUPPORTED, and you can add
+# user defined locales to /usr/local/share/i18n/SUPPORTED. If you change
+
+==> localtime <==
+TZif2UTCTZif2UTC
+UTC0
+
+==> logcheck <==
+head: error reading 'logcheck': Is a directory
+
+==> login.defs <==
+#
+# /etc/login.defs - Configuration control definitions for the login package.
+#
+
+==> logrotate.conf <==
+# see "man logrotate" for details
+
+# global options do not affect preceding include directives
+
+==> logrotate.d <==
+head: error reading 'logrotate.d': Is a directory
+
+==> lsb-release <==
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=22.04
+DISTRIB_CODENAME=jammy
+
+==> lvm <==
+head: error reading 'lvm': Is a directory
+
+==> machine-id <==
+837ff4eec8b24f82dc24fcf525cdfafa
+
+==> magic <==
+# Magic local data for file(1) command.
+# Insert here your local magic data. Format is described in magic(5).
+
+
+==> magic.mime <==
+# Magic local data for file(1) command.
+# Insert here your local magic data. Format is described in magic(5).
+
+
+==> manpath.config <==
+# manpath.config
+#
+# This file is used by the man-db package to configure the man and cat paths.
+
+==> mdadm <==
+head: error reading 'mdadm': Is a directory
+
+==> mime.types <==
+###############################################################################
+#
+#  Media (MIME) types and the extensions that represent them.
+
+==> mke2fs.conf <==
+[defaults]
+        base_features = sparse_super,large_file,filetype,resize_inode,dir_index,ext_attr
+        default_mntopts = acl,user_xattr
+
+==> modprobe.d <==
+head: error reading 'modprobe.d': Is a directory
+
+==> modules <==
+# /etc/modules: kernel modules to load at boot time.
+#
+# This file contains the names of kernel modules that should be loaded
+
+==> modules-load.d <==
+head: error reading 'modules-load.d': Is a directory
+
+==> mtab <==
+/dev/root / ext4 rw,relatime,discard,errors=remount-ro 0 0
+devtmpfs /dev devtmpfs rw,relatime,size=490264k,nr_inodes=122566,mode=755,inode64 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+head: cannot open 'multipath' for reading: Permission denied
+
+==> multipath.conf <==
+defaults {
+    user_friendly_names yes
+}
+
+==> nanorc <==
+## Sample initialization file for GNU nano.
+##
+## For the options that take parameters, the default value is shown.
+
+==> needrestart <==
+head: error reading 'needrestart': Is a directory
+
+==> netconfig <==
+#
+# The network configuration file. This file is currently only used in
+# conjunction with the TI-RPC code in the libtirpc library.
+
+==> netplan <==
+head: error reading 'netplan': Is a directory
+
+==> network <==
+head: error reading 'network': Is a directory
+
+==> networkd-dispatcher <==
+head: error reading 'networkd-dispatcher': Is a directory
+
+==> networks <==
+# symbolic names for networks, see networks(5) for more information
+link-local 169.254.0.0
+
+==> newt <==
+head: error reading 'newt': Is a directory
+
+==> nftables.conf <==
+#!/usr/sbin/nft -f
+
+flush ruleset
+
+==> nsswitch.conf <==
+# /etc/nsswitch.conf
+#
+# Example configuration of GNU Name Service Switch functionality.
+
+==> nvme <==
+head: error reading 'nvme': Is a directory
+
+==> opt <==
+head: error reading 'opt': Is a directory
+
+==> os-release <==
+PRETTY_NAME="Ubuntu 22.04.2 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+
+==> overlayroot.conf <==
+# This is the overlayroot config file
+# By default, overlayroot is not enabled.
+# To enable overlayroot:
+
+==> overlayroot.local.conf <==
+# CLOUD_IMG: This file was created/modified by the Cloud Image build process
+overlayroot_cfgdisk=LABEL=OROOTCFG
+
+==> pam.conf <==
+# ---------------------------------------------------------------------------#
+# /etc/pam.conf                                                              #
+# ---------------------------------------------------------------------------#
+
+==> pam.d <==
+head: error reading 'pam.d': Is a directory
+
+==> passwd <==
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+
+==> passwd- <==
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+
+==> perl <==
+head: error reading 'perl': Is a directory
+
+==> pm <==
+head: error reading 'pm': Is a directory
+
+==> polkit-1 <==
+head: error reading 'polkit-1': Is a directory
+
+==> pollinate <==
+head: error reading 'pollinate': Is a directory
+
+==> ppp <==
+head: error reading 'ppp': Is a directory
+
+==> profile <==
+# /etc/profile: system-wide .profile file for the Bourne shell (sh(1))
+# and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).
+
+
+==> profile.d <==
+head: error reading 'profile.d': Is a directory
+
+==> protocols <==
+# Internet (IP) protocols
+#
+# Updated from http://www.iana.org/assignments/protocol-numbers and other
+
+==> python3 <==
+head: error reading 'python3': Is a directory
+
+==> python3.10 <==
+head: error reading 'python3.10': Is a directory
+
+==> rc0.d <==
+head: error reading 'rc0.d': Is a directory
+
+==> rc1.d <==
+head: error reading 'rc1.d': Is a directory
+
+==> rc2.d <==
+head: error reading 'rc2.d': Is a directory
+
+==> rc3.d <==
+head: error reading 'rc3.d': Is a directory
+
+==> rc4.d <==
+head: error reading 'rc4.d': Is a directory
+
+==> rc5.d <==
+head: error reading 'rc5.d': Is a directory
+
+==> rc6.d <==
+head: error reading 'rc6.d': Is a directory
+
+==> rcS.d <==
+head: error reading 'rcS.d': Is a directory
+
+==> resolv.conf <==
+# This is /run/systemd/resolve/stub-resolv.conf managed by man:systemd-resolved(8).
+# Do not edit.
+#
+
+==> rmt <==
+@@@000@8       8880hhhDDStd8880PtdQtdRtd000/lib64/ld-linux-x86-64.so.2 GNUGNU~$N6/{ádnGNUG
+
+IGJOȾemS3>vj0?H[>;;vO >Y
+                        M`>. O9"I3/3 }o=Gf6( sn%unmH: Vz"YI? xГ__cxa_finalize__libc_start_mainstdin__getdelimstrlen__fprintf_chkfwritestdoutfflush_unlockedmemcmpfopenstrtolstderrdcgettext__errno_locationstrerrorexitstrcmp__ctype_b_locstrchrfputc_unlocked__ctype_tolower_locstrcasecmp__stack_chk_failmallocfreemempcpymemcpy__assert_failstrncmpcallocflockfilefputcfunlockfilegetenv__vfprintf_chkclosememmovememsetmemchrfwrite_unlocked__overflowreallocstrchrnulstrndup__vsnprintf_chkargp_failurefputs_unlockedstrerror_rprogram_invocation_short_name__prognameargp_program_bug_addressqsortargp_helpargp_state_helpargp_err_exit_statusprogram_invocation_name__progname_fullsleepargp_usageargp_errorargp_program_version_hookargp_program_versionargp_parsestrrchrisattystrtoumaxfread_unlockedioctlreadlseeksetlocalebindtextdomainabortlibc.so.6GLIBC_2.3GLIBC_2.14GLIBC_2.4GLIcmti.34GxuiCBZpz33qLIBC_2.2.5_ITM_deregisterTMCloneTable__gmon_start___ITM_registerTMCloneTableDii
+G@9``
+
+    +.?AHF
+
+==> rpc <==
+# This file contains user readable names that can be used in place of rpc
+# program numbers.
+
+
+==> rsyslog.conf <==
+# /etc/rsyslog.conf configuration file for rsyslog
+#
+# For more information install rsyslog-doc and see
+
+==> rsyslog.d <==
+head: error reading 'rsyslog.d': Is a directory
+
+==> screenrc <==
+# $Id: screenrc,v 1.15 2003/10/08 11:39:03 zal Exp $
+#
+# /etc/screenrc
+
+==> security <==
+head: error reading 'security': Is a directory
+
+==> selinux <==
+head: error reading 'selinux': Is a directory
+
+==> services <==
+# Network services, Internet style
+#
+# Updated from https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml .
+head: cannot open 'shadow' for reading: Permission denied
+head: cannot open 'shadow-' for reading: Permission denied
+
+==> shells <==
+# /etc/shells: valid login shells
+/bin/sh
+/bin/bash
+
+==> skel <==
+head: error reading 'skel': Is a directory
+
+==> sos <==
+head: error reading 'sos': Is a directory
+
+==> ssh <==
+head: error reading 'ssh': Is a directory
+
+==> ssl <==
+head: error reading 'ssl': Is a directory
+
+==> subgid <==
+ubuntu:100000:65536
+a_ayetigbo:165536:65536
+
+==> subgid- <==
+ubuntu:100000:65536
+
+==> subuid <==
+ubuntu:100000:65536
+a_ayetigbo:165536:65536
+
+==> subuid- <==
+ubuntu:100000:65536
+
+==> sudo.conf <==
+#
+# Default /etc/sudo.conf file
+#
+
+==> sudo_logsrvd.conf <==
+#
+# sudo logsrv daemon configuration
+#
+head: cannot open 'sudoers' for reading: Permission denied
+head: cannot open 'sudoers.d' for reading: Permission denied
+
+==> sysctl.conf <==
+#
+# /etc/sysctl.conf - Configuration file for setting system variables
+# See /etc/sysctl.d/ for additional system variables.
+
+==> sysctl.d <==
+head: error reading 'sysctl.d': Is a directory
+
+==> systemd <==
+head: error reading 'systemd': Is a directory
+
+==> terminfo <==
+head: error reading 'terminfo': Is a directory
+
+==> timezone <==
+Etc/UTC
+
+==> tmpfiles.d <==
+head: error reading 'tmpfiles.d': Is a directory
+
+==> ubuntu-advantage <==
+head: error reading 'ubuntu-advantage': Is a directory
+
+==> ucf.conf <==
+#
+# This file is a bourne shell snippet, and is sourced by the
+# ucf script for configuration.
+
+==> udev <==
+head: error reading 'udev': Is a directory
+
+==> ufw <==
+head: error reading 'ufw': Is a directory
+
+==> update-manager <==
+head: error reading 'update-manager': Is a directory
+
+==> update-motd.d <==
+head: error reading 'update-motd.d': Is a directory
+
+==> update-notifier <==
+head: error reading 'update-notifier': Is a directory
+
+==> usb_modeswitch.conf <==
+# Configuration for the usb_modeswitch package, a mode switching tool for
+# USB devices providing multiple states or modes
+#
+
+==> usb_modeswitch.d <==
+head: error reading 'usb_modeswitch.d': Is a directory
+
+==> vim <==
+head: error reading 'vim': Is a directory
+
+==> vmware-tools <==
+head: error reading 'vmware-tools': Is a directory
+
+==> vtrgb <==
+1,222,57,255,0,118,44,204,128,255,0,255,0,255,0,255
+1,56,181,199,111,38,181,204,128,0,255,255,0,0,255,255
+1,43,74,6,184,113,233,204,128,0,0,0,255,255,255,255
+
+==> wgetrc <==
+###
+### Sample Wget initialization file .wgetrc
+###
+
+==> xattr.conf <==
+# /etc/xattr.conf
+#
+# Format:
+
+==> xdg <==
+head: error reading 'xdg': Is a directory
+
+==> zsh_command_not_found <==
+# (c) Zygmunt Krynicki 2007,
+# Licensed under GPL, see COPYING for the whole text
+#
+a_ayetigbo@instance-1:/etc$ head -n 3 *
+==> NetworkManager <==
+head: error reading 'NetworkManager': Is a directory
+
+==> PackageKit <==
+head: error reading 'PackageKit': Is a directory
+
+==> X11 <==
+head: error reading 'X11': Is a directory
+
+==> adduser.conf <==
+# /etc/adduser.conf: `adduser' configuration.
+# See adduser(8) and adduser.conf(5) for full documentation.
+
+
+==> alternatives <==
+head: error reading 'alternatives': Is a directory
+
+==> apparmor <==
+head: error reading 'apparmor': Is a directory
+
+==> apparmor.d <==
+head: error reading 'apparmor.d': Is a directory
+
+==> apport <==
+head: error reading 'apport': Is a directory
+
+==> apt <==
+head: error reading 'apt': Is a directory
+
+==> bash.bashrc <==
+# System-wide .bashrc file for interactive bash(1) shells.
+
+# To enable the settings / commands in this file for login shells as well,
+
+==> bash_completion <==
+. /usr/share/bash-completion/bash_completion
+
+==> bash_completion.d <==
+head: error reading 'bash_completion.d': Is a directory
+
+==> bindresvport.blacklist <==
+#
+# This file contains a list of port numbers between 600 and 1024,
+# which should not be used by bindresvport. bindresvport is mostly
+
+==> binfmt.d <==
+head: error reading 'binfmt.d': Is a directory
+
+==> boto.cfg <==
+[GSUtil]
+default_project_id  = 1082737547444
+default_api_version = 2
+
+==> byobu <==
+head: error reading 'byobu': Is a directory
+
+==> ca-certificates <==
+head: error reading 'ca-certificates': Is a directory
+
+==> ca-certificates.conf <==
+# This file lists certificates that you wish to use or to ignore to be
+# installed in /etc/ssl/certs.
+# update-ca-certificates(8) will update /etc/ssl/certs by reading this file.
+
+==> ca-certificates.conf.dpkg-old <==
+# This file lists certificates that you wish to use or to ignore to be
+# installed in /etc/ssl/certs.
+# update-ca-certificates(8) will update /etc/ssl/certs by reading this file.
+
+==> chrony <==
+head: error reading 'chrony': Is a directory
+
+==> cloud <==
+head: error reading 'cloud': Is a directory
+
+==> console-setup <==
+head: error reading 'console-setup': Is a directory
+
+==> cron.d <==
+head: error reading 'cron.d': Is a directory
+
+==> cron.daily <==
+head: error reading 'cron.daily': Is a directory
+
+==> cron.hourly <==
+head: error reading 'cron.hourly': Is a directory
+
+==> cron.monthly <==
+head: error reading 'cron.monthly': Is a directory
+
+==> cron.weekly <==
+head: error reading 'cron.weekly': Is a directory
+
+==> crontab <==
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+
+==> cryptsetup-initramfs <==
+head: error reading 'cryptsetup-initramfs': Is a directory
+
+==> crypttab <==
+# <target name> <source device>         <key file>      <options>
+
+==> dbus-1 <==
+head: error reading 'dbus-1': Is a directory
+
+==> debconf.conf <==
+# This is the main config file for debconf. It tells debconf where to
+# store data. The format of this file is a set of stanzas. Each stanza
+# except the first sets up a database for debconf to use. For details, see
+
+==> debian_version <==
+bookworm/sid
+
+==> default <==
+head: error reading 'default': Is a directory
+
+==> deluser.conf <==
+# /etc/deluser.conf: `deluser' configuration.
+
+# Remove home directory and mail spool when user is removed
+
+==> depmod.d <==
+head: error reading 'depmod.d': Is a directory
+
+==> dhcp <==
+head: error reading 'dhcp': Is a directory
+
+==> dpkg <==
+head: error reading 'dpkg': Is a directory
+
+==> e2scrub.conf <==
+# e2scrub configuration file
+
+# Uncomment to enable automatic periodic runs of e2scrub_all
+
+==> ec2_version <==
+Ubuntu 22.04.2 LTS (Jammy Jellyfish)
+
+==> environment <==
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+
+==> ethertypes <==
+# Ethernet frame types
+#
+# The EtherType is a two-octet field of Ethernet frames used to indicate
+
+==> fstab <==
+LABEL=cloudimg-rootfs   /        ext4   discard,errors=remount-ro       0 1
+LABEL=UEFI      /boot/efi       vfat    umask=0077      0 1
+
+==> fuse.conf <==
+# The file /etc/fuse.conf allows for the following parameters:
+#
+# user_allow_other - Using the allow_other mount option works fine as root, in
+
+==> gai.conf <==
+# Configuration for getaddrinfo(3).
+#
+# So far only configuration for the destination address sorting is needed.
+
+==> google_instance_id <==
+3639658119868136997
+
+==> groff <==
+head: error reading 'groff': Is a directory
+
+==> group <==
+root:x:0:
+daemon:x:1:
+bin:x:2:
+
+==> group- <==
+root:x:0:
+daemon:x:1:
+bin:x:2:
+
+==> grub.d <==
+head: error reading 'grub.d': Is a directory
+head: cannot open 'gshadow' for reading: Permission denied
+head: cannot open 'gshadow-' for reading: Permission denied
+
+==> gss <==
+head: error reading 'gss': Is a directory
+
+==> hdparm.conf <==
+## This is the default configuration for hdparm for Debian.
+## Any line that begins with a comment is ignored - add as many as you
+## like.  Note that an in-line comment is not supported.  If a line
+
+==> host.conf <==
+# The "order" line is only used by old versions of the C library.
+order hosts,bind
+multi on
+
+==> hostname <==
+instance-1
+
+==> hosts <==
+127.0.0.1 localhost
+
+# The following lines are desirable for IPv6 capable hosts
+
+==> hosts.allow <==
+# /etc/hosts.allow: list of hosts that are allowed to access the system.
+#                   See the manual pages hosts_access(5) and hosts_options(5).
+#
+
+==> hosts.deny <==
+# /etc/hosts.deny: list of hosts that are _not_ allowed to access the system.
+#                  See the manual pages hosts_access(5) and hosts_options(5).
+#
+
+==> init.d <==
+head: error reading 'init.d': Is a directory
+
+==> initramfs-tools <==
+head: error reading 'initramfs-tools': Is a directory
+
+==> inputrc <==
+# /etc/inputrc - global inputrc for libreadline
+# See readline(3readline) and `info rluserman' for more information.
+
+
+==> iproute2 <==
+head: error reading 'iproute2': Is a directory
+
+==> iscsi <==
+head: error reading 'iscsi': Is a directory
+
+==> issue <==
+Ubuntu 22.04.2 LTS \n \l
+
+
+==> issue.net <==
+Ubuntu 22.04.2 LTS
+
+==> kernel <==
+head: error reading 'kernel': Is a directory
+
+==> kernel-img.conf <==
+# Kernel Image management overrides
+# See kernel-img.conf(5) for details
+do_symlinks = yes
+
+==> landscape <==
+head: error reading 'landscape': Is a directory
+
+==> ld.so.cache <==
+glibc-ld.so.cache1.1+,H9944P4:4AA--66   43;;I8383::@|@??A{A&559988=@'@GG4"""f"""##I$3$CBd@N@11wEaEG515_?I?,,z&d&u'_':: ''PC:C!z!''  2,,**/.QE;E9+#+J!4!6q611A.+.A3+31m12144U0?0337z75w5..g#Q#E)/)9?#?xHbHCC((W"A">>EEEE$$N(8(((((p(Z(2  v ` i9S9)y)DD++,,U?,p,$$22BB%j%'&"D
+                                                   DCC@@!!HGB;,;!!  ! 2q200^2H2//!/
+                                                                                   /..00T > a1K1w8a8AA.>>>=)&%:o:AA/*FA0A3&&,,-i-B>=>eC`C55@@lDVD%$%%{eCvC+*DDa:K:&&e;O;33l)V)_+I+D|D*EEED
+                                                                              ,+&$$m>W>-,;2%266 )
+)W*A*?p?mW4"(
+             (N82222$99EE==<o<<<<<<<B=,=O'9'"!??9z9ED/D>>FFGFFF<G&GlGVGGGm3W3?1)1@?FFi=S===lFVFFF;;FF0F*)&&=y=666- -,44kAUA(''&!!  \%F%&&"8
+                               8;q;E#/#98}*g*00/|/?>44c6M6$$??G919k7U755..;;5411q==-H(HZU11X<B<%<<{e4+r+>>Z-D-m!W!**-**ByBCC--++55  0/u$_$00BB,BBA''TH>H.CC9:#:::77BBg.Q.:9G/1/{0e0//.x./00n/X/?6)6!7
+                                                                                         787))@@;;HHGG**D7.7887788''j5T5%%V&@&%%gBQB9933/lib/x86_64-linux-gnu/libirs-9.18.1-1ubuntu1.3-Ubuntu.so/lib/x86_64-linux-gnu/libdns-9.18.1-1ubuntu1.3-Ubuntu.so/lib/x86_64-linux-gnu/libns-9.18.1-1ubuntu1.3-Ubuntu.so/lib/x86_64-linux-gnu/libisccfg-9.18.1-1ubuntu1.3-Ubuntu.so/lib/x86_64-linux-gnu/libisc-9.18.1-1ubuntu1.3-Ubuntu.so/lib/x86_64-linux-gnu/libisccc-9.18.1-1ubuntu1.3-Ubuntu.so/lib/x86_64-linux-gnu/libbind9-9.18.1-1ubuntu1.3-Ubuntu.so/lib/libmpathpersist.so/lib/x86_64-linux-gnu/libdevmapper-event-lvm2snapshot.so/lib/x86_64-linux-gnu/libdevmapper-event-lvm2mirror.so/lib/libdmmp.so/lib/x86_64-linux-gnu/libdevmapper-event-lvm2vdo.so/lib/x86_64-linux-gnu/libdevmapper-event-lvm2thin.so/lib/x86_64-linux-gnu/libopcodes-2.38-system.so/lib/x86_64-linux-gnu/libbfd-2.38-system.so/lib/libmultipath.so/lib/x86_64-linux-gnu/libpcprofile.so/lib/x86_64-linux-gnu/libmemusage.so/lib/libmpathcmd.so/lib/x86_64-linux-gnu/libdevmapper-event-lvm2raid.so/lib/x86_64-linux-gnu/libeatmydata.so/lib/x86_64-linux-gnu/libtcl8.6.so/lib/x86_64-linux-gnu/libplds4.so/lib/x86_64-linux-gnu/libnspr4.so/lib/x86_64-linux-gnu/libplc4.so/lib/x86_64-linux-gnu/libfreeblpriv3.so/lib/x86_64-linux-gnu/libnss3.so/lib/x86_64-linux-gnu/libssl3.so/lib/x86_64-linux-gnu/libnssutil3.so/lib/x86_64-linux-gnu/libfreebl3.so/lib/x86_64-linux-gnu/libsmime3.so/lib/x86_64-linux-gnu/libdb-5.3.so/lib/x86_64-linux-gnu/libstemmer.so.0d/lib/x86_64-linux-gnu/libntfs-3g.so.89/lib/x86_64-linux-gnu/libpackagekit-glib2.so.18/lib/x86_64-linux-gnu/libhistory.so.8/lib/x86_64-linux-gnu/liburcu.so.8/lib/x86_64-linux-gnu/libprocps.so.8/lib/x86_64-linux-gnu/liburcu-cds.so.8/lib/x86_64-linux-gnu/liburcu-qsbr.so.8/lib/x86_64-linux-gnu/liburcu-bp.so.8/lib/x86_64-linux-gnu/liburcu-common.so.8/lib/x86_64-linux-gnu/liburcu-signal.so.8/lib/x86_64-linux-gnu/libffi.so.8/lib/x86_64-linux-gnu/libreadline.so.8/lib/x86_64-linux-gnu/libnettle.so.8/lib/x86_64-linux-gnu/libunwind.so.8/lib/x86_64-linux-gnu/liburcu-memb.so.8/lib/x86_64-linux-gnu/liburcu-mb.so.8/lib/x86_64-linux-gnu/libksba.so.8/lib/x86_64-linux-gnu/libunwind-x86_64.so.8/lib/x86_64-linux-gnu/libcbor.so.0.8/lib/x86_64-linux-gnu/libpcap.so.0.8/lib/x86_64-linux-gnu/libevent_core-2.1.so.7/lib/x86_64-linux-gnu/libpng16.so.16/lib/x86_64-linux-gnu/libmenuw.so.6/lib/x86_64-linux-gnu/libncursesw.so.6/lib/x86_64-linux-gnu/libformw.so.6/lib/x86_64-linux-gnu/libpanelw.so.6/lib/x86_64-linux-gnu/libmenu.so.6/lib/x86_64-linux-gnu/libXau.so.6/lib/x86_64-linux-gnu/libXext.so.6/lib/x86_64-linux-gnu/libncurses.so.6/lib/x86_64-linux-gnu/libmpfr.so.6/lib/x86_64-linux-gnu/libXdmcp.so.6/lib/x86_64-linux-gnu/libtinfo.so.6/lib/x86_64-linux-gnu/libform.so.6/lib/x86_64-linux-gnu/libm.so.6/lib/x86_64-linux-gnu/libgdbm.so.6/lib/x86_64-linux-gnu/libpanel.so.6/lib/x86_64-linux-gnu/libfreetype.so.6/lib/x86_64-linux-gnu/libhogweed.so.6/lib/x86_64-linux-gnu/libtic.so.6/lib/x86_64-linux-gnu/libc.so.6/lib/x86_64-linux-gnu/libtasn1.so.6/lib/x86_64-linux-gnu/libX11.so.6/lib/x86_64-linux-gnu/libstdc++.so.6/lib/x86_64-linux-gnu/libisc-export.so.1105/lib/x86_64-linux-gnu/libply.so.5/lib/x86_64-linux-gnu/libply-boot-client.so.5/lib/x86_64-linux-gnu/libply-splash-graphics.so.5/lib/x86_64-linux-gnu/libpsl.so.5/lib/x86_64-linux-gnu/libply-splash-core.so.5/lib/x86_64-linux-gnu/libjson-c.so.5/lib/x86_64-linux-gnu/libqmi-glib.so.5/lib/x86_64-linux-gnu/liblzma.so.5/lib/x86_64-linux-gnu/libperl.so.5.34/lib/x86_64-linux-gnu/libnghttp2.so.14/lib/x86_64-linux-gnu/libatasmart.so.4/lib/x86_64-linux-gnu/libgdbm_compat.so.4/lib/x86_64-linux-gnu/libcurl-gnutls.so.4/lib/x86_64-linux-gnu/libjansson.so.4/lib/x86_64-linux-gnu/libfastjson.so.4/lib/x86_64-linux-gnu/libappstream.so.4/lib/x86_64-linux-gnu/libcurl.so.4/lib/x86_64-linux-gnu/libssh.so.4/lib/x86_64-linux-gnu/libmbim-glib.so.4/lib/x86_64-linux-gnu/libsodium.so.23/lib/x86_64-linux-gnu/liblvm2cmd.so.2.03/lib/x86_64-linux-gnu/libdevmapper-event-lvm2.so.2.03/lib/x86_64-linux-gnu/libpcreposix.so.3/lib/x86_64-linux-gnu/libcrypto.so.3/lib/x86_64-linux-gnu/libk5crypto.so.3/lib/x86_64-linux-gnu/libssl.so.3/lib/x86_64-linux-gnu/libnetfilter_conntrack.so.3/lib/x86_64-linux-gnu/libpci.so.3/lib/x86_64-linux-gnu/libpcre.so.3/lib/x86_64-linux-gnu/libtirpc.so.3/lib/x86_64-linux-gnu/libmpdec.so.3/lib/x86_64-linux-gnu/libkrb5.so.3/lib/x86_64-linux-gnu/libfuse3.so.3/lib/x86_64-linux-gnu/libdbus-1.so.3/lib/x86_64-linux-gnu/libmpdec++.so.3/lib/x86_64-linux-gnu/libnewt.so.0.52/lib/x86_64-linux-gnu/libxtables.so.12/lib/x86_64-linux-gnu/libcryptsetup.so.12/lib/x86_64-linux-gnu/libresolv.so.2/lib/x86_64-linux-gnu/libsigsegv.so.2/lib/x86_64-linux-gnu/libblockdev.so.2/lib/x86_64-linux-gnu/libbd_part.so.2/lib/x86_64-linux-gnu/libedit.so.2/lib/x86_64-linux-gnu/libnss_compat.so.2/lib/x86_64-linux-gnu/libss.so.2/lib/x86_64-linux-gnu/libnss_dns.so.2/lib/x86_64-linux-gnu/libbd_utils.so.2/lib/x86_64-linux-gnu/libbd_fs.so.2/lib/x86_64-linux-gnu/libext2fs.so.2/lib/x86_64-linux-gnu/libnss_files.so.2/lib/x86_64-linux-gnu/libbd_part_err.so.2/lib/x86_64-linux-gnu/libcom_err.so.2/lib/x86_64-linux-gnu/libbd_loop.so.2/lib/x86_64-linux-gnu/libseccomp.so.2/lib/x86_64-linux-gnu/libbd_swap.so.2/lib/x86_64-linux-gnu/libcap.so.2/lib/x86_64-linux-gnu/libe2p.so.2/lib/libnss_oslogin.so.2/lib/libnss_cache_oslogin.so.2/lib/x86_64-linux-gnu/libdrm.so.2/lib/x86_64-linux-gnu/libgpm.so.2/lib/x86_64-linux-gnu/libnsl.so.2/lib/x86_64-linux-gnu/libsepol.so.2/lib/x86_64-linux-gnu/libdl.so.2/lib/x86_64-linux-gnu/libunistring.so.2/lib/x86_64-linux-gnu/libslang.so.2/lib/x86_64-linux-gnu/libsemanage.so.2/lib/x86_64-linux-gnu/libkmod.so.2/lib/x86_64-linux-gnu/libnss_hesiod.so.2/lib/x86_64-linux-gnu/libnss_systemd.so.2/lib/x86_64-linux-gnu/libparted.so.2/lib/x86_64-linux-gnu/libip6tc.so.2/lib/x86_64-linux-gnu/libip4tc.so.2/lib/x86_64-linux-gnu/libxmlb.so.2/lib/x86_64-linux-gnu/libsgutils2-1.46.so.2/lib/x86_64-linux-gnu/libgssapi_krb5.so.2/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2/lib/x86_64-linux-gnu/liblzo2.so.2/lib/x86_64-linux-gnu/libsasl2.so.2/lib/x86_64-linux-gnu/libxml2.so.2/lib/x86_64-linux-gnu/libftdi1.so.2/lib/x86_64-linux-gnu/libyaml-0.so.2/lib/x86_64-linux-gnu/libnftnl.so.11/lib/x86_64-linux-gnu/libz.so.1/lib/x86_64-linux-gnu/libselinux.so.1/lib/x86_64-linux-gnu/libexpatw.so.1/lib/x86_64-linux-gnu/libdw.so.1/lib/x86_64-linux-gnu/libuv.so.1/lib/x86_64-linux-gnu/libudev.so.1/lib/x86_64-linux-gnu/libXmuu.so.1/lib/x86_64-linux-gnu/librt.so.1/lib/x86_64-linux-gnu/libcrypt.so.1/lib/x86_64-linux-gnu/libefiboot.so.1/lib/x86_64-linux-gnu/libmount.so.1/lib/x86_64-linux-gnu/libxslt.so.1/lib/x86_64-linux-gnu/libaudit.so.1/lib/x86_64-linux-gnu/libexpat.so.1/lib/x86_64-linux-gnu/libsmartcols.so.1/lib/x86_64-linux-gnu/libkeyutils.so.1/lib/x86_64-linux-gnu/libnftables.so.1/lib/x86_64-linux-gnu/libgcc_s.so.1/lib/x86_64-linux-gnu/libattr.so.1/lib/x86_64-linux-gnu/libapparmor.so.1/lib/x86_64-linux-gnu/libefivar.so.1/lib/x86_64-linux-gnu/librtmp.so.1/lib/x86_64-linux-gnu/libaio.so.1/lib/x86_64-linux-gnu/libbrotlicommon.so.1/lib/x86_64-linux-gnu/libatm.so.1/lib/x86_64-linux-gnu/libflashrom.so.1/lib/x86_64-linux-gnu/libxmlsec1-openssl.so.1/lib/x86_64-linux-gnu/libnsl.so.1/lib/x86_64-linux-gnu/libanl.so.1/lib/x86_64-linux-gnu/libutil.so.1/lib/x86_64-linux-gnu/libacl.so.1/lib/x86_64-linux-gnu/libfdisk.so.1/lib/x86_64-linux-gnu/libinih.so.1/lib/x86_64-linux-gnu/libelf.so.1/lib/x86_64-linux-gnu/libpipeline.so.1/lib/libhandle.so.1/lib/x86_64-linux-gnu/libBrokenLocale.so.1/lib/x86_64-linux-gnu/libzstd.so.1/lib/x86_64-linux-gnu/libuuid.so.1/lib/x86_64-linux-gnu/libblkid.so.1/lib/x86_64-linux-gnu/libbrotlienc.so.1/lib/x86_64-linux-gnu/libmagic.so.1/lib/x86_64-linux-gnu/libmvec.so.1/lib/x86_64-linux-gnu/libbrotlidec.so.1/lib/x86_64-linux-gnu/libthread_db.so.1/lib/x86_64-linux-gnu/libxcb.so.1/lib/x86_64-linux-gnu/libeatmydata.so.1/lib/x86_64-linux-gnu/libnuma.so.1/lib/x86_64-linux-gnu/liblz4.so.1/lib/x86_64-linux-gnu/libfido2.so.1/lib/x86_64-linux-gnu/libargon2.so.1/lib/x86_64-linux-gnu/libxmlsec1.so.1/lib/x86_64-linux-gnu/libgirepository-1.0.so.1/lib/x86_64-linux-gnu/libdevmapper-event.so.1.02.1/lib/x86_64-linux-gnu/libdevmapper.so.1.02.1/lib/x86_64-linux-gnu/libicutu.so.70/lib/x86_64-linux-gnu/libicutest.so.70/lib/x86_64-linux-gnu/libicuio.so.70/lib/x86_64-linux-gnu/libicui18n.so.70/lib/x86_64-linux-gnu/libicuuc.so.70/lib/x86_64-linux-gnu/libicudata.so.70/lib/x86_64-linux-gnu/libgnutls.so.30/lib/x86_64-linux-gnu/libgcrypt.so.20/lib/x86_64-linux-gnu/libdns-export.so.1110/lib/x86_64-linux-gnu/libgmp.so.10/lib/x86_64-linux-gnu/libnl-genl-3.so.200/lib/x86_64-linux-gnu/libnl-3.so.200/lib/libmpathpersist.so.0/lib/x86_64-linux-gnu/libkrb5support.so.0/lib/x86_64-linux-gnu/libpopt.so.0/lib/x86_64-linux-gnu/libdebconfclient.so.0/lib/x86_64-linux-gnu/libguestStoreClient.so.0/lib/x86_64-linux-gnu/libexslt.so.0/lib/x86_64-linux-gnu/libp11-kit.so.0/lib/x86_64-linux-gnu/libuchardet.so.0/lib/x86_64-linux-gnu/libisns.so.0/lib/x86_64-linux-gnu/libvmtools.so.0/lib/x86_64-linux-gnu/libhgfs.so.0/lib/x86_64-linux-gnu/libestr.so.0/lib/x86_64-linux-gnu/libgpg-error.so.0/lib/x86_64-linux-gnu/libutempter.so.0/lib/x86_64-linux-gnu/libunwind-coredump.so.0/lib/x86_64-linux-gnu/libwrap.so.0/lib/x86_64-linux-gnu/libassuan.so.0/lib/x86_64-linux-gnu/libpam.so.0/lib/x86_64-linux-gnu/libmnl.so.0/lib/x86_64-linux-gnu/libnfnetlink.so.0/lib/x86_64-linux-gnu/libmspack.so.0/lib/x86_64-linux-gnu/libfribidi.so.0/lib/x86_64-linux-gnu/libvgauth.so.0/lib/x86_64-linux-gnu/libnpth.so.0/lib/libmultipath.so.0/lib/x86_64-linux-gnu/libxxhash.so.0/lib/x86_64-linux-gnu/libc_malloc_debug.so.0/lib/x86_64-linux-gnu/libcap-ng.so.0/lib/x86_64-linux-gnu/libDeployPkg.so.0/lib/x86_64-linux-gnu/libctf.so.0/lib/x86_64-linux-gnu/libbpf.so.0/lib/x86_64-linux-gnu/libparted-fs-resize.so.0/lib/x86_64-linux-gnu/libunwind-ptrace.so.0/lib/x86_64-linux-gnu/libbsd.so.0/lib/x86_64-linux-gnu/libsystemd.so.0/lib/libmpathcmd.so.0/lib/x86_64-linux-gnu/libmd.so.0/lib/x86_64-linux-gnu/libctf-nobfd.so.0/lib/x86_64-linux-gnu/libpthread.so.0/lib/x86_64-linux-gnu/libpam_misc.so.0/lib/x86_64-linux-gnu/libpamc.so.0/lib/x86_64-linux-gnu/libguestlib.so.0/lib/x86_64-linux-gnu/libmm-glib.so.0/lib/x86_64-linux-gnu/liblmdb.so.0/lib/x86_64-linux-gnu/libmaxminddb.so.0/lib/x86_64-linux-gnu/libpcre2-8.so.0/lib/x86_64-linux-gnu/liblber-2.5.so.0/lib/x86_64-linux-gnu/libldap-2.5.so.0/lib/x86_64-linux-gnu/libsqlite3.so.0/lib/x86_64-linux-gnu/libudisks2.so.0/lib/x86_64-linux-gnu/libidn2.so.0/lib/x86_64-linux-gnu/libpolkit-agent-1.so.0/lib/x86_64-linux-gnu/libpolkit-gobject-1.so.0/lib/x86_64-linux-gnu/libgobject-2.0.so.0/lib/x86_64-linux-gnu/libgio-2.0.so.0/lib/x86_64-linux-gnu/libgmodule-2.0.so.0/lib/x86_64-linux-gnu/libgthread-2.0.so.0/lib/x86_64-linux-gnu/libglib-2.0.so.0/lib/x86_64-linux-gnu/libgstnet-1.0.so.0/lib/x86_64-linux-gnu/libgstreamer-1.0.so.0/lib/x86_64-linux-gnu/libgstcontroller-1.0.so.0/lib/x86_64-linux-gnu/libgstcheck-1.0.so.0/lib/x86_64-linux-gnu/libgstbase-1.0.so.0/lib/x86_64-linux-gnu/libusb-1.0.so.0/lib/x86_64-linux-gnu/libapt-pkg.so.6.0/lib/x86_64-linux-gnu/libopeniscsiusr.so.0.2.0/lib/libdmmp.so.0.2.0/lib/x86_64-linux-gnu/libbz2.so.1.0/lib/x86_64-linux-gnu/libpython3.10.so.1.0/lib/x86_64-linux-gnu/libnetplan.so.0.0/lib/x86_64-linux-gnu/libapt-private.so.0.0t!HCldconfig (Ubuntu GLIBC 2.35-0ubuntu3.1) stable release version 2.35
+==> ld.so.conf <==
+include /etc/ld.so.conf.d/*.conf
+
+
+==> ld.so.conf.d <==
+head: error reading 'ld.so.conf.d': Is a directory
+
+==> ldap <==
+head: error reading 'ldap': Is a directory
+
+==> legal <==
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+
+==> libaudit.conf <==
+# This is the configuration file for libaudit tunables.
+# It is currently only used for the failure_action tunable.
+
+
+==> libblockdev <==
+head: error reading 'libblockdev': Is a directory
+
+==> libnl-3 <==
+head: error reading 'libnl-3': Is a directory
+
+==> locale.alias <==
+# Locale name alias data base.
+# Copyright (C) 1996-2022 Free Software Foundation, Inc.
+#
+
+==> locale.gen <==
+# This file lists locales that you wish to have built. You can find a list
+# of valid supported locales at /usr/share/i18n/SUPPORTED, and you can add
+# user defined locales to /usr/local/share/i18n/SUPPORTED. If you change
+
+==> localtime <==
+TZif2UTCTZif2UTC
+UTC0
+
+==> logcheck <==
+head: error reading 'logcheck': Is a directory
+
+==> login.defs <==
+#
+# /etc/login.defs - Configuration control definitions for the login package.
+#
+
+==> logrotate.conf <==
+# see "man logrotate" for details
+
+# global options do not affect preceding include directives
+
+==> logrotate.d <==
+head: error reading 'logrotate.d': Is a directory
+
+==> lsb-release <==
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=22.04
+DISTRIB_CODENAME=jammy
+
+==> lvm <==
+head: error reading 'lvm': Is a directory
+
+==> machine-id <==
+837ff4eec8b24f82dc24fcf525cdfafa
+
+==> magic <==
+# Magic local data for file(1) command.
+# Insert here your local magic data. Format is described in magic(5).
+
+
+==> magic.mime <==
+# Magic local data for file(1) command.
+# Insert here your local magic data. Format is described in magic(5).
+
+
+==> manpath.config <==
+# manpath.config
+#
+# This file is used by the man-db package to configure the man and cat paths.
+
+==> mdadm <==
+head: error reading 'mdadm': Is a directory
+
+==> mime.types <==
+###############################################################################
+#
+#  Media (MIME) types and the extensions that represent them.
+
+==> mke2fs.conf <==
+[defaults]
+        base_features = sparse_super,large_file,filetype,resize_inode,dir_index,ext_attr
+        default_mntopts = acl,user_xattr
+
+==> modprobe.d <==
+head: error reading 'modprobe.d': Is a directory
+
+==> modules <==
+# /etc/modules: kernel modules to load at boot time.
+#
+# This file contains the names of kernel modules that should be loaded
+
+==> modules-load.d <==
+head: error reading 'modules-load.d': Is a directory
+
+==> mtab <==
+/dev/root / ext4 rw,relatime,discard,errors=remount-ro 0 0
+devtmpfs /dev devtmpfs rw,relatime,size=490264k,nr_inodes=122566,mode=755,inode64 0 0
+proc /proc proc rw,nosuid,nodev,noexec,relatime 0 0
+head: cannot open 'multipath' for reading: Permission denied
+
+==> multipath.conf <==
+defaults {
+    user_friendly_names yes
+}
+
+==> nanorc <==
+## Sample initialization file for GNU nano.
+##
+## For the options that take parameters, the default value is shown.
+
+==> needrestart <==
+head: error reading 'needrestart': Is a directory
+
+==> netconfig <==
+#
+# The network configuration file. This file is currently only used in
+# conjunction with the TI-RPC code in the libtirpc library.
+
+==> netplan <==
+head: error reading 'netplan': Is a directory
+
+==> network <==
+head: error reading 'network': Is a directory
+
+==> networkd-dispatcher <==
+head: error reading 'networkd-dispatcher': Is a directory
+
+==> networks <==
+# symbolic names for networks, see networks(5) for more information
+link-local 169.254.0.0
+
+==> newt <==
+head: error reading 'newt': Is a directory
+
+==> nftables.conf <==
+#!/usr/sbin/nft -f
+
+flush ruleset
+
+==> nsswitch.conf <==
+# /etc/nsswitch.conf
+#
+# Example configuration of GNU Name Service Switch functionality.
+
+==> nvme <==
+head: error reading 'nvme': Is a directory
+
+==> opt <==
+head: error reading 'opt': Is a directory
+
+==> os-release <==
+PRETTY_NAME="Ubuntu 22.04.2 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+
+==> overlayroot.conf <==
+# This is the overlayroot config file
+# By default, overlayroot is not enabled.
+# To enable overlayroot:
+
+==> overlayroot.local.conf <==
+# CLOUD_IMG: This file was created/modified by the Cloud Image build process
+overlayroot_cfgdisk=LABEL=OROOTCFG
+
+==> pam.conf <==
+# ---------------------------------------------------------------------------#
+# /etc/pam.conf                                                              #
+# ---------------------------------------------------------------------------#
+
+==> pam.d <==
+head: error reading 'pam.d': Is a directory
+
+==> passwd <==
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+
+==> passwd- <==
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+
+==> perl <==
+head: error reading 'perl': Is a directory
+
+==> pm <==
+head: error reading 'pm': Is a directory
+
+==> polkit-1 <==
+head: error reading 'polkit-1': Is a directory
+
+==> pollinate <==
+head: error reading 'pollinate': Is a directory
+
+==> ppp <==
+head: error reading 'ppp': Is a directory
+
+==> profile <==
+# /etc/profile: system-wide .profile file for the Bourne shell (sh(1))
+# and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).
+
+
+==> profile.d <==
+head: error reading 'profile.d': Is a directory
+
+==> protocols <==
+# Internet (IP) protocols
+#
+# Updated from http://www.iana.org/assignments/protocol-numbers and other
+
+==> python3 <==
+head: error reading 'python3': Is a directory
+
+==> python3.10 <==
+head: error reading 'python3.10': Is a directory
+
+==> rc0.d <==
+head: error reading 'rc0.d': Is a directory
+
+==> rc1.d <==
+head: error reading 'rc1.d': Is a directory
+
+==> rc2.d <==
+head: error reading 'rc2.d': Is a directory
+
+==> rc3.d <==
+head: error reading 'rc3.d': Is a directory
+
+==> rc4.d <==
+head: error reading 'rc4.d': Is a directory
+
+==> rc5.d <==
+head: error reading 'rc5.d': Is a directory
+
+==> rc6.d <==
+head: error reading 'rc6.d': Is a directory
+
+==> rcS.d <==
+head: error reading 'rcS.d': Is a directory
+
+==> resolv.conf <==
+# This is /run/systemd/resolve/stub-resolv.conf managed by man:systemd-resolved(8).
+# Do not edit.
+#
+
+==> rmt <==
+@@@000@8       8880hhhDDStd8880PtdQtdRtd000/lib64/ld-linux-x86-64.so.2 GNUGNU~$N6/{ádnGNUG
+
+IGJOȾemS3>vj0?H[>;;vO >Y
+                        M`>. O9"I3/3 }o=Gf6( sn%unmH: Vz"YI? xГ__cxa_finalize__libc_start_mainstdin__getdelimstrlen__fprintf_chkfwritestdoutfflush_unlockedmemcmpfopenstrtolstderrdcgettext__errno_locationstrerrorexitstrcmp__ctype_b_locstrchrfputc_unlocked__ctype_tolower_locstrcasecmp__stack_chk_failmallocfreemempcpymemcpy__assert_failstrncmpcallocflockfilefputcfunlockfilegetenv__vfprintf_chkclosememmovememsetmemchrfwrite_unlocked__overflowreallocstrchrnulstrndup__vsnprintf_chkargp_failurefputs_unlockedstrerror_rprogram_invocation_short_name__prognameargp_program_bug_addressqsortargp_helpargp_state_helpargp_err_exit_statusprogram_invocation_name__progname_fullsleepargp_usageargp_errorargp_program_version_hookargp_program_versionargp_parsestrrchrisattystrtoumaxfread_unlockedioctlreadlseeksetlocalebindtextdomainabortlibc.so.6GLIBC_2.3GLIBC_2.14GLIBC_2.4GLIcmti.34GxuiCBZpz33qLIBC_2.2.5_ITM_deregisterTMCloneTable__gmon_start___ITM_registerTMCloneTableDii
+G@9``
+
+    +.?AHF
+
+==> rpc <==
+# This file contains user readable names that can be used in place of rpc
+# program numbers.
+
+
+==> rsyslog.conf <==
+# /etc/rsyslog.conf configuration file for rsyslog
+#
+# For more information install rsyslog-doc and see
+
+==> rsyslog.d <==
+head: error reading 'rsyslog.d': Is a directory
+
+==> screenrc <==
+# $Id: screenrc,v 1.15 2003/10/08 11:39:03 zal Exp $
+#
+# /etc/screenrc
+
+==> security <==
+head: error reading 'security': Is a directory
+
+==> selinux <==
+head: error reading 'selinux': Is a directory
+
+==> services <==
+# Network services, Internet style
+#
+# Updated from https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml .
+head: cannot open 'shadow' for reading: Permission denied
+head: cannot open 'shadow-' for reading: Permission denied
+
+==> shells <==
+# /etc/shells: valid login shells
+/bin/sh
+/bin/bash
+
+==> skel <==
+head: error reading 'skel': Is a directory
+
+==> sos <==
+head: error reading 'sos': Is a directory
+
+==> ssh <==
+head: error reading 'ssh': Is a directory
+
+==> ssl <==
+head: error reading 'ssl': Is a directory
+
+==> subgid <==
+ubuntu:100000:65536
+a_ayetigbo:165536:65536
+
+==> subgid- <==
+ubuntu:100000:65536
+
+==> subuid <==
+ubuntu:100000:65536
+a_ayetigbo:165536:65536
+
+==> subuid- <==
+ubuntu:100000:65536
+
+==> sudo.conf <==
+#
+# Default /etc/sudo.conf file
+#
+
+==> sudo_logsrvd.conf <==
+#
+# sudo logsrv daemon configuration
+#
+head: cannot open 'sudoers' for reading: Permission denied
+head: cannot open 'sudoers.d' for reading: Permission denied
+
+==> sysctl.conf <==
+#
+# /etc/sysctl.conf - Configuration file for setting system variables
+# See /etc/sysctl.d/ for additional system variables.
+
+==> sysctl.d <==
+head: error reading 'sysctl.d': Is a directory
+
+==> systemd <==
+head: error reading 'systemd': Is a directory
+
+==> terminfo <==
+head: error reading 'terminfo': Is a directory
+
+==> timezone <==
+Etc/UTC
+
+==> tmpfiles.d <==
+head: error reading 'tmpfiles.d': Is a directory
+
+==> ubuntu-advantage <==
+head: error reading 'ubuntu-advantage': Is a directory
+
+==> ucf.conf <==
+#
+# This file is a bourne shell snippet, and is sourced by the
+# ucf script for configuration.
+
+==> udev <==
+head: error reading 'udev': Is a directory
+
+==> ufw <==
+head: error reading 'ufw': Is a directory
+
+==> update-manager <==
+head: error reading 'update-manager': Is a directory
+
+==> update-motd.d <==
+head: error reading 'update-motd.d': Is a directory
+
+==> update-notifier <==
+head: error reading 'update-notifier': Is a directory
+
+==> usb_modeswitch.conf <==
+# Configuration for the usb_modeswitch package, a mode switching tool for
+# USB devices providing multiple states or modes
+#
+
+==> usb_modeswitch.d <==
+head: error reading 'usb_modeswitch.d': Is a directory
+
+==> vim <==
+head: error reading 'vim': Is a directory
+
+==> vmware-tools <==
+head: error reading 'vmware-tools': Is a directory
+
+==> vtrgb <==
+1,222,57,255,0,118,44,204,128,255,0,255,0,255,0,255
+1,56,181,199,111,38,181,204,128,0,255,255,0,0,255,255
+1,43,74,6,184,113,233,204,128,0,0,0,255,255,255,255
+
+==> wgetrc <==
+###
+### Sample Wget initialization file .wgetrc
+###
+
+==> xattr.conf <==
+# /etc/xattr.conf
+#
+# Format:
+
+==> xdg <==
+head: error reading 'xdg': Is a directory
+
+==> zsh_command_not_found <==
+# (c) Zygmunt Krynicki 2007,
+# Licensed under GPL, see COPYING for the whole text
+#
+a_ayetigbo@instance-1:/etc$ crontab -e
+no crontab for a_ayetigbo - using an empty one
+
+Select an editor.  To change later, run 'select-editor'.
+  1. /bin/nano        <---- easiest
+  2. /usr/bin/vim.basic
+  3. /usr/bin/vim.tiny
+  4. /bin/ed
+
+Choose 1-4 [1]: 1 
+No modification made
+a_ayetigbo@instance-1:/etc$ head -n 3    

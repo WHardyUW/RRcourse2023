@@ -1,0 +1,80 @@
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-1031-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Apr 19 14:12:52 UTC 2023
+
+  System load:  0.31787109375     Processes:             106
+  Usage of /:   19.3% of 9.51GB   Users logged in:       0
+  Memory usage: 22%               IPv4 address for ens4: 10.128.0.2
+  Swap usage:   0%
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+maciejzdanowicz00@instance-1:~$ mkdir rr
+maciejzdanowicz00@instance-1:~$ cd rr
+maciejzdanowicz00@instance-1:~/rr$ touch test.txt
+maciejzdanowicz00@instance-1:~/rr$ touch new.txt
+maciejzdanowicz00@instance-1:~/rr$ nano touch.txt
+maciejzdanowicz00@instance-1:~/rr$ -ls
+Command '-ls' not found, did you mean:
+  command 'hls' from deb hfsutils (3.2.6-15build2)
+  command 'ils' from deb sleuthkit (4.11.1+dfsg-1)
+  command 'jls' from deb sleuthkit (4.11.1+dfsg-1)
+  command 'i-ls' from deb integrit (4.1-1.1)
+  command 'ols' from deb speech-tools (1:2.5.0-12)
+  command 'fls' from deb sleuthkit (4.11.1+dfsg-1)
+  command 'als' from deb atool (0.39.0-11)
+  command 'ls' from deb coreutils (8.32-4.1ubuntu1)
+Try: apt install <deb name>
+maciejzdanowicz00@instance-1:~/rr$ ls
+new.txt  test.txt  touch.txt
+maciejzdanowicz00@instance-1:~/rr$ rm touch.txt
+maciejzdanowicz00@instance-1:~/rr$ ls
+new.txt  test.txt
+maciejzdanowicz00@instance-1:~/rr$ nano new.txt
+maciejzdanowicz00@instance-1:~/rr$ cd ..
+maciejzdanowicz00@instance-1:~$ cd etc
+-bash: cd: etc: No such file or directory
+maciejzdanowicz00@instance-1:~$ cd rr
+maciejzdanowicz00@instance-1:~/rr$ cp /etc/modules rr
+maciejzdanowicz00@instance-1:~/rr$ ls
+new.txt  rr  test.txt
+maciejzdanowicz00@instance-1:~/rr$ ls -l
+total 8
+-rw-rw-r-- 1 maciejzdanowicz00 maciejzdanowicz00  16 Apr 19 14:16 new.txt
+-rw-r--r-- 1 maciejzdanowicz00 maciejzdanowicz00 195 Apr 19 14:19 rr
+-rw-rw-r-- 1 maciejzdanowicz00 maciejzdanowicz00   0 Apr 19 14:14 test.txt
+maciejzdanowicz00@instance-1:~/rr$ ls -lhS
+total 8.0K
+-rw-r--r-- 1 maciejzdanowicz00 maciejzdanowicz00 195 Apr 19 14:19 rr
+-rw-rw-r-- 1 maciejzdanowicz00 maciejzdanowicz00  16 Apr 19 14:16 new.txt
+-rw-rw-r-- 1 maciejzdanowicz00 maciejzdanowicz00   0 Apr 19 14:14 test.txt
+maciejzdanowicz00@instance-1:~/rr$ rmdir rr
+rmdir: failed to remove 'rr': Not a directory
+maciejzdanowicz00@instance-1:~/rr$ cd ..
+maciejzdanowicz00@instance-1:~$ rmdir rr
+rmdir: failed to remove 'rr': Directory not empty
+maciejzdanowicz00@instance-1:~$ rm rr/*
+maciejzdanowicz00@instance-1:~$ cd rr
+maciejzdanowicz00@instance-1:~/rr$ ls
+maciejzdanowicz00@instance-1:~/rr$ cd ..
+maciejzdanowicz00@instance-1:~$ rmdir rr
+maciejzdanowicz00@instance-1:~$ ls
+maciejzdanowicz00@instance-1:~$ 

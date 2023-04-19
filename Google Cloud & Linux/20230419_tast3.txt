@@ -1,0 +1,23 @@
+d_pacholleck@repo1:~$ ps -aux | grep 'cpu'
+root          10  0.0  0.0      0     0 ?        I<   07:53   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    07:53   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    07:53   0:00 [cpuhp/1]
+d_pacho+    1382  0.0  0.2   7004  2188 pts/0    R+   08:32   0:00 grep --color=auto cpu
+d_pacholleck@repo1:~$ ip a | tail -n 3
+       valid_lft 83948sec preferred_lft 83948sec
+    inet6 fe80::4001:aff:fe80:2/64 scope link 
+       valid_lft forever preferred_lft forever
+d_pacholleck@repo1:/$ pwd
+/
+d_pacholleck@repo1:/$ cd /etc
+d_pacholleck@repo1:/etc$ cd ./vim/
+d_pacholleck@repo1:/etc/vim$ pwd
+/etc/vim
+d_pacholleck@repo1:/etc/vim$ ls -l
+total 8
+-rw-r--r-- 1 root root 2266 Feb 24  2022 vimrc
+-rw-r--r-- 1 root root  662 Apr 18  2022 vimrc.tiny
+d_pacholleck@repo1:/etc/vim$ cat vimrc | head -n 3
+" All system-wide defaults are set in $VIMRUNTIME/debian.vim and sourced by
+" the call to :runtime you can find below.  If you wish to change any of those
+" settings, you should do it in this file (/etc/vim/vimrc), since debian.vim

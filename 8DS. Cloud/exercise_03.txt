@@ -1,0 +1,29 @@
+hsdxyq@instance-hyq-1:/etc/nvme$ ps aux|grep cpu
+root          10  0.0  0.0      0     0 ?        I<   09:34   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    09:34   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    09:34   0:00 [cpuhp/1]
+hsdxyq      1502  0.0  0.2   7004  2132 pts/0    S+   10:24   0:00 grep --color=auto cpu
+
+hsdxyq@instance-hyq-1:/etc/nvme$ ip link show| tail -n 3
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: ens4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1460 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 42:01:0a:b6:00:02 brd ff:ff:ff:ff:ff:ff
+
+hsdxyq@instance-hyq-1:/etc/nvme$ cd /etc/nvme/
+hsdxyq@instance-hyq-1:/etc/nvme$ pwd
+/etc/nvme
+hsdxyq@instance-hyq-1:/etc/nvme$ ll
+total 20
+drwxr-xr-x  2 root root 4096 Mar  2 02:13 ./
+drwxr-xr-x 94 root root 4096 Apr 19 10:10 ../
+-rw-r--r--  1 root root  183 Nov  8 12:13 discovery.conf
+-rw-r--r--  1 root root   37 Mar  2 02:13 hostid
+-rw-r--r--  1 root root   69 Mar  2 02:13 hostnqn
+hsdxyq@instance-hyq-1:/etc/nvme$ cat discovery.conf | head -n 3
+# Used for extracting default parameters for discovery
+#
+# Example:
+
+
+
+

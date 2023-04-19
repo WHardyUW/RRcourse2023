@@ -41,3 +41,10 @@ Here are some basic statistics for the TV show "How I Met Your Mother":
 - Primetime Emmy Awards: 10 wins and 72 nominations
 - People's Choice Awards: 8 wins and 21 nominations
 - Golden Globe Awards: 2 nominations
+
+# A graph of the viewership over time
+
+![**The viewership in the USA**](viewership.jpg)
+
+
+

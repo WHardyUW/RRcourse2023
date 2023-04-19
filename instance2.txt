@@ -1,0 +1,33 @@
+oshieodomero@instance-1:~$ mkdir rr
+oshieodomero@instance-1:~$ cd rr
+oshieodomero@instance-1:~/rr$ touch test.txt
+oshieodomero@instance-1:~/rr$ cd ..
+oshieodomero@instance-1:~$ ps aux | grep "cpu"
+root          10  0.0  0.0      0     0 ?        I<   09:34   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    09:34   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    09:34   0:00 [cpuhp/1]
+oshieod+    1142  0.0  0.2   7004  2216 pts/0    R+   10:11   0:00 grep --color=auto cpu
+oshieodomero@instance-1:~$ ip a | tail -n 3
+       valid_lft 3099sec preferred_lft 3099sec
+    inet6 fe80::4001:aff:feb6:3/64 scope link 
+       valid_lft forever preferred_lft forever
+oshieodomero@instance-1:~$ cd rr
+oshieodomero@instance-1:~/rr$ ls -l
+total 0
+-rw-rw-r-- 1 oshieodomero oshieodomero 0 Apr 19 10:07 test.txt
+oshieodomero@instance-1:~/rr$ pwd
+/home/oshieodomero/rr
+oshieodomero@instance-1:~/rr$ nano test.txt
+oshieodomero@instance-1:~/rr$ cat test.txt
+oshieodomero@instance-1:~/rr$ nano test.txt
+oshieodomero@instance-1:~/rr$ cat test.txt
+19-04-2023
+learning research
+making progress
+Interesting
+
+oshieodomero@instance-1:~/rr$ cat test.txt | head -n 3
+19-04-2023
+learning research
+making progress
+oshieodomero@instance-1:~/rr$ 

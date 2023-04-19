@@ -1,0 +1,38 @@
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-1031-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Apr 19 20:24:16 UTC 2023
+
+  System load:  0.30419921875     Processes:             106
+  Usage of /:   19.3% of 9.51GB   Users logged in:       0
+  Memory usage: 25%               IPv4 address for ens4: 10.128.0.2
+  Swap usage:   0%
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+l_pienkowsk2@rr-instance:~$ uname 0a
+uname: extra operand ‘0a’
+Try 'uname --help' for more information.
+l_pienkowsk2@rr-instance:~$ uname -a
+Linux rr-instance 5.15.0-1031-gcp #38-Ubuntu SMP Tue Feb 28 20:44:51 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+l_pienkowsk2@rr-instance:~$ touch test.txt
+l_pienkowsk2@rr-instance:~$ ls -l
+total 0
+-rw-rw-r-- 1 l_pienkowsk2 l_pienkowsk2 0 Apr 19 20:24 test.txt

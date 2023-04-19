@@ -60,3 +60,11 @@ ggplot(data = viewership_df) +
   ggtitle("Percentage Change in Viewership by Season")
   
 ![](Rplot01.png)
+
+
+
+
+## Observations
+The viewership of Game of Thrones increased significantly over its run, peaking at 11.99 million viewers for the series finale.
+However, the percentage change in viewership from the previous episode decreased in the later seasons, with a noticeable drop between seasons 5 and 6. Specifically, the viewership decreased by 11.96% between seasons 5 and 6.
+Despite the drop in percentage change in viewership, Game of Thrones remained a highly popular and successful show throughout its run.

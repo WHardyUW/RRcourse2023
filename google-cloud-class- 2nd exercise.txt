@@ -1,0 +1,355 @@
+ Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-1030-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Apr 19 08:40:54 UTC 2023
+
+  System load:  0.0               Processes:             108
+  Usage of /:   27.3% of 9.51GB   Users logged in:       1
+  Memory usage: 27%               IPv4 address for ens4: 10.182.0.2
+  Swap usage:   0%
+
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/gcp/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+48 updates can be applied immediately.
+33 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Wed Apr 19 08:35:14 2023 from 35.235.243.65
+j_ndhokero@instance-1:~$ px aux
+Command 'px' not found, but can be installed with:
+apt install px
+Please ask your administrator.
+j_ndhokero@instance-1:~$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.1  1.1 167576 11012 ?        Ss   07:51   0:04 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    07:51   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   07:51   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   07:51   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   07:51   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   07:51   0:00 [netns]
+root           8  0.0  0.0      0     0 ?        I<   07:51   0:00 [kworker/0:0H-events_highpri]
+root          10  0.0  0.0      0     0 ?        I<   07:51   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        S    07:51   0:00 [rcu_tasks_rude_]
+root          12  0.0  0.0      0     0 ?        S    07:51   0:00 [rcu_tasks_trace]
+root          13  0.0  0.0      0     0 ?        S    07:51   0:00 [ksoftirqd/0]
+root          14  0.0  0.0      0     0 ?        I    07:51   0:00 [rcu_sched]
+root          15  0.0  0.0      0     0 ?        S    07:51   0:00 [migration/0]
+root          16  0.0  0.0      0     0 ?        S    07:51   0:00 [idle_inject/0]
+root          18  0.0  0.0      0     0 ?        S    07:51   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    07:51   0:00 [cpuhp/1]
+root          20  0.0  0.0      0     0 ?        S    07:51   0:00 [idle_inject/1]
+root          21  0.0  0.0      0     0 ?        S    07:51   0:00 [migration/1]
+root          22  0.0  0.0      0     0 ?        S    07:51   0:00 [ksoftirqd/1]
+root          24  0.0  0.0      0     0 ?        I<   07:51   0:00 [kworker/1:0H-events_highpri]
+root          25  0.0  0.0      0     0 ?        S    07:51   0:00 [kdevtmpfs]
+root          26  0.0  0.0      0     0 ?        I<   07:51   0:00 [inet_frag_wq]
+root          27  0.0  0.0      0     0 ?        S    07:51   0:00 [kauditd]
+root          29  0.0  0.0      0     0 ?        S    07:51   0:00 [khungtaskd]
+root          30  0.0  0.0      0     0 ?        S    07:51   0:00 [oom_reaper]
+root          31  0.0  0.0      0     0 ?        I<   07:51   0:00 [writeback]
+root          32  0.0  0.0      0     0 ?        S    07:51   0:00 [kcompactd0]
+root          33  0.0  0.0      0     0 ?        SN   07:51   0:00 [ksmd]
+root          34  0.0  0.0      0     0 ?        SN   07:51   0:00 [khugepaged]
+root          80  0.0  0.0      0     0 ?        I<   07:51   0:00 [kintegrityd]
+root          81  0.0  0.0      0     0 ?        I<   07:51   0:00 [kblockd]
+root          82  0.0  0.0      0     0 ?        I<   07:51   0:00 [blkcg_punt_bio]
+root          83  0.0  0.0      0     0 ?        I<   07:51   0:00 [tpm_dev_wq]
+root          84  0.0  0.0      0     0 ?        I<   07:51   0:00 [ata_sff]
+root          85  0.0  0.0      0     0 ?        I<   07:51   0:00 [md]
+root          86  0.0  0.0      0     0 ?        I<   07:51   0:00 [edac-poller]
+root          87  0.0  0.0      0     0 ?        I<   07:51   0:00 [devfreq_wq]
+root          88  0.0  0.0      0     0 ?        S    07:51   0:00 [watchdogd]
+root          90  0.0  0.0      0     0 ?        I<   07:51   0:00 [kworker/0:1H-kblockd]
+root          92  0.0  0.0      0     0 ?        S    07:51   0:02 [kswapd0]
+root          93  0.0  0.0      0     0 ?        S    07:51   0:00 [ecryptfs-kthrea]
+root          95  0.0  0.0      0     0 ?        I<   07:51   0:00 [kthrotld]
+root          96  0.0  0.0      0     0 ?        I<   07:51   0:00 [acpi_thermal_pm]
+root          97  0.0  0.0      0     0 ?        S    07:51   0:00 [scsi_eh_0]
+root          98  0.0  0.0      0     0 ?        I<   07:51   0:00 [scsi_tmf_0]
+root          99  0.0  0.0      0     0 ?        I<   07:51   0:00 [nvme-wq]
+root         100  0.0  0.0      0     0 ?        I<   07:51   0:00 [nvme-reset-wq]
+root         101  0.0  0.0      0     0 ?        I<   07:51   0:00 [nvme-delete-wq]
+root         102  0.0  0.0      0     0 ?        I<   07:51   0:00 [vfio-irqfd-clea]
+root         104  0.0  0.0      0     0 ?        I<   07:51   0:00 [kworker/1:1H-kblockd]
+root         105  0.0  0.0      0     0 ?        I<   07:51   0:00 [mld]
+root         106  0.0  0.0      0     0 ?        I<   07:51   0:00 [ipv6_addrconf]
+root         116  0.0  0.0      0     0 ?        I<   07:51   0:00 [kstrp]
+root         119  0.0  0.0      0     0 ?        I<   07:51   0:00 [zswap-shrink]
+root         120  0.0  0.0      0     0 ?        I<   07:51   0:00 [kworker/u5:0]
+root         127  0.0  0.0      0     0 ?        I<   07:51   0:00 [charger_manager]
+root         128  0.0  0.0      0     0 ?        S    07:51   0:00 [jbd2/sda1-8]
+root         129  0.0  0.0      0     0 ?        I<   07:51   0:00 [ext4-rsv-conver]
+root         131  0.0  0.0      0     0 ?        S    07:51   0:00 [hwrng]
+root         170  0.0  1.1  48120 11652 ?        S<s  07:51   0:00 /lib/systemd/systemd-journald
+root         205  0.0  0.0      0     0 ?        I<   07:51   0:00 [kaluad]
+root         207  0.0  0.0      0     0 ?        I<   07:51   0:00 [kmpath_rdacd]
+root         208  0.0  0.0      0     0 ?        I<   07:51   0:00 [kmpathd]
+root         209  0.0  0.0      0     0 ?        I<   07:51   0:00 [kmpath_handlerd]
+root         213  0.0  2.7 289348 27100 ?        SLsl 07:51   0:00 /sbin/multipathd -d -s
+root         224  0.0  0.5  22996  5140 ?        Ss   07:51   0:00 /lib/systemd/systemd-udevd
+root         239  0.0  0.0      0     0 ?        I<   07:52   0:00 [cryptd]
+systemd+     423  0.0  0.5  16252  5288 ?        Ss   07:52   0:00 /lib/systemd/systemd-networkd
+systemd+     425  0.0  0.8  25260  8748 ?        Ss   07:52   0:00 /lib/systemd/systemd-resolved
+message+     459  0.0  0.4   8676  4192 ?        Ss   07:52   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+_chrony      469  0.0  0.3  18916  3096 ?        S    07:52   0:00 /usr/sbin/chronyd -F 1
+root         471  0.0  1.2 1238276 12232 ?       Ssl  07:52   0:00 /usr/bin/google_osconfig_agent
+_chrony      475  0.0  0.0  10588   520 ?        S    07:52   0:00 /usr/sbin/chronyd -F 1
+root         476  0.0  1.3  33128 13656 ?        Ss   07:52   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+syslog       487  0.0  0.4 222400  4544 ?        Ssl  07:52   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         540  0.0  1.2 1305868 12292 ?       Ssl  07:52   0:00 /usr/bin/google_guest_agent
+root         553  0.0  1.4 110072 14312 ?        Ssl  07:52   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         575  0.0  0.0   6216   836 ttyS0    Ss+  07:52   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 ttyS0 vt220
+root         632  0.0  0.0   6172   868 tty1     Ss+  07:52   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root         641  0.0  0.6 235444  6424 ?        Ssl  07:52   0:00 /usr/libexec/polkitd --no-debug
+root         651  0.0  0.6  15424  6832 ?        Ss   07:52   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root         670  0.0  0.6  15368  6684 ?        Ss   07:52   0:00 /lib/systemd/systemd-logind
+root         689  0.0  0.2   7284  2500 ?        Ss   07:52   0:00 /usr/sbin/cron -f -P
+root         944  2.2  2.6 949568 26388 ?        Ssl  07:52   1:06 /usr/lib/snapd/snapd
+root        1753  0.0  0.0      0     0 ?        I    08:03   0:01 [kworker/0:1-events]
+root        1805  0.0  0.0      0     0 ?        I    08:13   0:00 [kworker/u4:1-events_power_efficient]
+root        1832  0.0  0.0      0     0 ?        I    08:19   0:00 [kworker/1:1-cgroup_destroy]
+root        2185  0.0  1.9 296016 19580 ?        Ssl  08:20   0:00 /usr/libexec/packagekitd
+root        2291  0.0  0.0      0     0 ?        I    08:28   0:00 [kworker/u4:2-events_unbound]
+root        2302  0.0  1.0  17052 10872 ?        Ss   08:31   0:00 sshd: j_ndhokero [priv]
+j_ndhok+    2309  0.0  0.9  17056  9496 ?        Ss   08:31   0:00 /lib/systemd/systemd --user
+j_ndhok+    2310  0.0  0.5 170488  5020 ?        S    08:31   0:00 (sd-pam)
+root        2313  0.0  0.0      0     0 ?        I    08:31   0:00 [kworker/1:2-events]
+j_ndhok+    2371  0.0  0.8  17188  7960 ?        S    08:31   0:00 sshd: j_ndhokero@pts/0
+j_ndhok+    2372  0.0  0.5   9208  5324 pts/0    Ss   08:31   0:00 -bash
+root        2395  0.0  0.0      0     0 ?        I    08:32   0:00 [kworker/0:0-events]
+j_ndhok+    2466  0.0  0.2   7004  2172 pts/0    S+   08:34   0:00 grep --color=auto cpu
+root        2468  0.0  0.0      0     0 ?        I    08:34   0:00 [kworker/u4:4-events_unbound]
+root        2479  0.0  1.1  17052 11004 ?        Ss   08:35   0:00 sshd: j_ndhokero [priv]
+j_ndhok+    2539  0.0  0.8  17192  7936 ?        S    08:35   0:00 sshd: j_ndhokero@pts/1
+j_ndhok+    2540  0.0  0.5   9208  5244 pts/1    Ss   08:35   0:00 -bash
+j_ndhok+    2566  0.0  0.2   7004  2248 pts/1    S+   08:38   0:00 grep --color=auto cpu
+root        2570  0.0  0.0      0     0 ?        I    08:40   0:00 [kworker/u4:0]
+root        2585  0.0  1.1  17044 11000 ?        Ss   08:40   0:00 sshd: j_ndhokero [priv]
+j_ndhok+    2641  0.0  0.8  17180  8004 ?        S    08:40   0:00 sshd: j_ndhokero@pts/2
+j_ndhok+    2642  0.0  0.5   9208  5264 pts/2    Ss   08:40   0:00 -bash
+j_ndhok+    2666  0.0  0.3  10460  3376 pts/2    R+   08:41   0:00 ps aux
+j_ndhokero@instance-1:~$ ps aux | grep cpu
+root          10  0.0  0.0      0     0 ?        I<   07:51   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    07:51   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    07:51   0:00 [cpuhp/1]
+root        1753  0.0  0.0      0     0 ?        I    08:03   0:01 [kworker/0:1-mm_percpu_wq]
+root        2313  0.0  0.0      0     0 ?        I    08:31   0:00 [kworker/1:2-mm_percpu_wq]
+j_ndhok+    2466  0.0  0.2   7004  2172 pts/0    S+   08:34   0:00 grep --color=auto cpu
+j_ndhok+    2566  0.0  0.2   7004  2248 pts/1    S+   08:38   0:00 grep --color=auto cpu
+j_ndhok+    2668  0.0  0.2   7004  2180 pts/2    R+   08:42   0:00 grep --color=auto cpu
+j_ndhokero@instance-1:~$ tail -n 3
+^C      
+j_ndhokero@instance-1:~$ ip a|tail -n 3
+       valid_lft 83204sec preferred_lft 83204sec
+    inet6 fe80::4001:aff:feb6:2/64 scope link 
+       valid_lft forever preferred_lft forever
+j_ndhokero@instance-1:~$ ls
+dirname  test.txt  text.txt
+j_ndhokero@instance-1:~$ cd/etc
+-bash: cd/etc: No such file or directory
+j_ndhokero@instance-1:~$ ls
+dirname  test.txt  text.txt
+j_ndhokero@instance-1:~$ cd ./dirname
+j_ndhokero@instance-1:~/dirname$ ls
+j_ndhokero@instance-1:~/dirname$ ls
+j_ndhokero@instance-1:~/dirname$ cd .
+j_ndhokero@instance-1:~/dirname$ cd ..
+j_ndhokero@instance-1:~$ ls
+dirname  test.txt  text.txt
+j_ndhokero@instance-1:~$ cd etc
+-bash: cd: etc: No such file or directory
+j_ndhokero@instance-1:~$ home/user/etc
+-bash: home/user/etc: No such file or directory
+j_ndhokero@instance-1:~$ cd 
+j_ndhokero@instance-1:~$ ls
+dirname  test.txt  text.txt
+j_ndhokero@instance-1:~$ cd /etc
+j_ndhokero@instance-1:/etc$ ls
+NetworkManager                 cron.daily            groff            ld.so.cache     mke2fs.conf             pam.d        rpc                sysctl.d
+PackageKit                     cron.hourly           group            ld.so.conf      modprobe.d              passwd       rsyslog.conf       systemd
+X11                            cron.monthly          group-           ld.so.conf.d    modules                 passwd-      rsyslog.d          terminfo
+adduser.conf                   cron.weekly           grub.d           ldap            modules-load.d          perl         screenrc           timezone
+alternatives                   crontab               gshadow          legal           mtab                    pm           security           tmpfiles.d
+apparmor                       cryptsetup-initramfs  gshadow-         libaudit.conf   multipath               polkit-1     selinux            ubuntu-advantage
+apparmor.d                     crypttab              gss              libblockdev     multipath.conf          pollinate    services           ucf.conf
+apport                         dbus-1                hdparm.conf      libnl-3         nanorc                  ppp          shadow             udev
+apt                            debconf.conf          host.conf        locale.alias    needrestart             profile      shadow-            ufw
+bash.bashrc                    debian_version        hostname         locale.gen      netconfig               profile.d    shells             update-manager
+bash_completion                default               hosts            localtime       netplan                 protocols    skel               update-motd.d
+bash_completion.d              deluser.conf          hosts.allow      logcheck        network                 python3      sos                update-notifier
+bindresvport.blacklist         depmod.d              hosts.deny       login.defs      networkd-dispatcher     python3.10   ssh                usb_modeswitch.conf
+binfmt.d                       dhcp                  init.d           logrotate.conf  networks                rc0.d        ssl                usb_modeswitch.d
+boto.cfg                       dpkg                  initramfs-tools  logrotate.d     newt                    rc1.d        subgid             vim
+byobu                          e2scrub.conf          inputrc          lsb-release     nftables.conf           rc2.d        subgid-            vmware-tools
+ca-certificates                ec2_version           iproute2         lvm             nsswitch.conf           rc3.d        subuid             vtrgb
+ca-certificates.conf           environment           iscsi            machine-id      nvme                    rc4.d        subuid-            wgetrc
+ca-certificates.conf.dpkg-old  ethertypes            issue            magic           opt                     rc5.d        sudo.conf          xattr.conf
+chrony                         fstab                 issue.net        magic.mime      os-release              rc6.d        sudo_logsrvd.conf  xdg
+cloud                          fuse.conf             kernel           manpath.config  overlayroot.conf        rcS.d        sudoers            zsh_command_not_found
+console-setup                  gai.conf              kernel-img.conf  mdadm           overlayroot.local.conf  resolv.conf  sudoers.d
+cron.d                         google_instance_id    landscape        mime.types      pam.conf                rmt          sysctl.conf
+j_ndhokero@instance-1:/etc$ cd NetworkManager
+j_ndhokero@instance-1:/etc/NetworkManager$ pwd
+/etc/NetworkManager
+j_ndhokero@instance-1:/etc/NetworkManager$ cat NetworkManager | head -n 3
+cat: NetworkManager: No such file or directory
+j_ndhokero@instance-1:/etc/NetworkManager$ cat NetworkManager
+cat: NetworkManager: No such file or directory
+j_ndhokero@instance-1:/etc/NetworkManager$ pwd
+/etc/NetworkManager
+j_ndhokero@instance-1:/etc/NetworkManager$ ls
+dispatcher.d
+j_ndhokero@instance-1:/etc/NetworkManager$ cd ..
+j_ndhokero@instance-1:/etc$ ls
+NetworkManager                 cron.daily            groff            ld.so.cache     mke2fs.conf             pam.d        rpc                sysctl.d
+PackageKit                     cron.hourly           group            ld.so.conf      modprobe.d              passwd       rsyslog.conf       systemd
+X11                            cron.monthly          group-           ld.so.conf.d    modules                 passwd-      rsyslog.d          terminfo
+adduser.conf                   cron.weekly           grub.d           ldap            modules-load.d          perl         screenrc           timezone
+alternatives                   crontab               gshadow          legal           mtab                    pm           security           tmpfiles.d
+apparmor                       cryptsetup-initramfs  gshadow-         libaudit.conf   multipath               polkit-1     selinux            ubuntu-advantage
+apparmor.d                     crypttab              gss              libblockdev     multipath.conf          pollinate    services           ucf.conf
+apport                         dbus-1                hdparm.conf      libnl-3         nanorc                  ppp          shadow             udev
+apt                            debconf.conf          host.conf        locale.alias    needrestart             profile      shadow-            ufw
+bash.bashrc                    debian_version        hostname         locale.gen      netconfig               profile.d    shells             update-manager
+bash_completion                default               hosts            localtime       netplan                 protocols    skel               update-motd.d
+bash_completion.d              deluser.conf          hosts.allow      logcheck        network                 python3      sos                update-notifier
+bindresvport.blacklist         depmod.d              hosts.deny       login.defs      networkd-dispatcher     python3.10   ssh                usb_modeswitch.conf
+binfmt.d                       dhcp                  init.d           logrotate.conf  networks                rc0.d        ssl                usb_modeswitch.d
+boto.cfg                       dpkg                  initramfs-tools  logrotate.d     newt                    rc1.d        subgid             vim
+byobu                          e2scrub.conf          inputrc          lsb-release     nftables.conf           rc2.d        subgid-            vmware-tools
+ca-certificates                ec2_version           iproute2         lvm             nsswitch.conf           rc3.d        subuid             vtrgb
+ca-certificates.conf           environment           iscsi            machine-id      nvme                    rc4.d        subuid-            wgetrc
+ca-certificates.conf.dpkg-old  ethertypes            issue            magic           opt                     rc5.d        sudo.conf          xattr.conf
+chrony                         fstab                 issue.net        magic.mime      os-release              rc6.d        sudo_logsrvd.conf  xdg
+cloud                          fuse.conf             kernel           manpath.config  overlayroot.conf        rcS.d        sudoers            zsh_command_not_found
+console-setup                  gai.conf              kernel-img.conf  mdadm           overlayroot.local.conf  resolv.conf  sudoers.d
+cron.d                         google_instance_id    landscape        mime.types      pam.conf                rmt          sysctl.conf
+j_ndhokero@instance-1:/etc$ cd X11
+j_ndhokero@instance-1:/etc/X11$ ls
+Xsession.d  xkb
+j_ndhokero@instance-1:/etc/X11$ cd groff
+-bash: cd: groff: No such file or directory
+j_ndhokero@instance-1:/etc/X11$ cd ..
+j_ndhokero@instance-1:/etc$ cd groff
+j_ndhokero@instance-1:/etc/groff$ ls
+man.local  mdoc.local
+j_ndhokero@instance-1:/etc/groff$ pwd
+/etc/groff
+j_ndhokero@instance-1:/etc/groff$ head n -3
+head: invalid trailing option -- 3
+Try 'head --help' for more information.
+j_ndhokero@instance-1:/etc/groff$ head n -3 man.local
+head: invalid trailing option -- 3
+Try 'head --help' for more information.
+j_ndhokero@instance-1:/etc/groff$ head n --3 man.local
+head: unrecognized option '--3'
+Try 'head --help' for more information.
+j_ndhokero@instance-1:/etc/groff$ head n --3 man.local
+head: unrecognized option '--3'
+Try 'head --help' for more information.
+j_ndhokero@instance-1:/etc/groff$ head n -3 man.local
+head: invalid trailing option -- 3
+Try 'head --help' for more information.
+j_ndhokero@instance-1:/etc/groff$ head n -3 man.local
+head: invalid trailing option -- 3
+Try 'head --help' for more information.
+j_ndhokero@instance-1:/etc/groff$ head n -3 | man.local
+head: invalid trailing option -- 3
+Try 'head --help' for more information.
+man.local: command not found
+j_ndhokero@instance-1:/etc/groff$ head n -3 mdoc.local
+head: invalid trailing option -- 3
+Try 'head --help' for more information.
+j_ndhokero@instance-1:/etc/groff$ head n -- 3 man.local
+head: cannot open 'n' for reading: No such file or directory
+head: cannot open '3' for reading: No such file or directory
+==> man.local <==
+.\" -*- nroff -*-
+.\"
+.\" This file is loaded after an-old.tmac.
+.\" Put any local modifications to an-old.tmac here.
+.
+.if n \{\
+.  \" Debian: Map \(oq to ' rather than ` in nroff mode for devices other
+.  \" than utf8.
+.  if !'\*[.T]'utf8' \
+.    tr \[oq]'
+j_ndhokero@instance-1:/etc/groff$ cd ..
+j_ndhokero@instance-1:/etc$ ls
+NetworkManager                 cron.daily            groff            ld.so.cache     mke2fs.conf             pam.d        rpc                sysctl.d
+PackageKit                     cron.hourly           group            ld.so.conf      modprobe.d              passwd       rsyslog.conf       systemd
+X11                            cron.monthly          group-           ld.so.conf.d    modules                 passwd-      rsyslog.d          terminfo
+adduser.conf                   cron.weekly           grub.d           ldap            modules-load.d          perl         screenrc           timezone
+alternatives                   crontab               gshadow          legal           mtab                    pm           security           tmpfiles.d
+apparmor                       cryptsetup-initramfs  gshadow-         libaudit.conf   multipath               polkit-1     selinux            ubuntu-advantage
+apparmor.d                     crypttab              gss              libblockdev     multipath.conf          pollinate    services           ucf.conf
+apport                         dbus-1                hdparm.conf      libnl-3         nanorc                  ppp          shadow             udev
+apt                            debconf.conf          host.conf        locale.alias    needrestart             profile      shadow-            ufw
+bash.bashrc                    debian_version        hostname         locale.gen      netconfig               profile.d    shells             update-manager
+bash_completion                default               hosts            localtime       netplan                 protocols    skel               update-motd.d
+bash_completion.d              deluser.conf          hosts.allow      logcheck        network                 python3      sos                update-notifier
+bindresvport.blacklist         depmod.d              hosts.deny       login.defs      networkd-dispatcher     python3.10   ssh                usb_modeswitch.conf
+binfmt.d                       dhcp                  init.d           logrotate.conf  networks                rc0.d        ssl                usb_modeswitch.d
+boto.cfg                       dpkg                  initramfs-tools  logrotate.d     newt                    rc1.d        subgid             vim
+byobu                          e2scrub.conf          inputrc          lsb-release     nftables.conf           rc2.d        subgid-            vmware-tools
+ca-certificates                ec2_version           iproute2         lvm             nsswitch.conf           rc3.d        subuid             vtrgb
+ca-certificates.conf           environment           iscsi            machine-id      nvme                    rc4.d        subuid-            wgetrc
+ca-certificates.conf.dpkg-old  ethertypes            issue            magic           opt                     rc5.d        sudo.conf          xattr.conf
+chrony                         fstab                 issue.net        magic.mime      os-release              rc6.d        sudo_logsrvd.conf  xdg
+cloud                          fuse.conf             kernel           manpath.config  overlayroot.conf        rcS.d        sudoers            zsh_command_not_found
+console-setup                  gai.conf              kernel-img.conf  mdadm           overlayroot.local.conf  resolv.conf  sudoers.d
+cron.d                         google_instance_id    landscape        mime.types      pam.conf                rmt          sysctl.conf
+j_ndhokero@instance-1:/etc$ cd apparmor
+j_ndhokero@instance-1:/etc/apparmor$ ls
+init  parser.conf
+j_ndhokero@instance-1:/etc/apparmor$ head n -3 parser.conf
+head: invalid trailing option -- 3
+Try 'head --help' for more information.
+j_ndhokero@instance-1:/etc/apparmor$ tail b -3 parser.conf
+tail: option used in invalid context -- 3
+j_ndhokero@instance-1:/etc/apparmor$ cd ..
+j_ndhokero@instance-1:/etc$ ls
+NetworkManager                 cron.daily            groff            ld.so.cache     mke2fs.conf             pam.d        rpc                sysctl.d
+PackageKit                     cron.hourly           group            ld.so.conf      modprobe.d              passwd       rsyslog.conf       systemd
+X11                            cron.monthly          group-           ld.so.conf.d    modules                 passwd-      rsyslog.d          terminfo
+adduser.conf                   cron.weekly           grub.d           ldap            modules-load.d          perl         screenrc           timezone
+alternatives                   crontab               gshadow          legal           mtab                    pm           security           tmpfiles.d
+apparmor                       cryptsetup-initramfs  gshadow-         libaudit.conf   multipath               polkit-1     selinux            ubuntu-advantage
+apparmor.d                     crypttab              gss              libblockdev     multipath.conf          pollinate    services           ucf.conf
+apport                         dbus-1                hdparm.conf      libnl-3         nanorc                  ppp          shadow             udev
+apt                            debconf.conf          host.conf        locale.alias    needrestart             profile      shadow-            ufw
+bash.bashrc                    debian_version        hostname         locale.gen      netconfig               profile.d    shells             update-manager
+bash_completion                default               hosts            localtime       netplan                 protocols    skel               update-motd.d
+bash_completion.d              deluser.conf          hosts.allow      logcheck        network                 python3      sos                update-notifier
+bindresvport.blacklist         depmod.d              hosts.deny       login.defs      networkd-dispatcher     python3.10   ssh                usb_modeswitch.conf
+binfmt.d                       dhcp                  init.d           logrotate.conf  networks                rc0.d        ssl                usb_modeswitch.d
+boto.cfg                       dpkg                  initramfs-tools  logrotate.d     newt                    rc1.d        subgid             vim
+byobu                          e2scrub.conf          inputrc          lsb-release     nftables.conf           rc2.d        subgid-            vmware-tools
+ca-certificates                ec2_version           iproute2         lvm             nsswitch.conf           rc3.d        subuid             vtrgb
+ca-certificates.conf           environment           iscsi            machine-id      nvme                    rc4.d        subuid-            wgetrc
+ca-certificates.conf.dpkg-old  ethertypes            issue            magic           opt                     rc5.d        sudo.conf          xattr.conf
+chrony                         fstab                 issue.net        magic.mime      os-release              rc6.d        sudo_logsrvd.conf  xdg
+cloud                          fuse.conf             kernel           manpath.config  overlayroot.conf        rcS.d        sudoers            zsh_command_not_found
+console-setup                  gai.conf              kernel-img.conf  mdadm           overlayroot.local.conf  resolv.conf  sudoers.d
+cron.d                         google_instance_id    landscape        mime.types      pam.conf                rmt          sysctl.conf
+j_ndhokero@instance-1:/etc$ cd groff
+j_ndhokero@instance-1:/etc/groff$ ls
+man.local  mdoc.local
+j_ndhokero@instance-1:/etc/groff$ head -n 3 man.local
+.\" -*- nroff -*-
+.\"
+.\" This file is loaded after an-old.tmac.

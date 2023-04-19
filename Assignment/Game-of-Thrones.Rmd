@@ -1,0 +1,12 @@
+---
+title: "Game-Of-Thrones"
+output: html_document
+date: "2023-04-19"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Brief description 
+Game of Thrones is a fantasy drama television series created by David Benioff and D. B. Weiss. The show is based on George R. R. Martin's series of fantasy novels, A Song of Ice and Fire. It premiered on HBO on April 17, 2011, and concluded on May 19, 2019, with a total of 73 episodes over eight seasons.

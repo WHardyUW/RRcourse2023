@@ -31,3 +31,17 @@ oshieodomero@instance-1:~/rr$ cat test.txt | head -n 3
 learning research
 making progress
 oshieodomero@instance-1:~/rr$ 
+oshieodomero@instance-1:~/rr$ cd /etc
+oshieodomero@instance-1:/etc$ cd nvme
+oshieodomero@instance-1:/etc/nvme$ ls -l
+total 12
+-rw-r--r-- 1 root root 183 Nov  8 12:13 discovery.conf
+-rw-r--r-- 1 root root  37 Apr 15 02:12 hostid
+-rw-r--r-- 1 root root  69 Apr 15 02:12 hostnqn
+oshieodomero@instance-1:/etc/nvme$ pwd
+/etc/nvme
+oshieodomero@instance-1:/etc/nvme$ cat hostid | head -n 3
+ff7c4c01-7155-4a9a-b13e-ce9d0ba28d6a
+oshieodomero@instance-1:/etc/nvme$ cat hostnqn | head -n 3
+nqn.2014-08.org.nvmexpress:uuid:9a6012c2-296e-4ae1-9062-2038502221a5
+oshieodomero@instance-1:/etc/nvme$ 

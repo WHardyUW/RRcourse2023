@@ -1,0 +1,2 @@
+total 0
+-rw-rw-r-- 1 a_nowak64 a_nowak64 0 Apr 18 20:13 test.text

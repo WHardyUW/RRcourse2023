@@ -39,3 +39,24 @@ ggplot(data = data.frame(seasons, viewership)) +
   
 ![](Rplot.png)
   
+  ## Changes in Viewership
+Here is a graph showing the percentage change in viewership from the previous episode for each season of Game of Thrones:
+ 
+### code block
+library(dplyr)
+
+seasons <- c(1, 2, 3, 4, 5, 6, 7, 8)
+viewership <- c(2.52, 3.80, 4.97, 6.88, 7.99, 8.89, 10.26, 11.99)
+viewership_df <- data.frame(seasons, viewership)
+
+viewership_df <- viewership_df %>%
+  mutate(change = (viewership - lag(viewership))/lag(viewership))
+
+ggplot(data = viewership_df) + 
+  geom_line(aes(x = seasons, y = change)) + 
+  geom_point(aes(x = seasons, y = change)) + 
+  xlab("Season") + 
+  ylab("Percentage Change in Viewership") + 
+  ggtitle("Percentage Change in Viewership by Season")
+  
+![](Rplot01.png)

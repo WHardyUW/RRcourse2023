@@ -15,3 +15,8 @@ Game of Thrones is a fantasy drama television series created by David Benioff an
 
 Game of Thrones Logo
 ![**Logo of the series**](R.jpg)
+
+## Basic Statistics
+According to HBO, the final season of Game of Thrones had an average of 44.2 million viewers per episode, including delayed viewing.
+The show was a critical and commercial success, receiving numerous awards and nominations throughout its run, including 59 Primetime Emmy Awards, the most for any drama series.
+A Report on "Game of Thrones" TV Show Game of Thrones is a fantasy drama television series created by David Benioff and D. B. Weiss. The show is based on George R. R. Martin's series of fantasy novels, A Song of Ice and Fire. It premiered on HBO on April 17, 2011, and concluded on May 19, 2019, with a total of 73 episodes over eight seasons.

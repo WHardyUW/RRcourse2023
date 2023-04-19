@@ -8,11 +8,10 @@ a_nowak64@instance-1:/etc$ ip a | head -n 3
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
-a_nowak64@instance-1:/etc$ cd /etc
-a_nowak64@instance-1:/etc$ pwd
-/etc
-a_nowak64@instance-1:/etc$ head -3 adduser.conf
-# /etc/adduser.conf: `adduser' configuration.
-# See adduser(8) and adduser.conf(5) for full documentation.
+a_nowak64@instance-1:/etc$ cd ssl
+a_nowak64@instance-1:/etc/ssl$ pwd
+/etc/ssl
+a_nowak64@instance-1:/etc/ssl$ tail -3 openssl.cnf
 
-a_nowak64@instance-1:/etc$ 
+[system_default_sect]
+CipherString = DEFAULT:@SECLEVEL=2

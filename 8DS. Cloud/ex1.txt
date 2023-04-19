@@ -1,0 +1,6 @@
+Last login: Fri Apr 14 17:34:50 on ttys000
+(base) ludifeng@ludideMacBook-Pro ~ % ifconfig -a |tail -n 3
+utun6: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1380
+	inet6 fe80::643d:726:aa6d:3699%utun6 prefixlen 64 scopeid 0x15 
+	nd6 options=201<PERFORMNUD,DAD>
+(base) ludifeng@ludideMacBook-Pro ~ % 

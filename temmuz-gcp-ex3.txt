@@ -1,0 +1,66 @@
+temmuzyavuzer@cloudshell:~ (rr-gcp)$ ps aux | grep cpu
+temmuzy+     756  0.0  0.0   6272   640 pts/2    S<+  17:10   0:00 grep --color=auto cpu
+temmuzyavuzer@cloudshell:~ (rr-gcp)$ cd /etc/nvme
+-bash: cd: /etc/nvme: No such file or directory
+temmuzyavuzer@cloudshell:~ (rr-gcp)$ tail -3 /proc/net/dev
+    lo:  199690    1511    0    0    0     0          0         0   199690    1511    0    0    0     0       0          0
+docker0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  eth0:  233337    1744    0    0    0     0          0         0   227309    1372    0    0    0     0       0          0
+temmuzyavuzer@cloudshell:~ (rr-gcp)$ cd /etc/nvme
+-bash: cd: /etc/nvme: No such file or directory
+temmuzyavuzer@cloudshell:~ (rr-gcp)$ cd /etc
+temmuzyavuzer@cloudshell:/etc (rr-gcp)$ ls
+adduser.conf            ca-certificates       default       gai.conf   hosts            java-8-openjdk  logrotate.d     mke2fs.conf     nsswitch.conf      profile.d  rc6.d          services   sudoers            ucf.conf
+alternatives            ca-certificates.conf  deluser.conf  gdb        hosts.allow      kernel          lxc             modprobe.d      opt                protocols  rcS.d          shadow     sudoers.d          udev
+apache2                 containerd            dhcp          gitconfig  hosts.deny       ld.so.cache     lynx            modules         os-release         pulse      resolv.conf    shadow-    sudo_logsrvd.conf  ufw
+apparmor                cron.d                docker        groff      init             ld.so.conf      machine-id      modules-load.d  pam.conf           python2.7  rmt            shells     supervisor         update-motd.d
+apparmor.d              cron.daily            dpkg          group      init.d           ld.so.conf.d    magic           motd            pam.d              python3    rpc            skel       sv                 vim
+apt                     cron.hourly           e2scrub.conf  group-     initramfs-tools  libaudit.conf   magic.mime      mtab            passwd             python3.9  rsyslog.conf   ssh        sysctl.conf        vulkan
+bash.bashrc             cron.monthly          emacs         gshadow    inputrc          libnl-3         mailcap         mysql           passwd-            rc0.d      rsyslog.d      ssl        sysctl.d           wgetrc
+bash_completion         crontab               environment   gshadow-   iproute2         locale.alias    mailcap.order   nanorc          perl               rc1.d      runit          subgid     systemd            X11
+bash_completion.d       cron.weekly           ethertypes    gss        issue            locale.gen      manpath.config  netconfig       php                rc2.d      security       subgid-    terminfo           xattr.conf
+bazel.bazelrc           dbus-1                fonts         gtk-2.0    issue.net        localtime       mc              network         postgresql         rc3.d      selinux        subuid     timezone           xdg
+bindresvport.blacklist  debconf.conf          fstab         host.conf  java-11-openjdk  logcheck        mercurial       networks        postgresql-common  rc4.d      sensors3.conf  subuid-    tmpfiles.d
+binfmt.d                debian_version        fuse.conf     hostname   java-17-openjdk  login.defs      mime.types      nftables.conf   profile            rc5.d      sensors.d      sudo.conf  tmux.conf
+temmuzyavuzer@cloudshell:/etc (rr-gcp)$ gdb
+GNU gdb (Debian 10.1-1.7) 10.1.90.20210103-git
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+(gdb) cd gbd
+gbd: No such file or directory.
+(gdb) cd /Quit
+(gdb) Quit
+(gdb) Quit
+(gdb)
+(gdb) Quit
+(gdb)
+[1]+  Stopped                 gdb
+temmuzyavuzer@cloudshell:/etc (rr-gcp)$ cd emans
+-bash: cd: emans: No such file or directory
+temmuzyavuzer@cloudshell:/etc (rr-gcp)$ cd gss
+temmuzyavuzer@cloudshell:/etc/gss (rr-gcp)$ ls
+mech.d
+temmuzyavuzer@cloudshell:/etc/gss (rr-gcp)$ cd ..
+temmuzyavuzer@cloudshell:/etc (rr-gcp)$ cd apt
+temmuzyavuzer@cloudshell:/etc/apt (rr-gcp)$ ls
+apt.conf.d  auth.conf.d  preferences.d  sources.list  sources.list.d  sources.list.save  trusted.gpg  trusted.gpg~  trusted.gpg.d
+temmuzyavuzer@cloudshell:/etc/apt (rr-gcp)$ pwd
+/etc/apt
+temmuzyavuzer@cloudshell:/etc/apt (rr-gcp)$ cat sources.list | head -n 3
+deb https://deb.debian.org/debian bullseye main
+deb https://deb.debian.org/debian bullseye-updates main
+deb https://deb.debian.org/debian-security bullseye-security main
+temmuzyavuzer@cloudshell:/etc/apt (rr-gcp)$ ^C
+temmuzyavuzer@cloudshell:/etc/apt (rr-gcp)$

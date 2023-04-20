@@ -96,12 +96,10 @@ root        1050  0.0  0.0      0     0 ?        I    13:27   0:00 [kworker/0:0-
 root        1052  0.0  0.0      0     0 ?        I    13:28   0:00 [kworker/u4:0-events_unbound]
 root        1066  0.0  0.0      0     0 ?        I    13:33   0:00 [kworker/1:0-events_freezable]
 e_shiri+    1071  0.0  0.3  10460  3304 pts/0    R+   13:39   0:00 ps aux
-e_shirinov@instance1:~$ tail -n 3
-
-tail -last/3
-tail -last 3
-tail -3
-ps aux tail -3
+e_shirinov@instance1:~$ ip a | tail -3
+       valid_lft 83153sec preferred_lft 83153sec
+    inet6 fe80::4001:aff:fe80:2/64 scope link 
+       valid_lft forever preferred_lft forever
 ^C
 e_shirinov@instance1:~$ ip tail -3
 Object "tail" is unknown, try "ip help".

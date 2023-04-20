@@ -1,0 +1,27 @@
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    toc-expand: 1
+    toc-title: Contents
+    toc-location: body
+    smooth-scroll: true
+    theme: 
+      light: flatly
+      dark: darkly
+  pdf:
+    lof: true
+    lot: true
+  revealjs: 
+    output-file: document-revealjs.html
+keep-md: true
+number-sections: true
+number-depth: 2
+title-block-banner: true
+code-fold: true
+code-summary: Show code
+latex-tinytex: false
+execute:
+  echo: fenced
+  warning: false
+  freeze: true

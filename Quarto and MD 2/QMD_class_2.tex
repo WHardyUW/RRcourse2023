@@ -1,0 +1,678 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{2}
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Quarto},
+  pdfauthor={Wojciech Hardy},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Quarto}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{YAML, rendering and parameters}
+\author{Wojciech Hardy}
+\date{4/20/23}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, breakable, frame hidden, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
+
+\listoffigures
+\listoftables
+\hypertarget{moving-from-different-formats-to-quarto}{%
+\section{Moving from different formats to
+Quarto}\label{moving-from-different-formats-to-quarto}}
+
+\hypertarget{migrating-from-rmarkdown}{%
+\subsection{Migrating from RMarkdown}\label{migrating-from-rmarkdown}}
+
+Quarto is quite new. It's enough similar to RMarkdown to make most of
+the uses convertible. How?
+
+From a regular R script:
+
+Step 1) Run
+\texttt{knitr::convert\_chunk\_header(input\ =\ "RMD\_class\_1\_cut.Rmd",\ output\ =\ "QMD\_class\_1\_cut.qmd")}
+
+Step 2) Edit the YAML options (in notepad, through R, etc.)
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule()
+RMD & Quarto \\
+\midrule()
+\endhead
+output: & format: \\
+output: html\_document & format: html \\
+output: pdf\_document & format: pdf \\
+output: word\_document & format: docx \\
+output: xaringan & format: revealjs \\
+output: ioslides & format: ioslides \\
+: \href{https://quarto.org/docs/faq/rmarkdown.html}{Other} : & \\
+\bottomrule()
+\end{longtable}
+
+Done!
+
+\hypertarget{turning-your-notebook-into-a-quarto-document}{%
+\subsection{Turning your Notebook into a Quarto
+document}\label{turning-your-notebook-into-a-quarto-document}}
+
+Step 1) insert a YAML header in a \emph{raw} block
+
+For example:
+
+\texttt{-\/-\/-}
+
+\texttt{-\/-\/-}
+
+Done! You don't even need to switch to *.qmd!
+
+But if you want embedded code chunks, you should switch to .qmd.
+
+You can convert a *.ipynb file to a *.qmd file and \emph{vice versa}
+with: \texttt{quarto\ convert\ notebook.ipynb} (to qmd)
+\texttt{quarto\ convert\ notebook.qmd} (to ipynb)
+
+Or \href{https://jupytext.readthedocs.io/en/latest/}{use
+\texttt{Jupytext} to have both (synced)}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{to-add-a-refreshable-preview}{%
+\section{To add a (refreshable)
+preview}\label{to-add-a-refreshable-preview}}
+
+From terminal run:
+
+\texttt{quarto\ preview\ file.qmd}
+
+or
+
+\texttt{quarto\ preview\ notebook.ipynb}
+
+(You can preview in pdf by adding \texttt{-\/-to\ pdf})
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{need-a-recap}{%
+\section{Need a recap?}\label{need-a-recap}}
+
+Remember you can
+\href{https://quarto.org/docs/authoring/markdown-basics.html}{check the
+documentation} - there's many more options than we covered.
+
+For example, let's check here for some more info on
+\href{https://quarto.org/docs/authoring/figures.html}{figures} or
+\href{https://quarto.org/docs/authoring/diagrams.html}{diagrams} or
+other \href{https://quarto.org/docs/authoring/notebook-embed.html}{neat
+tricks}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{so-what-is-yaml}{%
+\section{So what is YAML?}\label{so-what-is-yaml}}
+
+\textbf{\href{https://yaml.org/}{YAML}} = \textbf{Y}AML \textbf{A}in't
+\textbf{M}arkup \textbf{L}anguage
+
+As Wikipedia puts it: ``a human-readable data-serialization language''.
+
+If that's not clear, ChatGPT makes it clearer:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  a way to represent computer data in a format that is easily understood
+  by humans, allowing for easier interpretation and modification of data
+  without needing specialized software or tools
+\item
+  these languages are commonly used in web development, data exchange
+  between different systems, and configuration files for applications.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{yaml-in-quarto---options}{%
+\section{YAML in Quarto - options}\label{yaml-in-quarto---options}}
+
+\hypertarget{basics}{%
+\subsection{Basics}\label{basics}}
+
+\hypertarget{the-syntax}{%
+\subsubsection{The syntax}\label{the-syntax}}
+
+YAML requires indentation for options and suboptions (accordingly with
+the hierarchy). Examples from leaset complex to most complex:
+
+\texttt{-\/-\/-}
+
+\texttt{-\/-\/-}
+
+Now with html-specific options: \texttt{-\/-\/-}
+
+\texttt{-\/-\/-}
+
+\hypertarget{banners}{%
+\subsubsection{Banners}\label{banners}}
+
+You can highlight the title with a banner:
+\texttt{title-block-banner:\ true}
+
+or include an image for a background:
+\texttt{title-block-banner:\ images/banner.jpeg}
+
+\hypertarget{dates}{%
+\subsubsection{Dates}\label{dates}}
+
+Change the date format and make it dynamic:
+
+\texttt{date:\ today} \texttt{date-format:\ short}
+
+\hypertarget{setting-default-chunk-options}{%
+\subsubsection{Setting default chunk
+options}\label{setting-default-chunk-options}}
+
+Within the \texttt{execute} key you can set default options for code
+blocks. They can be overridden within the specific code chunks.
+
+Example:
+
+\texttt{-\/-\/-} execute: echo: fenced warning: false cache: true
+freeze: true \texttt{-\/-\/-}
+
+\texttt{freeze} specifies a more general approach for caching when
+rendering a bunch of files or a whole project. \texttt{true} to not
+recompute generated computational output during a whole project render.
+\texttt{false} to always recompute (default). \texttt{auto} to recompute
+when a source file changed.
+
+\hypertarget{switching-formats}{%
+\subsubsection{Switching formats}\label{switching-formats}}
+
+Let's try \texttt{pdf} and \texttt{docx}.
+
+\href{https://quarto.org/docs/output-formats/all-formats.html}{For all
+available formats check here.}
+
+\hypertarget{html-options}{%
+\subsection{HTML options}\label{html-options}}
+
+The html format is the most flexible as it enables dynamic and
+interactive elements.
+
+To get an html final output, code in .qmd gets evaluated and the output
+is saved to .md (regular markdown). This is then translated using pandoc
+to html.
+
+\hypertarget{table-of-contents}{%
+\subsubsection{Table of Contents}\label{table-of-contents}}
+
+\texttt{-\/-\/-}
+
+\texttt{-\/-\/-}
+
+\texttt{toc-depth} describes the levels included (default 3).
+
+\texttt{toc-expand} how many should be expanded from the start
+(\texttt{true} if all, default \texttt{false} for none).
+
+\texttt{toc-title} to add a caption.
+
+\texttt{toc-location} to move the ToC (\texttt{left}, \texttt{right} or
+\texttt{body})
+
+\texttt{smooth-scroll:\ true} to enable smooth scrolling.
+
+\hypertarget{section-numbering}{%
+\subsubsection{Section numbering}\label{section-numbering}}
+
+\texttt{number-sections:\ true}
+
+\texttt{number-depth:\ 3} Number of levels for numbering.
+
+\hypertarget{global-code-chunk-options}{%
+\subsubsection{Global code-chunk
+options}\label{global-code-chunk-options}}
+
+\texttt{code-fold} to make it \textbf{optional} whether to display code.
+\texttt{true} to start with collapsed, \texttt{false} to not include,
+\texttt{show} to start with shown but collapsable.
+
+\texttt{code-summary} specify text for collapsed code.
+
+\hypertarget{including-html-elements}{%
+\subsubsection{Including html elements}\label{including-html-elements}}
+
+E.g.:
+
+\hypertarget{styling}{%
+\subsubsection{Styling}\label{styling}}
+
+You can use css for styling:
+
+\hypertarget{themes}{%
+\subsubsection{Themes}\label{themes}}
+
+You can do a quick swap of the whole theme by using one of 25 themes
+from \href{https://bootswatch.com/}{Bootswatch}. Try:
+
+\texttt{theme:\ lumen}
+
+\texttt{theme:\ solar}
+
+\texttt{theme:\ superhero}
+
+You can also provide a dark and light option:
+
+\hypertarget{some-others-not-all}{%
+\subsubsection{Some others (not all)}\label{some-others-not-all}}
+
+Disable the default special features with:
+
+\texttt{minimal:\ true}
+
+\hypertarget{divs-and-spans}{%
+\subsubsection{Divs and Spans}\label{divs-and-spans}}
+
+You can use classes and define `div' regions (as in html nodes), by
+indicating the start and end of a region with \texttt{:::}.
+
+For example:
+
+\hypertarget{putting-your-stuff-in-tabs}{%
+\subsubsection{Putting your stuff in
+tabs}\label{putting-your-stuff-in-tabs}}
+
+For example:
+
+\hypertarget{lists}{%
+\section{Lists}\label{lists}}
+
+\hypertarget{ordered}{%
+\paragraph{Ordered}\label{ordered}}
+
+\texttt{1.\ Item\ 1}
+
+\texttt{2.\ Item\ 2}
+
+\texttt{2.\ Item\ 3\ \#\ Note\ the\ error\ in\ numbering}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Item 1
+\item
+  Item 2
+\item
+  Item 3 \texttt{\#\ It\textquotesingle{}s\ fine\ here\ though}
+\end{enumerate}
+
+\hypertarget{unordered}{%
+\paragraph{Unordered}\label{unordered}}
+
+\texttt{*\ Item}
+
+\texttt{*\ Another\ item}
+
+\begin{itemize}
+\item
+  Item
+\item
+  Another item
+\end{itemize}
+
+\hypertarget{subitems}{%
+\paragraph{Subitems}\label{subitems}}
+
+\texttt{1.\ \ Item\ 1}
+
+\texttt{-\ \ \ Item\ 2}
+
+\texttt{-\ \ \ Item\ 3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Item 1
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Item 2
+  \item
+    Item 3
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{creating-a-self-contained-html}{%
+\subsubsection{Creating a self-contained
+Html}\label{creating-a-self-contained-html}}
+
+\texttt{-\/-\/-}
+
+\texttt{-\/-\/-}
+
+\hypertarget{pdf-options}{%
+\subsection{PDF options}\label{pdf-options}}
+
+Many of the options for the pdf and docx formats look the same. Main
+differences:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  no dynamic elements (e.g.~no floating table of content)
+\item
+  no direct html support
+\item
+  TeX support (e.g.~you can use document classes, etc.)
+\end{enumerate}
+
+\hypertarget{troubleshooting}{%
+\subsubsection{Troubleshooting}\label{troubleshooting}}
+
+Getting from markdown to pdf requires a TeX installation. Quarto will
+propose installing \texttt{tinytex} via its tools. You can try that.
+
+If it's not working, troubleshooting usually goes through some
+reinstallation.
+
+You can also try adding:
+
+\texttt{latex-tinytex:\ false}
+
+this will force Quarto to use what you have installed in the system
+instead of the Quarto installation.
+
+\hypertarget{including-elements}{%
+\subsubsection{Including elements}\label{including-elements}}
+
+Instead of html files and code, you may attach .tex files and TeX
+writing:
+
+\texttt{-\/-\/-}
+
+\texttt{-\/-\/-}
+
+\hypertarget{lists-of-tables-and-figures}{%
+\subsubsection{Lists of tables and
+figures}\label{lists-of-tables-and-figures}}
+
+\texttt{lof:\ true}
+
+\texttt{lot:\ true}
+
+\hypertarget{combining-formats}{%
+\subsection{Combining formats}\label{combining-formats}}
+
+You can also render several formats and link them together.
+
+For example:
+
+\texttt{-\/-\/-}
+
+\texttt{-\/-\/-}
+
+Or if the file extensions overlap:
+
+\texttt{-\/-\/-}
+
+\texttt{-\/-\/-}
+
+\hypertarget{getting-an-.md-file}{%
+\subsection{Getting an .md file}\label{getting-an-.md-file}}
+
+We might be interested in getting a pure .md file (for example for a
+readme.md file for GitHub).
+
+.md is a byproduct of the rendering process, usually deleted by the end
+of the process.
+
+To keep it:
+
+\texttt{keep-md:\ true}
+
+Try it for the \texttt{QMD\_class\_1\_cut.qmd} file and compare QMD with
+MD.
+
+\hypertarget{exporting-yaml}{%
+\section{Exporting YAML}\label{exporting-yaml}}
+
+We've been editing YAML before. We can actually put the info from YAML
+in a separate file that will be automatically considered for all qmd
+documents.
+
+It's helpful when:
+
+\begin{itemize}
+\tightlist
+\item
+  there's several documents that we want to have similar settings.
+\item
+  we work with a team and want everyone to use the same settings.
+\end{itemize}
+
+We have several options here:
+
+\texttt{\_quarto.yml} file keeps information at a project level
+
+\texttt{dir/\_metadata.yml} file keeps information at a directory level
+(e.g.~within a project)
+
+\texttt{dir/document.qmd} is just what we put in the document header.
+
+Document overrides \texttt{\_metadata.yml} which overrides
+\texttt{\_quarto.yml}.
+
+You can create the .yml files in notepad.
+
+Mostly the options are merged rather than overwritten (so bundled
+together).
+
+\hypertarget{rendering}{%
+\section{Rendering}\label{rendering}}
+
+You can render Quarto MD files from your scripts or terminal. To do so,
+use:
+
+\hypertarget{terminal}{%
+\subsection{Terminal}\label{terminal}}
+
+For a whole project:
+
+\texttt{quarto\ render} in current folder or
+\texttt{quarto\ render\ myproject} for the \texttt{myproject} project.
+
+For a file:
+
+\texttt{quarto\ render\ document.qmd}
+
+For a folder:
+
+\texttt{quarto\ render\ directory/}
+
+\hypertarget{from-the-level-of-r}{%
+\subsection{From the level of R}\label{from-the-level-of-r}}
+
+\texttt{library(quarto)} \texttt{quarto\_render()}
+
+You can specify options for the rendering, including:
+
+\texttt{output\_format}, \texttt{output\_file}, \texttt{use\_freezer},
+\texttt{execute\_params}, etc.
+
+Parameters will let you specify data inputs at the document's
+conception.
+
+\hypertarget{assignment}{%
+\section{Assignment}\label{assignment}}
+
+Get your TV show description file from the previous week. Modify it
+using what we've learned today:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  Render it into at least two different formats in an automated way
+  (e.g.~using YAML options or a script).
+\item
+  Add some features for the .html output, e.g.: add a table of contents
+  and change the theme.
+\item
+  Put the YAML options in a separate file.
+\item
+  Include tabs.
+\item
+  Browse through the documentation and pick additional configuration
+  options on your own.
+\end{enumerate}
+
+Note: if you didn't finish the assignment last week, you can work with
+the Assignment.Rmd file. You'll have to convert it to .qmd first though
+(use what we've learned today for that!)
+
+
+
+\end{document}

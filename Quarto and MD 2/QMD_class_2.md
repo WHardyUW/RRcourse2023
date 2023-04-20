@@ -33,6 +33,9 @@ execute:
 ---
 
 
+
+
+
 # Moving from different formats to Quarto
 
 ## Migrating from RMarkdown

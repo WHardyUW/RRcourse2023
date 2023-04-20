@@ -1,0 +1,51 @@
+ Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/gcp/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+25 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+*** System restart required ***
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+i_grakhovski@instance-2:~$ ps aux | grep cpu
+root          10  0.0  0.0      0     0 ?        I<   Apr13   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    Apr13   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    Apr13   0:00 [cpuhp/1]
+root       93586  0.0  0.0      0     0 ?        I    14:09   0:01 [kworker/1:2-mm_percpu_wq]
+i_grakh+   94182  0.0  0.0   8168   720 pts/0    S+   17:21   0:00 grep --color=auto cpu
+i_grakhovski@instance-2:~$ cd /etc/nvme
+i_grakhovski@instance-2:/etc/nvme$ head -3 example.txt
+head: cannot open 'example.txt' for reading: No such file or directory
+i_grakhovski@instance-2:/etc/nvme$ ip a | tail -n 3
+       valid_lft 47948sec preferred_lft 47948sec
+    inet6 fe80::4001:aff:fe80:3/64 scope link 
+       valid_lft forever preferred_lft forever
+i_grakhovski@instance-2:/etc/nvme$ pwd
+/etc/nvme
+i_grakhovski@instance-2:/etc/nvme$ cat discovery.conf | head -n 3
+# Used for extracting default parameters for discovery
+#
+# Example:
+i_grakhovski@instance-2:/etc/nvme$ 

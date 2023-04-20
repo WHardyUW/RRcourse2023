@@ -1,0 +1,74 @@
+wmisiura@instance-1:~$ ps aux | gpu
+-bash: gpu: command not found
+wmisiura@instance-1:~$ ps aux | grep gpu
+wmisiura     901  0.0  0.0   5136   640 pts/0    R+   16:59   0:00 grep gpu
+wmisiura@instance-1:~$ ifconfig | tail -n 3
+-bash: ifconfig: command not found
+wmisiura@instance-1:~$ ifconfig | tail -n ^C
+wmisiura@instance-1:~$ ipconfig
+-bash: ipconfig: command not found
+wmisiura@instance-1:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1460 qdisc mq state UP group default qlen 1000
+    link/ether 42:01:0a:80:00:03 brd ff:ff:ff:ff:ff:ff
+    altname enp0s4
+    inet 10.128.0.3/32 brd 10.128.0.3 scope global dynamic ens4
+       valid_lft 2233sec preferred_lft 2233sec
+    inet6 fe80::4001:aff:fe80:3/64 scope link 
+       valid_lft forever preferred_lft forever
+wmisiura@instance-1:~$ ip a | tail -n 3
+       valid_lft 2223sec preferred_lft 2223sec
+    inet6 fe80::4001:aff:fe80:3/64 scope link 
+       valid_lft forever preferred_lft forever
+wmisiura@instance-1:~$ cd ..
+wmisiura@instance-1:/home$ ls -la
+total 12
+drwxr-xr-x  3 root     root     4096 Apr 20 16:39 .
+drwxr-xr-x 18 root     root     4096 Apr 20 16:54 ..
+drwxr-xr-x  3 wmisiura wmisiura 4096 Apr 20 16:56 wmisiura
+wmisiura@instance-1:/home$ cd ..
+wmisiura@instance-1:/$ ls -la
+total 68
+drwxr-xr-x  18 root root  4096 Apr 20 16:54 .
+drwxr-xr-x  18 root root  4096 Apr 20 16:54 ..
+lrwxrwxrwx   1 root root     7 Apr 11 20:22 bin -> usr/bin
+drwxr-xr-x   4 root root  4096 Apr 11 20:27 boot
+drwxr-xr-x  14 root root  2840 Apr 20 16:38 dev
+drwxr-xr-x  68 root root  4096 Apr 20 16:58 etc
+drwxr-xr-x   3 root root  4096 Apr 20 16:39 home
+lrwxrwxrwx   1 root root     7 Apr 11 20:22 lib -> usr/lib
+lrwxrwxrwx   1 root root     9 Apr 11 20:22 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root     9 Apr 11 20:22 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root    10 Apr 11 20:22 libx32 -> usr/libx32
+drwx------   2 root root 16384 Apr 11 20:21 lost+found
+drwxr-xr-x   2 root root  4096 Apr 11 20:22 media
+drwxr-xr-x   2 root root  4096 Apr 11 20:22 mnt
+drwxr-xr-x   2 root root  4096 Apr 11 20:22 opt
+dr-xr-xr-x 133 root root     0 Apr 20 16:37 proc
+drwx------   2 root root  4096 Apr 11 20:22 root
+drwxr-xr-x  19 root root   580 Apr 20 16:58 run
+lrwxrwxrwx   1 root root     8 Apr 11 20:22 sbin -> usr/sbin
+drwxr-xr-x   2 root root  4096 Apr 11 20:22 srv
+dr-xr-xr-x  13 root root     0 Apr 20 16:37 sys
+drwxrwxrwt  11 root root  4096 Apr 20 16:58 tmp
+drwxr-xr-x  14 root root  4096 Apr 11 20:22 usr
+drwxr-xr-x  11 root root  4096 Apr 11 20:22 var
+wmisiura@instance-1:/$ cd etc
+wmisiura@instance-1:/etc$ pwd
+/etc
+wmisiura@instance-1:/etc$ head -n 3 passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+wmisiura@instance-1:/etc$ head -n 3
+^C
+wmisiura@instance-1:/etc$ du -a . | head -n 3
+4       ./modprobe.d/gce-blacklist.conf
+4       ./modprobe.d/blacklist.conf
+12      ./modprobe.d
+wmisiura@instance-1:/etc$ 

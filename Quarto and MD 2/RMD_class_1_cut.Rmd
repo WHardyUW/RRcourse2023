@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
----
+------------------------------------------------------------------------
 
 # Three key elements
 
@@ -17,6 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 At the very top. Stores author and document information, configuration, global options, inputs, styles, format specifications, etc. This document uses:
 
+```{=html}
 <pre class="code-block">
 ---
 title: "Quarto"
@@ -27,7 +28,7 @@ execute:
   echo: fenced
 ---
 </pre>
-
+```
 ## Markdown
 
 The markup language, with easy and nice editing options.
@@ -38,32 +39,30 @@ Where the magic happens - codes whose output becomes a part of the document.
 
 Let's start with Markdown!
 
-
----
+------------------------------------------------------------------------
 
 # Basic formatting
 
-Some basic text formatting includes `*Italics*` or `_Italics_` (*Italics*) and `**Bold**` or `__Bold__` (**Bold**) text. 
+Some basic text formatting includes `*Italics*` or `_Italics_` (*Italics*) and `**Bold**` or `__Bold__` (**Bold**) text.
 
-`Space between lines to break a paragraph
+\`Space between lines to break a paragraph
 
-Like so`
+Like so\`
 
 Space between lines to break a paragraph
 
 Like so
 
-`Or end a line with a double space to break  
-without starting a new paragraph`
+`Or end a line with a double space to break   without starting a new paragraph`
 
-Or end a line with a double space to break  
+Or end a line with a double space to break\
 without starting a new paragraph
 
 Superscripts can be done like so: `R^2^` R^2^
 
 Subscripts can be done like so: `H~2~O` H~2~O
 
----
+------------------------------------------------------------------------
 
 # Headers
 
@@ -87,7 +86,7 @@ Subscripts can be done like so: `H~2~O` H~2~O
 
 ##### Header 5
 
----
+------------------------------------------------------------------------
 
 # Lists
 
@@ -99,12 +98,11 @@ Subscripts can be done like so: `H~2~O` H~2~O
 
 `2. Item 3 # Note the error in numbering`
 
-1. Item 1
+1.  Item 1
 
-2. Item 2
+2.  Item 2
 
-2. Item 3 `# It's fine here though`
-
+3.  Item 3 `# It's fine here though`
 
 ## Unordered
 
@@ -112,34 +110,33 @@ Subscripts can be done like so: `H~2~O` H~2~O
 
 `* Another item`
 
-* Item
+-   Item
 
-* Another item
+-   Another item
 
 ## Subitems
 
-1. Item 1
-    + Item 2
-    - Item 3
+1.  Item 1
+    -   Item 2
+    -   Item 3
 
----
+------------------------------------------------------------------------
 
 # Tables
 
-| Day       | Hour  | Group  |
-|:------    |:-----:|-------:|
-| Wednesday | 9:45  | 1      |
-| Thursday  | 16:45 | 2      |
-| Thursday  | 18:30 | 3      |
+| Day       | Hour  | Group |
+|:----------|:-----:|------:|
+| Wednesday | 9:45  |     1 |
+| Thursday  | 16:45 |     2 |
+| Thursday  | 18:30 |     3 |
 
----
+------------------------------------------------------------------------
 
 # Equations
 
-You can insert equations with the same syntax as in LaTeX. E.g. within a sentence `$ \sum (x + 1) $` $\sum (x + 1)$  or as standalone with double `$$` at start and finish
+You can insert equations with the same syntax as in LaTeX. E.g. within a sentence `$ \sum (x + 1) $` $\sum (x + 1)$ or as standalone with double `$$` at start and finish
 
-$$\int_{-\infty}^{\infty}1/(b-a) dx$$
----
+## $$\int_{-\infty}^{\infty}1/(b-a) dx$$
 
 # Code chunks customisation
 
@@ -150,7 +147,6 @@ $$\int_{-\infty}^{\infty}1/(b-a) dx$$
 ```{r chunk_name}
 "You just put the name after the language declaration"
 ```
-
 
 ## Using variables as parameters
 
@@ -195,7 +191,6 @@ message("You will not see the message.")
 
 ### Hide plots with `fig.show='hide'`
 
-
 ```{r}
 
 plot(cars)
@@ -236,5 +231,4 @@ for (i in 1:10) {
 }
 ```
 
----
-
+------------------------------------------------------------------------

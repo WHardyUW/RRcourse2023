@@ -3,7 +3,11 @@
 # Reproducible Research 2023
 # Wojciech Hardy
 
+install.packages("quarto")
 library(quarto)
+library(dyplr)
+
+quarto install tinytex
 
 setwd("")
 

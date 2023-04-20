@@ -1,0 +1,18 @@
+j_dudzik2@instance-1:/etc/nvme$ ps aux | grep -i cpu
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root          10  0.0  0.0      0     0 ?        I<   13:13   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    13:13   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    13:13   0:00 [cpuhp/1]
+root         363  0.0  0.0      0     0 ?        I    13:13   0:00 [kworker/0:5-mm_percpu_wq]
+j_dudzi+    1407  0.0  0.2   7000  2204 pts/0    R+   13:52   0:00 grep --color=auto -i cpu
+j_dudzik2@instance-1:/etc/nvme$ ip a | tail -n 3
+       valid_lft 84053sec preferred_lft 84053sec
+    inet6 fe80::4001:aff:fe80:2/64 scope link 
+       valid_lft forever preferred_lft forever
+j_dudzik2@instance-1:/etc/nvme$ pwd
+/etc/nvme
+j_dudzik2@instance-1:/etc/nvme$ head -n 3 discovery.conf
+# Used for extracting default parameters for discovery
+#
+# Example:
+j_dudzik2@instance-1:/etc/nvme$ ^C

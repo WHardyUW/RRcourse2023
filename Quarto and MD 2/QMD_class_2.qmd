@@ -2,8 +2,22 @@
 title: "Quarto"
 subtitle: "YAML, rendering and parameters"
 author: "Wojciech Hardy"
-date: "4/20/2023"
-format: html
+date: today
+date-format: long
+format: 
+  html: 
+    toc: true
+    toc-depth: 2
+    toc-location: left
+    toc-title: contents
+    theme: 
+      light: flatly
+      dark: darkly
+    smooth-scroll: true
+    title-block-banner: true
+    title-block-style: default
+    title-block-banner-color: green
+  pdf: default
 execute:
   echo: fenced
 ---
@@ -119,6 +133,7 @@ format:
   html:
     toc: true
     toc-depth: 2
+  pdf: default
 number-sections: true
 </pre>
 `---`
@@ -150,6 +165,7 @@ execute:
   warning: false
   cache: true 
   freeze: true
+  
 `---`
 
 `freeze` specifies a more general approach for caching when rendering a bunch of files or a whole project. `true` to not recompute generated computational output during a whole project render. `false` to always recompute (default). `auto` to recompute when a source file changed.

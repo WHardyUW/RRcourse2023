@@ -1,12 +1,28 @@
 ---
-title: "Assignment"
+title: "Assignment quarto_2"
+subtitle: "TV show descriptions"
 author: "Nichakorn Pansailom"
-format: html
-editor: visual
+date: today
+date-format: long
+format: 
+  html: 
+    toc: true
+    toc-depth: 2
+    toc-location: left
+    toc-title: contents
+    theme: 
+      light: flatly
+      dark: darkly
+    smooth-scroll: true
+    title-block-banner: bb.png
+    title-block-style: default
+    title-block-banner-color: white
+  pdf:
+    lof: true
+    lot: true
 execute:
   echo: fenced
 ---
-
 ------------------------------------------------------------------------
 
 # TV Show: *The Big Bang Theory*
@@ -34,13 +50,14 @@ The Big Bang Theory is an American television sitcom created by **Chuck Lorre** 
 | 11     |    24    |      18.63m |
 | 12     |    24    |      17.31m |
 
-`---`
-<pre class="code-block">
-title: "Assignment QMD_2"
-format: 
-  html:
-    toc: true
-    toc-depth: 2
-number-sections: true
-</pre>
-`---`
+# The plot
+
+
+```{r}
+us_view <- list(
+  x =c(1:12),
+  y=c(8.31,10.03,14.22,13.21,15.82,18.68,19.96,19.05, 20.36,18.99,18.63,17.31)
+)
+
+plot(us_view, xlab = "nth Season", ylab = "US Viewer (m)", main = "Number ofViewers per season")
+```

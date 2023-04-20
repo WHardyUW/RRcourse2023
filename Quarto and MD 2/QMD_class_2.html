@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -31,49 +31,94 @@ ul.task-list li input[type="checkbox"] {
 <script src="QMD_class_2_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="QMD_class_2_files/libs/quarto-html/anchor.min.js"></script>
 <link href="QMD_class_2_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="QMD_class_2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="QMD_class_2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="QMD_class_2_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="QMD_class_2_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="QMD_class_2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="QMD_class_2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="QMD_class_2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="QMD_class_2_files/libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+    .quarto-title-block .quarto-title-banner {
+      color: green;
+    }
+    </style>
 
 
 </head>
 
-<body class="fullcontent">
+<body>
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Quarto</h1>
-<p class="subtitle lead">YAML, rendering and parameters</p>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Wojciech Hardy </p>
-          </div>
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Quarto</h1>
+            <p class="subtitle lead">YAML, rendering and parameters</p>
+                      </div>
   </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 20, 2023</p>
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Wojciech Hardy </p>
+            </div>
     </div>
-  </div>
-  
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 20, 2023</p>
+      </div>
+    </div>
     
-  </div>
+      
+    </div>
+    
   
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#moving-from-different-formats-to-quarto" id="toc-moving-from-different-formats-to-quarto" class="nav-link active" data-scroll-target="#moving-from-different-formats-to-quarto">Moving from different formats to Quarto</a>
+  <ul class="collapse">
+  <li><a href="#migrating-from-rmarkdown" id="toc-migrating-from-rmarkdown" class="nav-link" data-scroll-target="#migrating-from-rmarkdown">Migrating from RMarkdown</a></li>
+  <li><a href="#turning-your-notebook-into-a-quarto-document" id="toc-turning-your-notebook-into-a-quarto-document" class="nav-link" data-scroll-target="#turning-your-notebook-into-a-quarto-document">Turning your Notebook into a Quarto document</a></li>
+  </ul></li>
+  <li><a href="#to-add-a-refreshable-preview" id="toc-to-add-a-refreshable-preview" class="nav-link" data-scroll-target="#to-add-a-refreshable-preview">To add a (refreshable) preview</a></li>
+  <li><a href="#need-a-recap" id="toc-need-a-recap" class="nav-link" data-scroll-target="#need-a-recap">Need a recap?</a></li>
+  <li><a href="#so-what-is-yaml" id="toc-so-what-is-yaml" class="nav-link" data-scroll-target="#so-what-is-yaml">So what is YAML?</a></li>
+  <li><a href="#yaml-in-quarto---options" id="toc-yaml-in-quarto---options" class="nav-link" data-scroll-target="#yaml-in-quarto---options">YAML in Quarto - options</a>
+  <ul class="collapse">
+  <li><a href="#basics" id="toc-basics" class="nav-link" data-scroll-target="#basics">Basics</a></li>
+  <li><a href="#html-options" id="toc-html-options" class="nav-link" data-scroll-target="#html-options">HTML options</a></li>
+  </ul></li>
+  <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists">Lists</a>
+  <ul class="collapse">
+  <li><a href="#pdf-options" id="toc-pdf-options" class="nav-link" data-scroll-target="#pdf-options">PDF options</a></li>
+  <li><a href="#combining-formats" id="toc-combining-formats" class="nav-link" data-scroll-target="#combining-formats">Combining formats</a></li>
+  <li><a href="#getting-an-.md-file" id="toc-getting-an-.md-file" class="nav-link" data-scroll-target="#getting-an-.md-file">Getting an .md file</a></li>
+  </ul></li>
+  <li><a href="#exporting-yaml" id="toc-exporting-yaml" class="nav-link" data-scroll-target="#exporting-yaml">Exporting YAML</a></li>
+  <li><a href="#rendering" id="toc-rendering" class="nav-link" data-scroll-target="#rendering">Rendering</a>
+  <ul class="collapse">
+  <li><a href="#terminal" id="toc-terminal" class="nav-link" data-scroll-target="#terminal">Terminal</a></li>
+  <li><a href="#from-the-level-of-r" id="toc-from-the-level-of-r" class="nav-link" data-scroll-target="#from-the-level-of-r">From the level of R</a></li>
+  </ul></li>
+  <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment">Assignment</a></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
-</header>
+
+
 
 <section id="moving-from-different-formats-to-quarto" class="level1">
 <h1>Moving from different formats to Quarto</h1>
@@ -185,6 +230,7 @@ format:
   html:
     toc: true
     toc-depth: 2
+  pdf: default
 number-sections: true
 </pre>
 <p><code>---</code></p>
@@ -203,7 +249,8 @@ number-sections: true
 <h3 class="anchored" data-anchor-id="setting-default-chunk-options">Setting default chunk options</h3>
 <p>Within the <code>execute</code> key you can set default options for code blocks. They can be overridden within the specific code chunks.</p>
 <p>Example:</p>
-<p><code>---</code> execute: echo: fenced warning: false cache: true freeze: true <code>---</code></p>
+<p><code>---</code> execute: echo: fenced warning: false cache: true freeze: true</p>
+<p><code>---</code></p>
 <p><code>freeze</code> specifies a more general approach for caching when rendering a bunch of files or a whole project. <code>true</code> to not recompute generated computational output during a whole project render. <code>false</code> to always recompute (default). <code>auto</code> to recompute when a source file changed.</p>
 </section>
 <section id="switching-formats" class="level3">
@@ -483,6 +530,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -600,4 +762,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
+<script src="QMD_class_2_files/libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

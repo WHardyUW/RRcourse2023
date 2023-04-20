@@ -41,7 +41,6 @@ plt.title('Game of Thrones viewer statistics over time')
 plt.show()
 ```
 
-
 ```{python echo=FALSE}
 import pandas
 Got = pandas.read_csv("C:\\Users\\Arshad\\Documents\\GitHub\\RRcourse2023\\Assignments\\got_data.csv")
@@ -54,18 +53,17 @@ plt.title('Game of Thrones viewer statistics by  seasons')
 plt.show()
 ```
 
-
 ## Game of thrones viewers overview
 
 The summary of Game of Thrones viewership data per season in the US is as follows:
 
-- Season 1: 25.15 million viewers
-- Season 2: 37.95 million viewers
-- Season 3: 49.66 million viewers
-- Season 4: 68.46 million viewers
-- Season 5: 68.8 million viewers
-- Season 6: 76.88 million viewers
-- Season 7: 71.83 million viewers
-- Season 8: 71.88 million viewers
+-   Season 1: 25.15 million viewers
+-   Season 2: 37.95 million viewers
+-   Season 3: 49.66 million viewers
+-   Season 4: 68.46 million viewers
+-   Season 5: 68.8 million viewers
+-   Season 6: 76.88 million viewers
+-   Season 7: 71.83 million viewers
+-   Season 8: 71.88 million viewers
 
 This data shows that the viewership of Game of Thrones grew steadily from season to season, with the largest increase occurring between seasons 1 and 2. The show's peak viewership in the US occurred during seasons 5 and 6, and remained relatively consistent during seasons 7 and 8.

@@ -1,0 +1,11 @@
+  html:
+    css: styles.css
+    toc: true
+    toc-depth: 2
+    toc-expand: 3
+    toc-title: Contents
+    toc-location: body
+theme:
+  light: flatly
+  dark: darkly
+editor: visual

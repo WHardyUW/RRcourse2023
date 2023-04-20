@@ -132,12 +132,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="a-graph-of-the-episode-to-episode-or-season-to-season-changes-ratings" class="level1">
 <h1>A graph of the episode-to-episode (or season-to-season) changes ratings</h1>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="ratingforepisodes.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption"><strong>Ratings of the Episodes</strong></figcaption><p></p>
-</figure>
-</div>
+<p><strong>Create a data frame with the season-to-season viewership data</strong></p>
+<p>viewership &lt;- data.frame( season = 1:9, viewers = c(10.94, 9.47, 8.43, 8.59, 9.01, 8.24, 7.98, 7.88, 7.37) )</p>
+<p><strong>Create a line graph using ggplot2</strong></p>
+<p>library(ggplot2)</p>
+<p>ggplot(viewership, aes(x = season, y = viewers)) + geom_line() + geom_point() + labs(title = “Season-to-Season Changes in HIMYM Viewership”, x = “Season”, y = “Average Viewers (in millions)”)</p>
+<p><img src="Rplot01.png" class="img-fluid"></p>
 </section>
 
 </main>

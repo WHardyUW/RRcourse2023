@@ -68,5 +68,21 @@ ggplot(himym, aes(x = year, y = viewers)) +
 
 # A graph of the episode-to-episode (or season-to-season) changes ratings
 
-![**Ratings of the Episodes**](ratingforepisodes.jpg)
+**Create a data frame with the season-to-season viewership data**
+
+viewership <- data.frame(
+  season = 1:9,
+  viewers = c(10.94, 9.47, 8.43, 8.59, 9.01, 8.24, 7.98, 7.88, 7.37)
+)
+
+**Create a line graph using ggplot2**
+
+library(ggplot2)
+
+ggplot(viewership, aes(x = season, y = viewers)) +
+  geom_line() +
+  geom_point() +
+  labs(title = "Season-to-Season Changes in HIMYM Viewership", x = "Season", y = "Average Viewers (in millions)")
+
+![](Rplot01.png)
 

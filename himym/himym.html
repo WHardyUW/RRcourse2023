@@ -119,10 +119,23 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="a-graph-of-the-viewership-over-time" class="level1">
 <h1>A graph of the viewership over time</h1>
+<section id="code-block" class="level3">
+<h3 class="anchored" data-anchor-id="code-block">code block</h3>
+<p><strong>Load necessary packages</strong></p>
+<p>library(tidyverse)</p>
+<p><strong>Create a data frame with viewership data</strong></p>
+<p>himym &lt;- data.frame( year = c(2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014), viewers = c(10.94, 9.71, 8.68, 9.35, 9.14, 9.11, 8.45, 8.01, 7.48, 12.94) )</p>
+<p><strong>Create a plot with the x-axis showing only integers</strong></p>
+<p>ggplot(himym, aes(x = year, y = viewers)) + geom_line() + scale_x_continuous(breaks = himym$year, expand = c(0,0)) + labs(x = “Year”, y = “Viewers (millions)”, title = “Viewership of How I Met Your Mother”)</p>
+<p><img src="Rplot.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="a-graph-of-the-episode-to-episode-or-season-to-season-changes-ratings" class="level1">
+<h1>A graph of the episode-to-episode (or season-to-season) changes ratings</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="viewership.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption"><strong>The viewership in the USA</strong></figcaption><p></p>
+<p><img src="ratingforepisodes.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption"><strong>Ratings of the Episodes</strong></figcaption><p></p>
 </figure>
 </div>
 </section>

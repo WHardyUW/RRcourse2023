@@ -1,7 +1,21 @@
 
 # Sets the path to the parent directory of RR classes
-setwd("Z:\\File folders\\Teaching\\Reproducible Research\\2023\\Repository\\RRcourse2023\\6. Coding and documentation")
+#是的，环境配置也可能是导致路径设置错误的原因之一。
+#在设置工作目录之前，你需要确保你的环境已经正确配置，
+#并且你已经安装了所有需要的软件和包。
+#在R中，你可以使用以下命令来查看你的环境和包的情况：
+sessionInfo() # 查看当前会话信息，包括安装的R版本和已加载的包
+installed.packages() # 查看当前已安装的包
 
+#setwd("Z:\\File folders\\Teaching\\Reproducible Research\\2023\\Repository\\RRcourse2023\\6. Coding and documentation")
+#setwd("Users\yuqingwu\Desktop\RR Study\20230330RR\rep0330\RRcourse2023\6. Coding and documentation")
+#setwd("Users\\yuqingwu\\Desktop\\RR Study\\20230330RR\\rep0330\\RRcourse2023\\6. Coding and documentation")
+setwd("/Users/yuqingwu/Desktop/RR Study/20230330RR/rep0330/RRcourse2023/6. Coding and documentation")
+getwd()
+#另外，你需要确保在设置路径时使用了正确的语法和路径格式。
+#在Windows系统中，路径分隔符使用反斜杠\，
+#而在Linux和Mac系统中使用正斜杠/，
+#同时需要注意在路径中空格和特殊字符需要使用引号或转义符进行处理。
 #   Import data from the O*NET database, at ISCO-08 occupation level.
 # The original data uses a version of SOC classification, but the data we load here
 # are already cross-walked to ISCO-08 using: https://ibs.org.pl/en/resources/occupation-classifications-crosswalks-from-onet-soc-to-isco/
@@ -9,7 +23,7 @@ setwd("Z:\\File folders\\Teaching\\Reproducible Research\\2023\\Repository\\RRco
 # The O*NET database contains information for occupations in the USA, including
 # the tasks and activities typically associated with a specific occupation.
 
-task_data = read.csv("Data\\onet_tasks.csv")
+task_data = read.csv("Data/onet_tasks.csv")
 # isco08 variable is for occupation codes
 # the t_* variables are specific tasks conducted on the job
 
@@ -18,15 +32,15 @@ task_data = read.csv("Data\\onet_tasks.csv")
 # 1-digit ISCO occupation categories. (Check here for details: https://www.ilo.org/public/english/bureau/stat/isco/isco08/)
 library(readxl)                     
 
-isco1 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO1")
-isco2 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO2")
-isco3 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO3")
-isco4 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO4")
-isco5 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO5")
-isco6 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO6")
-isco7 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO7")
-isco8 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO8")
-isco9 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO9")
+isco1 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO1")
+isco2 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO2")
+isco3 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO3")
+isco4 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO4")
+isco5 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO5")
+isco6 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO6")
+isco7 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO7")
+isco8 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO8")
+isco9 <- read_excel("Data/Eurostat_employment_isco.xlsx", sheet="ISCO9")
 
 # We will focus on three countries, but perhaps we could clean this code to allow it
 # to easily run for all the countries in the sample?

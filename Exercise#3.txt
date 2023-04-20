@@ -1,0 +1,441 @@
+root@x446:~/saqib# ps aux | grep cpu
+root      4072  0.0  0.1   8832   656 pts/3    S+   17:01   0:00 grep --color=auto cpu
+root@x446:~/saqib# tail -3 /proc/net/dev
+  sit0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  eth0: 55367456  657562    0 123652    0     0          0         0   177186    1074    0    0    0     0       0          0
+    lo:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+
+
+
+
+
+
+
+root@x446:~# ls
+client1  client2  master_repo  noobs  rr3  rr4  rr5  saqib  server
+root@x446:~# ls -la
+total 96
+drwx------ 15 root root  4096 kwi 20 16:38 .
+drwxr-xr-x 24 root root  4096 kwi 13 05:01 ..
+-rw-------  1 root root  6765 kwi 20 16:39 .bash_history
+-rw-r--r--  1 root root  3106 gru  5  2019 .bashrc
+drwx------  3 root root  4096 paź 30  2020 .cache
+drwxr-xr-x  5 root root  4096 mar 27 18:42 client1
+drwxr-xr-x  6 root root  4096 mar 27 18:47 client2
+drwx------  4 root root  4096 kwi 20 16:45 .config
+drwxr-xr-x  3 root root  4096 wrz 22  2020 .local
+drwxr-xr-x  3 root root  4096 mar 27 19:03 master_repo
+lrwxrwxrwx  1 root root    10 lut 28  2022 noobs -> /opt/noobs
+-rw-r--r--  1 root root   161 gru  5  2019 .profile
+drwxr-xr-x  6 root root  4096 mar 27 18:50 rr3
+drwxr-xr-x  3 root root  4096 mar 27 18:55 rr4
+drwxr-xr-x  3 root root  4096 mar 27 19:05 rr5
+drwxr-xr-x  2 root root  4096 kwi 20 16:59 saqib
+drwxr-xr-x  7 root root  4096 mar 27 18:46 server
+drwx------  2 root root  4096 sty  4 13:02 .ssh
+drwxr-xr-x  2 root root  4096 kwi 22  2022 .vim
+-rw-------  1 root root 13609 mar 27 18:37 .viminfo
+-rw-r--r--  1 root root   177 paź 30  2020 .vimrc
+root@x446:~# cd ..
+root@x446:/# ls -la
+total 92
+drwxr-xr-x    24 root   root     4096 kwi 13 05:01 .
+drwxr-xr-x    24 root   root     4096 kwi 13 05:01 ..
+drwxr-xr-x     2 root   root     4096 sty  4 13:04 bin
+drwxr-xr-x     2 root   root     4096 kwi 15  2020 boot
+drwxr-xr-x     2 root   root     4096 sty  4 13:02 cytrus
+drwxr-xr-x     6 root   root      500 kwi 13 05:01 dev
+drwxr-xr-x    88 root   root     4096 kwi 13 05:01 etc
+drwxr-xr-x     2 root   root     4096 kwi 15  2020 home
+drwxr-xr-x    15 root   root     4096 kwi 25  2020 lib
+drwxr-xr-x     2 root   root     4096 wrz 12  2022 lib64
+drwx------     2 nobody nogroup 16384 mar 27 18:16 lost+found
+drwxr-xr-x     2 root   root     4096 kwi 25  2020 media
+drwxr-xr-x     2 root   root     4096 kwi 25  2020 mnt
+drwxr-xr-x     3 root   root     4096 lut 28  2022 opt
+dr-xr-xr-x 14466 nobody nogroup     0 kwi 13 05:01 proc
+drwx------    15 root   root     4096 kwi 20 16:38 root
+drwxr-xr-x    15 root   root      500 kwi 20 16:38 run
+drwxr-xr-x     2 root   root     4096 mar 27 18:26 sbin
+drwxr-xr-x     2 root   root     4096 maj  2  2022 snap
+drwxr-xr-x     2 root   root     4096 kwi 25  2020 srv
+dr-xr-xr-x    15 nobody nogroup     0 kwi 13 05:01 sys
+drwxrwxrwt    11 root   root     4096 kwi 20 16:34 tmp
+drwxr-xr-x    11 root   root     4096 mar 27 18:25 usr
+drwxr-xr-x    13 root   root     4096 sty  4 13:03 var
+root@x446:/# cd etc
+root@x446:/etc# pwd
+/etc
+root@x446:/etc# ls -l
+total 824
+-rw-r--r-- 1 root root    3028 kwi 25  2020 adduser.conf
+-rw-r--r-- 1 root root      33 kwi 25  2020 aliases
+-rw-r--r-- 1 root root   12288 kwi 25  2020 aliases.db
+drwxr-xr-x 2 root root    4096 mar 27 18:28 alternatives
+drwxr-xr-x 8 root root    4096 mar 27 18:27 apache2
+drwxr-xr-x 3 root root    4096 wrz 22  2020 apparmor
+drwxr-xr-x 7 root root    4096 sty  4 13:05 apparmor.d
+-rw-r--r-- 1 root root     354 kwi 25  2020 appliance.info
+drwxr-xr-x 7 root root    4096 mar 11  2022 apt
+-rw-r--r-- 1 root root    2319 lut 25  2020 bash.bashrc
+-rw-r--r-- 1 root root      45 sty 26  2020 bash_completion
+drwxr-xr-x 2 root root    4096 sty  4 13:05 bash_completion.d
+-rw-r--r-- 1 root root     367 kwi 14  2020 bindresvport.blacklist
+drwxr-xr-x 2 root root    4096 kwi 22  2020 binfmt.d
+drwxr-xr-x 3 root root    4096 kwi 25  2020 ca-certificates
+-rw-r--r-- 1 root root    6824 sty  4 13:05 ca-certificates.conf
+-rw-r--r-- 1 root root    6821 wrz 12  2022 ca-certificates.conf.dpkg-old
+drwxr-xr-x 2 root root    4096 kwi 25  2020 calendar
+drwxr-xr-x 2 root root    4096 wrz 22  2020 console-setup
+drwxr-xr-x 2 root root    4096 kwi 22  2022 cracklib
+drwxr-xr-x 2 root root    4096 mar 27 18:16 cron.d
+drwxr-xr-x 2 root root    4096 mar 27 18:27 cron.daily
+drwxr-xr-x 2 root root    4096 kwi 25  2020 cron.hourly
+drwxr-xr-x 2 root root    4096 kwi 25  2020 cron.monthly
+-rw-r--r-- 1 root root    1041 mar 27 18:16 crontab
+drwxr-xr-x 2 root root    4096 kwi 25  2020 cron.weekly
+drwxr-xr-x 4 root root    4096 kwi 25  2020 dbus-1
+drwxr-xr-x 3 root root    4096 mar 27 18:25 dconf
+-rw-r--r-- 1 root root    2969 sie  3  2019 debconf.conf
+-rw-r--r-- 1 root root      13 gru  5  2019 debian_version
+drwxr-xr-x 2 root root    4096 mar 27 18:27 default
+-rw-r--r-- 1 root root     604 wrz 15  2018 deluser.conf
+drwxr-xr-x 2 root root    4096 wrz 12  2022 depmod.d
+drwxr-xr-x 4 root root    4096 sty  4 13:05 dhcp
+drwxr-xr-x 2 root root    4096 kwi 22  2022 dictionaries-common
+drwxr-xr-x 4 root root    4096 wrz 12  2022 dpkg
+-rw-r--r-- 1 root root     685 lut 14  2020 e2scrub.conf
+drwxr-xr-x 3 root root    4096 wrz 22  2020 emacs
+-rw-r--r-- 1 root root     106 wrz 22  2020 environment
+drwxr-xr-x 2 root root    4096 mar 27 18:27 environment.d
+-rw-r--r-- 1 root root    1816 gru 27  2019 ethertypes
+drwxr-xr-x 4 root root    4096 kwi 25  2020 fonts
+-rw-r--r-- 1 root root      37 kwi 25  2020 fstab
+-rw-r--r-- 1 root root     280 cze 20  2014 fuse.conf
+-rw-r--r-- 1 root root    2584 lut  1  2020 gai.conf
+drwxr-xr-x 4 root root    4096 mar 27 18:25 ghostscript
+-rw-r--r-- 1 root root     698 lut 19  2020 gitweb.conf
+drwxr-xr-x 2 root root    4096 kwi 25  2020 groff
+-rw-r--r-- 1 root root     747 mar 27 18:27 group
+-rw-r--r-- 1 root root     730 paź 12  2020 group-
+-rw-r----- 1 root shadow   624 mar 27 18:27 gshadow
+-rw-r----- 1 root shadow   610 paź 12  2020 gshadow-
+drwxr-xr-x 3 root root    4096 kwi 25  2020 gss
+drwxr-xr-x 2 root root    4096 mar 27 18:28 gtk-3.0
+-rw-r--r-- 1 root root    5060 sie 21  2019 hdparm.conf
+-rw-r--r-- 1 root root      92 gru  5  2019 host.conf
+-rw-r--r-- 1 root root       5 kwi 13 05:01 hostname
+-rw-r--r-- 1 root root     178 kwi 13 05:01 hosts
+-rw-r--r-- 1 root root     411 kwi 25  2020 hosts.allow
+-rw-r--r-- 1 root root     711 kwi 25  2020 hosts.deny
+drwxr-xr-x 2 root root    4096 mar 27 18:26 ImageMagick-6
+drwxr-xr-x 2 root root    4096 mar 27 18:27 init.d
+-rw-r--r-- 1 root root    1748 lut 25  2020 inputrc
+drwxr-xr-x 4 root root    4096 kwi 25  2020 iproute2
+-rw-r--r-- 1 root root    7217 sie  6  2020 irssi.conf
+-rw-r--r-- 1 root root      26 sie 22  2022 issue
+-rw-r--r-- 1 root root      19 sie 22  2022 issue.net
+drwxr-xr-x 4 root root    4096 kwi 25  2020 kernel
+drwxr-xr-x 2 root root    4096 wrz 12  2022 ldap
+-rw-r--r-- 1 root root   32834 mar 27 18:28 ld.so.cache
+-rw-r--r-- 1 root root      34 kwi 14  2020 ld.so.conf
+drwxr-xr-x 2 root root    4096 wrz 12  2022 ld.so.conf.d
+-rw-r--r-- 1 root root     267 gru  5  2019 legal
+-rw-r--r-- 1 root root     191 lut 18  2020 libaudit.conf
+drwxr-xr-x 2 root root    4096 cze 25  2019 libpaper.d
+drwxr-xr-x 4 root root    4096 wrz 22  2020 lighttpd
+-rw-r--r-- 1 root root    2996 kwi 14  2020 locale.alias
+-rw-r--r-- 1 root root    9436 wrz 12  2022 locale.gen
+-rw-r--r-- 1 root root    1796 wrz 22  2020 locale.nopurge
+lrwxrwxrwx 1 root root      27 sty  4 13:05 localtime -> /usr/share/zoneinfo/Etc/UTC
+drwxr-xr-x 4 root root    4096 kwi 22  2022 logcheck
+-rw-r--r-- 1 root root   10550 lut  7  2020 login.defs
+-rw-r--r-- 1 root root     533 sty 21  2019 logrotate.conf
+drwxr-xr-x 2 root root    4096 mar 27 18:27 logrotate.d
+-rw-r--r-- 1 root root     104 sie 22  2022 lsb-release
+-rw-r--r-- 1 root root   14867 lut  1  2019 ltrace.conf
+-r--r--r-- 1 root root      33 kwi 25  2020 machine-id
+-rw-r--r-- 1 root root     111 sty 16  2020 magic
+-rw-r--r-- 1 root root     111 sty 16  2020 magic.mime
+-rw-r--r-- 1 root root    5496 mar 27 18:28 mailcap
+-rw-r--r-- 1 root root     449 paź 18  2019 mailcap.order
+-rw-r--r-- 1 root root    5215 lut 25  2020 manpath.config
+drwxr-xr-x 2 root root    4096 wrz 22  2020 mc
+-rw-r--r-- 1 root root   24546 paź 18  2019 mime.types
+-rw-r--r-- 1 root root     808 lut 14  2020 mke2fs.conf
+drwxr-xr-x 2 root root    4096 wrz 12  2022 modprobe.d
+-rw-r--r-- 1 root root     195 kwi 25  2020 modules
+drwxr-xr-x 2 root root    4096 sty  4 13:03 modules-load.d
+-rw-r--r-- 1 root root    1144 mar 27 18:17 motd
+lrwxrwxrwx 1 root root      19 wrz 22  2020 mtab -> ../proc/self/mounts
+-rw-r--r-- 1 root root   10037 lut  7  2020 nanorc
+drwxr-xr-x 2 root root    4096 kwi 23  2020 netplan
+drwxr-xr-x 8 root root    4096 kwi 25  2020 networkd-dispatcher
+-rw-r--r-- 1 root root      91 gru  5  2019 networks
+drwxr-xr-x 2 root root    4096 kwi 25  2020 newt
+-rw-r--r-- 1 root root     510 kwi 25  2020 nsswitch.conf
+drwxr-xr-x 2 root root    4096 kwi 25  2020 opt
+lrwxrwxrwx 1 root root      21 sie 22  2022 os-release -> ../usr/lib/os-release
+-rw-r--r-- 1 root root     552 gru 17  2019 pam.conf
+drwxr-xr-x 2 root root    4096 sty  4 13:05 pam.d
+-rw-r--r-- 1 root root       3 mar 27 18:26 papersize
+-rw-r--r-- 1 root root    1637 mar 27 18:27 passwd
+-rw-r--r-- 1 root root    1637 mar 27 18:27 passwd-
+drwxr-xr-x 3 root root    4096 wrz 22  2020 perl
+-rw-r--r-- 1 root root     350 kwi 25  2020 popularity-contest.conf
+-rw-r--r-- 1 root root     581 gru  5  2019 profile
+drwxr-xr-x 2 root root    4096 sty  4 13:05 profile.d
+-rw-r--r-- 1 root root    2932 kwi  1  2013 protocols
+drwxr-xr-x 2 root root    4096 wrz 12  2022 python2.7
+drwxr-xr-x 2 root root    4096 kwi 25  2020 python3
+drwxr-xr-x 2 root root    4096 sty  4 13:05 python3.8
+drwxr-xr-x 2 root root    4096 mar 27 18:27 rc0.d
+drwxr-xr-x 2 root root    4096 mar 27 18:27 rc1.d
+drwxr-xr-x 2 root root    4096 mar 27 18:27 rc2.d
+drwxr-xr-x 2 root root    4096 mar 27 18:27 rc3.d
+drwxr-xr-x 2 root root    4096 mar 27 18:27 rc4.d
+drwxr-xr-x 2 root root    4096 mar 27 18:27 rc5.d
+drwxr-xr-x 2 root root    4096 mar 27 18:27 rc6.d
+-rwxr-xr-x 1 root root      13 paź 30  2020 rc.local
+drwxr-xr-x 2 root root    4096 wrz 22  2020 rcS.d
+-rw-r--r-- 1 root root     116 kwi 13 05:01 resolv.conf
+lrwxrwxrwx 1 root root      13 mar 15  2022 rmt -> /usr/sbin/rmt
+-rw-r--r-- 1 root root     887 kwi  1  2013 rpc
+-rw-r--r-- 1 root root    1382 lut 11  2020 rsyslog.conf
+drwxr-xr-x 2 root root    4096 lut 28  2022 rsyslog.d
+drwxr-xr-x 3 root root    4096 mar 27 18:27 runit
+-rw-r--r-- 1 root root    3663 cze 20  2016 screenrc
+drwxr-xr-x 4 root root    4096 kwi 22  2022 security
+drwxr-xr-x 2 root root    4096 kwi 25  2020 selinux
+-rw-r--r-- 1 root root   10593 lis  6  2019 sensors3.conf
+drwxr-xr-x 2 root root    4096 wrz 12  2022 sensors.d
+lrwxrwxrwx 1 root root      22 lis 16  2017 service -> runit/runsvdir/default
+-rw-r--r-- 1 root root   14464 lut 16  2020 services
+-rw-r----- 1 root shadow   979 mar 27 18:27 shadow
+-rw-r----- 1 root shadow   979 mar 27 18:27 shadow-
+-rw-r--r-- 1 root root     125 mar 18  2022 shells
+drwxr-xr-x 2 root root    4096 kwi 22  2022 skel
+drwxr-xr-x 4 root root    4096 mar 27 18:16 ssh
+drwxr-xr-x 4 root root    4096 wrz 12  2022 ssl
+-rw-r--r-- 1 root root      20 paź 12  2020 subgid
+-rw-r--r-- 1 root root       0 kwi 25  2020 subgid-
+-rw-r--r-- 1 root root      20 paź 12  2020 subuid
+-rw-r--r-- 1 root root       0 kwi 25  2020 subuid-
+-r--r----- 1 root root     755 lut  3  2020 sudoers
+drwxr-xr-x 2 root root    4096 cze 21  2021 sudoers.d
+drwxr-xr-x 3 root root    4096 mar 27 18:26 sv
+-rw-r--r-- 1 root root    2351 kwi 25  2020 sysctl.conf
+drwxr-xr-x 2 root root    4096 sty  4 13:03 sysctl.d
+drwxr-xr-x 5 root root    4096 sty  4 13:05 systemd
+drwxr-xr-x 2 root root    4096 kwi 25  2020 terminfo
+-rw-r--r-- 1 root root       8 sty  4 13:05 timezone
+drwxr-xr-x 2 root root    4096 wrz 22  2020 tmpfiles.d
+drwxr-xr-x 2 root root    4096 sty  4 13:05 ubuntu-advantage
+-rw-r--r-- 1 root root    1260 gru 14  2018 ucf.conf
+drwxr-xr-x 4 root root    4096 sty  4 13:05 udev
+drwxr-xr-x 3 root root    4096 lut 28  2022 ufw
+drwxr-xr-x 3 root root    4096 wrz 12  2022 update-manager
+drwxr-xr-x 2 root root    4096 sty  4 13:05 update-motd.d
+drwxr-xr-x 2 root root    4096 sty  4 13:05 vim
+lrwxrwxrwx 1 root root      23 kwi 25  2020 vtrgb -> /etc/alternatives/vtrgb
+drwxr-xr-x 5 root root    4096 kwi 25  2020 vulkan
+drwxr-xr-x 2 root root    4096 mar 27 18:16 vzdump
+-rw-r--r-- 1 root root    4942 lip 24  2019 wgetrc
+drwxr-xr-x 9 root root    4096 kwi 25  2020 X11
+-rw-r--r-- 1 root root     642 wrz 24  2019 xattr.conf
+drwxr-xr-x 4 root root    4096 kwi 25  2020 xdg
+drwxr-xr-x 2 root root    4096 mar 18  2022 zsh
+-rw-r--r-- 1 root root     477 paź  7  2019 zsh_command_not_found
+root@x446:/etc# ls -la
+total 832
+drwxr-xr-x 88 root root    4096 kwi 13 05:01 .
+drwxr-xr-x 24 root root    4096 kwi 13 05:01 ..
+-rw-r--r--  1 root root    3028 kwi 25  2020 adduser.conf
+-rw-r--r--  1 root root      33 kwi 25  2020 aliases
+-rw-r--r--  1 root root   12288 kwi 25  2020 aliases.db
+drwxr-xr-x  2 root root    4096 mar 27 18:28 alternatives
+drwxr-xr-x  8 root root    4096 mar 27 18:27 apache2
+drwxr-xr-x  3 root root    4096 wrz 22  2020 apparmor
+drwxr-xr-x  7 root root    4096 sty  4 13:05 apparmor.d
+-rw-r--r--  1 root root     354 kwi 25  2020 appliance.info
+drwxr-xr-x  7 root root    4096 mar 11  2022 apt
+-rw-r--r--  1 root root    2319 lut 25  2020 bash.bashrc
+-rw-r--r--  1 root root      45 sty 26  2020 bash_completion
+drwxr-xr-x  2 root root    4096 sty  4 13:05 bash_completion.d
+-rw-r--r--  1 root root     367 kwi 14  2020 bindresvport.blacklist
+drwxr-xr-x  2 root root    4096 kwi 22  2020 binfmt.d
+drwxr-xr-x  3 root root    4096 kwi 25  2020 ca-certificates
+-rw-r--r--  1 root root    6824 sty  4 13:05 ca-certificates.conf
+-rw-r--r--  1 root root    6821 wrz 12  2022 ca-certificates.conf.dpkg-old
+drwxr-xr-x  2 root root    4096 kwi 25  2020 calendar
+drwxr-xr-x  2 root root    4096 wrz 22  2020 console-setup
+drwxr-xr-x  2 root root    4096 kwi 22  2022 cracklib
+drwxr-xr-x  2 root root    4096 mar 27 18:16 cron.d
+drwxr-xr-x  2 root root    4096 mar 27 18:27 cron.daily
+drwxr-xr-x  2 root root    4096 kwi 25  2020 cron.hourly
+drwxr-xr-x  2 root root    4096 kwi 25  2020 cron.monthly
+-rw-r--r--  1 root root    1041 mar 27 18:16 crontab
+drwxr-xr-x  2 root root    4096 kwi 25  2020 cron.weekly
+drwxr-xr-x  4 root root    4096 kwi 25  2020 dbus-1
+drwxr-xr-x  3 root root    4096 mar 27 18:25 dconf
+-rw-r--r--  1 root root    2969 sie  3  2019 debconf.conf
+-rw-r--r--  1 root root      13 gru  5  2019 debian_version
+drwxr-xr-x  2 root root    4096 mar 27 18:27 default
+-rw-r--r--  1 root root     604 wrz 15  2018 deluser.conf
+drwxr-xr-x  2 root root    4096 wrz 12  2022 depmod.d
+drwxr-xr-x  4 root root    4096 sty  4 13:05 dhcp
+drwxr-xr-x  2 root root    4096 kwi 22  2022 dictionaries-common
+drwxr-xr-x  4 root root    4096 wrz 12  2022 dpkg
+-rw-r--r--  1 root root     685 lut 14  2020 e2scrub.conf
+drwxr-xr-x  3 root root    4096 wrz 22  2020 emacs
+-rw-r--r--  1 root root     106 wrz 22  2020 environment
+drwxr-xr-x  2 root root    4096 mar 27 18:27 environment.d
+-rw-r--r--  1 root root    1816 gru 27  2019 ethertypes
+drwxr-xr-x  4 root root    4096 kwi 25  2020 fonts
+-rw-r--r--  1 root root      37 kwi 25  2020 fstab
+-rw-r--r--  1 root root     280 cze 20  2014 fuse.conf
+-rw-r--r--  1 root root    2584 lut  1  2020 gai.conf
+drwxr-xr-x  4 root root    4096 mar 27 18:25 ghostscript
+-rw-r--r--  1 root root     698 lut 19  2020 gitweb.conf
+drwxr-xr-x  2 root root    4096 kwi 25  2020 groff
+-rw-r--r--  1 root root     747 mar 27 18:27 group
+-rw-r--r--  1 root root     730 paź 12  2020 group-
+-rw-r-----  1 root shadow   624 mar 27 18:27 gshadow
+-rw-r-----  1 root shadow   610 paź 12  2020 gshadow-
+drwxr-xr-x  3 root root    4096 kwi 25  2020 gss
+drwxr-xr-x  2 root root    4096 mar 27 18:28 gtk-3.0
+-rw-r--r--  1 root root    5060 sie 21  2019 hdparm.conf
+-rw-r--r--  1 root root      92 gru  5  2019 host.conf
+-rw-r--r--  1 root root       5 kwi 13 05:01 hostname
+-rw-r--r--  1 root root     178 kwi 13 05:01 hosts
+-rw-r--r--  1 root root     411 kwi 25  2020 hosts.allow
+-rw-r--r--  1 root root     711 kwi 25  2020 hosts.deny
+drwxr-xr-x  2 root root    4096 mar 27 18:26 ImageMagick-6
+drwxr-xr-x  2 root root    4096 mar 27 18:27 init.d
+-rw-r--r--  1 root root    1748 lut 25  2020 inputrc
+drwxr-xr-x  4 root root    4096 kwi 25  2020 iproute2
+-rw-r--r--  1 root root    7217 sie  6  2020 irssi.conf
+-rw-r--r--  1 root root      26 sie 22  2022 issue
+-rw-r--r--  1 root root      19 sie 22  2022 issue.net
+drwxr-xr-x  4 root root    4096 kwi 25  2020 kernel
+drwxr-xr-x  2 root root    4096 wrz 12  2022 ldap
+-rw-r--r--  1 root root   32834 mar 27 18:28 ld.so.cache
+-rw-r--r--  1 root root      34 kwi 14  2020 ld.so.conf
+drwxr-xr-x  2 root root    4096 wrz 12  2022 ld.so.conf.d
+-rw-r--r--  1 root root     267 gru  5  2019 legal
+-rw-r--r--  1 root root     191 lut 18  2020 libaudit.conf
+drwxr-xr-x  2 root root    4096 cze 25  2019 libpaper.d
+drwxr-xr-x  4 root root    4096 wrz 22  2020 lighttpd
+-rw-r--r--  1 root root    2996 kwi 14  2020 locale.alias
+-rw-r--r--  1 root root    9436 wrz 12  2022 locale.gen
+-rw-r--r--  1 root root    1796 wrz 22  2020 locale.nopurge
+lrwxrwxrwx  1 root root      27 sty  4 13:05 localtime -> /usr/share/zoneinfo/Etc/UTC
+drwxr-xr-x  4 root root    4096 kwi 22  2022 logcheck
+-rw-r--r--  1 root root   10550 lut  7  2020 login.defs
+-rw-r--r--  1 root root     533 sty 21  2019 logrotate.conf
+drwxr-xr-x  2 root root    4096 mar 27 18:27 logrotate.d
+-rw-r--r--  1 root root     104 sie 22  2022 lsb-release
+-rw-r--r--  1 root root   14867 lut  1  2019 ltrace.conf
+-r--r--r--  1 root root      33 kwi 25  2020 machine-id
+-rw-r--r--  1 root root     111 sty 16  2020 magic
+-rw-r--r--  1 root root     111 sty 16  2020 magic.mime
+-rw-r--r--  1 root root    5496 mar 27 18:28 mailcap
+-rw-r--r--  1 root root     449 paź 18  2019 mailcap.order
+-rw-r--r--  1 root root    5215 lut 25  2020 manpath.config
+drwxr-xr-x  2 root root    4096 wrz 22  2020 mc
+-rw-r--r--  1 root root   24546 paź 18  2019 mime.types
+-rw-r--r--  1 root root     808 lut 14  2020 mke2fs.conf
+drwxr-xr-x  2 root root    4096 wrz 12  2022 modprobe.d
+-rw-r--r--  1 root root     195 kwi 25  2020 modules
+drwxr-xr-x  2 root root    4096 sty  4 13:03 modules-load.d
+-rw-r--r--  1 root root    1144 mar 27 18:17 motd
+lrwxrwxrwx  1 root root      19 wrz 22  2020 mtab -> ../proc/self/mounts
+-rw-r--r--  1 root root   10037 lut  7  2020 nanorc
+drwxr-xr-x  2 root root    4096 kwi 23  2020 netplan
+drwxr-xr-x  8 root root    4096 kwi 25  2020 networkd-dispatcher
+-rw-r--r--  1 root root      91 gru  5  2019 networks
+drwxr-xr-x  2 root root    4096 kwi 25  2020 newt
+-rw-r--r--  1 root root     510 kwi 25  2020 nsswitch.conf
+drwxr-xr-x  2 root root    4096 kwi 25  2020 opt
+lrwxrwxrwx  1 root root      21 sie 22  2022 os-release -> ../usr/lib/os-release
+-rw-r--r--  1 root root     552 gru 17  2019 pam.conf
+drwxr-xr-x  2 root root    4096 sty  4 13:05 pam.d
+-rw-r--r--  1 root root       3 mar 27 18:26 papersize
+-rw-r--r--  1 root root    1637 mar 27 18:27 passwd
+-rw-r--r--  1 root root    1637 mar 27 18:27 passwd-
+drwxr-xr-x  3 root root    4096 wrz 22  2020 perl
+-rw-r--r--  1 root root     350 kwi 25  2020 popularity-contest.conf
+-rw-r--r--  1 root root     581 gru  5  2019 profile
+drwxr-xr-x  2 root root    4096 sty  4 13:05 profile.d
+-rw-r--r--  1 root root    2932 kwi  1  2013 protocols
+-rw-------  1 root root       0 kwi 25  2020 .pwd.lock
+drwxr-xr-x  2 root root    4096 wrz 12  2022 python2.7
+drwxr-xr-x  2 root root    4096 kwi 25  2020 python3
+drwxr-xr-x  2 root root    4096 sty  4 13:05 python3.8
+drwxr-xr-x  2 root root    4096 mar 27 18:27 rc0.d
+drwxr-xr-x  2 root root    4096 mar 27 18:27 rc1.d
+drwxr-xr-x  2 root root    4096 mar 27 18:27 rc2.d
+drwxr-xr-x  2 root root    4096 mar 27 18:27 rc3.d
+drwxr-xr-x  2 root root    4096 mar 27 18:27 rc4.d
+drwxr-xr-x  2 root root    4096 mar 27 18:27 rc5.d
+drwxr-xr-x  2 root root    4096 mar 27 18:27 rc6.d
+-rwxr-xr-x  1 root root      13 paź 30  2020 rc.local
+drwxr-xr-x  2 root root    4096 wrz 22  2020 rcS.d
+-rw-r--r--  1 root root     116 kwi 13 05:01 resolv.conf
+lrwxrwxrwx  1 root root      13 mar 15  2022 rmt -> /usr/sbin/rmt
+-rw-r--r--  1 root root     887 kwi  1  2013 rpc
+-rw-r--r--  1 root root    1382 lut 11  2020 rsyslog.conf
+drwxr-xr-x  2 root root    4096 lut 28  2022 rsyslog.d
+drwxr-xr-x  3 root root    4096 mar 27 18:27 runit
+-rw-r--r--  1 root root    3663 cze 20  2016 screenrc
+drwxr-xr-x  4 root root    4096 kwi 22  2022 security
+drwxr-xr-x  2 root root    4096 kwi 25  2020 selinux
+-rw-r--r--  1 root root   10593 lis  6  2019 sensors3.conf
+drwxr-xr-x  2 root root    4096 wrz 12  2022 sensors.d
+lrwxrwxrwx  1 root root      22 lis 16  2017 service -> runit/runsvdir/default
+-rw-r--r--  1 root root   14464 lut 16  2020 services
+-rw-r-----  1 root shadow   979 mar 27 18:27 shadow
+-rw-r-----  1 root shadow   979 mar 27 18:27 shadow-
+-rw-r--r--  1 root root     125 mar 18  2022 shells
+drwxr-xr-x  2 root root    4096 kwi 22  2022 skel
+drwxr-xr-x  4 root root    4096 mar 27 18:16 ssh
+drwxr-xr-x  4 root root    4096 wrz 12  2022 ssl
+-rw-r--r--  1 root root      20 paź 12  2020 subgid
+-rw-r--r--  1 root root       0 kwi 25  2020 subgid-
+-rw-r--r--  1 root root      20 paź 12  2020 subuid
+-rw-r--r--  1 root root       0 kwi 25  2020 subuid-
+-r--r-----  1 root root     755 lut  3  2020 sudoers
+drwxr-xr-x  2 root root    4096 cze 21  2021 sudoers.d
+drwxr-xr-x  3 root root    4096 mar 27 18:26 sv
+-rw-r--r--  1 root root    2351 kwi 25  2020 sysctl.conf
+drwxr-xr-x  2 root root    4096 sty  4 13:03 sysctl.d
+drwxr-xr-x  5 root root    4096 sty  4 13:05 systemd
+drwxr-xr-x  2 root root    4096 kwi 25  2020 terminfo
+-rw-r--r--  1 root root       8 sty  4 13:05 timezone
+drwxr-xr-x  2 root root    4096 wrz 22  2020 tmpfiles.d
+drwxr-xr-x  2 root root    4096 sty  4 13:05 ubuntu-advantage
+-rw-r--r--  1 root root    1260 gru 14  2018 ucf.conf
+drwxr-xr-x  4 root root    4096 sty  4 13:05 udev
+drwxr-xr-x  3 root root    4096 lut 28  2022 ufw
+drwxr-xr-x  3 root root    4096 wrz 12  2022 update-manager
+drwxr-xr-x  2 root root    4096 sty  4 13:05 update-motd.d
+drwxr-xr-x  2 root root    4096 sty  4 13:05 vim
+lrwxrwxrwx  1 root root      23 kwi 25  2020 vtrgb -> /etc/alternatives/vtrgb
+drwxr-xr-x  5 root root    4096 kwi 25  2020 vulkan
+drwxr-xr-x  2 root root    4096 mar 27 18:16 vzdump
+-rw-r--r--  1 root root    4942 lip 24  2019 wgetrc
+drwxr-xr-x  9 root root    4096 kwi 25  2020 X11
+-rw-r--r--  1 root root     642 wrz 24  2019 xattr.conf
+drwxr-xr-x  4 root root    4096 kwi 25  2020 xdg
+drwxr-xr-x  2 root root    4096 mar 18  2022 zsh
+-rw-r--r--  1 root root     477 paź  7  2019 zsh_command_not_found
+root@x446:/etc# head -n 3
+^Z
+[1]+  Stopped                 head -n 3
+root@x446:/etc# head -n 3 passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+root@x446:/etc# pwd
+/etc
+root@x446:/etc# ls

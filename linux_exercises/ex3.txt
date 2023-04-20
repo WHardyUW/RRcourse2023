@@ -1,0 +1,47 @@
+tjstarak@rr-2:~$ ip a | tail -n 3
+       valid_lft 84812sec preferred_lft 84812sec
+    inet6 fe80::4001:aff:feba:3/64 scope link
+       valid_lft forever preferred_lft forever
+tjstarak@rr-2:~$ ps -aux | grep -i cpu
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root          10  0.0  0.0      0     0 ?        I<   13:12   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    13:12   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    13:12   0:00 [cpuhp/1]
+tjstarak    1365  0.0  0.2   7000  2124 pts/0    R+   13:38   0:00 grep --color=auto -i cpu
+tjstarak@rr-2:~$ ip a | tail -n 3
+       valid_lft 84802sec preferred_lft 84802sec
+    inet6 fe80::4001:aff:feba:3/64 scope link
+       valid_lft forever preferred_lft forever
+tjstarak@rr-2:~$ cd .
+./       ../      .cache/  .config/ .ssh/
+tjstarak@rr-2:~$ cd /etc/
+NetworkManager/       cron.daily/           iscsi/                network/              rc2.d/                terminfo/
+PackageKit/           cron.hourly/          kernel/               networkd-dispatcher/  rc3.d/                tmpfiles.d/
+X11/                  cron.monthly/         landscape/            newt/                 rc4.d/                ubuntu-advantage/
+alternatives/         cron.weekly/          ld.so.conf.d/         nvme/                 rc5.d/                udev/
+apparmor/             cryptsetup-initramfs/ ldap/                 opt/                  rc6.d/                ufw/
+apparmor.d/           dbus-1/               libblockdev/          pam.d/                rcS.d/                update-manager/
+apport/               default/              libnl-3/              perl/                 rsyslog.d/            update-motd.d/
+apt/                  depmod.d/             logcheck/             pm/                   security/             update-notifier/
+bash_completion.d/    dhcp/                 logrotate.d/          polkit-1/             selinux/              usb_modeswitch.d/
+binfmt.d/             dpkg/                 lvm/                  pollinate/            skel/                 vim/
+byobu/                groff/                mdadm/                ppp/                  sos/                  vmware-tools/
+ca-certificates/      grub.d/               modprobe.d/           profile.d/            ssh/                  xdg/
+chrony/               gss/                  modules-load.d/       python3/              ssl/
+cloud/                init.d/               multipath/            python3.10/           sudoers.d/
+console-setup/        initramfs-tools/      needrestart/          rc0.d/                sysctl.d/
+cron.d/               iproute2/             netplan/              rc1.d/                systemd/
+tjstarak@rr-2:~$ cd /etc/nvme
+tjstarak@rr-2:/etc/nvme$ pwd
+/etc/nvme
+tjstarak@rr-2:/etc/nvme$ ls
+discovery.conf  hostid  hostnqn
+tjstarak@rr-2:/etc/nvme$ cat discovery.conf | tail -n 3
+#
+# Example:
+# --transport=<trtype> --traddr=<traddr> --trsvcid=<trsvcid> --host-traddr=<host-traddr> --host-iface=<host-iface>
+tjstarak@rr-2:/etc/nvme$ tail -n 3 discovery.conf
+#
+# Example:
+# --transport=<trtype> --traddr=<traddr> --trsvcid=<trsvcid> --host-traddr=<host-traddr> --host-iface=<host-iface>
+tjstarak@rr-2:/etc/nvme$

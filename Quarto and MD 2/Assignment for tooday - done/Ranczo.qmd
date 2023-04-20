@@ -3,26 +3,13 @@ title: "Ranczo"
 author: "455395"
 format:
   html:
-
     toc: true
-
     toc-depth: 2
-
     toc-expand: 3
-
     toc-title: Contents
-
     toc-location: body
 editor: visual
 ---
-
-\<pre class="code-block"\>
-
-title: "Ranczo"
-
-format:
-
-\</pre\>
 
 # Ranczo
 
@@ -62,6 +49,5 @@ x_variable <- (6857229.0 - 4101154.0)
 
 Between season 1 and 2 the views increased by `r x_variable` which was the greatest change in the shows history.
 
-```{=html}
-
+```{}
 ```

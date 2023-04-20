@@ -1,14 +1,29 @@
 ---
 title: "HIMYM"
 author: "Aziz Aliev"
-date: "4/13/2023"
-format: html
+date: today
+date-format: short
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    toc-expand: 1
+    toc-title: Contents
+    toc-location: right
+    smooth-scroll: true
+  docx: default
+number-sections: true
+number-depth: 2
+title-block-banner: true
+code-fold: true
+theme:
+  light: flatly
+  dark: darkly
 execute:
   echo: fenced
+  warning: false
 ---
 
-knitr::convert_chunk_header(input = "himym.Rmd", 
-                            output = "himym.qmd")
 
 # _How I Met Your Mother_
 

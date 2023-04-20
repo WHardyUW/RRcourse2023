@@ -1,6 +1,8 @@
 ---
 title: "Ranczo"
 author: "455395"
+title-block-banner: true
+title-block-banner-color: red
 format:
   html:
     css: styles.css
@@ -14,9 +16,6 @@ theme:
   dark: darkly
 editor: visual
 ---
-
-
-
 
 
 ::: {.panel-tabset}

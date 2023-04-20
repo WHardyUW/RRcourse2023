@@ -1,14 +1,54 @@
+# Assignment
+
+Get your TV show description file from the previous week. Modify it using what we've learned today:
+
+0) Convert it to .qmd first though (use what we've learned today for that!)
+
+1) Render it into at least two different formats in an automated way (e.g. using YAML options or a script).
+
+2) Add some features for the .html output, e.g.: add a table of contents and change the theme.
+
+3) We skip step 3. 
+
+4) Include tabs.
+
+5) Browse through the documentation and pick additional configuration options on your own.
+
+
 ---
 title: "Exercise"
+subtitle: "QF"
 author: "Wojciech Hardy"
-date: "3/29/2022"
-output: html_document
+date: today
+date-format: short
+format: 
+  html: defaul
+  pdf: defaul
+theme: quartrz
+execute:
+  echo: fenced
+  warning: false
+  freeze: true 
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 load("../Data/season_1.RData")
 ```
+## Migrating from RMarkdown
+
+knitr::convert_chunk_header(input = "Assignment.Rmd", output = "Assignment.qmd")
+
+| RMD                     | Quarto           |     
+|:----------              |:-----            |
+| output:                 | format:          |
+| output: html_document   | format: html     |
+| output: pdf_document    | format: pdf      |
+| output: word_document   | format: docx     |
+| output: xaringan        | format: revealjs |
+| output: ioslides        | format: ioslides |
+|: [Other](https://quarto.org/docs/faq/rmarkdown.html)   :|
+
 
 # Game of Thrones - Season 1 summary in numbers
 

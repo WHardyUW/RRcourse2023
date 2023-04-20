@@ -471,7 +471,7 @@ Get your TV show description file from the previous week. Modify it using what w
 
 2) Add some features for the .html output, e.g.: add a table of contents and change the theme.
 
-3) Put the YAML options in a separate file.
+3) We skip step 3. 
 
 4) Include tabs.
 

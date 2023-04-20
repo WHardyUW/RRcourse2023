@@ -11,11 +11,8 @@ lntung@instance-1:/var/log$ ip a  |  tail -n 3
 
 lntung@instance-1:/var/log$ cd ../../etc/nvme
 
-lntung@instance-1:/etc/nvme$ ls -l
-total 12
--rw-r--r-- 1 root root 157 Sep  7  2020 discovery.conf
--rw-r--r-- 1 root root  37 Mar  2 21:45 hostid
--rw-r--r-- 1 root root  69 Mar  2 21:45 hostnqn
+lntung@instance-1:/etc/nvme$ pwd
+/etc/nvme
 
 lntung@instance-1:/etc/nvme$ cat discovery.conf | head -n 3
 # Used for extracting default parameters for discovery

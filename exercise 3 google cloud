@@ -1,0 +1,213 @@
+e_shirinov@instance1:~$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.1  1.1 101104 11676 ?        Ss   13:17   0:02 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    13:17   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   13:17   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   13:17   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   13:17   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   13:17   0:00 [netns]
+root           8  0.0  0.0      0     0 ?        I<   13:17   0:00 [kworker/0:0H-events_highpri]
+root          10  0.0  0.0      0     0 ?        I<   13:17   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        S    13:17   0:00 [rcu_tasks_rude_]
+root          12  0.0  0.0      0     0 ?        S    13:17   0:00 [rcu_tasks_trace]
+root          13  0.0  0.0      0     0 ?        S    13:17   0:00 [ksoftirqd/0]
+root          14  0.0  0.0      0     0 ?        I    13:17   0:00 [rcu_sched]
+root          15  0.0  0.0      0     0 ?        S    13:17   0:00 [migration/0]
+root          16  0.0  0.0      0     0 ?        S    13:17   0:00 [idle_inject/0]
+root          18  0.0  0.0      0     0 ?        S    13:17   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    13:17   0:00 [cpuhp/1]
+root          20  0.0  0.0      0     0 ?        S    13:17   0:00 [idle_inject/1]
+root          21  0.0  0.0      0     0 ?        S    13:17   0:00 [migration/1]
+root          22  0.0  0.0      0     0 ?        S    13:17   0:00 [ksoftirqd/1]
+root          24  0.0  0.0      0     0 ?        I<   13:17   0:00 [kworker/1:0H-events_highpri]
+root          25  0.0  0.0      0     0 ?        S    13:17   0:00 [kdevtmpfs]
+root          26  0.0  0.0      0     0 ?        I<   13:17   0:00 [inet_frag_wq]
+root          27  0.0  0.0      0     0 ?        S    13:17   0:00 [kauditd]
+root          29  0.0  0.0      0     0 ?        S    13:17   0:00 [khungtaskd]
+root          30  0.0  0.0      0     0 ?        S    13:17   0:00 [oom_reaper]
+root          31  0.0  0.0      0     0 ?        I<   13:17   0:00 [writeback]
+root          32  0.0  0.0      0     0 ?        S    13:17   0:00 [kcompactd0]
+root          33  0.0  0.0      0     0 ?        SN   13:17   0:00 [ksmd]
+root          34  0.0  0.0      0     0 ?        SN   13:17   0:00 [khugepaged]
+root          80  0.0  0.0      0     0 ?        I<   13:17   0:00 [kintegrityd]
+root          81  0.0  0.0      0     0 ?        I<   13:17   0:00 [kblockd]
+root          82  0.0  0.0      0     0 ?        I<   13:17   0:00 [blkcg_punt_bio]
+root          83  0.0  0.0      0     0 ?        I<   13:17   0:00 [tpm_dev_wq]
+root          84  0.0  0.0      0     0 ?        I<   13:17   0:00 [ata_sff]
+root          85  0.0  0.0      0     0 ?        I<   13:17   0:00 [md]
+root          86  0.0  0.0      0     0 ?        I<   13:17   0:00 [edac-poller]
+root          87  0.0  0.0      0     0 ?        I<   13:17   0:00 [devfreq_wq]
+root          88  0.0  0.0      0     0 ?        S    13:17   0:00 [watchdogd]
+root          90  0.0  0.0      0     0 ?        I<   13:17   0:00 [kworker/1:1H-kblockd]
+root          92  0.0  0.0      0     0 ?        S    13:17   0:00 [kswapd0]
+root          93  0.0  0.0      0     0 ?        S    13:17   0:00 [ecryptfs-kthrea]
+root          95  0.0  0.0      0     0 ?        I<   13:17   0:00 [kthrotld]
+root          96  0.0  0.0      0     0 ?        I<   13:17   0:00 [acpi_thermal_pm]
+root          97  0.0  0.0      0     0 ?        S    13:17   0:00 [scsi_eh_0]
+root          98  0.0  0.0      0     0 ?        I<   13:17   0:00 [scsi_tmf_0]
+root          99  0.0  0.0      0     0 ?        I<   13:17   0:00 [nvme-wq]
+root         100  0.0  0.0      0     0 ?        I<   13:17   0:00 [nvme-reset-wq]
+root         101  0.0  0.0      0     0 ?        I<   13:17   0:00 [nvme-delete-wq]
+root         102  0.0  0.0      0     0 ?        I<   13:17   0:00 [vfio-irqfd-clea]
+root         103  0.0  0.0      0     0 ?        I    13:17   0:00 [kworker/u4:2-events_unbound]
+root         104  0.0  0.0      0     0 ?        I<   13:17   0:00 [mld]
+root         105  0.0  0.0      0     0 ?        I<   13:17   0:00 [kworker/0:1H-kblockd]
+root         106  0.0  0.0      0     0 ?        I<   13:17   0:00 [ipv6_addrconf]
+root         116  0.0  0.0      0     0 ?        I<   13:17   0:00 [kstrp]
+root         119  0.0  0.0      0     0 ?        I<   13:17   0:00 [zswap-shrink]
+root         120  0.0  0.0      0     0 ?        I<   13:17   0:00 [kworker/u5:0]
+root         127  0.0  0.0      0     0 ?        I<   13:17   0:00 [charger_manager]
+root         128  0.0  0.0      0     0 ?        S    13:17   0:00 [jbd2/sda1-8]
+root         129  0.0  0.0      0     0 ?        I<   13:17   0:00 [ext4-rsv-conver]
+root         131  0.0  0.0      0     0 ?        S    13:17   0:00 [hwrng]
+root         170  0.0  1.4  48256 14244 ?        S<s  13:18   0:00 /lib/systemd/systemd-journald
+root         205  0.0  0.0      0     0 ?        I<   13:18   0:00 [kaluad]
+root         206  0.0  0.0      0     0 ?        I<   13:18   0:00 [kmpath_rdacd]
+root         209  0.0  0.0      0     0 ?        I<   13:18   0:00 [kmpathd]
+root         210  0.0  0.0      0     0 ?        I<   13:18   0:00 [kmpath_handlerd]
+root         213  0.0  2.7 289348 27360 ?        SLsl 13:18   0:00 /sbin/multipathd -d -s
+root         224  0.0  0.0      0     0 ?        I    13:18   0:00 [kworker/0:5-events]
+root         225  0.0  0.6  22996  6548 ?        Ss   13:18   0:00 /lib/systemd/systemd-udevd
+root         240  0.0  0.0      0     0 ?        I<   13:18   0:00 [cryptd]
+systemd+     433  0.0  0.8  16252  8072 ?        Ss   13:18   0:00 /lib/systemd/systemd-networkd
+systemd+     435  0.0  1.2  25260 12568 ?        Ss   13:18   0:00 /lib/systemd/systemd-resolved
+message+     469  0.0  0.4   8608  4772 ?        Ss   13:18   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+_chrony      479  0.0  0.3  18916  3404 ?        S    13:18   0:00 /usr/sbin/chronyd -F 1
+_chrony      480  0.0  0.0  10588   520 ?        S    13:18   0:00 /usr/sbin/chronyd -F 1
+root         484  0.0  2.1 1238276 21112 ?       Ssl  13:18   0:00 /usr/bin/google_osconfig_agent
+root         492  0.0  1.9  33128 18884 ?        Ss   13:18   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+syslog       498  0.0  0.5 222400  5440 ?        Ssl  13:18   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         504  0.3  3.9 948960 39024 ?        Ssl  13:18   0:05 /usr/lib/snapd/snapd
+root         546  0.0  1.5 1305612 15708 ?       Ssl  13:18   0:00 /usr/bin/google_guest_agent
+root         628  0.0  2.1 110072 21452 ?        Ssl  13:18   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         666  0.0  0.8 235428  8304 ?        Ssl  13:18   0:00 /usr/libexec/polkitd --no-debug
+root         670  0.0  0.1   6216  1108 ttyS0    Ss+  13:18   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 ttyS0 vt220
+root         675  0.0  0.1   6172  1124 tty1     Ss+  13:18   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root         688  0.0  0.9  15424  9504 ?        Ss   13:18   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root         693  0.0  0.7  15348  7520 ?        Ss   13:18   0:00 /lib/systemd/systemd-logind
+root         697  0.0  0.2   7284  2832 ?        Ss   13:18   0:00 /usr/sbin/cron -f -P
+root         839  0.0  0.0      0     0 ?        I    13:18   0:00 [kworker/1:4-events]
+root         854  0.0  1.1  17048 10932 ?        Ss   13:19   0:00 sshd: e_shirinov [priv]
+e_shiri+     857  0.0  0.9  17056  9740 ?        Ss   13:19   0:00 /lib/systemd/systemd --user
+e_shiri+     858  0.0  0.4 104028  4096 ?        S    13:19   0:00 (sd-pam)
+e_shiri+     944  0.0  0.8  17188  8020 ?        R    13:19   0:00 sshd: e_shirinov@pts/0
+e_shiri+     947  0.0  0.5   9208  5344 pts/0    Ss   13:19   0:00 -bash
+root        1050  0.0  0.0      0     0 ?        I    13:27   0:00 [kworker/0:0-events]
+root        1052  0.0  0.0      0     0 ?        I    13:28   0:00 [kworker/u4:0-events_unbound]
+root        1066  0.0  0.0      0     0 ?        I    13:33   0:00 [kworker/1:0-events_freezable]
+e_shiri+    1071  0.0  0.3  10460  3304 pts/0    R+   13:39   0:00 ps aux
+e_shirinov@instance1:~$ tail -n 3
+
+tail -last/3
+tail -last 3
+tail -3
+ps aux tail -3
+^C
+e_shirinov@instance1:~$ ip tail -3
+Object "tail" is unknown, try "ip help".
+e_shirinov@instance1:~$ ip a tail -3
+Command "tail" is unknown, try "ip address help".
+e_shirinov@instance1:~$ ipa tail -3
+Command 'ipa' not found, but can be installed with:
+apt install freeipa-client
+Please ask your administrator.
+e_shirinov@instance1:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1460 qdisc mq state UP group default qlen 1000
+    link/ether 42:01:0a:80:00:02 brd ff:ff:ff:ff:ff:ff
+    inet 10.128.0.2/32 metric 100 scope global dynamic ens4
+       valid_lft 84663sec preferred_lft 84663sec
+    inet6 fe80::4001:aff:fe80:2/64 scope link 
+       valid_lft forever preferred_lft forever
+e_shirinov@instance1:~$ tail -3
+^C
+e_shirinov@instance1:~$ du -a
+4       ./.bash_logout
+4       ./.profile
+4       ./.bash_history
+4       ./.ssh
+0       ./test
+0       ./file.txt
+4       ./.bashrc
+0       ./.cache/motd.legal-displayed
+4       ./.cache
+28      .
+e_shirinov@instance1:~$ tail -3
+^C
+e_shirinov@instance1:~$ ip a tail -3
+Command "tail" is unknown, try "ip address help".
+e_shirinov@instance1:~$ ipa tail -3
+Command 'ipa' not found, but can be installed with:
+apt install freeipa-client
+Please ask your administrator.
+e_shirinov@instance1:~$ ip
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+       ip [ -force ] -batch filename
+where  OBJECT := { address | addrlabel | fou | help | ila | ioam | l2tp | link |
+                   macsec | maddress | monitor | mptcp | mroute | mrule |
+                   neighbor | neighbour | netconf | netns | nexthop | ntable |
+                   ntbl | route | rule | sr | tap | tcpmetrics |
+                   token | tunnel | tuntap | vrf | xfrm }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
+                    -h[uman-readable] | -iec | -j[son] | -p[retty] |
+                    -f[amily] { inet | inet6 | mpls | bridge | link } |
+                    -4 | -6 | -M | -B | -0 |
+                    -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
+                    -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
+                    -rc[vbuf] [size] | -n[etns] name | -N[umeric] | -a[ll] |
+                    -c[olor]}
+e_shirinov@instance1:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1460 qdisc mq state UP group default qlen 1000
+    link/ether 42:01:0a:80:00:02 brd ff:ff:ff:ff:ff:ff
+    inet 10.128.0.2/32 metric 100 scope global dynamic ens4
+       valid_lft 83837sec preferred_lft 83837sec
+    inet6 fe80::4001:aff:fe80:2/64 scope link 
+       valid_lft forever preferred_lft forever
+e_shirinov@instance1:~$ du -a.
+du: invalid option -- '.'
+Try 'du --help' for more information.
+e_shirinov@instance1:~$ du -a .
+4       ./.bash_logout
+4       ./.profile
+4       ./.bash_history
+4       ./.ssh
+0       ./test
+0       ./file.txt
+4       ./.bashrc
+0       ./.cache/motd.legal-displayed
+4       ./.cache
+28      .
+e_shirinov@instance1:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1460 qdisc mq state UP group default qlen 1000
+    link/ether 42:01:0a:80:00:02 brd ff:ff:ff:ff:ff:ff
+    inet 10.128.0.2/32 metric 100 scope global dynamic ens4
+       valid_lft 83789sec preferred_lft 83789sec
+    inet6 fe80::4001:aff:fe80:2/64 scope link 
+       valid_lft forever preferred_lft forever
+e_shirinov@instance1:~$ tail -3
+^C
+e_shirinov@instance1:~$ pwd
+/home/e_shirinov
+e_shirinov@instance1:~$ ls
+file.txt  test
+e_shirinov@instance1:~$ ls -l
+total 0
+-rw-rw-r-- 1 e_shirinov e_shirinov 0 Apr 13 13:45 file.txt
+-rw-rw-r-- 1 e_shirinov e_shirinov 0 Apr 13 13:45 test

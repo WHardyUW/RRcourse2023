@@ -1,0 +1,286 @@
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-1032-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Apr 21 17:18:33 UTC 2023
+
+  System load:  0.0               Processes:             101
+  Usage of /:   29.9% of 9.51GB   Users logged in:       1
+  Memory usage: 25%               IPv4 address for ens4: 10.128.0.2
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/gcp/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+26 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+top - 17:20:52 up  1:30,  2 users,  load average: 0.00, 0.00, 0.00
+Tasks: 101 total,   1 running, 100 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :    965.9 total,    438.1 free,    217.9 used,    309.9 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.    610.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                              
+   1364 a_ayeti+  20   0   10892   3936   3248 R   1.1   0.4   0:00.04 top                                  
+      1 root      20   0  166648  11884   8272 S   0.0   1.2   0:02.70 systemd                              
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd                             
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                               
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                           
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                         
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri          
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                         
+     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_                      
+     12 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace                      
+     13 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                          
+     14 root      20   0       0      0      0 I   0.0   0.0   0:00.18 rcu_sched                            
+     15 root      rt   0       0      0      0 S   0.0   0.0   0:00.03 migration/0                          
+     16 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                        
+     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                              
+     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                              
+     20 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                        
+     21 root      rt   0       0      0      0 S   0.0   0.0   0:00.28 migration/1                          
+     22 root      20   0       0      0      0 S   0.0   0.0   0:00.07 ksoftirqd/1                          
+     24 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-kblockd                 
+     25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                            
+     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq                         
+     27 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                              
+     29 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                           
+     30 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                           
+     31 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback                            
+     32 root      20   0       0      0      0 S   0.0   0.0   0:00.25 kcompactd0                           
+     33 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                 
+     34 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                           
+     80 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd                          
+     81 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd                              
+a_ayetigbo@instance-1:~$ htop
+a_ayetigbo@instance-1:~$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  1.2 166648 11884 ?        Ss   15:50   0:02 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    15:50   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   15:50   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   15:50   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   15:50   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   15:50   0:00 [netns]
+root           8  0.0  0.0      0     0 ?        I<   15:50   0:00 [kworker/0:0H-events_highpri]
+root          10  0.0  0.0      0     0 ?        I<   15:50   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        S    15:50   0:00 [rcu_tasks_rude_]
+root          12  0.0  0.0      0     0 ?        S    15:50   0:00 [rcu_tasks_trace]
+root          13  0.0  0.0      0     0 ?        S    15:50   0:00 [ksoftirqd/0]
+root          14  0.0  0.0      0     0 ?        I    15:50   0:00 [rcu_sched]
+root          15  0.0  0.0      0     0 ?        S    15:50   0:00 [migration/0]
+root          16  0.0  0.0      0     0 ?        S    15:50   0:00 [idle_inject/0]
+root          18  0.0  0.0      0     0 ?        S    15:50   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    15:50   0:00 [cpuhp/1]
+root          20  0.0  0.0      0     0 ?        S    15:50   0:00 [idle_inject/1]
+root          21  0.0  0.0      0     0 ?        S    15:50   0:00 [migration/1]
+root          22  0.0  0.0      0     0 ?        S    15:50   0:00 [ksoftirqd/1]
+root          24  0.0  0.0      0     0 ?        I<   15:50   0:00 [kworker/1:0H-kblockd]
+root          25  0.0  0.0      0     0 ?        S    15:50   0:00 [kdevtmpfs]
+root          26  0.0  0.0      0     0 ?        I<   15:50   0:00 [inet_frag_wq]
+root          27  0.0  0.0      0     0 ?        S    15:50   0:00 [kauditd]
+root          29  0.0  0.0      0     0 ?        S    15:50   0:00 [khungtaskd]
+root          30  0.0  0.0      0     0 ?        S    15:50   0:00 [oom_reaper]
+root          31  0.0  0.0      0     0 ?        I<   15:50   0:00 [writeback]
+root          32  0.0  0.0      0     0 ?        S    15:50   0:00 [kcompactd0]
+root          33  0.0  0.0      0     0 ?        SN   15:50   0:00 [ksmd]
+root          34  0.0  0.0      0     0 ?        SN   15:50   0:00 [khugepaged]
+root          80  0.0  0.0      0     0 ?        I<   15:50   0:00 [kintegrityd]
+root          81  0.0  0.0      0     0 ?        I<   15:50   0:00 [kblockd]
+root          82  0.0  0.0      0     0 ?        I<   15:50   0:00 [blkcg_punt_bio]
+root          83  0.0  0.0      0     0 ?        I<   15:50   0:00 [tpm_dev_wq]
+root          84  0.0  0.0      0     0 ?        I<   15:50   0:00 [ata_sff]
+root          85  0.0  0.0      0     0 ?        I<   15:50   0:00 [md]
+root          86  0.0  0.0      0     0 ?        I<   15:50   0:00 [edac-poller]
+root          87  0.0  0.0      0     0 ?        I<   15:50   0:00 [devfreq_wq]
+root          88  0.0  0.0      0     0 ?        S    15:50   0:00 [watchdogd]
+root          90  0.0  0.0      0     0 ?        I<   15:50   0:00 [kworker/0:1H-kblockd]
+root          92  0.0  0.0      0     0 ?        S    15:50   0:00 [kswapd0]
+root          93  0.0  0.0      0     0 ?        S    15:50   0:00 [ecryptfs-kthrea]
+root          95  0.0  0.0      0     0 ?        I<   15:50   0:00 [kthrotld]
+root          96  0.0  0.0      0     0 ?        I<   15:50   0:00 [acpi_thermal_pm]
+root          97  0.0  0.0      0     0 ?        S    15:50   0:00 [scsi_eh_0]
+root          98  0.0  0.0      0     0 ?        I<   15:50   0:00 [scsi_tmf_0]
+root          99  0.0  0.0      0     0 ?        I<   15:50   0:00 [nvme-wq]
+root         100  0.0  0.0      0     0 ?        I<   15:50   0:00 [nvme-reset-wq]
+root         101  0.0  0.0      0     0 ?        I<   15:50   0:00 [nvme-delete-wq]
+root         102  0.0  0.0      0     0 ?        I<   15:50   0:00 [vfio-irqfd-clea]
+root         104  0.0  0.0      0     0 ?        I<   15:50   0:00 [kworker/1:1H-kblockd]
+root         105  0.0  0.0      0     0 ?        I<   15:50   0:00 [mld]
+root         106  0.0  0.0      0     0 ?        I<   15:50   0:00 [ipv6_addrconf]
+root         116  0.0  0.0      0     0 ?        I<   15:50   0:00 [kstrp]
+root         119  0.0  0.0      0     0 ?        I<   15:50   0:00 [zswap-shrink]
+root         120  0.0  0.0      0     0 ?        I<   15:50   0:00 [kworker/u5:0]
+root         127  0.0  0.0      0     0 ?        I<   15:50   0:00 [charger_manager]
+root         128  0.0  0.0      0     0 ?        S    15:50   0:00 [jbd2/sda1-8]
+root         129  0.0  0.0      0     0 ?        I<   15:50   0:00 [ext4-rsv-conver]
+root         131  0.0  0.0      0     0 ?        S    15:50   0:00 [hwrng]
+root         170  0.0  2.8  64568 27868 ?        S<s  15:50   0:00 /lib/systemd/systemd-journald
+root         199  0.0  0.0      0     0 ?        I    15:50   0:00 [kworker/1:9-events]
+root         211  0.0  0.0      0     0 ?        I<   15:50   0:00 [kaluad]
+root         213  0.0  0.0      0     0 ?        I<   15:50   0:00 [kmpath_rdacd]
+root         214  0.0  0.0      0     0 ?        I<   15:50   0:00 [kmpathd]
+root         215  0.0  0.0      0     0 ?        I<   15:50   0:00 [kmpath_handlerd]
+root         219  0.0  2.7 289348 27360 ?        SLsl 15:50   0:00 /sbin/multipathd -d -s
+root         228  0.0  0.6  23128  6600 ?        Ss   15:50   0:00 /lib/systemd/systemd-udevd
+root         249  0.0  0.0      0     0 ?        I<   15:50   0:00 [cryptd]
+systemd+     443  0.0  0.8  16252  8044 ?        Ss   15:50   0:00 /lib/systemd/systemd-networkd
+systemd+     445  0.0  1.2  25260 12360 ?        Ss   15:50   0:00 /lib/systemd/systemd-resolved
+message+     479  0.0  0.4   8612  4804 ?        Ss   15:50   0:00 @dbus-daemon --system --address=systemd: 
+_chrony      489  0.0  0.3  18916  3320 ?        S    15:50   0:00 /usr/sbin/chronyd -F 1
+_chrony      490  0.0  0.0  10588   516 ?        S    15:50   0:00 /usr/sbin/chronyd -F 1
+root         493  0.0  2.1 1238276 20932 ?       Ssl  15:50   0:00 /usr/bin/google_osconfig_agent
+root         503  0.0  1.8  33124 18776 ?        Ss   15:50   0:00 /usr/bin/python3 /usr/bin/networkd-dispat
+syslog       507  0.0  0.6 222400  5948 ?        Ssl  15:50   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         515  0.1  4.7 801912 46532 ?        Ssl  15:50   0:05 /usr/lib/snapd/snapd
+root         560  0.0  1.5 1379600 15524 ?       Ssl  15:50   0:00 /usr/bin/google_guest_agent
+root         642  0.0  2.1 110068 21332 ?        Ssl  15:50   0:00 /usr/bin/python3 /usr/share/unattended-up
+root         659  0.0  0.8 235452  8148 ?        Ssl  15:50   0:00 /usr/libexec/polkitd --no-debug
+root         662  0.0  0.1   6216  1160 ttyS0    Ss+  15:50   0:00 /sbin/agetty -o -p -- \u --keep-baud 1152
+root         668  0.0  0.1   6172  1160 tty1     Ss+  15:50   0:00 /sbin/agetty -o -p -- \u --noclear tty1 l
+root         686  0.0  0.9  15424  9488 ?        Ss   15:50   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 1
+root         694  0.0  0.7  15348  7496 ?        Ss   15:50   0:00 /lib/systemd/systemd-logind
+root         706  0.0  0.2   7284  2816 ?        Ss   15:50   0:00 /usr/sbin/cron -f -P
+a_ayeti+     872  0.0  0.9  17068  9684 ?        Ss   15:51   0:00 /lib/systemd/systemd --user
+a_ayeti+     873  0.0  0.4 169576  4116 ?        S    15:51   0:00 (sd-pam)
+root         992  0.0  0.0      0     0 ?        I    16:00   0:00 [kworker/0:1-events]
+root         998  0.0  0.0      0     0 ?        I    16:05   0:00 [kworker/0:2-events]
+root        1056  0.0  0.0      0     0 ?        I    16:16   0:00 [kworker/u4:0-ext4-rsv-conversion]
+root        1105  0.0  1.1  17048 10916 ?        Ss   16:39   0:00 sshd: a_ayetigbo [priv]
+a_ayeti+    1161  0.0  0.8  17192  8060 ?        S    16:39   0:00 sshd: a_ayetigbo@pts/1
+a_ayeti+    1162  0.0  0.5   9208  5280 pts/1    Ss+  16:39   0:00 -bash
+root        1225  0.0  0.0      0     0 ?        I    16:46   0:00 [kworker/1:0-events]
+root        1242  0.0  0.0      0     0 ?        I    17:03   0:00 [kworker/u4:2-events_power_efficient]
+root        1248  0.0  0.0      0     0 ?        I    17:12   0:00 [kworker/u4:1-events_unbound]
+root        1268  0.0  1.1  17044 10952 ?        Ss   17:18   0:00 sshd: a_ayetigbo [priv]
+a_ayeti+    1346  0.0  0.8  17180  8036 ?        S    17:18   0:00 sshd: a_ayetigbo@pts/0
+a_ayeti+    1347  0.0  0.5   9208  5312 pts/0    Ss   17:18   0:00 -bash
+root        1358  0.0  0.0      0     0 ?        I    17:18   0:00 [kworker/u4:3]
+a_ayeti+    1367  0.0  0.3  10460  3372 pts/0    R+   17:21   0:00 ps aux
+a_ayetigbo@instance-1:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1460 qdisc mq state UP group default qlen 1000
+    link/ether 42:01:0a:80:00:02 brd ff:ff:ff:ff:ff:ff
+    inet 10.128.0.2/32 metric 100 scope global dynamic ens4
+       valid_lft 80894sec preferred_lft 80894sec
+    inet6 fe80::4001:aff:fe80:2/64 scope link 
+       valid_lft forever preferred_lft forever
+a_ayetigbo@instance-1:~$ history
+    1  uname -a
+    2  touch text.txt
+    3  ls -l
+    4  ls
+    5  exit
+    6  l
+    7  ls
+    8  pwd
+    9  quit
+   10  q
+   11  exit
+   12  history
+   13  ls
+   14  cd ~/Documents
+   15  cd C:\Users\Acer\Desktop
+   16  cd C:/Users/Acer/Desktop
+   17  cd ~
+   18  cd /
+   19  pwd
+   20  cd ..
+   21  cd ~/Documents
+   22  cd ~/Desktop
+   23  pwd
+   24  pwd
+   25  tasklist /FI "IMAGENAME eq *cpu*" /V
+   26  pgrep -a cpu
+   27  ifconfig | tail -n 3
+   28  ip addr | tail -n 3
+   29  cd /etc && find . -type f -readable -printf '%h\n' | sort -u | shuf -n 1 | xargs cd
+   30  pwd
+   31  head -n 3 *
+   32  crontab -e
+   33  head -n 3 
+   34  head -n 3 *
+   35  uname -a
+   36  ls -l
+   37  pwd
+   38  ls --help
+   39  man ls
+   40  su _username_
+   41  ls
+   42  nano text.txt
+   43  df
+   44  df -h
+   45  du
+   46  du -a . | sort -n -r | head -n 10
+   47  top
+   48  htop
+   49  ps aux
+   50  ip a
+   51  history
+a_ayetigbo@instance-1:~$ crontab -e
+no crontab for a_ayetigbo - using an empty one
+No modification made
+a_ayetigbo@instance-1:~$ nano test.sh
+a_ayetigbo@instance-1:~$ ps aux | grep cpu
+root          10  0.0  0.0      0     0 ?        I<   15:50   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    15:50   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    15:50   0:00 [cpuhp/1]
+a_ayeti+    1391  0.0  0.2   7004  2216 pts/0    R+   17:29   0:00 grep --color=auto cpu
+a_ayetigbo@instance-1:~$ ifconfig | tail -n 3
+Command 'ifconfig' not found, but can be installed with:
+apt install net-tools
+Please ask your administrator.
+a_ayetigbo@instance-1:~$ ip a | tail -n 3
+       valid_lft 80362sec preferred_lft 80362sec
+    inet6 fe80::4001:aff:fe80:2/64 scope link 
+       valid_lft forever preferred_lft forever
+a_ayetigbo@instance-1:~$ cd $(find /etc -type f -readable | grep -m1 /)
+-bash: cd: /etc/screenrc: Not a directory
+a_ayetigbo@instance-1:~$ ls
+test.sh  text.txt
+a_ayetigbo@instance-1:~$ find /etc -type f -readable | grep -m1 /
+/etc/screenrc
+a_ayetigbo@instance-1:~$ pwd
+/home/a_ayetigbo
+a_ayetigbo@instance-1:~$ cd find /etc -type f -readable | grep -m1 /
+-bash: cd: too many arguments
+a_ayetigbo@instance-1:~$ cd $ find /etc -type f -readable | grep -m1 /
+-bash: cd: too many arguments
+a_ayetigbo@instance-1:~$ cd $(find /etc -type f -readable | grep -m1 /)
+-bash: cd: /etc/screenrc: Not a directory
+a_ayetigbo@instance-1:~$ cd $(find /etc -type f -readable -printf '%h\n' | sort -u | shuf -n 1)
+find: ‘/etc/multipath’: Permission denied
+find: ‘/etc/ssl/private’: Permission denied
+find: ‘/etc/sudoers.d’: Permission denied
+find: ‘/etc/polkit-1/localauthority’: Permission denied
+a_ayetigbo@instance-1:/etc/polkit-1/localauthority.conf.d$ pwd
+/etc/polkit-1/localauthority.conf.d
+a_ayetigbo@instance-1:/etc/polkit-1/localauthority.conf.d$ head -n 3
+
+
+
+
+
+
+a_ayetigbo@instance-1:/etc/polkit-1/localauthority.conf.d$ 
+a_ayetigbo@instance-1:/etc/polkit-1/localauthority.conf.d$ head -n 3

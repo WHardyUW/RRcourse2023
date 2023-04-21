@@ -1,0 +1,2 @@
+total 0
+-rw-rw-r-- 1 oshieodomero oshieodomero 0 Apr 14 18:06 test.txt

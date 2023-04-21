@@ -1,1 +1,8 @@
+<<<<<<< HEAD
+
+today's date is 22/03/2023
+add some text
+
+=======
 add some textsomething
+>>>>>>> courseRepo/main

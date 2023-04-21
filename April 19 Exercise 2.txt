@@ -1,0 +1,87 @@
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-1032-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Apr 21 16:39:42 UTC 2023
+
+  System load:  0.0               Processes:             102
+  Usage of /:   29.9% of 9.51GB   Users logged in:       1
+  Memory usage: 25%               IPv4 address for ens4: 10.128.0.2
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/gcp/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+26 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Fri Apr 21 15:51:29 2023 from 35.235.240.0
+a_ayetigbo@instance-1:~$ ls
+text.txt
+a_ayetigbo@instance-1:~$ nano text.txt
+a_ayetigbo@instance-1:~$ mkdir rr
+a_ayetigbo@instance-1:~$ ls
+rr  text.txt
+a_ayetigbo@instance-1:~$ cd rr
+a_ayetigbo@instance-1:~/rr$ touch test.txt
+a_ayetigbo@instance-1:~/rr$ ls
+test.txt
+a_ayetigbo@instance-1:~/rr$ pwd
+/home/a_ayetigbo/rr
+a_ayetigbo@instance-1:~/rr$ ^C
+a_ayetigbo@instance-1:~/rr$ cp /etc/modules .
+a_ayetigbo@instance-1:~/rr$ ls -l
+total 4
+-rw-r--r-- 1 a_ayetigbo a_ayetigbo 195 Apr 21 16:54 modules
+-rw-rw-r-- 1 a_ayetigbo a_ayetigbo   0 Apr 21 16:46 test.txt
+a_ayetigbo@instance-1:~/rr$ ls -lS 
+total 4
+-rw-r--r-- 1 a_ayetigbo a_ayetigbo 195 Apr 21 16:54 modules
+-rw-rw-r-- 1 a_ayetigbo a_ayetigbo   0 Apr 21 16:46 test.txt
+a_ayetigbo@instance-1:~/rr$ ls -lS rr
+ls: cannot access 'rr': No such file or directory
+a_ayetigbo@instance-1:~/rr$ ls -lS .
+total 4
+-rw-r--r-- 1 a_ayetigbo a_ayetigbo 195 Apr 21 16:54 modules
+-rw-rw-r-- 1 a_ayetigbo a_ayetigbo   0 Apr 21 16:46 test.txt
+a_ayetigbo@instance-1:~/rr$ ls -S .
+modules  test.txt
+a_ayetigbo@instance-1:~/rr$ ls -S
+modules  test.txt
+a_ayetigbo@instance-1:~/rr$ rm dir
+rm: cannot remove 'dir': No such file or directory
+a_ayetigbo@instance-1:~/rr$ rmdir
+rmdir: missing operand
+Try 'rmdir --help' for more information.
+a_ayetigbo@instance-1:~/rr$ rmdir rr
+rmdir: failed to remove 'rr': No such file or directory
+a_ayetigbo@instance-1:~/rr$ rm -r
+rm: missing operand
+Try 'rm --help' for more information.
+a_ayetigbo@instance-1:~/rr$ cd .
+a_ayetigbo@instance-1:~/rr$ cd ..
+a_ayetigbo@instance-1:~$ rmdir rr
+rmdir: failed to remove 'rr': Directory not empty
+a_ayetigbo@instance-1:~$ rm -r
+rm: missing operand
+Try 'rm --help' for more information.
+a_ayetigbo@instance-1:~$ rm -r rr
+a_ayetigbo@instance-1:~$ ls
+text.txt
+a_ayetigbo@instance-1:~$ 

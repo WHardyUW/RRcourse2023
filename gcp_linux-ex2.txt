@@ -1,0 +1,81 @@
+﻿Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-1030-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Apr 21 12:06:26 UTC 2023
+
+  System load:  0.66552734375     Processes:             115
+  Usage of /:   24.1% of 9.51GB   Users logged in:       0
+  Memory usage: 22%               IPv4 address for ens4: 10.182.0.2
+  Swap usage:   0%
+
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/gcp/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Wed Apr 19 08:51:11 2023 from 35.235.243.64
+s_socha2@instance-1:~$  mkdir rr
+s_socha2@instance-1:~$ cd rr
+s_socha2@instance-1:~/rr$ touch test.txt
+s_socha2@instance-1:~/rr$ nano new.txt
+s_socha2@instance-1:~/rr$ cp /etc/modules /rr
+cp: cannot create regular file '/rr': Permission denied
+s_socha2@instance-1:~/rr$ cp /etc/modules 
+cp: missing destination file operand after '/etc/modules'
+Try 'cp --help' for more information.
+s_socha2@instance-1:~/rr$ cp /etc/modules /copied_file
+cp: cannot create regular file '/copied_file': Permission denied
+s_socha2@instance-1:~/rr$ cp /etc/modules /rr/copied_file
+cp: cannot create regular file '/rr/copied_file': No such file or directory
+s_socha2@instance-1:~/rr$ cp /etc/modules /rr/
+cp: cannot create regular file '/rr/': Not a directory
+s_socha2@instance-1:~/rr$ cp /etc/modules /rr
+cp: cannot create regular file '/rr': Permission denied
+s_socha2@instance-1:~/rr$ cp /etc/modules pwd
+s_socha2@instance-1:~/rr$ -ls
+Command '-ls' not found, did you mean:
+  command 'ols' from deb speech-tools (1:2.5.0-12)
+  command 'ils' from deb sleuthkit (4.11.1+dfsg-1)
+  command 'als' from deb atool (0.39.0-11)
+  command 'ls' from deb coreutils (8.32-4.1ubuntu1)
+  command 'jls' from deb sleuthkit (4.11.1+dfsg-1)
+  command 'hls' from deb hfsutils (3.2.6-15build2)
+  command 'fls' from deb sleuthkit (4.11.1+dfsg-1)
+  command 'i-ls' from deb integrit (4.1-1.1)
+Try: apt install <deb name>
+s_socha2@instance-1:~/rr$ ls
+new.txt  pwd  test.txt
+s_socha2@instance-1:~/rr$ cp /etc/modules copied_file
+s_socha2@instance-1:~/rr$ rm -r /rr
+rm: cannot remove '/rr': No such file or directory
+s_socha2@instance-1:~/rr$ cd ./
+s_socha2@instance-1:~/rr$ rm -r /rr
+rm: cannot remove '/rr': No such file or directory
+s_socha2@instance-1:~/rr$ rm -r rr
+rm: cannot remove 'rr': No such file or directory
+s_socha2@instance-1:~/rr$ rmdir /rr
+rmdir: failed to remove '/rr': No such file or directory
+s_socha2@instance-1:~/rr$ rmdir rr
+rmdir: failed to remove 'rr': No such file or directory
+s_socha2@instance-1:~/rr$ cd ../
+s_socha2@instance-1:~$ rmdir /rr
+rmdir: failed to remove '/rr': No such file or directory
+s_socha2@instance-1:~$ rmdir rr
+rmdir: failed to remove 'rr': Directory not empty
+s_socha2@instance-1:~$ rm -r rr

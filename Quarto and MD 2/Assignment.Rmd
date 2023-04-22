@@ -1,8 +1,8 @@
 ---
-title: "Exercise"
-author: "Wojciech Hardy"
+title: "Exercise 2"
+author: "Anjola Olatunbosun"
 date: "3/29/2022"
-output: html_document
+format: html
 ---
 
 ```{r setup, include=FALSE}

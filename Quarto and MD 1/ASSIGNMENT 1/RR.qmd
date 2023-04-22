@@ -46,5 +46,5 @@ GOT <- data.frame(
 GOT_VIEWS <- ggplot(GOT, aes(x = Season, y = Avg_Viewers_Per_Season_mill, fill= Season))+
   geom_bar(stat = "identity")
 
-GOT_VIEWS + scale_fill_manual(values = c("red", "blue", "orange", "green", "purple", "pink", "grey", "black")) + labs(title = "U.S. viewers per Season (avg millions)", x = "Season", y = "Avg_Viewers_Per_Season_mill")
+GOT_VIEWS + scale_fill_manual(values = c("red", "blue", "orange", "green", "purple", "pink", "grey", "black")) + labs(title = "U.S. viewers per Season (avg millions)", x = "Season", y = "Avg_Viewers_Per_Season_mill")+ geom_text(aes(label = signif(Avg_Viewers_Per_Season_mill)), nudge_y = 0.5)
 ```

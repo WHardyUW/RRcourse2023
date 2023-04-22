@@ -16,7 +16,7 @@ Game of Thrones is an American fantasy drama television series created by David 
 ```{}
 ```
 
-[![Game of Thrones](/Users/macbookpro/Documents/GitHub/RRcourse2023/Quarto%20and%20MD%201/ASSIGNMENT%201/Game_of_Thrones_title_card.jpg)](https://en.wikipedia.org/wiki/File:Game_of_Thrones_title_card.jpg)
+[![Game of Thrones](Game_of_Thrones_title_card.jpg)](https://en.wikipedia.org/wiki/File:Game_of_Thrones_title_card.jpg)
 
 ### **Viewership**
 
@@ -38,10 +38,13 @@ Game of Thrones was considered a ratings success for HBO throughout all eight se
 ```{r}
 library(ggplot2)
 GOT <- data.frame(
-  Season = c("1- 2011", "2- 2012", "3- 2013", "4- 2014", "5- 2015", "6- 2016", "7- 2017", "8- 2019"),
-  Avg_Viewers_Per_Season_mill = c(2.52, 3.8, 4.97, 6.84, 6.88, 7.69, 10.26, 11.99)
-)
-GOT_VIEWS <- ggplot(GOT, aes(x = Season, y = Avg_Viewers_Per_Season_mill)) +
+  Season = c("1- 2011", "2- 2012", "3- 2013", "4- 2014", "5- 2015", "6- 2016", "7- 2017", "8- 2019"), Avg_Viewers_Per_Season_mill = c(2.52, 3.8, 4.97, 6.84, 6.88, 7.69, 10.26, 11.99))
+
+```
+
+```{r}
+GOT_VIEWS <- ggplot(GOT, aes(x = Season, y = Avg_Viewers_Per_Season_mill, fill= Season))+
   geom_bar(stat = "identity")
-GOT_VIEWS + labs(title = "U.S. viewers per Season (avg millions)", x = "Season", y = "Avg_Viewers_Per_Season_mill")
+
+GOT_VIEWS + scale_fill_manual(values = c("red", "blue", "orange", "green", "purple", "pink", "grey", "black")) + labs(title = "U.S. viewers per Season (avg millions)", x = "Season", y = "Avg_Viewers_Per_Season_mill")
 ```

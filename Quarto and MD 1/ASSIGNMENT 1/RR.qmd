@@ -7,7 +7,9 @@ execute:
   echo: fenced
 ---
 
-## Game of Thrones
+# Game of Thrones
+
+### Brief Description
 
 Game of Thrones is an American fantasy drama television series created by David Beinoff and D.B. Weiss for HBO. It is an adaptation of A song of Ice and Fire, a series of fantasy novels by George R. R. Martin, the first of which is A Game of Thrones. The show was shot in the United Kingdom, Canada, Croatia, Iceland, Malta, Morocco, and Spain. It premiered on HBO in the United States on April 17, 2011, and concluded on May 19, 2019, with 73 episodes broadcast over eight seasons.
 
@@ -15,3 +17,7 @@ Game of Thrones is an American fantasy drama television series created by David 
 ```
 
 [![Game of Thrones](/Users/macbookpro/Documents/GitHub/RRcourse2023/Quarto%20and%20MD%201/ASSIGNMENT%201/Game_of_Thrones_title_card.jpg)](https://en.wikipedia.org/wiki/Game_of_Thrones)
+
+### **Viewership**
+
+*Game of Thrones* was considered a ratings success for HBO throughout all eight seasons.^[\[383\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-384)[\[384\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-385)^ The show premiere was watched by 2.2 million, and the first season averaged 2.5 million viewers per episode.^[\[385\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-386)^ For its second season, the series had an average gross audience of 11.6 million viewers.^[\[386\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-387)^ The third season was seen by 14.2 million viewers, making *Game of Thrones* the second-most-viewed HBO series (after *The Sopranos*).^[\[387\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-388)^ HBO said that *Game of Thrones*' average gross audience of 18.4 million viewers (later adjusted to 18.6 million) had passed *The Sopranos* for the viewership record.^[\[388\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-389)[\[389\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-390)^ The season five episode "[The House of Black and White](https://en.wikipedia.org/wiki/The_House_of_Black_and_White "The House of Black and White")" was simulcasted in 173 countries, becoming the "largest TV drama telecast" according to *Guinness World Records*.

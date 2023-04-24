@@ -2,7 +2,7 @@
 title: "Quarto Assignment 1"
 author: "Anjolaoluwa Olatunbosun"
 date: "4/12/2023"
-theme: solar
+theme: spacelab
 format:
   html:
     toc: true

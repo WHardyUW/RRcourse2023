@@ -1,0 +1,18 @@
+---
+title: "Quarto Assignment 1"
+author: "Anjolaoluwa Olatunbosun"
+date: "4/12/2023"
+theme: solar
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    toc-expand: 3
+    toc-title: Contents
+    toc-location: body
+    include_metadata: 
+  pdf: default
+  docx: default
+execute:
+  echo: fenced
+---

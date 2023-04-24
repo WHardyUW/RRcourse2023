@@ -13,6 +13,7 @@ format:
     include_metadata: 
   pdf: default
   docx: default
+  epub: default
 execute:
   echo: fenced
 ---

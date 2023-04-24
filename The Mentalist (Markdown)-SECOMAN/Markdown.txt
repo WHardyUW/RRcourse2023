@@ -1,0 +1,43 @@
+---
+title: "The Mentalist"
+author: "Sercan Yiğit Akbay (SECOMAN)"
+date: "24.04.2023"
+format: html
+execute:
+  echo: fenced
+---
+
+
+# _The Mentalist_
+
+## Brief Description
+The Mentalist is an American drama television series that ran from September 23, 2008, until February 18, 2015, broadcasting 151 episodes over seven seasons, on CBS.[1] Created by Bruno Heller, who was also its executive producer, the show follows former "psychic" Patrick Jane (Simon Baker), who is a consultant to the California Bureau of Investigation (CBI), and his boss, senior agent Teresa Lisbon (Robin Tunney), using the highly developed observational skills he previously employed to "read" people's minds.
+
+![**A photo from the series**](Mentalist_Rating.jpg)
+
+# Basic Statistics for The Mentalist
+
+Here are some basic statistics for the TV show "How I Met Your Mother":
+
+- Total number of seasons: 7
+- Total number of episodes: 151
+- Running Time: 40 minutes
+- First episode air date: September 23, 2008
+- Last episode air date: February 18, 2015
+
+## Rating
+
+- IMDb rating: 8.0/10
+
+
+## Awards
+
+-2009: 25th TCA Awards for "Outstanding new program"
+
+-2009: People's Choice Award for "Favorite New TV Drama"[47]
+
+-2009: Simon Baker received a nomination for Primetime Emmy Award for Outstanding Lead Actor – Drama Series[48]
+
+
+
+

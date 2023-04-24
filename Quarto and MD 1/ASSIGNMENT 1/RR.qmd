@@ -13,6 +13,8 @@ format:
     include_metadata: 
   pdf: default
   docx: default
+numbersections: true
+code-fold: true
 execute:
   echo: fenced
 ---

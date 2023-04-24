@@ -1,0 +1,21 @@
+---
+title: The Office Viewership Report
+author: "Anjola Olatunbosun"
+date: "4/12/2023"
+format: html
+output:
+  html:
+    toc: true
+execute:
+  echo: fenced
+---
+
+# T H E   O F F I C E   V I E W E R S H I P   R E P O R T 
+
+# **Introduction**
+
+***The Office*** is an American mockumentary sitcom television series that depicts the everyday work lives of office employees at the Scranton Pennsylvania, branch of the fictional Dunder Mifflin Paper Company. It aired on NBC from March 24, 2005, to May 16, 2013, spanning a total of nine seasons. Based on the 2001--2003 BBC series of the same name created by *Ricky Gervais* and *Stephen Merchant*, it was adapted for American television by \*Greg Daniels\*, a veteran writer for Saturday Night Live, King of the Hill and The Simpsons. It was co-produced by Daniels' Deedle-Dee Productions and Reveille Productions later Shine America), in association with Universal Television. The original executive producers were *Daniels, Gervais, Merchant, Howard Klein, and Ben Silverman,* with numerous others being promoted in later seasons
+
+```{r}
+1 + 1
+```

@@ -1,8 +1,17 @@
 ---
-title: "Exercise"
-author: "Wojciech Hardy"
+title: "Exercise 2"
+author: "Anjola Olatunbosun"
 date: "3/29/2022"
-output: html_document
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    toc-expand: true
+    toc-title: Contents
+    toc-location: body
+    smooth-scroll: true
+    theme:
+      dark: darkly
 ---
 
 ```{r setup, include=FALSE}
@@ -10,6 +19,10 @@ knitr::opts_chunk$set(echo = FALSE)
 load("../Data/season_1.RData")
 ```
 
+```{r}
+#rmarkdown::render("Assignment.Rmd", output_format = c("pdf_document", "html_document"))
+
+```
 # Game of Thrones - Season 1 summary in numbers
 
 ### __(*Warning:* spoilers ahead)__

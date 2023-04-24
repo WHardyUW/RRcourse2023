@@ -2,7 +2,14 @@
 title: "Quarto Assignment 1"
 author: "Anjolaoluwa Olatunbosun"
 date: "4/12/2023"
-format: html
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    toc-expand: 3
+    toc-title: Contents
+    toc-location: body
+  pdf: default
 execute:
   echo: fenced
 ---
@@ -52,3 +59,6 @@ GOT_VIEWS + scale_fill_manual(values = c("red", "blue", "orange", "green", "purp
 ### **Review of Viewership**
 
 From the graph above, we can see a constant increase in viewership after each season. Between when the first season was aired in 2011 and when the last season was aired in 2019, there has been a percentage increase of 375.4%. Some interesting insight shows that the percentage change in viewings between 2011 and 2012 is the highest among all the years, indicating a significant increase in viewership in that year. Which shows that after people realized how nice the series was, more people got interested and decided to be a part of it. Meanwhile, the percentage change in viewings between 2014 and 2015 is the lowest, suggesting nothing major really happened in season 4. The overall trend shows an increase in viewings over time, with some fluctuations in growth rate.
+
+### **Conclusion**
+

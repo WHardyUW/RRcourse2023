@@ -34,4 +34,15 @@ ggplot(got_data, aes(x = got_data$Original.Air.Date, y = got_data$U.S..Viewers..
   geom_line() +
   labs(x = "Original Air Date", y = "Viewership (Millions)", title = "Viewership of Game of Thrones over Time")
 ```
+## Viewership of Game of Thrones over Seasons
+```{r}
+# Calculate the average viewership for each season
+season_data <- got_data %>%
+  group_by(Season) %>%
+  summarize(avg_viewership = mean(U.S..Viewers..Millions.))
 
+# Create a bar chart of average viewership by season
+ggplot(season_data, aes(x = Season, y = avg_viewership)) +
+  geom_col() +
+  labs(x = "Season", y = "Average Viewership (Millions)", title = "Average Viewership of Game of Thrones by Season")
+```

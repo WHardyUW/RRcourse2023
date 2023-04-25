@@ -1,0 +1,52 @@
+---
+title: "Game of Thrones Viewership"
+author: "Berk Arikan"
+format: html
+editor: visual
+---
+```{r,echo=FALSE,warning=FALSE}
+library(ggplot2)
+library(dplyr)
+
+# Read in viewership data 
+got_data <- read.csv("got_viewership.csv")
+# Convert dates to R date format
+got_data$Original.Air.Date <- as.Date(got_data$Original.Air.Date, format = "%d-%b-%Y")
+
+```
+
+## Brief Description
+
+Game of Thrones is a medieval fantasy television series based on the book series "A Song of Ice and Fire" by George R.R. Martin. The show takes place in the fictional continents of Westeros and Essos, where several noble families fight for control of the Iron Throne, the seat of the king of the Seven Kingdoms. The show features an ensemble cast of characters, each with their own storylines and motivations, and explores themes such as politics, power, love, war, and betrayal. The show became known for its epic battle scenes, unexpected twists, and shocking deaths of major characters. It ran for eight seasons, concluding in 2019.
+
+[](Game_of_Thrones_title_card.jpg)
+
+
+## Basic Statistics
+
+Table taken from Wikipedia:
+[](us_viewership.png)
+
+## Viewership of Game of Thrones on U.S by Air Date
+```{r,echo=FALSE,warning=FALSE}
+# Create a line plot of viewership over time
+ggplot(got_data, aes(x = got_data$Original.Air.Date, y = got_data$U.S..Viewers..Millions.)) +
+  geom_line() +
+  labs(x = "Original Air Date", y = "Viewership (Millions)", title = "Viewership of Game of Thrones over Time")
+```
+## Viewership of Game of Thrones over Seasons
+```{r,echo=FALSE,warning=FALSE}
+# Calculate the average viewership for each season
+season_data <- got_data %>%
+  group_by(Season) %>%
+  summarize(avg_viewership = mean(U.S..Viewers..Millions.))
+
+# Create a bar chart of average viewership by season
+ggplot(season_data, aes(x = Season, y = avg_viewership)) +
+  geom_col() +
+  labs(x = "Season", y = "Average Viewership (Millions)", title = "Average Viewership of Game of Thrones by Season")
+```
+## Observations
+
+As a reader can see, there is an huge increase in viewership between season 6-to-7. It is the highest increase in viewership followed by viewership of season 3-to-4. This may depend on many factors but it seems that season 6 has highly appraised episodes on IMDB;so that,this might be an huge factor affecting this observation.
+

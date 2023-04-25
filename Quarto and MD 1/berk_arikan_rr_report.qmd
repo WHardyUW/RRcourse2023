@@ -7,6 +7,12 @@ editor: visual
 ```{r}
 library(ggplot2)
 library(dplyr)
+
+# Read in viewership data 
+got_data <- read.csv("got_viewership.csv")
+# Convert dates to R date format
+got_data$Original.Air.Date <- as.Date(got_data$Original.Air.Date, format = "%d-%b-%Y")
+
 ```
 
 ## Brief Description
@@ -20,3 +26,12 @@ Game of Thrones is a medieval fantasy television series based on the book series
 
 Table taken from Wikipedia:
 [Viewership](us_viewership.png)
+
+## Viewership of Game of Thrones on U.S by Air Date
+```{r}
+# Create a line plot of viewership over time
+ggplot(got_data, aes(x = got_data$Original.Air.Date, y = got_data$U.S..Viewers..Millions.)) +
+  geom_line() +
+  labs(x = "Original Air Date", y = "Viewership (Millions)", title = "Viewership of Game of Thrones over Time")
+```
+

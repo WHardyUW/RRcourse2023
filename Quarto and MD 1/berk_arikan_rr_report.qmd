@@ -1,0 +1,22 @@
+---
+title: "Game of Thrones Viewership"
+author: "Berk Arikan"
+format: html
+editor: visual
+---
+```{r}
+library(ggplot2)
+library(dplyr)
+```
+
+## Brief Description
+
+Game of Thrones is a medieval fantasy television series based on the book series "A Song of Ice and Fire" by George R.R. Martin. The show takes place in the fictional continents of Westeros and Essos, where several noble families fight for control of the Iron Throne, the seat of the king of the Seven Kingdoms. The show features an ensemble cast of characters, each with their own storylines and motivations, and explores themes such as politics, power, love, war, and betrayal. The show became known for its epic battle scenes, unexpected twists, and shocking deaths of major characters. It ran for eight seasons, concluding in 2019.
+
+[Game of Thrones Logo](Game_of_Thrones_title_card.jpg)
+
+
+## Basic Statistics
+
+Table taken from Wikipedia:
+[Viewership](us_viewership.png)

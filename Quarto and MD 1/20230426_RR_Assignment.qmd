@@ -10,4 +10,4 @@ execute:
 
 ## The Witcher (TV Serial)
 
-*The Witcher* is a fantasy drama television series created by *Lauren Schmidt Hissrich* for Netflix. It is based on the book series of the same name by Polish writer *Andrzej Sapkowski*. Set on a fictional, medieval-inspired landmass known as the Continent, *The Witcher* explores the legend of *Geralt of Rivia, Yennefer of Vengerberg and Princess Ciri*. It stars *Henry Cavill, Anya Chalotra, and Freya Allan*.
+*The Witcher* is a fantasy drama television series created by *Lauren Schmidt Hissrich* for Netflix. It is based on the book series of the same name by Polish writer *Andrzej Sapkowski*. Set on a fictional, medieval-inspired landmass known as the Continent, *The Witcher* explores the legend of *Geralt of Rivia, Yennefer of Vengerberg and Princess Ciri*. It stars *Henry Cavill, Anya Chalotra, and Freya Allan*. ![The Witcher Logo](%5C20230426_RR_Assignment_files%5CThe_Witcher_Title_Card.png)

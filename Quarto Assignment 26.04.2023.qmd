@@ -1,0 +1,32 @@
+---
+title: "Quarto Assignment"
+date: "26/04/2023"
+author: "Ayoola Ayetigbo (444421)"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: console
+execute:
+  echo: fenced  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+![](title card.png){fig-align="center" width=90%}
+
+## SUITS
+
+[*Suits*](https://en.wikipedia.org/wiki/Suits_(American_TV_series) "Suits (American TV series)") is an American [television drama series](https://en.wikipedia.org/wiki/Television_drama_series "Television drama series") created by [Aaron Korsh](https://en.wikipedia.org/wiki/Aaron_Korsh "Aaron Korsh"), which premiered on June 23, 2011 on [USA Network](https://en.wikipedia.org/wiki/USA_Network "USA Network") on June 23, 2011, produced by [Universal Content Productions](https://en.wikipedia.org/wiki/Universal_Content_Productions "Universal Content Productions").
+
+Set at a [fictional](https://en.wikipedia.org/wiki/Fictional "Fictional") [New York City](https://en.wikipedia.org/wiki/New_York_City "New York City") [law firm](https://en.wikipedia.org/wiki/Law_firm "Law firm"), it follows Mike Ross ([Patrick J. Adams](https://en.wikipedia.org/wiki/Patrick_J._Adams "Patrick J. Adams")), who uses his [photographic memory](https://en.wikipedia.org/wiki/Photographic_memory "Photographic memory") to talk his way into a job as an associate working for successful closer Harvey Specter ([Gabriel Macht](https://en.wikipedia.org/wiki/Gabriel_Macht "Gabriel Macht")), despite being a college dropout who never attended law school.^[\[1\]](https://en.wikipedia.org/wiki/Suits_(American_TV_series)#cite_note-SuitsSeriesPremiere-2)^ *Suits* focuses on Harvey and Mike winning lawsuits and closing cases, while at the same time hiding Mike's secret.^[\[2\]](https://en.wikipedia.org/wiki/Suits_(American_TV_series)#cite_note-3)^ It also features [Rick Hoffman](https://en.wikipedia.org/wiki/Rick_Hoffman "Rick Hoffman") as neurotic lawyer with a prowess in financial law Louis Litt, [Meghan Markle](https://en.wikipedia.org/wiki/Meghan_Markle "Meghan Markle") as ambitious [paralegal](https://en.wikipedia.org/wiki/Paralegal "Paralegal") Rachel Zane, [Sarah Rafferty](https://en.wikipedia.org/wiki/Sarah_Rafferty "Sarah Rafferty") as Harvey's legal secretary and confidante Donna Paulsen, and [Gina Torres](https://en.wikipedia.org/wiki/Gina_Torres "Gina Torres") as the firm's managing partner, Jessica Pearson.
+
+On January 30, 2018, the series was renewed for an eighth season although Torres, Adams and Markle all left the show,^[\[3\]](https://en.wikipedia.org/wiki/Suits_(American_TV_series)#cite_note-4)^ with [Katherine Heigl](https://en.wikipedia.org/wiki/Katherine_Heigl "Katherine Heigl") joining the cast as Samantha Wheeler. Recurring characters Alex Williams ([Dulé Hill](https://en.wikipedia.org/wiki/Dul%C3%A9_Hill "Dulé Hill")) and Katrina Bennett ([Amanda Schull](https://en.wikipedia.org/wiki/Amanda_Schull "Amanda Schull")) were promoted to series regulars.^[\[4\]](https://en.wikipedia.org/wiki/Suits_(American_TV_series)#cite_note-S8-Heigl-5)^ The show was renewed for a 10-episode ninth and final season on January 23, 2019, which premiered on July 17, 2019.^[\[5\]](https://en.wikipedia.org/wiki/Suits_(American_TV_series)#cite_note-6)[\[6\]](https://en.wikipedia.org/wiki/Suits_(American_TV_series)#cite_note-7)^
+
+Throughout its run, *Suits* was nominated for numerous awards, including individual attention for Torres and Adams. Besides two nominations recognizing her role as a supporting actress, Torres was awarded Outstanding Performance in a Television Series at the 2013 [NHMC Impact Awards](https://en.wikipedia.org/wiki/National_Hispanic_Media_Coalition "National Hispanic Media Coalition"). Adams was nominated for Outstanding Performance by a Male Actor in a Drama Series at the [2012 Screen Actors Guild Awards](https://en.wikipedia.org/wiki/18th_Screen_Actors_Guild_Awards "18th Screen Actors Guild Awards"). The show itself was nominated for two [People's Choice Awards](https://en.wikipedia.org/wiki/People%27s_Choice_Awards "People's Choice Awards"). The show's success spawned a short-lived spin-off, [*Pearson*](https://en.wikipedia.org/wiki/Pearson_(TV_series) "Pearson (TV series)"), centered on Jessica Pearson's entry into Chicago politics, which premiered alongside the final season of *Suits* on July 17, 2019.^[\[7\]](https://en.wikipedia.org/wiki/Suits_(American_TV_series)#cite_note-USA_Network-8)[\[8\]](https://en.wikipedia.org/wiki/Suits_(American_TV_series)#cite_note-9)[\[9\]](https://en.wikipedia.org/wiki/Suits_(American_TV_series)#cite_note-Pearson_Premiere_Date-10)^ *Suits* concluded on September 25, 2019, after nine seasons and 134 episodes.
+
+
+
+

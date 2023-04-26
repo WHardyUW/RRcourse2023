@@ -1,0 +1,12 @@
+---
+title: "Klan-assignment-20230426"
+author: "Szymon Socha"
+format: html
+editor: visual
+---
+
+## KLAN (TV Series)
+
+***Klan*** is a Polish soap opera that premiered on September 22, 1997 on the public TVP1 channel. With more than 4,000 episodes spanning 25 seasons, the show is the longest-running Polish TV series. It airs from Monday to Friday at 5.50 p.m. on TVP1.
+
+Klan revolves around the fates of the multi-generation Lubicz family from Warsaw.

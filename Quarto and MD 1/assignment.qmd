@@ -1,0 +1,34 @@
+---
+title: "assignment"
+format: html
+date: "4/11/2023"
+format: html
+execute:
+  echo: fenced
+---
+
+## List of *Suits* episodes
+
+![](https://upload.wikimedia.org/wikipedia/commons/c/cc/Suits_Logo.png){fig-align="right" width="250"}
+
+[*Suits*](https://en.wikipedia.org/wiki/Suits_(American_TV_series)) is an American [television drama series](https://en.wikipedia.org/wiki/Television_drama_series "Television drama series") created by [Aaron Korsh](https://en.wikipedia.org/wiki/Aaron_Korsh "Aaron Korsh"), which premiered on June 23, 2011 on the [USA Network](https://en.wikipedia.org/wiki/USA_Network "USA Network"). It revolves around Mike Ross ([Patrick J. Adams](https://en.wikipedia.org/wiki/Patrick_J._Adams "Patrick J. Adams")), who begins working as a law associate for Harvey Specter ([Gabriel Macht](https://en.wikipedia.org/wiki/Gabriel_Macht "Gabriel Macht")), despite never attending law school. The show focuses on Harvey and Mike managing to close cases, while maintaining Mike's secret.
+
+The series was renewed for an eighth season on January 30, 2018.^[\[1\]](https://en.wikipedia.org/wiki/List_of_Suits_episodes#cite_note-1)^ In January 2019, the series was renewed for a ninth and final season which premiered on July 17, 2019.^[\[2\]](https://en.wikipedia.org/wiki/List_of_Suits_episodes#cite_note-2)^ During the course of the series, 134 episodes of *Suits* aired over nine seasons, between June 23, 2011, and September 25, 2019.
+
+### Episodes \[[edit](https://en.wikipedia.org/w/index.php?title=List_of_Suits_episodes&action=edit&section=1)\]
+
+-   **Season1**
+
+```{r echo=FALSE}
+data=read.csv('Quarto and MD 1/seson.csv',header=T,sep=',',dec='.')
+library(knitr)
+kable(data)
+
+```
+
+-   **Season2**
+
+```{r echo=FALSE}
+data2=read.csv('Quarto and MD 1/seson2.csv',header=T,sep=',',dec='.')
+kable(data2)
+```

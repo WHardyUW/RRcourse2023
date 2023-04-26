@@ -14,6 +14,31 @@ knitr::opts_chunk$set(echo = TRUE)
 
 The series was renewed for an eighth season on January 30, 2018.[1] In January 2019, the series was renewed for a ninth and final season which premiered on July 17, 2019.[2] During the course of the series, 134 episodes of Suits aired over nine seasons, between June 23, 2011, and September 25, 2019.
 
-'''{r}
+
 ![Suits logo](Suits_Logo.png)
-'''
+
+
+## Viewershipo info
+
+| No.overall | No. inseason | Title                     | Directed by         | Written by                                | Original air date                              | U.S. viewers(millions) |
+|------------|--------------|---------------------------|---------------------|-------------------------------------------|------------------------------------------------|------------------------|
+| 77         | 1            | "To Trouble"              | Silver Tree         | Aaron Korsh                               | July&nbsp;13,&nbsp;2016&nbsp;(2016-07-13)      | 1.85[79]               |
+| 78         | 2            | "Accounts Payable"        | Michael Smith       | Ethan Drogin                              | July&nbsp;20,&nbsp;2016&nbsp;(2016-07-20)      | 1.65[80]               |
+| 79         | 3            | "Back on the Map"         | Cherie Nowlan       | Rick Muirragui                            | July&nbsp;27,&nbsp;2016&nbsp;(2016-07-27)      | 1.78[81]               |
+| 80         | 4            | "Turn"                    | Christopher Misiano | Daniel Arkin                              | August&nbsp;3,&nbsp;2016&nbsp;(2016-08-03)     | 1.81[82]               |
+| 81         | 5            | "Trust"                   | Kate Dennis         | Kyle Long                                 | August&nbsp;10,&nbsp;2016&nbsp;(2016-08-10)    | 1.51[83]               |
+| 82         | 6            | "Spain"                   | Silver Tree         | Genevieve Sparling                        | August&nbsp;17,&nbsp;2016&nbsp;(2016-08-17)    | 1.68[84]               |
+| 83         | 7            | "Shake the Trees"         | Anton Cropper       | Rick Muirragui &amp; Sandra Silverstein   | August&nbsp;24,&nbsp;2016&nbsp;(2016-08-24)    | 1.83[85]               |
+| 84         | 8            | "Borrowed Time"           | Gabriel Macht       | Sharyn Rothstein                          | August&nbsp;31,&nbsp;2016&nbsp;(2016-08-31)    | 1.88[86]               |
+| 85         | 9            | "The Hand That Feeds You" | Roger Kumble        | Daniel Arkin                              | September&nbsp;7,&nbsp;2016&nbsp;(2016-09-07)  | 1.87[87]               |
+| 86         | 10           | "P.S.L."                  | Kevin Bray          | Aaron Korsh &amp; Genevieve Sparling      | September&nbsp;14,&nbsp;2016&nbsp;(2016-09-14) | 1.92[88]               |
+| 87         | 11           | "She's Gone"              | Patrick J. Adams    | Aaron Korsh &amp; Rick Muirragui          | January&nbsp;25,&nbsp;2017&nbsp;(2017-01-25)   | 1.37[89]               |
+| 88         | 12           | "The Painting"            | Gregor Jordan       | Sharyn Rothstein &amp; Sandra Silverstein | February&nbsp;1,&nbsp;2017&nbsp;(2017-02-01)   | 1.53[90]               |
+| 89         | 13           | "Teeth, Nose, Teeth"      | Silver Tree         | Kyle Long                                 | February&nbsp;8,&nbsp;2017&nbsp;(2017-02-08)   | 1.28[91]               |
+| 90         | 14           | "Admission of Guilt"      | Michael Smith       | Ethan Drogin                              | February&nbsp;15,&nbsp;2017&nbsp;(2017-02-15)  | 1.21[92]               |
+| 91         | 15           | "Quid Pro Quo"            | Maurice Marable     | Aaron Korsh &amp; Daniel Arkin            | February&nbsp;22,&nbsp;2017&nbsp;(2017-02-22)  | 1.25[93]               |
+| 92         | 16           | "Character and Fitness"   | Roger Kumble        | Genevieve Sparling                        | March&nbsp;1,&nbsp;2017&nbsp;(2017-03-01)      | 1.13[94]               |
+
+
+
+

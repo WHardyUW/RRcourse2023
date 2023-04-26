@@ -14,3 +14,11 @@ Klan revolves around the fates of the multi-generation Lubicz family from Warsaw
 ## Klan logo
 
 ![Klan logo](https://upload.wikimedia.org/wikipedia/commons/1/1c/Logo_Serialu_Klan.png)
+
+## Basic statistics
+
+| Period    | No. views |
+|:----------|:---------:|
+| 1997      |    4m     |
+| 2005      |   4.5m    |
+| 2021/2022 |   1.09    |

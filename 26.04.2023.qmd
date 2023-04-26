@@ -1,0 +1,60 @@
+---
+
+title: "26.04.2023_VadymDudarenko444820"
+
+format: html
+
+editor: visual
+
+---
+
+# Stranger Things
+
+
+Stranger Things is an American science fiction horror drama television series created by the *Duffer Brothers*, who also serve as showrunners and are executive producers along with *Shawn Levy* and *Dan Cohen*. Produced by Monkey Massacre Productions and Levy's 21 Laps Entertainment, the first season was released on Netflix on July 15, 2016. Its second, third, and fourth seasons followed in October 2017, July 2019, and May and July 2022, respectively. In February 2022, it was renewed for a fifth and final season
+
+
+![](https://en.wikipedia.org/wiki/Stranger_Things#/media/File:Stranger_Things_logo.png)
+
+## Ratings
+
+
+| Season | Episode_number | Raiting |
+
+|:-------|:--------------:|--------:|
+
+| 1      |       1        |    8.23 |
+
+| 3      |       1        |    7.30 |
+
+| 4      |       1        |    9.52 |
+
+
+
+## Graphs
+
+## Quarto
+
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+
+## Running Code
+
+
+When you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+
+{r}
+
+1 + 1
+
+
+You can add options to executable code like this
+
+
+{r}
+
+#| echo: false
+
+2 * 2

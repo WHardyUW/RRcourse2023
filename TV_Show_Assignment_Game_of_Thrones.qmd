@@ -1,0 +1,31 @@
+---
+title: "TV_Show_Assignment_Game_of_Thrones"
+format: html
+editor: visual
+execute:
+  echo: fenced
+---
+
+## Game of Thrones
+
+***Game of Thrones*** is an American [fantasy](https://en.wikipedia.org/wiki/Fantasy_television "Fantasy television") [drama](https://en.wikipedia.org/wiki/Drama_(film_and_television) "Drama (film and television)") television series created by [David Benioff](https://en.wikipedia.org/wiki/David_Benioff "David Benioff") and [D. B. Weiss](https://en.wikipedia.org/wiki/D._B._Weiss "D. B. Weiss") for [HBO](https://en.wikipedia.org/wiki/HBO "HBO"). It is an adaptation of [*A Song of Ice and Fire*](https://en.wikipedia.org/wiki/A_Song_of_Ice_and_Fire "A Song of Ice and Fire"), a series of fantasy novels by [George R. R. Martin](https://en.wikipedia.org/wiki/George_R._R._Martin "George R. R. Martin"), the first of which is [*A Game of Thrones*](https://en.wikipedia.org/wiki/A_Game_of_Thrones "A Game of Thrones"). The show was shot in the United Kingdom, Canada, Croatia, Iceland, Malta, Morocco, and Spain. It premiered on HBO in the United States on April 17, 2011, and concluded on May 19, 2019, with 73 episodes broadcast over eight seasons.
+
+*Game of Thrones* attracted a record viewership on HBO and has a broad, active, and international fan base. Critics have praised the series for its acting, complex characters, story, scope, and production values, although its frequent use of nudity and violence (including sexual violence) has been subject to criticism. The [final season](https://en.wikipedia.org/wiki/Game_of_Thrones_(season_8) "Game of Thrones (season 8)") received significant critical backlash for its reduced length and creative decisions, with many considering it a disappointing conclusion. The series received 59 [Primetime Emmy Awards](https://en.wikipedia.org/wiki/Primetime_Emmy_Awards "Primetime Emmy Awards"), the most by a drama series, including [Outstanding Drama Series](https://en.wikipedia.org/wiki/Primetime_Emmy_Award_for_Outstanding_Drama_Series "Primetime Emmy Award for Outstanding Drama Series") in 2015, 2016, 2018 and 2019. Its [other awards and nominations](https://en.wikipedia.org/wiki/List_of_awards_and_nominations_received_by_Game_of_Thrones "List of awards and nominations received by Game of Thrones") include three [Hugo Awards for Best Dramatic Presentation](https://en.wikipedia.org/wiki/Hugo_Award_for_Best_Dramatic_Presentation "Hugo Award for Best Dramatic Presentation"), a [Peabody Award](https://en.wikipedia.org/wiki/Peabody_Award "Peabody Award"), and five nominations for the [Golden Globe Award for Best Television Series -- Drama](https://en.wikipedia.org/wiki/Golden_Globe_Award_for_Best_Television_Series_%E2%80%93_Drama "Golden Globe Award for Best Television Series – Drama").
+
+## Awards
+
+*Game of Thrones* has won numerous awards throughout its run, including 59 Emmy Awards, eight [Screen Actors Guild Awards](https://en.wikipedia.org/wiki/Screen_Actors_Guild_Award "Screen Actors Guild Award") and a [Peabody Award](https://en.wikipedia.org/wiki/Peabody_Award "Peabody Award"). It holds the record for total Emmy Award wins for a scripted television series (surpassing the record of 37 wins held by [*Frasier*](https://en.wikipedia.org/wiki/Frasier "Frasier") since [2004](https://en.wikipedia.org/wiki/56th_Primetime_Emmy_Awards "56th Primetime Emmy Awards")) and for most Emmy nominations for a drama series, with 161.^[\[145\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-emmys.com-146)[\[374\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-375)[\[375\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-376)[\[376\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-377)^ In 2019, the show's final season established a new record for most Emmy nominations received in a year with 32, breaking the 25-year-long record of 26 nominations established by [*NYPD Blue*](https://en.wikipedia.org/wiki/NYPD_Blue "NYPD Blue") in 1994.^[\[377\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-variety072019-378)^ In 2013, the [Writers Guild of America](https://en.wikipedia.org/wiki/Writers_Guild_of_America "Writers Guild of America") listed *Game of Thrones* as the 40th best written series in television history.^[\[378\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-379)^ In 2015, *The Hollywood Reporter* placed it at number four on their best TV shows ever list,^[\[379\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-380)^ while in 2016 the series was placed seventh on [*Empire*](https://en.wikipedia.org/wiki/Empire_(film_magazine) "Empire (film magazine)")'s "The 50 best TV shows ever".^[\[380\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-381)^ The same year, *Rolling Stone* named it the twelfth "greatest TV Show of all time".^[\[381\]](https://en.wikipedia.org/wiki/Game_of_Thrones#cite_note-382)^ In 2013, at the Media Access Awards, George R. R. Martin accepted the Visionary Award from the Writers With Disabilities committee of the Writers Guild of America, for its positive portrayal of character with disabilities
+
+```{r}
+library(readxl)
+views <- read_excel("US_Viewership_Game_of_Thrones.xlsx")
+views
+```
+
+#### Plot of Average Views (Season 1 to 6)
+
+```{r}
+#| label: fig-mpg
+#| fig-cap: "Average views (Season 1 to 6)"
+plot(views$`Average views`)
+```

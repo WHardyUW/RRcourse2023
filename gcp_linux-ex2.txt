@@ -30,25 +30,25 @@ The list of available updates is more than a week old.
 To check for new updates run: sudo apt update
 
 Last login: Wed Apr 19 08:51:11 2023 from 35.235.243.64
-s_socha2@instance-1:~$  mkdir rr
-s_socha2@instance-1:~$ cd rr
-s_socha2@instance-1:~/rr$ touch test.txt
-s_socha2@instance-1:~/rr$ nano new.txt
-s_socha2@instance-1:~/rr$ cp /etc/modules /rr
+---@instance-1:~$  mkdir rr
+---@instance-1:~$ cd rr
+---@instance-1:~/rr$ touch test.txt
+---@instance-1:~/rr$ nano new.txt
+---@instance-1:~/rr$ cp /etc/modules /rr
 cp: cannot create regular file '/rr': Permission denied
-s_socha2@instance-1:~/rr$ cp /etc/modules 
+---@instance-1:~/rr$ cp /etc/modules 
 cp: missing destination file operand after '/etc/modules'
 Try 'cp --help' for more information.
-s_socha2@instance-1:~/rr$ cp /etc/modules /copied_file
+---@instance-1:~/rr$ cp /etc/modules /copied_file
 cp: cannot create regular file '/copied_file': Permission denied
-s_socha2@instance-1:~/rr$ cp /etc/modules /rr/copied_file
+---@instance-1:~/rr$ cp /etc/modules /rr/copied_file
 cp: cannot create regular file '/rr/copied_file': No such file or directory
-s_socha2@instance-1:~/rr$ cp /etc/modules /rr/
+---@instance-1:~/rr$ cp /etc/modules /rr/
 cp: cannot create regular file '/rr/': Not a directory
-s_socha2@instance-1:~/rr$ cp /etc/modules /rr
+---@instance-1:~/rr$ cp /etc/modules /rr
 cp: cannot create regular file '/rr': Permission denied
-s_socha2@instance-1:~/rr$ cp /etc/modules pwd
-s_socha2@instance-1:~/rr$ -ls
+---@instance-1:~/rr$ cp /etc/modules pwd
+---@instance-1:~/rr$ -ls
 Command '-ls' not found, did you mean:
   command 'ols' from deb speech-tools (1:2.5.0-12)
   command 'ils' from deb sleuthkit (4.11.1+dfsg-1)
@@ -59,23 +59,23 @@ Command '-ls' not found, did you mean:
   command 'fls' from deb sleuthkit (4.11.1+dfsg-1)
   command 'i-ls' from deb integrit (4.1-1.1)
 Try: apt install <deb name>
-s_socha2@instance-1:~/rr$ ls
+---@instance-1:~/rr$ ls
 new.txt  pwd  test.txt
-s_socha2@instance-1:~/rr$ cp /etc/modules copied_file
-s_socha2@instance-1:~/rr$ rm -r /rr
+---@instance-1:~/rr$ cp /etc/modules copied_file
+---@instance-1:~/rr$ rm -r /rr
 rm: cannot remove '/rr': No such file or directory
-s_socha2@instance-1:~/rr$ cd ./
-s_socha2@instance-1:~/rr$ rm -r /rr
+---@instance-1:~/rr$ cd ./
+---@instance-1:~/rr$ rm -r /rr
 rm: cannot remove '/rr': No such file or directory
-s_socha2@instance-1:~/rr$ rm -r rr
+---@instance-1:~/rr$ rm -r rr
 rm: cannot remove 'rr': No such file or directory
-s_socha2@instance-1:~/rr$ rmdir /rr
+---@instance-1:~/rr$ rmdir /rr
 rmdir: failed to remove '/rr': No such file or directory
-s_socha2@instance-1:~/rr$ rmdir rr
+---@instance-1:~/rr$ rmdir rr
 rmdir: failed to remove 'rr': No such file or directory
-s_socha2@instance-1:~/rr$ cd ../
-s_socha2@instance-1:~$ rmdir /rr
+---@instance-1:~/rr$ cd ../
+---@instance-1:~$ rmdir /rr
 rmdir: failed to remove '/rr': No such file or directory
-s_socha2@instance-1:~$ rmdir rr
+---@instance-1:~$ rmdir rr
 rmdir: failed to remove 'rr': Directory not empty
-s_socha2@instance-1:~$ rm -r rr
+---@instance-1:~$ rm -r rr

@@ -1,0 +1,13 @@
+---
+title: "20230426_RR_Assignment"
+author: "Dustin Pacholleck"
+date: "4/26/2023"
+format: html
+editor: visual
+execute:
+  echo: fenced
+---
+
+## The Witcher (TV Serial)
+
+*The Witcher* is a fantasy drama television series created by *Lauren Schmidt Hissrich* for Netflix. It is based on the book series of the same name by Polish writer *Andrzej Sapkowski*. Set on a fictional, medieval-inspired landmass known as the Continent, *The Witcher* explores the legend of *Geralt of Rivia, Yennefer of Vengerberg and Princess Ciri*. It stars *Henry Cavill, Anya Chalotra, and Freya Allan*.

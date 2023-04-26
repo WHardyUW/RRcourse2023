@@ -429,4 +429,435 @@ s_socha2@instance-1:/etc/cloud$ cat build.info | head -n 3
 build_name: server
 serial: 20230302
 s_socha2@instance-1:/etc/cloud$ ^C
-s_socha2@instance-1:/etc/cloud$ 
+=======
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-1030-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Apr 19 08:51:10 UTC 2023
+
+  System load:  0.64697265625     Processes:             114
+  Usage of /:   21.1% of 9.51GB   Users logged in:       0
+  Memory usage: 26%               IPv4 address for ens4: 10.182.0.2
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Wed Apr 12 08:32:42 2023 from 35.235.242.208
+s_socha2@instance-1:~$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  5.7  1.3 101976 13028 ?        Ss   08:50   0:02 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    08:50   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   08:50   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   08:50   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   08:50   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   08:50   0:00 [netns]
+root           7  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/0:0-events]
+root           8  0.0  0.0      0     0 ?        I<   08:50   0:00 [kworker/0:0H-events_highpri]
+root           9  0.3  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:0-flush-8:0]
+root          10  0.0  0.0      0     0 ?        I<   08:50   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        S    08:50   0:00 [rcu_tasks_rude_]
+root          12  0.0  0.0      0     0 ?        S    08:50   0:00 [rcu_tasks_trace]
+root          13  0.1  0.0      0     0 ?        S    08:50   0:00 [ksoftirqd/0]
+root          14  0.5  0.0      0     0 ?        I    08:50   0:00 [rcu_sched]
+root          15  0.0  0.0      0     0 ?        S    08:50   0:00 [migration/0]
+root          16  0.0  0.0      0     0 ?        S    08:50   0:00 [idle_inject/0]
+root          17  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/0:1-events]
+root          18  0.0  0.0      0     0 ?        S    08:50   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    08:50   0:00 [cpuhp/1]
+root          20  0.0  0.0      0     0 ?        S    08:50   0:00 [idle_inject/1]
+root          21  0.6  0.0      0     0 ?        S    08:50   0:00 [migration/1]
+root          22  0.1  0.0      0     0 ?        S    08:50   0:00 [ksoftirqd/1]
+root          23  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/1:0-events]
+root          24  0.0  0.0      0     0 ?        I<   08:50   0:00 [kworker/1:0H-kblockd]
+root          25  0.0  0.0      0     0 ?        S    08:50   0:00 [kdevtmpfs]
+root          26  0.0  0.0      0     0 ?        I<   08:50   0:00 [inet_frag_wq]
+root          27  0.0  0.0      0     0 ?        S    08:50   0:00 [kauditd]
+root          28  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/1:1-cgroup_destroy]
+root          29  0.0  0.0      0     0 ?        S    08:50   0:00 [khungtaskd]
+root          30  0.0  0.0      0     0 ?        S    08:50   0:00 [oom_reaper]
+root          31  0.0  0.0      0     0 ?        I<   08:50   0:00 [writeback]
+root          32  0.0  0.0      0     0 ?        S    08:50   0:00 [kcompactd0]
+root          33  0.0  0.0      0     0 ?        SN   08:50   0:00 [ksmd]
+root          34  0.0  0.0      0     0 ?        SN   08:50   0:00 [khugepaged]
+root          80  0.0  0.0      0     0 ?        I<   08:50   0:00 [kintegrityd]
+root          81  0.0  0.0      0     0 ?        I<   08:50   0:00 [kblockd]
+root          82  0.0  0.0      0     0 ?        I<   08:50   0:00 [blkcg_punt_bio]
+root          83  0.0  0.0      0     0 ?        I<   08:50   0:00 [tpm_dev_wq]
+root          84  0.0  0.0      0     0 ?        I<   08:50   0:00 [ata_sff]
+root          85  0.0  0.0      0     0 ?        I<   08:50   0:00 [md]
+root          86  0.0  0.0      0     0 ?        I<   08:50   0:00 [edac-poller]
+root          87  0.0  0.0      0     0 ?        I<   08:50   0:00 [devfreq_wq]
+root          88  0.0  0.0      0     0 ?        S    08:50   0:00 [watchdogd]
+root          89  0.1  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:1-writeback]
+root          90  0.0  0.0      0     0 ?        I<   08:50   0:00 [kworker/0:1H-kblockd]
+root          92  0.0  0.0      0     0 ?        S    08:50   0:00 [kswapd0]
+root          93  0.0  0.0      0     0 ?        S    08:50   0:00 [ecryptfs-kthrea]
+root          95  0.0  0.0      0     0 ?        I<   08:50   0:00 [kthrotld]
+root          96  0.0  0.0      0     0 ?        I<   08:50   0:00 [acpi_thermal_pm]
+root          97  0.0  0.0      0     0 ?        S    08:50   0:00 [scsi_eh_0]
+root          98  0.0  0.0      0     0 ?        I<   08:50   0:00 [scsi_tmf_0]
+root          99  0.0  0.0      0     0 ?        I<   08:50   0:00 [nvme-wq]
+root         100  0.0  0.0      0     0 ?        I<   08:50   0:00 [nvme-reset-wq]
+root         101  0.0  0.0      0     0 ?        I<   08:50   0:00 [nvme-delete-wq]
+root         102  0.0  0.0      0     0 ?        I<   08:50   0:00 [vfio-irqfd-clea]
+root         103  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:2-loop3]
+root         104  0.0  0.0      0     0 ?        I<   08:50   0:00 [kworker/1:1H-kblockd]
+root         105  0.0  0.0      0     0 ?        I<   08:50   0:00 [mld]
+root         106  0.0  0.0      0     0 ?        I<   08:50   0:00 [ipv6_addrconf]
+root         107  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/0:2-rcu_gp]
+root         116  0.0  0.0      0     0 ?        I<   08:50   0:00 [kstrp]
+root         119  0.0  0.0      0     0 ?        I<   08:50   0:00 [zswap-shrink]
+root         120  0.0  0.0      0     0 ?        I<   08:50   0:00 [kworker/u5:0]
+root         127  0.0  0.0      0     0 ?        I<   08:50   0:00 [charger_manager]
+root         128  0.0  0.0      0     0 ?        S    08:50   0:00 [jbd2/sda1-8]
+root         129  0.0  0.0      0     0 ?        I<   08:50   0:00 [ext4-rsv-conver]
+root         130  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/1:2-events]
+root         131  0.0  0.0      0     0 ?        S    08:50   0:00 [hwrng]
+root         170  0.5  1.4  39928 13856 ?        S<s  08:50   0:00 /lib/systemd/systemd-journald
+root         192  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/1:3-events]
+root         193  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/1:4-cgroup_destroy]
+root         194  0.1  0.0      0     0 ?        I    08:50   0:00 [kworker/1:5-events]
+root         195  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/1:6-events]
+root         202  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/0:3-events]
+root         203  0.1  0.0      0     0 ?        I    08:50   0:00 [kworker/0:4-cgroup_destroy]
+root         208  0.0  0.0      0     0 ?        I<   08:50   0:00 [kaluad]
+root         209  0.0  0.0      0     0 ?        I<   08:50   0:00 [kmpath_rdacd]
+root         214  0.0  0.0      0     0 ?        I<   08:50   0:00 [kmpathd]
+root         215  0.0  0.0      0     0 ?        I<   08:50   0:00 [kmpath_handlerd]
+root         216  0.1  2.7 289348 27100 ?        SLsl 08:50   0:00 /sbin/multipathd -d -s
+root         226  0.7  0.6  23008  6600 ?        Ss   08:50   0:00 /lib/systemd/systemd-udevd
+root         242  0.0  0.0      0     0 ?        I<   08:50   0:00 [cryptd]
+root         313  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:3-flush-8:0]
+root         319  0.1  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:4-flush-8:0]
+root         320  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:5-ext4-rsv-conversion]
+root         321  0.1  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:6-events_unbound]
+root         322  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:7]
+systemd+     424  0.1  0.8  16252  8100 ?        Ss   08:50   0:00 /lib/systemd/systemd-networkd
+systemd+     426  0.2  1.2  25260 12496 ?        Ss   08:50   0:00 /lib/systemd/systemd-resolved
+message+     460  0.3  0.5   8676  5008 ?        Ss   08:50   0:00 @dbus-daemon --system --address=systemd: --n
+_chrony      471  0.0  0.3  18916  3368 ?        S    08:50   0:00 /usr/sbin/chronyd -F 1
+_chrony      472  0.0  0.0  10588   520 ?        S    08:50   0:00 /usr/sbin/chronyd -F 1
+root         474  0.3  2.0 1238532 20668 ?       Ssl  08:50   0:00 /usr/bin/google_osconfig_agent
+root         483  0.3  1.8  33128 18764 ?        Ss   08:50   0:00 /usr/bin/python3 /usr/bin/networkd-dispatche
+syslog       485  0.1  0.5 222400  5628 ?        Ssl  08:50   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         488 29.3  4.7 1022692 47160 ?       Ssl  08:50   0:09 /usr/lib/snapd/snapd
+root         531  0.3  1.7 1305612 17224 ?       Ssl  08:50   0:00 /usr/bin/google_guest_agent
+root         547  0.4  2.1 110072 21368 ?        Ssl  08:50   0:00 /usr/bin/python3 /usr/share/unattended-upgra
+root         623  0.0  0.8 235444  8212 ?        Ssl  08:50   0:00 /usr/libexec/polkitd --no-debug
+root         627  0.0  0.1   6216  1092 ttyS0    Ss+  08:50   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,
+root         640  0.0  0.8  15424  8860 ?        Ss   08:50   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-1
+root         641  0.0  0.1   6172  1088 tty1     Ss+  08:50   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linu
+root         653  0.3  0.7  15364  7588 ?        Ss   08:50   0:00 /lib/systemd/systemd-logind
+root         656  0.0  0.2   7284  2880 ?        Ss   08:50   0:00 /usr/sbin/cron -f -P
+root         747  0.4  0.6  14692  6324 ?        Ss   08:50   0:00 /lib/systemd/systemd-timedated
+root        1008  0.1  1.1  17044 10896 ?        Ss   08:51   0:00 sshd: s_socha2 [priv]
+s_socha2    1012  0.9  0.9  17060  9636 ?        Ss   08:51   0:00 /lib/systemd/systemd --user
+s_socha2    1013  0.0  0.5 104900  4952 ?        S    08:51   0:00 (sd-pam)
+s_socha2    1098  0.1  0.8  17184  8104 ?        S    08:51   0:00 sshd: s_socha2@pts/0
+s_socha2    1101  0.3  0.5   9208  5256 pts/0    Ss   08:51   0:00 -bash
+s_socha2    1120  0.0  0.3  10460  3380 pts/0    R+   08:51   0:00 ps aux
+s_socha2@instance-1:~$ ps aux 
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  1.2  1.1 167512 11768 ?        Ss   08:50   0:02 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    08:50   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   08:50   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   08:50   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   08:50   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   08:50   0:00 [netns]
+root           7  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/0:0-cgroup_destroy]
+root           8  0.0  0.0      0     0 ?        I<   08:50   0:00 [kworker/0:0H-events_highpri]
+root           9  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:0-flush-8:0]
+root          10  0.0  0.0      0     0 ?        I<   08:50   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        S    08:50   0:00 [rcu_tasks_rude_]
+root          12  0.0  0.0      0     0 ?        S    08:50   0:00 [rcu_tasks_trace]
+root          13  0.0  0.0      0     0 ?        S    08:50   0:00 [ksoftirqd/0]
+root          14  0.1  0.0      0     0 ?        I    08:50   0:00 [rcu_sched]
+root          15  0.0  0.0      0     0 ?        S    08:50   0:00 [migration/0]
+root          16  0.0  0.0      0     0 ?        S    08:50   0:00 [idle_inject/0]
+root          17  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/0:1-events]
+root          18  0.0  0.0      0     0 ?        S    08:50   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    08:50   0:00 [cpuhp/1]
+root          20  0.0  0.0      0     0 ?        S    08:50   0:00 [idle_inject/1]
+root          21  0.1  0.0      0     0 ?        S    08:50   0:00 [migration/1]
+root          22  0.0  0.0      0     0 ?        S    08:50   0:00 [ksoftirqd/1]
+root          23  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/1:0-events]
+root          24  0.0  0.0      0     0 ?        I<   08:50   0:00 [kworker/1:0H-kblockd]
+root          25  0.0  0.0      0     0 ?        S    08:50   0:00 [kdevtmpfs]
+root          26  0.0  0.0      0     0 ?        I<   08:50   0:00 [inet_frag_wq]
+root          27  0.0  0.0      0     0 ?        S    08:50   0:00 [kauditd]
+root          28  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/1:1-cgroup_destroy]
+root          29  0.0  0.0      0     0 ?        S    08:50   0:00 [khungtaskd]
+root          30  0.0  0.0      0     0 ?        S    08:50   0:00 [oom_reaper]
+root          31  0.0  0.0      0     0 ?        I<   08:50   0:00 [writeback]
+root          32  0.0  0.0      0     0 ?        S    08:50   0:00 [kcompactd0]
+root          33  0.0  0.0      0     0 ?        SN   08:50   0:00 [ksmd]
+root          34  0.0  0.0      0     0 ?        SN   08:50   0:00 [khugepaged]
+root          80  0.0  0.0      0     0 ?        I<   08:50   0:00 [kintegrityd]
+root          81  0.0  0.0      0     0 ?        I<   08:50   0:00 [kblockd]
+root          82  0.0  0.0      0     0 ?        I<   08:50   0:00 [blkcg_punt_bio]
+root          83  0.0  0.0      0     0 ?        I<   08:50   0:00 [tpm_dev_wq]
+root          84  0.0  0.0      0     0 ?        I<   08:50   0:00 [ata_sff]
+root          85  0.0  0.0      0     0 ?        I<   08:50   0:00 [md]
+root          86  0.0  0.0      0     0 ?        I<   08:50   0:00 [edac-poller]
+root          87  0.0  0.0      0     0 ?        I<   08:50   0:00 [devfreq_wq]
+root          88  0.0  0.0      0     0 ?        S    08:50   0:00 [watchdogd]
+root          89  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:1-events_unbound]
+root          90  0.0  0.0      0     0 ?        I<   08:50   0:00 [kworker/0:1H-kblockd]
+root          92  0.1  0.0      0     0 ?        S    08:50   0:00 [kswapd0]
+root          93  0.0  0.0      0     0 ?        S    08:50   0:00 [ecryptfs-kthrea]
+root          95  0.0  0.0      0     0 ?        I<   08:50   0:00 [kthrotld]
+root          96  0.0  0.0      0     0 ?        I<   08:50   0:00 [acpi_thermal_pm]
+root          97  0.0  0.0      0     0 ?        S    08:50   0:00 [scsi_eh_0]
+root          98  0.0  0.0      0     0 ?        I<   08:50   0:00 [scsi_tmf_0]
+root          99  0.0  0.0      0     0 ?        I<   08:50   0:00 [nvme-wq]
+root         100  0.0  0.0      0     0 ?        I<   08:50   0:00 [nvme-reset-wq]
+root         101  0.0  0.0      0     0 ?        I<   08:50   0:00 [nvme-delete-wq]
+root         102  0.0  0.0      0     0 ?        I<   08:50   0:00 [vfio-irqfd-clea]
+root         103  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:2-loop3]
+root         104  0.0  0.0      0     0 ?        I<   08:50   0:00 [kworker/1:1H-kblockd]
+root         105  0.0  0.0      0     0 ?        I<   08:50   0:00 [mld]
+root         106  0.0  0.0      0     0 ?        I<   08:50   0:00 [ipv6_addrconf]
+root         107  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/0:2-rcu_gp]
+root         116  0.0  0.0      0     0 ?        I<   08:50   0:00 [kstrp]
+root         119  0.0  0.0      0     0 ?        I<   08:50   0:00 [zswap-shrink]
+root         120  0.0  0.0      0     0 ?        I<   08:50   0:00 [kworker/u5:0]
+root         127  0.0  0.0      0     0 ?        I<   08:50   0:00 [charger_manager]
+root         128  0.0  0.0      0     0 ?        S    08:50   0:00 [jbd2/sda1-8]
+root         129  0.0  0.0      0     0 ?        I<   08:50   0:00 [ext4-rsv-conver]
+root         130  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/1:2-events]
+root         131  0.0  0.0      0     0 ?        S    08:50   0:00 [hwrng]
+root         170  0.1  1.1  39928 10932 ?        S<s  08:50   0:00 /lib/systemd/systemd-journald
+root         192  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/1:3-events]
+root         193  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/1:4-cgroup_destroy]
+root         194  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/1:5-events]
+root         195  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/1:6-events_freezable]
+root         202  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/0:3-events]
+root         203  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/0:4-cgroup_destroy]
+root         208  0.0  0.0      0     0 ?        I<   08:50   0:00 [kaluad]
+root         209  0.0  0.0      0     0 ?        I<   08:50   0:00 [kmpath_rdacd]
+root         214  0.0  0.0      0     0 ?        I<   08:50   0:00 [kmpathd]
+root         215  0.0  0.0      0     0 ?        I<   08:50   0:00 [kmpath_handlerd]
+root         216  0.0  2.7 289348 27100 ?        SLsl 08:50   0:00 /sbin/multipathd -d -s
+root         226  0.1  0.5  23008  5692 ?        Ss   08:50   0:00 /lib/systemd/systemd-udevd
+root         242  0.0  0.0      0     0 ?        I<   08:50   0:00 [cryptd]
+root         313  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:3-flush-8:0]
+root         319  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:4-writeback]
+root         320  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:5-events_power_efficient]
+root         321  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:6-events_power_efficient]
+root         322  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/u4:7]
+systemd+     424  0.0  0.6  16252  6236 ?        Ss   08:50   0:00 /lib/systemd/systemd-networkd
+systemd+     426  0.0  1.0  25260 10056 ?        Ss   08:50   0:00 /lib/systemd/systemd-resolved
+message+     460  0.0  0.4   8676  4432 ?        Ss   08:50   0:00 @dbus-daemon --system --address=systemd: --n
+_chrony      471  0.0  0.3  18916  3204 ?        S    08:50   0:00 /usr/sbin/chronyd -F 1
+_chrony      472  0.0  0.0  10588   520 ?        S    08:50   0:00 /usr/sbin/chronyd -F 1
+root         474  0.0  1.6 1238532 16300 ?       Ssl  08:50   0:00 /usr/bin/google_osconfig_agent
+root         483  0.0  1.4  33128 14420 ?        Ss   08:50   0:00 /usr/bin/python3 /usr/bin/networkd-dispatche
+syslog       485  0.0  0.5 222400  5076 ?        Ssl  08:50   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         488  8.2  3.2 1022692 32472 ?       Ssl  08:50   0:16 /usr/lib/snapd/snapd
+root         531  0.0  1.4 1305612 14364 ?       Ssl  08:50   0:00 /usr/bin/google_guest_agent
+root         547  0.0  1.5 110072 15404 ?        Ssl  08:50   0:00 /usr/bin/python3 /usr/share/unattended-upgra
+root         623  0.0  0.7 235444  7156 ?        Ssl  08:50   0:00 /usr/libexec/polkitd --no-debug
+root         627  0.0  0.0   6216   828 ttyS0    Ss+  08:50   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,
+root         640  0.0  0.5  15424  5636 ?        Ss   08:50   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-1
+root         641  0.0  0.0   6172   872 tty1     Ss+  08:50   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linu
+root         653  0.0  0.5  15364  5628 ?        Ss   08:50   0:00 /lib/systemd/systemd-logind
+root         656  0.0  0.2   7284  2536 ?        Ss   08:50   0:00 /usr/sbin/cron -f -P
+root        1008  0.0  0.7  17044  7272 ?        Ss   08:51   0:00 sshd: s_socha2 [priv]
+s_socha2    1012  0.0  0.7  17060  7780 ?        Ss   08:51   0:00 /lib/systemd/systemd --user
+s_socha2    1013  0.0  0.4 104900  4932 ?        S    08:51   0:00 (sd-pam)
+s_socha2    1098  0.0  0.6  17184  6084 ?        S    08:51   0:00 sshd: s_socha2@pts/0
+s_socha2    1101  0.0  0.4   9208  4780 pts/0    Ss   08:51   0:00 -bash
+s_socha2    1219  0.0  0.3  10460  3324 pts/0    R+   08:54   0:00 ps aux
+s_socha2@instance-1:~$ ps aux | grep cpu
+root          10  0.0  0.0      0     0 ?        I<   08:50   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    08:50   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    08:50   0:00 [cpuhp/1]
+root         193  0.0  0.0      0     0 ?        I    08:50   0:00 [kworker/1:4-mm_percpu_wq]
+s_socha2    1241  0.0  0.2   7004  2084 pts/0    R+   08:54   0:00 grep --color=auto cpu
+s_socha2@instance-1:~$ ip 
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+       ip [ -force ] -batch filename
+where  OBJECT := { address | addrlabel | fou | help | ila | ioam | l2tp | link |
+                   macsec | maddress | monitor | mptcp | mroute | mrule |
+                   neighbor | neighbour | netconf | netns | nexthop | ntable |
+                   ntbl | route | rule | sr | tap | tcpmetrics |
+                   token | tunnel | tuntap | vrf | xfrm }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
+                    -h[uman-readable] | -iec | -j[son] | -p[retty] |
+                    -f[amily] { inet | inet6 | mpls | bridge | link } |
+                    -4 | -6 | -M | -B | -0 |
+                    -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
+                    -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
+                    -rc[vbuf] [size] | -n[etns] name | -N[umeric] | -a[ll] |
+                    -c[olor]}
+s_socha2@instance-1:~$ ps aux | grep cpu
+root          10  0.0  0.0      0     0 ?        I<   08:50   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    08:50   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    08:50   0:00 [cpuhp/1]
+s_socha2    1247  0.0  0.2   7004  2176 pts/0    R+   08:55   0:00 grep --color=auto cpu
+s_socha2@instance-1:~$ ip | tail -n 3
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+       ip [ -force ] -batch filename
+where  OBJECT := { address | addrlabel | fou | help | ila | ioam | l2tp | link |
+                   macsec | maddress | monitor | mptcp | mroute | mrule |
+                   neighbor | neighbour | netconf | netns | nexthop | ntable |
+                   ntbl | route | rule | sr | tap | tcpmetrics |
+                   token | tunnel | tuntap | vrf | xfrm }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
+                    -h[uman-readable] | -iec | -j[son] | -p[retty] |
+                    -f[amily] { inet | inet6 | mpls | bridge | link } |
+                    -4 | -6 | -M | -B | -0 |
+                    -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
+                    -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
+                    -rc[vbuf] [size] | -n[etns] name | -N[umeric] | -a[ll] |
+                    -c[olor]}
+s_socha2@instance-1:~$ ps aux | grep cpu
+root          10  0.0  0.0      0     0 ?        I<   08:50   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    08:50   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    08:50   0:00 [cpuhp/1]
+s_socha2    1252  0.0  0.2   7004  2236 pts/0    R+   08:56   0:00 grep --color=auto cpu
+s_socha2@instance-1:~$ ip | tail -n 3
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+       ip [ -force ] -batch filename
+where  OBJECT := { address | addrlabel | fou | help | ila | ioam | l2tp | link |
+                   macsec | maddress | monitor | mptcp | mroute | mrule |
+                   neighbor | neighbour | netconf | netns | nexthop | ntable |
+                   ntbl | route | rule | sr | tap | tcpmetrics |
+                   token | tunnel | tuntap | vrf | xfrm }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
+                    -h[uman-readable] | -iec | -j[son] | -p[retty] |
+                    -f[amily] { inet | inet6 | mpls | bridge | link } |
+                    -4 | -6 | -M | -B | -0 |
+                    -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
+                    -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
+                    -rc[vbuf] [size] | -n[etns] name | -N[umeric] | -a[ll] |
+                    -c[olor]}
+s_socha2@instance-1:~$ ip a | tail -n 3
+       valid_lft 85927sec preferred_lft 85927sec
+    inet6 fe80::4001:aff:feb6:2/64 scope link 
+       valid_lft forever preferred_lft forever
+s_socha2@instance-1:~$ cd ./ets
+-bash: cd: ./ets: No such file or directory
+s_socha2@instance-1:~$ cd ./etc
+-bash: cd: ./etc: No such file or directory
+s_socha2@instance-1:~$ cd /etc
+s_socha2@instance-1:/etc$ 
+s_socha2@instance-1:/etc$ 
+s_socha2@instance-1:/etc$ ls
+NetworkManager                 groff            mke2fs.conf             rpc
+PackageKit                     group            modprobe.d              rsyslog.conf
+X11                            group-           modules                 rsyslog.d
+adduser.conf                   grub.d           modules-load.d          screenrc
+alternatives                   gshadow          mtab                    security
+apparmor                       gshadow-         multipath               selinux
+apparmor.d                     gss              multipath.conf          services
+apport                         hdparm.conf      nanorc                  shadow
+apt                            host.conf        needrestart             shadow-
+bash.bashrc                    hostname         netconfig               shells
+bash_completion                hosts            netplan                 skel
+bash_completion.d              hosts.allow      network                 sos
+bindresvport.blacklist         hosts.deny       networkd-dispatcher     ssh
+binfmt.d                       init.d           networks                ssl
+boto.cfg                       initramfs-tools  newt                    subgid
+byobu                          inputrc          nftables.conf           subgid-
+ca-certificates                iproute2         nsswitch.conf           subuid
+ca-certificates.conf           iscsi            nvme                    subuid-
+ca-certificates.conf.dpkg-old  issue            opt                     sudo.conf
+chrony                         issue.net        os-release              sudo_logsrvd.conf
+cloud                          kernel           overlayroot.conf        sudoers
+console-setup                  kernel-img.conf  overlayroot.local.conf  sudoers.d
+cron.d                         landscape        pam.conf                sysctl.conf
+cron.daily                     ld.so.cache      pam.d                   sysctl.d
+cron.hourly                    ld.so.conf       passwd                  systemd
+cron.monthly                   ld.so.conf.d     passwd-                 terminfo
+cron.weekly                    ldap             perl                    timezone
+crontab                        legal            pm                      tmpfiles.d
+cryptsetup-initramfs           libaudit.conf    polkit-1                ubuntu-advantage
+crypttab                       libblockdev      pollinate               ucf.conf
+dbus-1                         libnl-3          ppp                     udev
+debconf.conf                   locale.alias     profile                 ufw
+debian_version                 locale.gen       profile.d               update-manager
+default                        localtime        protocols               update-motd.d
+deluser.conf                   logcheck         python3                 update-notifier
+depmod.d                       login.defs       python3.10              usb_modeswitch.conf
+dhcp                           logrotate.conf   rc0.d                   usb_modeswitch.d
+dpkg                           logrotate.d      rc1.d                   vim
+e2scrub.conf                   lsb-release      rc2.d                   vmware-tools
+ec2_version                    lvm              rc3.d                   vtrgb
+environment                    machine-id       rc4.d                   wgetrc
+ethertypes                     magic            rc5.d                   xattr.conf
+fstab                          magic.mime       rc6.d                   xdg
+fuse.conf                      manpath.config   rcS.d                   zsh_command_not_found
+gai.conf                       mdadm            resolv.conf
+google_instance_id             mime.types       rmt
+s_socha2@instance-1:/etc$ /etc/group
+-bash: /etc/group: Permission denied
+s_socha2@instance-1:/etc$ /etc/machine-id
+-bash: /etc/machine-id: Permission denied
+s_socha2@instance-1:/etc$ /etc/fstab
+-bash: /etc/fstab: Permission denied
+s_socha2@instance-1:/etc$ /etc/environment
+-bash: /etc/environment: Permission denied
+s_socha2@instance-1:/etc$ cd /etc/machine-id
+-bash: cd: /etc/machine-id: Not a directory
+s_socha2@instance-1:/etc$ cd /default
+-bash: cd: /default: No such file or directory
+s_socha2@instance-1:/etc$ cd default
+s_socha2@instance-1:/etc/default$ -ls
+Command '-ls' not found, did you mean:
+  command 'hls' from deb hfsutils (3.2.6-15build2)
+  command 'als' from deb atool (0.39.0-11)
+  command 'jls' from deb sleuthkit (4.11.1+dfsg-1)
+  command 'ols' from deb speech-tools (1:2.5.0-12)
+  command 'fls' from deb sleuthkit (4.11.1+dfsg-1)
+  command 'ils' from deb sleuthkit (4.11.1+dfsg-1)
+  command 'i-ls' from deb integrit (4.1-1.1)
+  command 'ls' from deb coreutils (8.32-4.1ubuntu1)
+Try: apt install <deb name>
+s_socha2@instance-1:/etc/default$ ls
+apport         cron        grub                         keyboard  motd-news            pollinate  ufw
+chrony         cryptdisks  grub.d                       locale    networkd-dispatcher  rsync      useradd
+console-setup  dbus        instance_configs.cfg.distro  mdadm     open-iscsi           ssh
+s_socha2@instance-1:/etc/default$ cd ./
+s_socha2@instance-1:/etc/default$ 
+s_socha2@instance-1:/etc/default$ cd ../
+s_socha2@instance-1:/etc$ cd cloud
+s_socha2@instance-1:/etc/cloud$ pwd
+/etc/cloud
+s_socha2@instance-1:/etc/cloud$ ls
+build.info  clean.d  cloud.cfg  cloud.cfg.d  templates
+s_socha2@instance-1:/etc/cloud$ cd clean.d | cat filename 
+cat: filename: No such file or directory
+s_socha2@instance-1:/etc/cloud$ cd clean.d
+s_socha2@instance-1:/etc/cloud/clean.d$ cd ../
+s_socha2@instance-1:/etc/cloud$ cat clean.d | head -n 3
+cat: clean.d: Is a directory
+s_socha2@instance-1:/etc/cloud$ cat clean.d | head -n 4
+cat: clean.d: Is a directory
+s_socha2@instance-1:/etc/cloud$ cat clean.d | head -n 1
+cat: clean.d: Is a directory
+s_socha2@instance-1:/etc/cloud$ cat build.info | head -n 3
+build_name: server
+serial: 20230302
+s_socha2@instance-1:/etc/cloud$ cat build.info | head -n 4
+build_name: server
+serial: 20230302
+s_socha2@instance-1:/etc/cloud$ cat build.info | head -n 1
+build_name: server
+s_socha2@instance-1:/etc/cloud$ cat build.info | head -n 3
+build_name: server
+serial: 20230302
+s_socha2@instance-1:/etc/cloud$ ^C

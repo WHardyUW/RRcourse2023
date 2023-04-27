@@ -1,0 +1,16 @@
+---
+title: "Assignment"
+author: ""
+date: today
+output: html_document
+params:
+   season: 1
+
+---
+
+```{r}
+library( quarto )
+quarto_render( "Assignment.qmd", 
+              execute_params = list(season = 1), 
+              output_file = sprintf( "assignment_output_season_%d.qmd", 1 ) )
+```

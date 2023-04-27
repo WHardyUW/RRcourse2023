@@ -14,7 +14,7 @@ title-block-banner: true
 execute:
   echo: fenced
 params:
-  season: 7
+  season: 1
 ---
 
 ```{r}

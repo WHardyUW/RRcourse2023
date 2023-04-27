@@ -3,10 +3,15 @@ title: "Assignment"
 author: ""
 date: today
 output: html_document
+params:
+  season: 1
+  
 ---
 
 ```{r}
-load("../Data/season_1.RData")
+season_no <- params$season
+
+load(paste0("../Data/season_", season_no, ".RData"))
 ```
 
 # Game of Thrones - Season 1 summary in numbers

@@ -19,7 +19,7 @@ latex-tinytex: false
 
 PDFs are created using LaTeX. As such some 'dynamic' fields don't work here. But also, we get to use TeX for formatting. 
 
-### PDF-specifc options
+### PDF-specific options
 
 Changing the font size:
 

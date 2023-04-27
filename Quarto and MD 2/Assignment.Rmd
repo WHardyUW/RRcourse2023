@@ -1,5 +1,4 @@
 ---
-<pre class="code-block">
 title: "Exercise"
 author: "runan zhang"
 date: "3/29/2022"
@@ -20,7 +19,6 @@ include-before-body: header.html
 theme:
   light: flatly
   dark: darkly
-</pre>
 ---
 
 ```{r setup, include=FALSE}
@@ -30,7 +28,7 @@ knitr::convert_chunk_header(input = "Assignment.Rmd", output = "Assignment.qmd")
 ```
 
 | RMD                                                     | Quarto           |
-|:---------------------------------------------------|:-------------------|
+|:--------------------------------------------------|:--------------------|
 | output:                                                 | format:          |
 | output: html_document                                   | format: html     |
 | output: pdf_document                                    | format: pdf      |

@@ -1,12 +1,25 @@
 ---
 title: "Assignment"
-author: ""
+author: "Zixia Zhou"
 date: today
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    smooth-scroll: true
+number-sections: true
+number-depth: 2
+title-block-banner: true
+execute:
+  echo: fenced
+params:
+  season: 2
 output: html_document
 ---
 
 ```{r}
-load("../Data/season_1.RData")
+season_no <- params$season
+load(paste0("../Data/season_",season_no,".RData"))
 ```
 
 # Game of Thrones - Season 1 summary in numbers
@@ -24,8 +37,10 @@ Set on the fictional continents of Westeros and Essos, Game of Thrones has a lar
 ***
 
 ### Season 1 summary
-
-Season 1 of Game of Thrones consisted of 10 episodes that aired between April 17 and June 19, 2011 on HBO. The show gathered an average of 2.515 first-day TV viewers in the US, with the number growing from 2.22 to 3.04 million by the end of the season.
+```{r}
+paste0("Season ", season_no, " of Game of Thrones")
+```
+ consisted of 10 episodes that aired between April 17 and June 19, 2011 on HBO. The show gathered an average of 2.515 first-day TV viewers in the US, with the number growing from 2.22 to 3.04 million by the end of the season.
 
 The most popular episode of the season was "Fire and Blood", in which:
 
@@ -50,3 +65,4 @@ Finally, the episodes with the above-average viewership were:
 | 8             | "The Pointy End" | Daniel Minahan      |
 | 9             | "Baelor" | Alan Taylor      |
 | 10            | "Fire and Blood" | Alan Taylor      |
+```{r}

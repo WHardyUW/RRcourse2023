@@ -9,7 +9,7 @@ params:
 ---
 
 ```{r}
-load("../Data/season_1.RData")
+data <- load( cat( "../Data/season_", params$season, ".RData" ) )
 ```
 
 # Game of Thrones - Season 1 summary in numbers

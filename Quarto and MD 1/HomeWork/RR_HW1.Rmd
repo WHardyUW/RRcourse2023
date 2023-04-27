@@ -1,0 +1,84 @@
+---
+title: "RR_HW1"
+author: "Yiqing Hu"
+date: "`r Sys.Date()`"
+output: html_document
+---
+## ASSIGNMENT
+Pick a TV show that had its premieres on TV and thus has some viewership numbers reported on Wikipedia. E.g. Suits (see table just above the References). Then create a short report (you can copy the content from Wikipedia or other pages for this task) that contains, for example:
+
+---
+
+### Task 1
+
+*Description*
+
+Uits is an American television drama series created by Aaron Korsh, which premiered on June 23, 2011 on the USA Network. It revolves around Mike Ross (Patrick J. Adams), who begins working as a law associate for Harvey Specter (Gabriel Macht), despite never attending law school. The show focuses on Harvey and Mike managing to close cases, while maintaining Mike's secret.
+
+The series was renewed for an eighth season on January 30, 2018.[1] In January 2019, the series was renewed for a ninth and final season which premiered on July 17, 2019.[2] During the course of the series, 134 episodes of Suits aired over nine seasons, between June 23, 2011, and September 25, 2019.
+
+---
+
+### Task 2
+
+![](/Users/huyiqing/PycharmProjects/UW_lab/RRcourse2023/Quarto and MD 1/HomeWork/Suits_Logo.png)
+<br>
+
+---
+
+### Task 3
+A summary of some basic statistics (e.g. on viewership or ratings).
+<br>
+
+```{r echo=FALSE, results='asis'}
+viewers_ep3 <- c(3.47, 3.80, 3.88, 3.70, 3.72, 3.89, 3.41, 3.42, 4.00, 4.48, 3.57, 3.75, 3.36, 3.07, 2.90, 3.20)
+viewers_ep5 <- c(3.59, 3.92, 4.07, 3.98, 3.79, 3.82, 3.39, 3.38, 3.98, 4.39, 3.74, 3.85, 3.43, 3.15, 3.02, 3.14)
+season_no <- 1:length(viewers_ep3)
+
+for(i in 1:length(viewers_ep3)){
+  cat("- Item", viewers_ep3[i], "\n")
+}
+
+```
+
+```{r echo=FALSE}
+summary(viewers_ep3)
+```
+
+---
+
+### Task 4
+A graph of the viewership over time.
+
+```{r echo=FALSE}
+plot(y=viewers_ep3, x=1:length(viewers_ep3), xlab ='time')
+```
+
+---
+
+### Task 5
+A graph of the episode-to-episode (or season-to-season) changes in viewership.
+
+```{r echo=FALSE} 
+library(ggplot2)
+
+df <- data.frame(season_no = 1:length(viewers_ep3), view1 = viewers_ep3, view2 = viewers_ep5)
+knitr::kable(df, col.names = c("Season No.", "View1", "View2"))
+
+df <- data.frame(x = 1:length(viewers_ep3), v1 = viewers_ep5, v2 = viewers_ep3)
+ggplot(data = df, aes(x = x)) +
+  geom_line(aes(y = v1)) +
+  geom_line(aes(y = v2)) +
+  labs(title = "Comparison", x = "Season No.", y = "Views")
+```
+
+
+
+
+
+
+
+
+
+
+

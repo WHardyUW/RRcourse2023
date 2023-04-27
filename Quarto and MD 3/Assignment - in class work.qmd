@@ -1,12 +1,16 @@
 ---
 title: "Assignment"
-author: ""
+author: "Michal Kulbat"
 date: today
 output: html_document
+params:
+  season: 1
 ---
 
 ```{r}
-load("../Data/season_1.RData")
+season_no <- params$season
+
+load(paste0("../Data/season_", season_no, ".RData"))
 ```
 
 # Game of Thrones - Season 1 summary in numbers
@@ -16,6 +20,13 @@ load("../Data/season_1.RData")
 ------------------------------------------------------------------------
 
 ### Overview
+
+```{r}
+
+for (x in 1:length(season_data$no_season))
+
+cat( "The Episode", season_data$no_season[x], "Was directed by", season_data$directed_by[x], "and had a premiere on", season_data$premiere_date[x], ".\n\n")
+```
 
 (From the [Wikipedia](https://en.wikipedia.org/wiki/Game_of_Thrones#Premise)) Game of Thrones is an American fantasy drama television series created by David Benioff and D. B. Weiss for HBO. It is an adaptation of A Song of Ice and Fire, a series of fantasy novels by George R. R. Martin, the first of which is A Game of Thrones.
 
@@ -50,3 +61,7 @@ Finally, the episodes with the above-average viewership were:
 | 8             |    "The Pointy End"     | Daniel Minahan |
 | 9             |        "Baelor"         |  Alan Taylor   |
 | 10            |    "Fire and Blood"     |  Alan Taylor   |
+
+------------------------------------------------------------------------
+
+

@@ -17,13 +17,13 @@ theme:
 editor: visual
 ---
 
-
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Ranczo
+
 "*Ranch*" is a Polish television comedy series, directed by [*Wojciech Adamczyk*](https://en.wikipedia.org/w/index.php?title=Wojciech_Adamczyk&action=edit&redlink=1 "Wojciech Adamczyk (page does not exist)"), that originally aired from March 25, 2006 to November 27, 2016 on [*TVP1*](https://en.wikipedia.org/wiki/TVP1 "TVP1"). It follows the story of *Lucy Wilska*, a [*Polish-American*](https://en.wikipedia.org/wiki/Polish-American "Polish-American") who has inherited her grandmother's country home in the fictional small village of *Wilkowyje*. She arrives in *Wilkowyje* with intent to sell the cottage but, after seeing the charm of the village, decides to stay. - Source: *Wikipedia*
 
 ## Picture
+
 ![Ranczo picture](https://th.bing.com/th/id/OIP.5MY6QOCiXVVQ2Y1-hkusYwHaEK?w=332&h=186&c=7&r=0&o=5&pid=1.7)
 
 ## Viewers
@@ -55,10 +55,10 @@ x_variable <- (6857229.0 - 4101154.0)
 ```
 
 Between season 1 and 2 the views increased by `r x_variable` which was the greatest change in the shows history.
-
 :::
 
+## References
 
-
-
-
+::: {#refs}
+https://pl.wikipedia.org/wiki/Ranczo\_(serial_telewizyjny)
+:::

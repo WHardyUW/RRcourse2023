@@ -4,14 +4,13 @@ author: ""
 date: today
 output: html_document
 params:
-  season: 1
-  printcode" TRUE
-  data: files.RData
-
+  season: 7
+  ##season_df: "season_1.RData
 ---
 
 ```{r}
-load("../Data/season_1.RData")
+season_no <- params$season
+load(paste0("../Data/season_", season_no, ".RData"))
 ```
 
 # Game of Thrones - Season 1 summary in numbers

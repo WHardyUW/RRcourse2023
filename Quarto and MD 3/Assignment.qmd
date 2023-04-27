@@ -9,7 +9,13 @@ params:
 ---
 
 ```{r}
-data <- load( cat( "../Data/season_", params$season, ".RData" ) )
+data <- load( sprintf( "../Data/season_%d.RData", params$season )
+```
+
+```{r}
+quarto_render( sprintf( "assignment_output_season_%d.qmd", 1), 
+              execute_params = list(season = 1), 
+              output_file = sprintf( "assignment_output_season_%d.qmd", 1))
 ```
 
 # Game of Thrones - Season 1 summary in numbers

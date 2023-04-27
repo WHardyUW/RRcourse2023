@@ -30,5 +30,15 @@ As stated by Wikipedia, 24 is an American crime drama television series created 
 
 ```{r}
 #| echo: false
-2 * 2
+#| # Load the ggplot2 package
+library(ggplot2)
+
+# Example data
+x <- c(2001, 2002, 2003, 2005, 2006, 2007, 2008, 2010, 2014)
+y <- c(8.6, 11.73, 10.3, 11.9, 13.78, 13, 12.62, 9.31, 6.33)
+df <- data.frame(x, y)
+
+# Create the line graph
+ggplot(data = df, aes(x = x, y = y)) +
+  geom_line() + scale_x_continuous(breaks = x, labels = x)
 ```

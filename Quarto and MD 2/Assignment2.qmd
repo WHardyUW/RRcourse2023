@@ -15,6 +15,7 @@ format:
   pdf:
     lof: true
     lot: true
+    latex-tinytex: false
 title-block-banner: true 
 execute:
   echo: fenced

@@ -4,7 +4,8 @@ subtitle: "Presentation formats"
 author: "Wojciech Hardy"
 date: today
 format:
-  revealjs:
+#|reveal-js-url similar to hmtl
+  revealjs: 
     footer: "Presentation for the RR course."
     duration: 15
   pptx: default

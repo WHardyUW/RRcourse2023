@@ -18,8 +18,7 @@ params:
 
 ```{r}
 season_no <-params$season
-load(paste0("../Data/season_", season_no, ".RData"))
-
+load(paste0("D:/Quantitative/RR_lab/RR_lab4_1/Data/season_", season_no, ".RData"))
 
 ```
 
@@ -52,7 +51,7 @@ You can see how the viewership of the episodes changed in Figure 1.
 
 ```{r}
 #| label = "viewers_plot"
-plot(data$viewers, type="l", col="red", lwd=5, xlab = "Episode number", ylab = "1st day TV viewers in the US (millions)")
+plot(season_data$viewers, type="l", col="red", lwd=5, xlab = "Episode number", ylab = "1st day TV viewers in the US (millions)")
 ```
 
 ***

@@ -18,3 +18,9 @@ library(ggplot2)
 ## Trailer Park Boys - photo
 
 ![TPB photo](https://cdn.fansided.com/wp-content/blogs.dir/340/files/2015/08/trailer-park-boys.jpg)
+
+### Ratings
+
+| Platform | Rating | Votes |
+|:---------|:------:|:------:|
+| Imdb   | 8.6/10 | 46 527 |

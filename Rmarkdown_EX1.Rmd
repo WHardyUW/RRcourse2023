@@ -69,4 +69,10 @@ ggplot(tpb_data, aes(x=season, y=avg_rating, group=1)) +
 
 ```
 
+### Description of the obseraved changes
+
+Trailer Park Boys had a change in writers and producers after Season 7. This change could have led to a shift (variable `avg_rating`) in the show's tone or direction, which may not have resonated well with the audience.
+
+
+
 

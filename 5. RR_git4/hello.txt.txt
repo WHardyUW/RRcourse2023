@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Artur Skowroński, 23.03.2023
+=======
+add some textsomething
+>>>>>>> originalRepo/main

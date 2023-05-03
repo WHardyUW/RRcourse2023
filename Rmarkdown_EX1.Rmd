@@ -41,4 +41,32 @@ ggplot(trailer_df, aes(x=year, y=search_interest, group=1)) +
   geom_point()
 ```
 
+### A graph of season-to-season changes in viewership
+
+```{r echo=FALSE}
+
+library(ggplot2)
+
+# Season vector
+season <- c("Season 1", "Season 2", "Season 3", "Season 4", "Season 5", "Season 6", "Season 7", "Season 8", "Season 9", "Season 10", "Season 11", "Season 12")
+
+# Average rating vector
+avg_rating <- c(8.2, 8.6, 8.6, 8.7, 8.6, 8.6, 8.7, 8.5, 8.4, 8.3, 8.2, 8.1)
+
+# Create a data frame from the vectors
+tpb_data <- data.frame(season, avg_rating)
+
+# Order the factor levels of season variable
+tpb_data$season <- factor(tpb_data$season, levels = c("Season 1", "Season 2", "Season 3", "Season 4", "Season 5", "Season 6", "Season 7", "Season 8", "Season 9", "Season 10", "Season 11", "Season 12"))
+
+# Plot the data using ggplot2
+ggplot(tpb_data, aes(x=season, y=avg_rating, group=1)) +
+  geom_line() +
+  xlab("Season") +
+  ylab("Average Rating") +
+  ggtitle("Trailer Park Boys Seasons and their Average Ratings") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
 

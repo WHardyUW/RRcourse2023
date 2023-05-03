@@ -196,10 +196,10 @@ div.csl-indent {
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>data_popular_title <span class="ot">=</span> data_popular[[<span class="dv">1</span>]]</span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>data_popular_description <span class="ot">=</span> data_popular[[<span class="dv">2</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The season of Game of Thrones consisted of 10 episodes that aired between 17 April 2011 and 19 June 2011 on HBO. The show gathered an average of 2.515 million first-day TV viewers in the US, with the number changing from 2.22 to 3.04 million by the end of the season.</p>
-<p>The most popular episode of the season was “Fire and Blood”, in which:</p>
+<p>The season of Game of Thrones consisted of 10 episodes that aired between 31 March 2013 and 09 June 2013 on HBO. The show gathered an average of 4.966 million first-day TV viewers in the US, with the number changing from 4.37 to 5.39 million by the end of the season.</p>
+<p>The most popular episode of the season was “The Climb”, in which:</p>
 <blockquote class="blockquote">
-<p>The North secedes from the Seven Kingdoms and proclaims Robb as king. With Jaime as the Starks’ prisoner and Robert’s two brothers, Stannis and Renly, each challenging Joffrey’s claim to the throne, Tywin appoints Tyrion as acting King’s Hand, while Tywin fights to defend Joffrey’s reign. Jon attempts to desert the Night’s Watch to avenge Ned and join Robb, but his Night’s Watch brothers convince him to honor his oath. Jon joins an expedition to search for Benjen Stark beyond the Wall. Yoren, a Night’s Watch recruiter, smuggles Arya out of King’s Landing disguised as a boy, while Joffrey intends to crown Sansa his queen, despite executing her father. Daenerys’s baby is born deformed and dead, and Drogo is left in a vegetative state by the witch’s treacherous magic. Daenerys compassionately ends Drogo’s life. She places the three dragon eggs on Drogo’s funeral pyre and sets it afire, also burning the witch alive. Ignoring Jorah’s pleas, she walks into the flames. When the embers die the following morning, Daenerys is found in the ashes, unharmed, flanked by three newly-hatched baby dragons. Jorah and other witnesses kneel before her.</p>
+<p>In King’s Landing, Tywin coerces Olenna into an agreement to marry Cersei to Loras. Cersei admits to Tyrion that Joffrey tried to have him killed during the siege. Tyrion informs Shae and Sansa about his and Sansa’s betrothal. Littlefinger tells Varys that he discovered Ros was Varys’ informant and that Joffrey killed her. In the Riverlands, Melisandre buys Gendry from the Brotherhood, and foretells Arya that she will kill many people with brown eyes, green eyes, and blue eyes; she promises they will meet again. Having married Talisa, Rob strikes a new agreement with Walder Frey by giving him Harrenhal and having his uncle, Edmure Tully, marry a Frey daughter or granddaughter. Roose Bolton plans to send Jaime to King’s Landing, but refuses to allow Brienne to accompany him. At an unknown location, the mysterious man continues torturing Theon. In the North, tension arises between Osha and Meera. Beyond the Wall, Sam continues his flight with Gilly, while Jon and Ygritte scale the Wall with two other Wildlings.</p>
 </blockquote>
 <hr>
 <p>You can see how the viewership of the episodes changed in Figure 1.</p>
@@ -215,11 +215,12 @@ div.csl-indent {
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data_above_mean <span class="ot">=</span> <span class="fu">subset</span>(season_data, viewers <span class="sc">&gt;</span> viewers_mean, <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"no_season"</span>, <span class="st">"title"</span>, <span class="st">"directed_by"</span>))</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(data_above_mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   no_season                   title    directed_by
-9          5 "The Wolf and the Lion"     Brian Kirk
-15         8        "The Pointy End" Daniel Minahan
-17         9                "Baelor"    Alan Taylor
-19        10        "Fire and Blood"    Alan Taylor</code></pre>
+<pre><code>   no_season                    title       directed_by
+9          5         "Kissed by Fire"       Alex Graves
+11         6              "The Climb"     Alik Sakharov
+15         8            "Second Sons" Michelle MacLaren
+17         9 "The Rains of Castamere"      David Nutter
+19        10                  "Mhysa"      David Nutter</code></pre>
 </div>
 </div>
 

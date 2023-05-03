@@ -196,10 +196,10 @@ div.csl-indent {
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>data_popular_title <span class="ot">=</span> data_popular[[<span class="dv">1</span>]]</span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>data_popular_description <span class="ot">=</span> data_popular[[<span class="dv">2</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The season of Game of Thrones consisted of 10 episodes that aired between 17 April 2011 and 19 June 2011 on HBO. The show gathered an average of 2.515 million first-day TV viewers in the US, with the number changing from 2.22 to 3.04 million by the end of the season.</p>
-<p>The most popular episode of the season was “Fire and Blood”, in which:</p>
+<p>The season of Game of Thrones consisted of 6 episodes that aired between 14 April 2019 and 19 May 2019 on HBO. The show gathered an average of 11.95 million first-day TV viewers in the US, with the number changing from 11.7 to 13.6 million by the end of the season.</p>
+<p>The most popular episode of the season was “The Iron Throne”, in which:</p>
 <blockquote class="blockquote">
-<p>The North secedes from the Seven Kingdoms and proclaims Robb as king. With Jaime as the Starks’ prisoner and Robert’s two brothers, Stannis and Renly, each challenging Joffrey’s claim to the throne, Tywin appoints Tyrion as acting King’s Hand, while Tywin fights to defend Joffrey’s reign. Jon attempts to desert the Night’s Watch to avenge Ned and join Robb, but his Night’s Watch brothers convince him to honor his oath. Jon joins an expedition to search for Benjen Stark beyond the Wall. Yoren, a Night’s Watch recruiter, smuggles Arya out of King’s Landing disguised as a boy, while Joffrey intends to crown Sansa his queen, despite executing her father. Daenerys’s baby is born deformed and dead, and Drogo is left in a vegetative state by the witch’s treacherous magic. Daenerys compassionately ends Drogo’s life. She places the three dragon eggs on Drogo’s funeral pyre and sets it afire, also burning the witch alive. Ignoring Jorah’s pleas, she walks into the flames. When the embers die the following morning, Daenerys is found in the ashes, unharmed, flanked by three newly-hatched baby dragons. Jorah and other witnesses kneel before her.</p>
+<p>Jon is appalled when the Unsullied execute captured soldiers upon Daenerys’ orders. Tyrion finds Jaime and Cersei dead in the ruins. Daenerys rallies the Unsullied and Dothraki, proclaiming she will lead them to “liberate” the entire world. Tyrion resigns as Hand of the Queen and is imprisoned for treason. Arya and Tyrion separately warn Jon that Daenerys is a threat to him, House Stark, and the people. Jon confronts Daenerys. Unable to halt her destructive path, an agonized Jon kills her. Drogon, enraged, melts the Iron Throne, then carries away Daenerys’ body. Later, Tyrion proposes that all future monarchs be chosen by Westerosi leaders, rather than familial succession. Bran Stark is proclaimed King Bran the Broken. He grants the North independence as a kingdom and appoints Tyrion his Hand. Jon is sentenced to the Night’s Watch to appease the Unsullied, who set sail for Naath, Missandei’s homeland. Tyrion reorganizes the Small Council – Brienne, Bronn, Davos, and Sam – to rebuild King’s Landing. Podrick is knighted. Sansa is crowned Queen in the North. Arya sets sail to explore unknown lands west of Westeros. Jon rejoins Tormund and Ghost at Castle Black, leading the Wildlings north of the Wall.</p>
 </blockquote>
 <hr>
 <p>You can see how the viewership of the episodes changed in Figure 1.</p>
@@ -215,11 +215,10 @@ div.csl-indent {
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data_above_mean <span class="ot">=</span> <span class="fu">subset</span>(season_data, viewers <span class="sc">&gt;</span> viewers_mean, <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"no_season"</span>, <span class="st">"title"</span>, <span class="st">"directed_by"</span>))</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(data_above_mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   no_season                   title    directed_by
-9          5 "The Wolf and the Lion"     Brian Kirk
-15         8        "The Pointy End" Daniel Minahan
-17         9                "Baelor"    Alan Taylor
-19        10        "Fire and Blood"    Alan Taylor</code></pre>
+<pre><code>   no_season             title                 directed_by
+5          3  "The Long Night"            Miguel Sapochnik
+9          5       "The Bells"            Miguel Sapochnik
+11         6 "The Iron Throne" David Benioff &amp; D. B. Weiss</code></pre>
 </div>
 </div>
 

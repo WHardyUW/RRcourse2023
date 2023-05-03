@@ -196,10 +196,10 @@ div.csl-indent {
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>data_popular_title <span class="ot">=</span> data_popular[[<span class="dv">1</span>]]</span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>data_popular_description <span class="ot">=</span> data_popular[[<span class="dv">2</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The season of Game of Thrones consisted of 10 episodes that aired between 17 April 2011 and 19 June 2011 on HBO. The show gathered an average of 2.515 million first-day TV viewers in the US, with the number changing from 2.22 to 3.04 million by the end of the season.</p>
-<p>The most popular episode of the season was “Fire and Blood”, in which:</p>
+<p>The season of Game of Thrones consisted of 7 episodes that aired between 16 July 2017 and 27 August 2017 on HBO. The show gathered an average of 10.2314286 million first-day TV viewers in the US, with the number changing from 10.1 to 12 million by the end of the season.</p>
+<p>The most popular episode of the season was “The Dragon and the Wolf”, in which:</p>
 <blockquote class="blockquote">
-<p>The North secedes from the Seven Kingdoms and proclaims Robb as king. With Jaime as the Starks’ prisoner and Robert’s two brothers, Stannis and Renly, each challenging Joffrey’s claim to the throne, Tywin appoints Tyrion as acting King’s Hand, while Tywin fights to defend Joffrey’s reign. Jon attempts to desert the Night’s Watch to avenge Ned and join Robb, but his Night’s Watch brothers convince him to honor his oath. Jon joins an expedition to search for Benjen Stark beyond the Wall. Yoren, a Night’s Watch recruiter, smuggles Arya out of King’s Landing disguised as a boy, while Joffrey intends to crown Sansa his queen, despite executing her father. Daenerys’s baby is born deformed and dead, and Drogo is left in a vegetative state by the witch’s treacherous magic. Daenerys compassionately ends Drogo’s life. She places the three dragon eggs on Drogo’s funeral pyre and sets it afire, also burning the witch alive. Ignoring Jorah’s pleas, she walks into the flames. When the embers die the following morning, Daenerys is found in the ashes, unharmed, flanked by three newly-hatched baby dragons. Jorah and other witnesses kneel before her.</p>
+<p>The wight is presented to the Lannister court. Cersei demands Jon’s neutrality, but she storms off when Jon upholds his oath to Daenerys. Tyrion meets with Cersei, apparently gaining her alliance. Cersei reveals to Jaime that she instead will use the Golden Company of Braavos to secure her hold on Westeros and allow the white walkers to destroy Daenerys and Jon’s armies. Disgusted, Jaime rides north to warn Jon and Daenerys. At Dragonstone, Theon wins his men’s respect and leads them to rescue Yara. Aboard a North-bound ship, Jon seeks out Daenerys, and they become lovers. At Winterfell, Littlefinger works to increase dissent between Arya and Sansa. Sansa, Arya, and Bran publicly accuse Littlefinger of murdering Jon and Lysa Arryn and of treason against their father. Deserted by the Lords of the Vale, Littlefinger is executed by Arya. Samwell arrives and meets with Bran. Combining Gilly’s earlier information and Bran’s vision, they realize Jon is Aegon Targaryen, the legitimate heir to the Iron Throne. Jon’s parents, Rhaegar Targaryen and Lyanna Stark, secretly married. At Eastwatch, the Night King, astride the undead Viserion, blasts a hole through the Wall with blue dragon fire; the Army of the Dead marches through.</p>
 </blockquote>
 <hr>
 <p>You can see how the viewership of the episodes changed in Figure 1.</p>
@@ -215,11 +215,9 @@ div.csl-indent {
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data_above_mean <span class="ot">=</span> <span class="fu">subset</span>(season_data, viewers <span class="sc">&gt;</span> viewers_mean, <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"no_season"</span>, <span class="st">"title"</span>, <span class="st">"directed_by"</span>))</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(data_above_mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   no_season                   title    directed_by
-9          5 "The Wolf and the Lion"     Brian Kirk
-15         8        "The Pointy End" Daniel Minahan
-17         9                "Baelor"    Alan Taylor
-19        10        "Fire and Blood"    Alan Taylor</code></pre>
+<pre><code>   no_season                     title    directed_by
+9          5               "Eastwatch"   Matt Shakman
+13         7 "The Dragon and the Wolf" Jeremy Podeswa</code></pre>
 </div>
 </div>
 

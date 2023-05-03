@@ -196,10 +196,10 @@ div.csl-indent {
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>data_popular_title <span class="ot">=</span> data_popular[[<span class="dv">1</span>]]</span>
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>data_popular_description <span class="ot">=</span> data_popular[[<span class="dv">2</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The season of Game of Thrones consisted of 10 episodes that aired between 17 April 2011 and 19 June 2011 on HBO. The show gathered an average of 2.515 million first-day TV viewers in the US, with the number changing from 2.22 to 3.04 million by the end of the season.</p>
-<p>The most popular episode of the season was “Fire and Blood”, in which:</p>
+<p>The season of Game of Thrones consisted of 10 episodes that aired between 24 April 2016 and 26 June 2016 on HBO. The show gathered an average of 7.688 million first-day TV viewers in the US, with the number changing from 7.94 to 8.89 million by the end of the season.</p>
+<p>The most popular episode of the season was “The Winds of Winter”, in which:</p>
 <blockquote class="blockquote">
-<p>The North secedes from the Seven Kingdoms and proclaims Robb as king. With Jaime as the Starks’ prisoner and Robert’s two brothers, Stannis and Renly, each challenging Joffrey’s claim to the throne, Tywin appoints Tyrion as acting King’s Hand, while Tywin fights to defend Joffrey’s reign. Jon attempts to desert the Night’s Watch to avenge Ned and join Robb, but his Night’s Watch brothers convince him to honor his oath. Jon joins an expedition to search for Benjen Stark beyond the Wall. Yoren, a Night’s Watch recruiter, smuggles Arya out of King’s Landing disguised as a boy, while Joffrey intends to crown Sansa his queen, despite executing her father. Daenerys’s baby is born deformed and dead, and Drogo is left in a vegetative state by the witch’s treacherous magic. Daenerys compassionately ends Drogo’s life. She places the three dragon eggs on Drogo’s funeral pyre and sets it afire, also burning the witch alive. Ignoring Jorah’s pleas, she walks into the flames. When the embers die the following morning, Daenerys is found in the ashes, unharmed, flanked by three newly-hatched baby dragons. Jorah and other witnesses kneel before her.</p>
+<p>Before her trial, Cersei destroys the Sept of Baelor by wildfire, killing the High Sparrow, the Tyrells, Lancel and Kevan Lannister, hundreds of nobles, and the Faith Militant; Qyburn has Pycelle killed. Cersei reveals her incest with Jamie and that she killed Robert Baratheon to Septa Unella before having Ser Robert Strong aka Gregor Clegane torture her until she dies. Distraught over Margaery’s death, Tommen commits suicide. In Dorne, Varys meets with Olenna and Ellaria, seeking an alliance between Daenerys and their Houses against the Lannisters. Davos confronts Melisandre over Princess Shireen’s death, resulting in Jon banishing her. Led by Lyanna Mormont, the Wildlings and the surviving northern Houses pledge loyalty to Jon as King of the North. Sansa rebuffs Littlefinger’s romantic overtures. Arya kills Walder Frey and his sons. Sam and Gilly reach the Citadel in Oldtown. Benjen accompanies Brandon and Meera to the Wall but is unable to go further. In a vision, Bran sees Ned finding Lyanna Stark as she lies dying after giving birth (to Jon Snow) during King Robert’s rebellion. Jaime returns to King’s Landing, and Cersei is crowned Queen of the Seven Kingdoms. Daenerys names Tyrion Hand of the Queen and sails for Westeros with the Greyjoys, her armies, and her dragons, leaving Dario Naharis and the Second Sons behind to rule Meereen until new leaders are elected.</p>
 </blockquote>
 <hr>
 <p>You can see how the viewership of the episodes changed in Figure 1.</p>
@@ -215,11 +215,12 @@ div.csl-indent {
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data_above_mean <span class="ot">=</span> <span class="fu">subset</span>(season_data, viewers <span class="sc">&gt;</span> viewers_mean, <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"no_season"</span>, <span class="st">"title"</span>, <span class="st">"directed_by"</span>))</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(data_above_mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   no_season                   title    directed_by
-9          5 "The Wolf and the Lion"     Brian Kirk
-15         8        "The Pointy End" Daniel Minahan
-17         9                "Baelor"    Alan Taylor
-19        10        "Fire and Blood"    Alan Taylor</code></pre>
+<pre><code>   no_season                  title      directed_by
+1          1        "The Red Woman"   Jeremy Podeswa
+7          4 "Book of the Stranger"  Daniel Sackheim
+9          5             "The Door"      Jack Bender
+13         7       "The Broken Man"       Mark Mylod
+19        10  "The Winds of Winter" Miguel Sapochnik</code></pre>
 </div>
 </div>
 

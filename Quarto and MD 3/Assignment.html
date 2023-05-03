@@ -158,26 +158,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">".."</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>season <span class="ot">=</span> <span class="st">"season_1"</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>path_name <span class="ot">=</span> <span class="fu">paste</span>(<span class="fu">getwd</span>(), <span class="st">"/Data/"</span>, season, <span class="st">".csv"</span>, <span class="at">sep =</span> <span class="st">""</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># path_name = "D:/Documents/RR/RRcourse2023/Data/season_1.csv"</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">read.csv</span>(path_name)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>number_episodes <span class="ot">=</span> <span class="fu">nrow</span>(data)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>dates <span class="ot">=</span> <span class="fu">as.list</span>(data[<span class="st">"premiere_date"</span>])</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>season_start <span class="ot">=</span> <span class="fu">format</span>(<span class="fu">as.Date</span>(<span class="fu">str_sub</span>(dates[[<span class="dv">1</span>]][<span class="dv">1</span>], <span class="sc">-</span><span class="dv">12</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="st">"(%Y-%m-%d"</span>), <span class="st">"%d %B %Y"</span>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>season_end <span class="ot">=</span> <span class="fu">format</span>(<span class="fu">as.Date</span>(<span class="fu">str_sub</span>(dates[[<span class="dv">1</span>]][number_episodes], <span class="sc">-</span><span class="dv">12</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="st">"(%Y-%m-%d"</span>), <span class="st">"%d %B %Y"</span>)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>viewers_mean <span class="ot">=</span> <span class="fu">mean</span>(<span class="fu">as.list</span>(data[<span class="st">"viewers"</span>])[[<span class="dv">1</span>]])</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>viewers_start <span class="ot">=</span> <span class="fu">as.list</span>(data[<span class="st">"viewers"</span>])[[<span class="dv">1</span>]][<span class="dv">1</span>]</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>viewers_end <span class="ot">=</span> <span class="fu">as.list</span>(data[<span class="st">"viewers"</span>])[[<span class="dv">1</span>]][number_episodes]</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>viewers_max <span class="ot">=</span> <span class="fu">max</span>(<span class="fu">as.list</span>(data[<span class="st">"viewers"</span>])[[<span class="dv">1</span>]])</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>data_popular <span class="ot">=</span> <span class="fu">subset</span>(data, viewers <span class="sc">==</span> viewers_max, <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"title"</span>, <span class="st">"description"</span>))</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>data_popular_title <span class="ot">=</span> data_popular[[<span class="dv">1</span>]]</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>data_popular_description <span class="ot">=</span> data_popular[[<span class="dv">2</span>]]</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>data_above_mean <span class="ot">=</span> <span class="fu">subset</span>(data, viewers <span class="sc">&gt;</span> viewers_mean, <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"no_season"</span>, <span class="st">"title"</span>, <span class="st">"directed_by"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">read.csv</span>(path_name)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>number_episodes <span class="ot">=</span> <span class="fu">nrow</span>(data)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>dates <span class="ot">=</span> <span class="fu">as.list</span>(data[<span class="st">"premiere_date"</span>])</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>season_start <span class="ot">=</span> <span class="fu">format</span>(<span class="fu">as.Date</span>(<span class="fu">str_sub</span>(dates[[<span class="dv">1</span>]][<span class="dv">1</span>], <span class="sc">-</span><span class="dv">12</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="st">"(%Y-%m-%d"</span>), <span class="st">"%d %B %Y"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>season_end <span class="ot">=</span> <span class="fu">format</span>(<span class="fu">as.Date</span>(<span class="fu">str_sub</span>(dates[[<span class="dv">1</span>]][number_episodes], <span class="sc">-</span><span class="dv">12</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="st">"(%Y-%m-%d"</span>), <span class="st">"%d %B %Y"</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>viewers_mean <span class="ot">=</span> <span class="fu">mean</span>(<span class="fu">as.list</span>(data[<span class="st">"viewers"</span>])[[<span class="dv">1</span>]])</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>viewers_start <span class="ot">=</span> <span class="fu">as.list</span>(data[<span class="st">"viewers"</span>])[[<span class="dv">1</span>]][<span class="dv">1</span>]</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>viewers_end <span class="ot">=</span> <span class="fu">as.list</span>(data[<span class="st">"viewers"</span>])[[<span class="dv">1</span>]][number_episodes]</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>viewers_max <span class="ot">=</span> <span class="fu">max</span>(<span class="fu">as.list</span>(data[<span class="st">"viewers"</span>])[[<span class="dv">1</span>]])</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>data_popular <span class="ot">=</span> <span class="fu">subset</span>(data, viewers <span class="sc">==</span> viewers_max, <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"title"</span>, <span class="st">"description"</span>))</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>data_popular_title <span class="ot">=</span> data_popular[[<span class="dv">1</span>]]</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>data_popular_description <span class="ot">=</span> data_popular[[<span class="dv">2</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Season 1 of Game of Thrones consisted of 10 episodes that aired between 17 April 2011 and 19 June 2011 on HBO. The show gathered an average of 2.515 million first-day TV viewers in the US, with the number changing from 2.22 to 3.04 million by the end of the season.</p>
 <p>The most popular episode of the season was “Fire and Blood”, in which:</p>
@@ -225,6 +222,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data_above_mean <span class="ot">=</span> <span class="fu">subset</span>(data, viewers <span class="sc">&gt;</span> viewers_mean, <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"no_season"</span>, <span class="st">"title"</span>, <span class="st">"directed_by"</span>))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(data_above_mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   no_season                   title    directed_by
+5          5 "The Wolf and the Lion"     Brian Kirk
+8          8        "The Pointy End" Daniel Minahan
+9          9                "Baelor"    Alan Taylor
+10        10        "Fire and Blood"    Alan Taylor</code></pre>
+</div>
+</div>
 </section>
 </section>
 

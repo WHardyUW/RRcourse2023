@@ -30,7 +30,6 @@ Set on the fictional continents of Westeros and Essos, Game of Thrones has a lar
 setwd("..")
 season = "season_1"
 path_name = paste(getwd(), "/Data/", season, ".csv", sep = "")
-# path_name = "D:/Documents/RR/RRcourse2023/Data/season_1.csv"
 data = read.csv(path_name)
 
 number_episodes = nrow(data)
@@ -48,8 +47,6 @@ viewers_max = max(as.list(data["viewers"])[[1]])
 data_popular = subset(data, viewers == viewers_max, select = c("title", "description"))
 data_popular_title = data_popular[[1]]
 data_popular_description = data_popular[[2]]
-
-data_above_mean = subset(data, viewers > viewers_mean, select = c("no_season", "title", "directed_by"))
 
 ```
 
@@ -78,3 +75,10 @@ Finally, the episodes with the above-average viewership were:
 | 8             | "The Pointy End" | Daniel Minahan      |
 | 9             | "Baelor" | Alan Taylor      |
 | 10            | "Fire and Blood" | Alan Taylor      |
+
+```{r}
+
+data_above_mean = subset(data, viewers > viewers_mean, select = c("no_season", "title", "directed_by"))
+print(data_above_mean)
+
+```

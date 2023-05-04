@@ -1,0 +1,74 @@
+---
+title: "Quarto"
+author: "Le Nhat Tung"
+date: "04/05/2023"
+format: html
+execute:
+  echo: fenced
+---
+
+```{r}
+#| label = "setup",
+#| include = FALSE
+library(chron)
+library(reticulate)
+```
+
+------------------------------------------------------------------------
+
+```{r}/#| warning = FALSE
+setwd("C:/Users/Windows/OneDrive/Learning/WNE/SEM4/RR/Quarto_Exercise_1/")
+```
+
+# *Summary of Better Call Saul*
+
+!["Breaking Bad"](images/image1.jpg)
+
+
+Better Call Saul is an American television drama series created by Vince Gilligan and Peter Gould, which premiered in 2015 on AMC. It is a spin-off and prequel to Gilligan's previous series, Breaking Bad (2008-2013). Set primarily in the first half of the 2000s in Albuquerque, New Mexico, the series develops Jimmy McGill (Bob Odenkirk), an earnest lawyer and former con artist, into an egocentric criminal defense attorney known as Saul Goodman. Also shown is the moral decline of former police officer Mike Ehrmantraut (Jonathan Banks), who becomes a violent fixer for drug traffickers to support his granddaughter and her widowed mother.
+
+Over the course of the series, 63 episodes aired over six seasons. The series premiere aired on February 8, 2015, and the series finale aired on August 15, 2022.[1][2]
+
+
+## Read Dataset
+
+```{r}
+#| warning = FALSE 
+library(readxl)
+rate <- read_excel("data/episoderate.xlsx")
+viewer <- read_excel ("data/viewers.xlsx")
+```
+
+
+## Summary of Rating
+
+```{r}
+#| warning = FALSE
+library(dplyr) 
+summary(rate)
+
+glimpse(rate)
+
+```
+
+## U.S. viewers (millions) over time
+
+```{r}
+plot(viewer$`U.S. viewers (millions)`, xlab = "Parts", ylab = "Viweres - Millions", main = "U.S. viewers (millions)")
+
+```
+
+## U.S. viewers (millions) over time by Season
+
+```{r}
+#| label: fig-cars
+#| fig-cap: "Total Number of Viewers by Season"
+viewer$`U.S. viewers (millions)` = as.numeric(viewer$`U.S. viewers (millions)`)
+boxplot(viewer$`U.S. viewers (millions)` ~ viewer$Season, xlab = "Parts" , ylab = "Viweres - Millions", main = "U.S. viewers (millions)")
+```
+
+@fig-cars display total number over viewers by seasons. We can easly see that the number of viewers
+dropped dramatically from season 1 to season 6.
+
+
+

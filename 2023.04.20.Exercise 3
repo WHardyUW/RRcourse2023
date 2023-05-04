@@ -1,0 +1,21 @@
+lntung@instance-1:/var/log$ ps aux | grep "cpu"
+root          10  0.0  0.0      0     0 ?        I<   16:34   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    16:34   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    16:34   0:00 [cpuhp/1]
+lntung     13076  0.0  0.2   8168  2416 pts/0    R+   17:00   0:00 grep --color=auto cpu
+
+lntung@instance-1:/var/log$ ip a  |  tail -n 3
+       valid_lft 2003sec preferred_lft 2003sec
+    inet6 fe80::4001:aff:fe80:2/64 scope link 
+       valid_lft forever preferred_lft forever
+
+lntung@instance-1:/var/log$ cd ../../etc/nvme
+
+lntung@instance-1:/etc/nvme$ pwd
+/etc/nvme
+
+lntung@instance-1:/etc/nvme$ cat discovery.conf | head -n 3
+# Used for extracting default parameters for discovery
+#
+# Example:
+lntung@instance-1:/etc/nvme$ 

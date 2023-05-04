@@ -44,7 +44,7 @@ season1 = round(data_grp.iloc[0],1)
 season8 = round(data_grp.iloc[-1],1)
 
 display(Markdown(f"""
-Viewership of Game of Thrones has grown substantially over time. Total viewers per season increased from {season1} to {season8} millions over the course of 8 seasons.
+Viewership of Game of Thrones has grown substantially over time. Total viewers per season increased from {season1} to {season8} millions over the course of 8 seasons. 
 """
 ))
 ```

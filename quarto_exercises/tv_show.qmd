@@ -22,3 +22,12 @@ import matplotlib.pyplot as plt
 sns.lineplot(data=data, x='episode', y='viewers').set_title('Viewership in millions')
 plt.show()
 ```
+
+
+```{python}
+data['season_episode'] = data.groupby('season')['episode'].rank(method='first', ascending=True)
+sns.lineplot(data=data, x='season_episode', y='viewers', hue='season', )
+plt.title('Viewership in millions')
+plt.xticks(range(1, 11))
+plt.show()
+```

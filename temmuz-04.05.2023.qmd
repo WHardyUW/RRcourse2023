@@ -1,0 +1,49 @@
+------------------------------------------------------------------------
+
+title: "TemmuzYavuzer - 444130"
+
+format: html
+
+editor: visual
+
+------------------------------------------------------------------------
+
+# Game of Thrones
+
+***Game of Thrones*** is an American [fantasy](https://en.wikipedia.org/wiki/Fantasy_television "Fantasy television") [drama](https://en.wikipedia.org/wiki/Drama_(film_and_television) "Drama (film and television)") television series created by [David Benioff](https://en.wikipedia.org/wiki/David_Benioff "David Benioff") and [D. B. Weiss](https://en.wikipedia.org/wiki/D._B._Weiss "D. B. Weiss") for [HBO](https://en.wikipedia.org/wiki/HBO "HBO"). It is an adaptation of [*A Song of Ice and Fire*](https://en.wikipedia.org/wiki/A_Song_of_Ice_and_Fire "A Song of Ice and Fire"), a series of fantasy novels by [George R. R. Martin](https://en.wikipedia.org/wiki/George_R._R._Martin "George R. R. Martin"), the first of which is [*A Game of Thrones*](https://en.wikipedia.org/wiki/A_Game_of_Thrones "A Game of Thrones"). The show was shot in the United Kingdom, Canada, Croatia, Iceland, Malta, Morocco, and Spain. It premiered on HBO in the United States on April 17, 2011, and concluded on May 19, 2019, with 73 episodes broadcast over eight seasons.
+
+![](https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/Game_of_Thrones_title_card.jpg/250px-Game_of_Thrones_title_card.jpg)
+
+## Ratings
+
+| Season \| Episode_number \| Raiting \|
+
+\|:-------\|:--------------:\|--------:\|
+
+| 1 \| 1 \| 9 \|
+
+| 3 \| 1 \| 9.30 \|
+
+| 4 \| 1 \| 9.52 \|
+
+## Graphs
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+{r}
+
+1 + 1
+
+You can add options to executable code like this
+
+{r}
+
+#\| echo: false
+
+2 \* 2

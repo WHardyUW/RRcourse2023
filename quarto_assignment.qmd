@@ -1,0 +1,33 @@
+---
+title: "quarto_assignment"
+format: html
+editor: visual
+---
+
+## Quarto
+
+**Report on Money Heist**
+
+**1. Description of TV Show**
+
+***Money Heist*** is a Spanish [*heist*](https://en.wikipedia.org/wiki/Heist_genre "Heist genre") [*crime drama*](https://en.wikipedia.org/wiki/Crime_drama "Crime drama") television series created by \*[Álex Pina](https://en.wikipedia.org/wiki/%C3%81lex_Pina "Álex Pina")\*. The series traces two long-prepared heists led by [the Professor](https://en.wikipedia.org/wiki/The_Professor_(Money_Heist) "The Professor (Money Heist)") *([Álvaro Morte](https://en.wikipedia.org/wiki/%C3%81lvaro_Morte "Álvaro Morte"))*, one on the [*Royal Mint of Spain*](https://en.wikipedia.org/wiki/Royal_Mint_(Spain) "Royal Mint (Spain)"), and one on the [*Bank of Spain*](https://en.wikipedia.org/wiki/Bank_of_Spain "Bank of Spain"), told from the perspective of one of the robbers, [*Tokyo*](https://en.wikipedia.org/wiki/Tokyo_(Money_Heist) "Tokyo (Money Heist)") *([Úrsula Corberó](https://en.wikipedia.org/wiki/%C3%9Arsula_Corber%C3%B3 "Úrsula Corberó"))*. The narrative is told in a real-time-like fashion and relies on flashbacks, time-jumps, hidden character motivations, and an [unreliable narrator](https://en.wikipedia.org/wiki/Unreliable_narrator "Unreliable narrator") for complexity.
+
+**2. Photo from the Show**
+
+![](moneyheist.jpg.webp){width="540"}
+
+**3. Summary of Statistics**
+
+According to **nexttv**, The fifth season of Spanish-language crime thriller *Money Heist* captured another 148 million viewing hours globally on Netflix for the week of December 6-12 2021, making it the top show of any kind \-- English, non-English, TV series or movie \-- on Netflix last week.
+
+**4. Viewership over time**
+
+```{r}
+A <- c(34.3,65,56)
+B <-c("Part 3","Part 4","Part 5")
+  
+# Plot the bar chart 
+barplot(A, names.arg = B, xlab ="Part", 
+        ylab ="Views", col ="blue", 
+        main ="Money Heist Views Part 3-5 (in Millions)")
+```

@@ -15,3 +15,10 @@ data = pd.read_csv('data/viewership.csv')
 print(f'Average viewers per episode, in millions: {data["viewers"].mean():.2f}')
 print(f'Std. deviation of viewers per episode, in millions: {data["viewers"].std():.2f}')
 ```
+
+```{python}
+import seaborn as sns
+import matplotlib.pyplot as plt
+sns.lineplot(data=data, x='episode', y='viewers').set_title('Viewership in millions')
+plt.show()
+```

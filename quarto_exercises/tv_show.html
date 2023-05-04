@@ -123,6 +123,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
+<section id="description" class="level4">
+<h4 class="anchored" data-anchor-id="description">Description</h4>
 <p><em>Game of Thrones</em> is an American fantasy drama television series created by David Benioff and D. B. Weiss for HBO. It is an adaptation of <em>A Song of Ice and Fire</em>, a series of fantasy novels by George R. R. Martin, the first of which is <em>A Game of Thrones</em>. The show was shot in the United Kingdom, Canada, Croatia, Iceland, Malta, Morocco, and Spain. It premiered on HBO in the United States on April 17, 2011, and concluded on May 19, 2019, with 73 episodes broadcast over eight seasons.</p>
 <p>Set on the fictional continents of <em>Westeros</em> and <em>Essos</em>, <em>Game of Thrones</em> has a large ensemble cast and follows several story arcs throughout the course of the show. The first major arc concerns the <em>Iron Throne</em> of the <em>Seven Kingdoms</em> of <em>Westeros</em> through a web of political conflicts among the noble families either vying to claim the throne or fighting for independence from whoever sits on it. The second focuses on the last descendant of the realm’s deposed ruling dynasty, who has been exiled to <em>Essos</em> and is plotting to return and reclaim the throne. The third follows the Night’s Watch, a military order defending the realm against threats from beyond <em>Westeros</em>’s northern border.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -131,50 +133,71 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p></p><figcaption class="figure-caption"><em>Game of Thrones</em> scene</figcaption><p></p>
 </figure>
 </div>
+</section>
+<section id="basic-descriptive-statistics-of-the-series-viewership" class="level4">
+<h4 class="anchored" data-anchor-id="basic-descriptive-statistics-of-the-series-viewership">Basic descriptive statistics of the series viewership</h4>
 <div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">'data/viewership.csv'</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Average viewers per episode, in millions: </span><span class="sc">{</span>data[<span class="st">"viewers"</span>]<span class="sc">.</span>mean()<span class="sc">:.2f}</span><span class="ss">'</span>)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Std. deviation of viewers per episode, in millions: </span><span class="sc">{</span>data[<span class="st">"viewers"</span>]<span class="sc">.</span>std()<span class="sc">:.2f}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Average viewers per episode, in millions: 6.45
 Std. deviation of viewers per episode, in millions: 2.83</code></pre>
 </div>
 </div>
+</section>
+<section id="series-viewership-over-time" class="level4">
+<h4 class="anchored" data-anchor-id="series-viewership-over-time">Series viewership over time</h4>
 <div class="cell" data-execution_count="2">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">'episode'</span>, y<span class="op">=</span><span class="st">'viewers'</span>).set_title(<span class="st">'Viewership in millions'</span>)</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <p><img src="tv_show_files/figure-html/cell-3-output-1.png" width="585" height="449"></p>
 </div>
 </div>
+</section>
+<section id="season-by-season-comparison-of-viewership" class="level4">
+<h4 class="anchored" data-anchor-id="season-by-season-comparison-of-viewership">Season by season comparison of viewership</h4>
 <div class="cell" data-execution_count="3">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'season_episode'</span>] <span class="op">=</span> data.groupby(<span class="st">'season'</span>)[<span class="st">'episode'</span>].rank(method<span class="op">=</span><span class="st">'first'</span>, ascending<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">'season_episode'</span>, y<span class="op">=</span><span class="st">'viewers'</span>, hue<span class="op">=</span><span class="st">'season'</span>, )</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Viewership in millions'</span>)</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>plt.xticks(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>))</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <p><img src="tv_show_files/figure-html/cell-4-output-1.png" width="585" height="449"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data_grp <span class="op">=</span> data.groupby(<span class="st">'season'</span>)[<span class="st">'viewers'</span>].<span class="bu">sum</span>()</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>season1 <span class="op">=</span> <span class="bu">round</span>(data_grp.iloc[<span class="dv">0</span>],<span class="dv">1</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>season8 <span class="op">=</span> <span class="bu">round</span>(data_grp.iloc[<span class="op">-</span><span class="dv">1</span>],<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>display(Markdown(<span class="ss">f"""</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ss">Over time the viewership of Game of Thrones has grown substantially. Total viewers per season increased from </span><span class="sc">{</span>season1<span class="sc">}</span><span class="ss"> to </span><span class="sc">{</span>season8<span class="sc">}</span><span class="ss"> millions over the course of 8 seasons.</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>data_grp <span class="op">=</span> data.groupby(<span class="st">'season'</span>)[<span class="st">'viewers'</span>].<span class="bu">sum</span>()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>season1 <span class="op">=</span> <span class="bu">round</span>(data_grp.iloc[<span class="dv">0</span>],<span class="dv">1</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>season8 <span class="op">=</span> <span class="bu">round</span>(data_grp.iloc[<span class="op">-</span><span class="dv">1</span>],<span class="dv">1</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>display(Markdown(<span class="ss">f"""</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ss">Viewership of Game of Thrones has grown substantially over time. Total viewers per season increased from </span><span class="sc">{</span>season1<span class="sc">}</span><span class="ss"> to </span><span class="sc">{</span>season8<span class="sc">}</span><span class="ss"> millions over the course of 8 seasons.</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
-<p>Over time the viewership of Game of Thrones has grown substantially. Total viewers per season increased from 25.2 to 72.0 millions over the course of 8 seasons.</p>
+<p>Viewership of Game of Thrones has grown substantially over time. Total viewers per season increased from 25.2 to 72.0 millions over the course of 8 seasons.</p>
 </div>
 </div>
+</section>
 
 </main>
 <!-- /main column -->

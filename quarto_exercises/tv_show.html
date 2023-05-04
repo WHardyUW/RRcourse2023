@@ -150,6 +150,31 @@ Std. deviation of viewers per episode, in millions: 2.83</code></pre>
 <p><img src="tv_show_files/figure-html/cell-3-output-1.png" width="585" height="449"></p>
 </div>
 </div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'season_episode'</span>] <span class="op">=</span> data.groupby(<span class="st">'season'</span>)[<span class="st">'episode'</span>].rank(method<span class="op">=</span><span class="st">'first'</span>, ascending<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data<span class="op">=</span>data, x<span class="op">=</span><span class="st">'season_episode'</span>, y<span class="op">=</span><span class="st">'viewers'</span>, hue<span class="op">=</span><span class="st">'season'</span>, )</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Viewership in millions'</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>plt.xticks(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>))</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="tv_show_files/figure-html/cell-4-output-1.png" width="585" height="449"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data_grp <span class="op">=</span> data.groupby(<span class="st">'season'</span>)[<span class="st">'viewers'</span>].<span class="bu">sum</span>()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>season1 <span class="op">=</span> <span class="bu">round</span>(data_grp.iloc[<span class="dv">0</span>],<span class="dv">1</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>season8 <span class="op">=</span> <span class="bu">round</span>(data_grp.iloc[<span class="op">-</span><span class="dv">1</span>],<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Markdown</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>display(Markdown(<span class="ss">f"""</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ss">Over time the viewership of Game of Thrones has grown substantially. Total viewers per season increased from </span><span class="sc">{</span>season1<span class="sc">}</span><span class="ss"> to </span><span class="sc">{</span>season8<span class="sc">}</span><span class="ss"> millions over the course of 8 seasons.</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p>Over time the viewership of Game of Thrones has grown substantially. Total viewers per season increased from 25.2 to 72.0 millions over the course of 8 seasons.</p>
+</div>
+</div>
 
 </main>
 <!-- /main column -->

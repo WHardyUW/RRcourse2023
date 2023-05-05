@@ -1,0 +1,46 @@
+---
+title: "Brooklyn 99"
+format: html
+editor: visual
+---
+
+***Brooklyn Nine-Nine*** is an American police procedural comedy television series that aired on Fox, and later on NBC. The show aired from September 17, 2013, to September 16, 2021, for a total of eight seasons and 153 episodes. Created by *Dan Goor* and *Michael Schur*, the premise revolves around seven New York City Police Department (NYPD) detectives who are adjusting to life under their new commanding officer, the serious and stern Captain *Raymond Holt* (*Andre Braugher*). Featuring an ensemble cast headed by *Braugher* and *Andy Samberg*, the cast also features *Stephanie Beatriz*, *Terry Crews*, *Melissa Fumero*, *Joe Lo Truglio*, *Chelsea Peretti*, *Dirk Blocker*, and *Joel McKinnon Miller*.
+
+![Logo](https://en.wikipedia.org/wiki/File:Brooklyn_Nine-Nine_Logo.png)
+
+Average number of episodes per season:
+
+```{r}
+#| echo: false
+Episodes = c(22, 23, 23, 22, 22, 18, 13, 10)
+print(mean(Episodes))
+```
+
+Graph of vievership over time
+
+```{r}
+#| echo: false
+
+df <- data.frame(year = 2014:2021, viewers = c(2.59, 2.35, 2.02, 1.5, 1.79, 1.55, 2.24, 1.88))
+plot(df)
+```
+
+A graph of the season-to-season changes in viewership.
+
+```{r}
+#| echo: false
+
+# Create the data frame
+df <- data.frame(year = 2014:2021, viewers = c(2.59, 2.35, 2.02, 1.5, 1.79, 1.55, 2.24, 1.88))
+
+# Compute the differences between the last "viewers" value
+df$diff <- c(diff(df$viewers), NA)
+
+# Show the resulting data frame
+plot(df$year, df$diff)
+
+```
+
+The highest peak in differences can be observed between 2019 and 2020, when the Viewers number grew by `r 2.24 - 1.55` Millions of viewers
+
+

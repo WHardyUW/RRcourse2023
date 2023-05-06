@@ -10,7 +10,7 @@ bibliography: bibliography.bib
 documentclass: article
 fontsize: 11pt
 geometry: margin=1in
-latex-tinytex: false
+latex-tinytex: true
 ---
 
 ---

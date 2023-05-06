@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Nijat Hasanli">
+<meta name="dcterms.date" content="2023-04-22">
+
+<title>Stranger Things</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="gameofthrones.rmd_files/libs/clipboard/clipboard.min.js"></script>
+<script src="gameofthrones.rmd_files/libs/quarto-html/quarto.js"></script>
+<script src="gameofthrones.rmd_files/libs/quarto-html/popper.min.js"></script>
+<script src="gameofthrones.rmd_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="gameofthrones.rmd_files/libs/quarto-html/anchor.min.js"></script>
+<link href="gameofthrones.rmd_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="gameofthrones.rmd_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="gameofthrones.rmd_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="gameofthrones.rmd_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="gameofthrones.rmd_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Stranger Things</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Nijat Hasanli </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 22, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p>knitr::convert_chunk_header(input = “strangerthings.Rmd”, output = “strangerthings.qmd”)</p>
+<section id="stanger-things" class="level1">
+<h1>Stanger Things</h1>
+<section id="brief-description" class="level2">
+<h2 class="anchored" data-anchor-id="brief-description">Brief Description</h2>
+<p>“Stranger Things” is set in the 1980s and pays homage to popular culture from that decade, including music, fashion, and technology. The show is heavily influenced by the works of Steven Spielberg, Stephen King, and John Carpenter, and features themes such as friendship, family, and the supernatural. The plot revolves around the disappearance of Will Byers, a young boy from Hawkins, Indiana. As his friends and family search for him, they come across a mysterious girl named Eleven, who possesses telekinetic powers and seems to be connected to Will’s disappearance. They soon discover the existence of a parallel dimension called the “Upside Down,” which is a dark and dangerous place filled with monstrous creatures. Throughout the series, the characters face numerous challenges as they try to uncover the truth about Upside Down and the government agency that is experimenting on Eleven and other children with psychic abilities. They also face personal struggles, including romantic relationships, family dynamics, and the pressures of growing up. The show has been praised for its talented cast, including Millie Bobby Brown, Finn Wolfhard, and David Harbour, who bring their characters to life with nuance and depth. It has also been praised for its use of visual effects and music to create a suspenseful and nostalgic atmosphere. “Stranger Things” has become a cultural phenomenon, inspiring merchandise, cosplay, and even a themed attraction at Universal Studios.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="strangerthings.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption"><strong>A photo from the series</strong></figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="basic-statistics-for-stranger-things" class="level1">
+<h1>Basic Statistics for Stranger Things</h1>
+<p>Here are some basic statistics for the TV show “Stanger Things”:</p>
+<ul>
+<li>Total number of seasons: 4 (as of September 2021, but a 5th season has been announced)</li>
+<li>Total number of episodes: 34 (so far)</li>
+<li>Average episode length: 50-60 minutes</li>
+<li>Total runtime: Approximately 28 hours (so far)</li>
+<li>First episode air date: July 15, 2016</li>
+<li>Last episode air date: July 4, 2019 (for season 3)</li>
+</ul>
+<section id="ratings" class="level2">
+<h2 class="anchored" data-anchor-id="ratings">Ratings</h2>
+<ul>
+<li>IMDb rating: 8.7/10</li>
+<li>Rotten Tomatoes score: 93% (season 1), 94% (season 2), 89% (season 3), and 90% (season 4)</li>
+<li>Metacritic score: 76/100 (season 1), 78/100 (season 2), 71/100 (season 3), and 72/100 (season 4)</li>
+</ul>
+</section>
+<section id="awards" class="level2">
+<h2 class="anchored" data-anchor-id="awards">Awards</h2>
+<ul>
+<li>Primetime Emmy Awards: 6 wins and 40 nominations (as of September 2021)</li>
+<li>People’s Choice Awards: 9 wins and 23 nominations</li>
+<li>Golden Globe Awards: 0 wins and 4 nominations.</li>
+</ul>
+</section>
+</section>
+<section id="a-graph-of-the-viewership-over-time" class="level1">
+<h1>A graph of the viewership over time</h1>
+<section id="code-block" class="level3">
+<h3 class="anchored" data-anchor-id="code-block">code block</h3>
+<p><strong>Load necessary packages</strong></p>
+<p>library(tidyverse)</p>
+<p><strong>Create a data frame with viewership data</strong></p>
+<p>strangerthings &lt;- data.frame( year = c(2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020), viewers = c(8.94, 9.71, 10.68, 11.35, 9.23, 11.31, 9.84, 8.44, 7.5, 8.18))</p>
+<p><strong>Create a plot with the x-axis showing only integers</strong></p>
+<p>ggplot(himym, aes(x = year, y = viewers)) + geom_line() + scale_x_continuous(breaks = strangerthings$year, expand = c(0,0)) + labs(x = “Year”, y = “Viewers (millions)”, title = “Viewership of Stranger Things”)</p>
+<p><img src="Rplot.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="a-graph-of-the-episode-to-episode-or-season-to-season-changes-ratings" class="level1">
+<h1>A graph of the episode-to-episode (or season-to-season) changes ratings</h1>
+<p><strong>Create a data frame with the season-to-season viewership data</strong></p>
+<p>viewership &lt;- data.frame( season = 1:8, viewers = c(10.94, 9.47, 8.43, 8.59, 9.01, 8.24, 7.98, 7.37) )</p>
+<p><strong>Create a line graph using ggplot2</strong></p>
+<p>library(ggplot2)</p>
+<p>ggplot(viewership, aes(x = season, y = viewers)) + geom_line() + geom_point() + labs(title = “Season-to-Season Changes in Stanger Things Viewership”, x = “Season”, y = “Average Viewers (in millions)”)</p>
+<p><img src="Rplot01.png" class="img-fluid"></p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

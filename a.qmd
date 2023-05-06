@@ -1,0 +1,73 @@
+---
+title: "Breaking Bad"
+author: "Nijat Hasanli"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+# Load required libraries
+library(tidyverse)
+library(ggplot2)
+
+Breaking Bad is an American television series created by Vince Gilligan. It premiered on AMC on January 20, 2008, and ran for five seasons until its finale on September 29, 2013. The show follows the story of Walter White (played by Bryan Cranston), a high school chemistry teacher who turns to making and selling methamphetamine after being diagnosed with cancer.
+
+
+
+# Step 3: Basic statistics on viewership or ratings
+# Data source: https://en.wikipedia.org/wiki/Breaking_Bad#Viewership
+show_ratings <- data.frame(
+  season = 1:5,
+  viewership = c(1.41, 1.22, 1.58, 1.92, 5.22)
+)
+
+Breaking Bad was a critically acclaimed show that achieved high ratings during its run. The series finale was watched by 10.3 million viewers, making it the most-watched episode of the series. The show also won numerous awards, including 16 Primetime Emmy Awards.
+
+
+
+# Step 4: Graph of viewership over time
+# Data source: https://en.wikipedia.org/wiki/Breaking_Bad#Viewership
+viewership_over_time <- data.frame(
+  season = 1:5,
+  viewership = c(1.41, 1.22, 1.58, 1.92, 5.22),
+  episode_count = c(7, 13, 13, 13, 16)
+)
+
+ggplot(viewership_over_time, aes(x = season, y = viewership)) +
+  geom_line() +
+  labs(title = "Viewership of Breaking Bad Over Time",
+       x = "Season",
+       y = "Viewership (millions)")
+
+
+library(ggplot2)
+
+# Calculate the change in ratings from one episode to the next
+episode_ratings$rating_change <- c(NA, diff(episode_ratings$ratings))
+
+# Create a line plot of rating changes over episodes
+ggplot(episode_ratings, aes(x = episode, y = rating_change)) +
+  geom_line() +
+  labs(x = "Episode", y = "Rating Change", 
+       title = "Changes in Episode Ratings for Breaking Bad") +
+  theme_minimal()
+
+```
+Breaking Bad experienced some fluctuations in viewership over its five seasons. Between seasons two and three, the show saw a significant increase in viewership, with a 55% growth in ratings. However, the ratings began to decrease slightly after season four, with a 4% decline in ratings between seasons four and five.
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).

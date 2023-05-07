@@ -1,0 +1,28 @@
+---
+title: "Assignment_Barry_TV_show"
+format:
+  html:
+    theme: default
+---
+
+_Barrry_ is an American dark comedy-crime television series created by Alec Berg and Bill Hader that premiered on HBO. It stars Hader as the titular character, a hitman from the Midwest who travels to Los Angeles to kill someone and then finds himself joining an acting class taught by Henry Winkler's character.
+
+![Barry Show Logo](barry_logo.jpg)
+
+Here is a summary of some basic statistics on viewership:
+
+```{r}
+library(tidyverse)
+
+barry_data <- tribble(
+  ~episode, ~season, ~title, ~director, ~writer, ~air_date, ~viewers_millions,
+  1, 1, "Chapter One: Make Your Mark", "Bill Hader", "Alec Berg & Bill Hader", "2018-03-25", 0.564,
+  2, 2, "Chapter Two: Use It", "Bill Hader", "Alec Berg & Bill Hader", "2018-04-01", 0.641,
+  # ... Add all remaining rows from the provided table ...
+)
+
+barry_summary <- barry_data %>%
+  group_by(season) %>%
+  summarise(avg_viewers = mean(viewers_millions))
+
+barry_summary

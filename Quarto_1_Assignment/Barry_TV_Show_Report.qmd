@@ -78,3 +78,20 @@ ggplot(barry_data, aes(x = episode, y = viewers)) +
 
 
 ```
+
+```{r}
+
+summary_stats <- data.frame(
+  mean_viewership = mean(barry_data$viewers, na.rm = TRUE),
+  max_viewership = max(barry_data$viewers, na.rm = TRUE),
+  min_viewership = min(barry_data$viewers, na.rm = TRUE),
+  total_episodes = nrow(barry_data)
+)
+
+```
+
+5. Write a short description of the observed changes with inline references to numbers:
+
+```markdown
+The average viewership for "Barry" is `r summary_stats$mean_viewership` million viewers per episode. The highest viewership was achieved by episode `r which.max(barry_data$viewers)` with `r summary_stats$max_viewership` million viewers, while the lowest viewership was for episode `r which.min(barry_data$viewers)` with `r summary_stats$min_viewership` million viewers. Over the course of `r summary_stats$total_episodes` episodes, there have been both increases and decreases in viewership, as shown in the graphs above.
+```

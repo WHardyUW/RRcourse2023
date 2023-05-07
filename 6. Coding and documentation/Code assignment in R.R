@@ -1,65 +1,53 @@
+# Ctrl + Shift + C」来添加或移除「#」符号以注释或取消注释多行代码。
+# sessionInfo() # 查看当前会话信息，包括安装的R版本和已加载的包
+# installed.packages() # 查看当前已安装的包
+# install.packages("styler") #规范写作automatically formats R code to follow a consistent style guide，works "Addins" also.
+
+###### Assegniment code cleaning ######
+# library(styler)
+#style_file("/6.Coding\ and\ documentation/Code\ assignment\ in\ R.R") 
+
+# install.packages("formatR") #优化公式provides functions for formatting R code
+# library(formatR)
+# tidy_source("path/to/your/file.R")#注意code clean前要备份，因为formatR 可以修改代码文件本身
 
 # Sets the path to the parent directory of RR classes
-setwd("Z:\\File folders\\Teaching\\Reproducible Research\\2023\\Repository\\RRcourse2023\\6. Coding and documentation")
+# setwd("Z:\\File folders\\Teaching\\Reproducible Research\\2023\\Repository\\RRcourse2023\\6. Coding and documentation")
+setwd(
+  "/Users/yuqingwu/Desktop/RR\ Study/20230330RR/rep0330/RRcourse2023/6.\ Coding\ and\ documentation"
+)
+install.packages("dplyr")
+library(readxl)
+library(magrittr)
 
-#   Import data from the O*NET database, at ISCO-08 occupation level.
-# The original data uses a version of SOC classification, but the data we load here
-# are already cross-walked to ISCO-08 using: https://ibs.org.pl/en/resources/occupation-classifications-crosswalks-from-onet-soc-to-isco/
+# Import data from the O*NET database, at ISCO-08 occupation level.
+task_data <- read.csv("Data/onet_tasks.csv")
 
-# The O*NET database contains information for occupations in the USA, including
-# the tasks and activities typically associated with a specific occupation.
-
-task_data = read.csv("Data\\onet_tasks.csv")
-# isco08 variable is for occupation codes
-# the t_* variables are specific tasks conducted on the job
-
-# read employment data from Eurostat
+# Read employment data from Eurostat
 # These datasets include quarterly information on the number of workers in specific
 # 1-digit ISCO occupation categories. (Check here for details: https://www.ilo.org/public/english/bureau/stat/isco/isco08/)
-library(readxl)                     
 
-isco1 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO1")
-isco2 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO2")
-isco3 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO3")
-isco4 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO4")
-isco5 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO5")
-isco6 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO6")
-isco7 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO7")
-isco8 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO8")
-isco9 <- read_excel("Data\\Eurostat_employment_isco.xlsx", sheet="ISCO9")
+# Create a list of data frames by reading sheets of the employment data
+isco_list <- lapply(1:9, function(i) read_excel("Data/Eurostat_employment_isco.xlsx", sheet = paste0("ISCO", i)))
 
-# We will focus on three countries, but perhaps we could clean this code to allow it
-# to easily run for all the countries in the sample?
+# Aggregate the employment data by country
+all_data <- do.call(rbind, isco_list) %>%
+  group_by(Country) %>%
+  summarise_at(vars(Belgium:Poland), sum) %>%
+  mutate(total = rowSums(.[4:12]))
 
-# This will calculate worker totals in each of the chosen countries.
-total_Belgium = isco1$Belgium + isco2$Belgium + isco3$Belgium + isco4$Belgium + isco5$Belgium + isco6$Belgium + isco7$Belgium + isco8$Belgium + isco9$Belgium
-total_Spain = isco1$Spain + isco2$Spain + isco3$Spain + isco4$Spain + isco5$Spain + isco6$Spain + isco7$Spain + isco8$Spain + isco9$Spain
-total_Poland = isco1$Poland + isco2$Poland + isco3$Poland + isco4$Poland + isco5$Poland + isco6$Poland + isco7$Poland + isco8$Poland + isco9$Poland
+# Add the share columns to all_data
+all_data <- all_data %>%
+  mutate(across(Belgium:Poland, ~ . / total), .keep = "unused")
 
-# Let's merge all these datasets. We'll need a column that stores the occupation categories:
-isco1$ISCO <- 1
-isco2$ISCO <- 2
-isco3$ISCO <- 3
-isco4$ISCO <- 4
-isco5$ISCO <- 5
-isco6$ISCO <- 6
-isco7$ISCO <- 7
-isco8$ISCO <- 8
-isco9$ISCO <- 9
+# Merge all_data with task_data
+task_data %>%
+  mutate(isco08_1dig = as.numeric(str_sub(isco08, 1, 1))) %>%
+  inner_join(all_data, by = "isco08_1dig") %>%
+  group_by(Country, isco08_1dig) %>%
+  summarise_at(vars(starts_with("t_")), mean)
 
-# and this gives us one large file with employment in all occupations.
-all_data <- rbind(isco1, isco2, isco3, isco4, isco5, isco6, isco7, isco8, isco9)
 
-# We have 9 occupations and the same time range for each, so we an add the totals by
-# adding a vector that is 9 times the previously calculated totals
-all_data$total_Belgium <- c(total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium, total_Belgium) 
-all_data$total_Spain <- c(total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain, total_Spain) 
-all_data$total_Poland <- c(total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland, total_Poland) 
-
-# And this will give us shares of each occupation among all workers in a period-country
-all_data$share_Belgium = all_data$Belgium/all_data$total_Belgium
-all_data$share_Spain = all_data$Spain/all_data$total_Spain
-all_data$share_Poland = all_data$Poland/all_data$total_Poland
 
 # Now let's look at the task data. We want the first digit of the ISCO variable only
 library(stringr)
@@ -68,10 +56,13 @@ task_data$isco08_1dig <- str_sub(task_data$isco08, 1, 1) %>% as.numeric()
 
 # And we'll calculate the mean task values at a 1-digit level 
 # (more on what these tasks are below)
-
 aggdata <-aggregate(task_data, by=list(task_data$isco08_1dig),
                     FUN=mean, na.rm=TRUE)
 aggdata$isco08 <- NULL
+
+# Save the output to a file
+write.csv(all_data, "all_data.csv", row.names = FALSE)
+write.csv(aggdata, "aggdata.csv", row.names = FALSE)
 
 # We'll be interested in tracking the intensity of Non-routine cognitive analytical tasks
 # Using a framework reminiscent of the work by David Autor.
@@ -166,9 +157,9 @@ combined$multip_Poland_NRCA <- (combined$std_Poland_NRCA*combined$share_Poland)
 agg_Spain <-aggregate(combined$multip_Spain_NRCA, by=list(combined$TIME),
                       FUN=sum, na.rm=TRUE)
 agg_Belgium <-aggregate(combined$multip_Belgium_NRCA, by=list(combined$TIME),
-                      FUN=sum, na.rm=TRUE)
+                        FUN=sum, na.rm=TRUE)
 agg_Poland <-aggregate(combined$multip_Poland_NRCA, by=list(combined$TIME),
-                      FUN=sum, na.rm=TRUE)
+                       FUN=sum, na.rm=TRUE)
 
 # We can plot it now!
 plot(agg_Poland$x, xaxt="n")
@@ -189,4 +180,3 @@ axis(1, at=seq(1, 40, 3), labels=agg_Belgium$Group.1[seq(1, 40, 3)])
 # 4.A.3.a.3	Controlling Machines and Processes
 # 4.C.2.d.1.i	Spend Time Making Repetitive Motions
 # 4.C.3.d.3	Pace Determined by Speed of Equipment
-

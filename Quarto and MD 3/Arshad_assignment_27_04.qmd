@@ -1,0 +1,49 @@
+---
+title: "Assignment 27.04"
+author: "Arshad"
+date: today
+date-format: long
+format:
+  html: 
+    toc: true
+    toc-depth: 2
+    toc-expand: 1
+    toc-title: Table of contents
+    toc-location: left
+    smooth-scroll: true
+output: html_document
+number-sections: true
+number-depth: 2
+title-block-banner: true
+code-fold: true
+latex-tinytex: false
+theme: 
+  light: flatly
+  dark: darkly
+execute:
+  echo: fenced
+documentclass: article
+fontsize: 11pt
+geometry: margin=1in
+params:
+  season: 3
+  printcode: TRUE
+---
+
+```{r, results='asis'}
+dir_file=paste("../Data/season_",params$season,".csv", sep="")
+
+inputfile =read.csv(dir_file)
+
+season_no <- params$season
+vie=inputfile$description[inputfile$viewers==max(inputfile$viewers)]
+
+fen=inputfile$title[inputfile$no_season==max(inputfile$no_season)]
+fed=inputfile$description[inputfile$no_season==max(inputfile$no_season)]
+
+no_season <- params$season
+title <- params$title
+
+cat("The season is ", params$season, "\n", "The name of final episode in this season is ",fen,". Here is the brief description of this episode: ", "\n", "   ",fed, sep="")
+cat("\n\n","The most popular episode was ", inputfile$title[inputfile$viewers==max(inputfile$viewers)], " by ", max(inputfile$viewers), " millions of viewers", ". See below information about it: \n  ",gsub("\n", "_",strwrap(inputfile$description[inputfile$viewers==max(inputfile$viewers)])), sep="")
+```

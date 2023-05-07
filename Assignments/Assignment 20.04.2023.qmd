@@ -1,0 +1,72 @@
+---
+title: "TV show"
+subtitle: "with new changes from 2nd assignment"
+author: "Arshad"
+date: today
+date-format: long
+format:
+  html: 
+    toc: true
+    toc-depth: 2
+    toc-expand: 1
+    toc-title: Table of contents
+    toc-location: left
+    smooth-scroll: true
+  pdf: 
+    lof: true
+    lot: true
+number-sections: true
+number-depth: 2
+title-block-banner: true
+code-fold: true
+latex-tinytex: false
+theme: 
+  light: flatly
+  dark: darkly
+execute: 
+  echo: fenced
+  warning: false
+---
+
+# Game of Thrones
+
+## About GOT
+
+***Game of Thrones*** is an American fantasy drama television series created by **David Benioff** and **D. B. Weiss** for **HBO**. It is an adaptation of *A Song of Ice and Fire*, a series of fantasy novels by **George R. R. Martin**, the first of which is ***A Game of Thrones***. The show was shot in the United Kingdom, Canada, Croatia, Iceland, Malta, Morocco, and Spain. It premiered on HBO in the United States on April 17, 2011, and concluded on May 19, 2019, with 73 episodes broadcast over eight seasons. [Wikipedia](https://en.wikipedia.org/wiki/Game_of_Thrones)
+
+<img src="https://static.posters.cz/image/750/plakaty/gra-o-tron-game-of-thrones-logo-i21034.jpg" title="Title: An elephant" alt="GOT title card"/>
+
+## Basic facts about GOT
+
+-   The show consists of **73 episodes**, with a total runtime of approximately 73 hours and 55 minutes.
+-   The series was filmed in various locations around the world, including ***Northern Ireland, Croatia, Spain, and Iceland***.
+-   The show's cast includes many notable actors, including **Emilia Clarke, Kit Harington, Peter Dinklage, Lena Headey**, and **Maisie Williams**, among others.
+-   *"Game of Thrones"* has won numerous awards, including **59 Primetime Emmy Awards**, which is the most won by any scripted television series.
+-   According to Wikipedia, the show's viewership increased over time, with the final season averaging **44.2 million** viewers per episode across all platforms.
+-   The series has been widely praised for its production values, storytelling, and performances, although its final season was controversial among some fans and critics.
+
+# Main characters
+
+::: {.panel-tabset}
+
+
+## Arya Stark
+
+`1. date of birth`
+
+01.01.1978
+
+
+## Tyrion Lannister
+
+`1. date of birth`
+
+01.02.1978
+
+## Sansa Stark
+
+`1. date of birth`
+
+01.03.1978
+    
+:::

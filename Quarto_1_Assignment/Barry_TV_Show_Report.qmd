@@ -1,0 +1,40 @@
+---
+title: "Assignment_Barry_TV_show"
+format:
+  html:
+    theme: default
+---
+
+_Barrry_ is an American dark comedy-crime television series created by Alec Berg and Bill Hader that premiered on HBO. It stars Hader as the titular character, a hitman from the Midwest who travels to Los Angeles to kill someone and then finds himself joining an acting class taught by Henry Winkler's character.
+
+Here is a summary of some basic statistics on viewership (in Millions):
+
+```{r}
+# Create a data frame with the viewership data
+barry_data <- data.frame(
+  episode = c(1:28),
+  viewers = c(0.564, 0.641, 0.595, 0.511, 0.643, 0.560, 0.636, 0.548, 0.532, 0.424, 1.78, 1.94, 2.03, 1.99, 1.87, 2.21, 0.249, 0.294, 0.299, 0.270, 0.257, 0.210, 0.261, 0.221, 0.274, 0.216, 0.208, 0.303)
+)
+
+# Calculate the mean, median, minimum, maximum, and standard deviation
+mean_viewers <- mean(barry_data$viewers)
+median_viewers <- median(barry_data$viewers)
+min_viewers <- min(barry_data$viewers)
+max_viewers <- max(barry_data$viewers)
+sd_viewers <- sd(barry_data$viewers)
+
+# Display the statistics
+cat("Mean viewership: ", mean_viewers, "\n")
+cat("Median viewership: ", median_viewers, "\n")
+cat("Minimum viewership: ", min_viewers, "\n")
+cat("Maximum viewership: ", max_viewers, "\n")
+cat("Standard deviation of viewership: ", sd_viewers, "\n")
+
+```
+
+
+![Barry shot](https://github.com/RafalMisiorski/RRcourse2023/raw/main/Barry_pic.jpg "Barry shot")
+
+
+
+

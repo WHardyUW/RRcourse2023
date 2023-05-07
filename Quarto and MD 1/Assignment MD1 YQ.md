@@ -13,3 +13,8 @@ execute:
 
 The series was renewed for an eighth season on January 30, 2018.[1] In January 2019, the series was renewed for a ninth and final season which premiered on July 17, 2019.[2] During the course of the series, 134 episodes of Suits aired over nine seasons, between June 23, 2011, and September 25, 2019.
 
+# 2. A photo with the logo or a shot from the show itself.
+![The logo of Suits](https://en.wikipedia.org/wiki/File:Suits_Logo.png)
+
+
+

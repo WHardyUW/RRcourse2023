@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Wojciech Hardy">
-<meta name="dcterms.date" content="2023-04-20">
 
 <title>Quarto</title>
 <style>
@@ -31,54 +30,94 @@ ul.task-list li input[type="checkbox"] {
 <script src="QMD_class_2_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="QMD_class_2_files/libs/quarto-html/anchor.min.js"></script>
 <link href="QMD_class_2_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="QMD_class_2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="QMD_class_2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="QMD_class_2_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="QMD_class_2_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="QMD_class_2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="QMD_class_2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="QMD_class_2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="QMD_class_2_files/libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 </head>
 
-<body class="fullcontent">
+<body>
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Quarto</h1>
-<p class="subtitle lead">YAML, rendering and parameters</p>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Wojciech Hardy </p>
-          </div>
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Quarto</h1>
+            <p class="subtitle lead">YAML, rendering and parameters</p>
+                      </div>
   </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 20, 2023</p>
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Wojciech Hardy </p>
+            </div>
     </div>
-  </div>
-  
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">4/20/23</p>
+      </div>
+    </div>
     
-  </div>
+      
+    </div>
+    
   
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#moving-from-different-formats-to-quarto" id="toc-moving-from-different-formats-to-quarto" class="nav-link active" data-scroll-target="#moving-from-different-formats-to-quarto"><span class="toc-section-number">1</span>  Moving from different formats to Quarto</a>
+  <ul class="collapse">
+  <li><a href="#migrating-from-rmarkdown" id="toc-migrating-from-rmarkdown" class="nav-link" data-scroll-target="#migrating-from-rmarkdown"><span class="toc-section-number">1.1</span>  Migrating from RMarkdown</a></li>
+  <li><a href="#turning-your-notebook-into-a-quarto-document" id="toc-turning-your-notebook-into-a-quarto-document" class="nav-link" data-scroll-target="#turning-your-notebook-into-a-quarto-document"><span class="toc-section-number">1.2</span>  Turning your Notebook into a Quarto document</a></li>
+  </ul></li>
+  <li><a href="#to-add-a-refreshable-preview" id="toc-to-add-a-refreshable-preview" class="nav-link" data-scroll-target="#to-add-a-refreshable-preview"><span class="toc-section-number">2</span>  To add a (refreshable) preview</a></li>
+  <li><a href="#need-a-recap" id="toc-need-a-recap" class="nav-link" data-scroll-target="#need-a-recap"><span class="toc-section-number">3</span>  Need a recap?</a></li>
+  <li><a href="#so-what-is-yaml" id="toc-so-what-is-yaml" class="nav-link" data-scroll-target="#so-what-is-yaml"><span class="toc-section-number">4</span>  So what is YAML?</a></li>
+  <li><a href="#yaml-in-quarto---options" id="toc-yaml-in-quarto---options" class="nav-link" data-scroll-target="#yaml-in-quarto---options"><span class="toc-section-number">5</span>  YAML in Quarto - options</a>
+  <ul class="collapse">
+  <li><a href="#basics" id="toc-basics" class="nav-link" data-scroll-target="#basics"><span class="toc-section-number">5.1</span>  Basics</a></li>
+  <li><a href="#html-options" id="toc-html-options" class="nav-link" data-scroll-target="#html-options"><span class="toc-section-number">5.2</span>  HTML options</a></li>
+  </ul></li>
+  <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists"><span class="toc-section-number">6</span>  Lists</a>
+  <ul class="collapse">
+  <li><a href="#pdf-options" id="toc-pdf-options" class="nav-link" data-scroll-target="#pdf-options"><span class="toc-section-number">6.1</span>  PDF options</a></li>
+  <li><a href="#combining-formats" id="toc-combining-formats" class="nav-link" data-scroll-target="#combining-formats"><span class="toc-section-number">6.2</span>  Combining formats</a></li>
+  <li><a href="#getting-an-.md-file" id="toc-getting-an-.md-file" class="nav-link" data-scroll-target="#getting-an-.md-file"><span class="toc-section-number">6.3</span>  Getting an .md file</a></li>
+  </ul></li>
+  <li><a href="#exporting-yaml" id="toc-exporting-yaml" class="nav-link" data-scroll-target="#exporting-yaml"><span class="toc-section-number">7</span>  Exporting YAML</a></li>
+  <li><a href="#rendering" id="toc-rendering" class="nav-link" data-scroll-target="#rendering"><span class="toc-section-number">8</span>  Rendering</a>
+  <ul class="collapse">
+  <li><a href="#terminal" id="toc-terminal" class="nav-link" data-scroll-target="#terminal"><span class="toc-section-number">8.1</span>  Terminal</a></li>
+  <li><a href="#from-the-level-of-r" id="toc-from-the-level-of-r" class="nav-link" data-scroll-target="#from-the-level-of-r"><span class="toc-section-number">8.2</span>  From the level of R</a></li>
+  </ul></li>
+  <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment"><span class="toc-section-number">9</span>  Assignment</a></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
-</header>
 
-<section id="moving-from-different-formats-to-quarto" class="level1">
-<h1>Moving from different formats to Quarto</h1>
-<section id="migrating-from-rmarkdown" class="level2">
-<h2 class="anchored" data-anchor-id="migrating-from-rmarkdown">Migrating from RMarkdown</h2>
+
+
+<section id="moving-from-different-formats-to-quarto" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Moving from different formats to Quarto</h1>
+<section id="migrating-from-rmarkdown" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="migrating-from-rmarkdown"><span class="header-section-number">1.1</span> Migrating from RMarkdown</h2>
 <p>Quarto is quite new. It’s enough similar to RMarkdown to make most of the uses convertible. How?</p>
 <p>From a regular R script:</p>
 <p>Step 1) Run <code>knitr::convert_chunk_header(input = "RMD_class_1_cut.Rmd", output = "QMD_class_1_cut.qmd")</code></p>
@@ -123,8 +162,8 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>Done!</p>
 </section>
-<section id="turning-your-notebook-into-a-quarto-document" class="level2">
-<h2 class="anchored" data-anchor-id="turning-your-notebook-into-a-quarto-document">Turning your Notebook into a Quarto document</h2>
+<section id="turning-your-notebook-into-a-quarto-document" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="turning-your-notebook-into-a-quarto-document"><span class="header-section-number">1.2</span> Turning your Notebook into a Quarto document</h2>
 <p>Step 1) insert a YAML header in a <em>raw</em> block</p>
 <p>For example:</p>
 <code>---</code>
@@ -141,8 +180,8 @@ format: html
 <hr>
 </section>
 </section>
-<section id="to-add-a-refreshable-preview" class="level1">
-<h1>To add a (refreshable) preview</h1>
+<section id="to-add-a-refreshable-preview" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> To add a (refreshable) preview</h1>
 <p>From terminal run:</p>
 <p><code>quarto preview file.qmd</code></p>
 <p>or</p>
@@ -150,14 +189,14 @@ format: html
 <p>(You can preview in pdf by adding <code>--to pdf</code>)</p>
 <hr>
 </section>
-<section id="need-a-recap" class="level1">
-<h1>Need a recap?</h1>
+<section id="need-a-recap" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Need a recap?</h1>
 <p>Remember you can <a href="https://quarto.org/docs/authoring/markdown-basics.html">check the documentation</a> - there’s many more options than we covered.</p>
 <p>For example, let’s check here for some more info on <a href="https://quarto.org/docs/authoring/figures.html">figures</a> or <a href="https://quarto.org/docs/authoring/diagrams.html">diagrams</a> or other <a href="https://quarto.org/docs/authoring/notebook-embed.html">neat tricks</a>.</p>
 <hr>
 </section>
-<section id="so-what-is-yaml" class="level1">
-<h1>So what is YAML?</h1>
+<section id="so-what-is-yaml" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> So what is YAML?</h1>
 <p><strong><a href="https://yaml.org/">YAML</a></strong> = <strong>Y</strong>AML <strong>A</strong>in’t <strong>M</strong>arkup <strong>L</strong>anguage</p>
 <p>As Wikipedia puts it: “a human-readable data-serialization language”.</p>
 <p>If that’s not clear, ChatGPT makes it clearer:</p>
@@ -167,10 +206,10 @@ format: html
 </ol>
 <hr>
 </section>
-<section id="yaml-in-quarto---options" class="level1">
-<h1>YAML in Quarto - options</h1>
-<section id="basics" class="level2">
-<h2 class="anchored" data-anchor-id="basics">Basics</h2>
+<section id="yaml-in-quarto---options" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> YAML in Quarto - options</h1>
+<section id="basics" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="basics"><span class="header-section-number">5.1</span> Basics</h2>
 <section id="the-syntax" class="level3">
 <h3 class="anchored" data-anchor-id="the-syntax">The syntax</h3>
 <p>YAML requires indentation for options and suboptions (accordingly with the hierarchy). Examples from leaset complex to most complex:</p>
@@ -212,8 +251,8 @@ number-sections: true
 <p><a href="https://quarto.org/docs/output-formats/all-formats.html">For all available formats check here.</a></p>
 </section>
 </section>
-<section id="html-options" class="level2">
-<h2 class="anchored" data-anchor-id="html-options">HTML options</h2>
+<section id="html-options" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="html-options"><span class="header-section-number">5.2</span> HTML options</h2>
 <p>The html format is the most flexible as it enables dynamic and interactive elements.</p>
 <p>To get an html final output, code in .qmd gets evaluated and the output is saved to .md (regular markdown). This is then translated using pandoc to html.</p>
 <section id="table-of-contents" class="level3">
@@ -301,8 +340,8 @@ Some more text
 </section>
 </section>
 </section>
-<section id="lists" class="level1">
-<h1>Lists</h1>
+<section id="lists" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Lists</h1>
 <div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Ordered</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Unordered</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Subitems</a></li></ul>
 <div class="tab-content">
@@ -347,8 +386,8 @@ Some more text
 </pre>
 <p><code>---</code></p>
 </section>
-<section id="pdf-options" class="level2">
-<h2 class="anchored" data-anchor-id="pdf-options">PDF options</h2>
+<section id="pdf-options" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="pdf-options"><span class="header-section-number">6.1</span> PDF options</h2>
 <p>Many of the options for the pdf and docx formats look the same. Main differences:</p>
 <ol type="1">
 <li><p>no dynamic elements (e.g.&nbsp;no floating table of content)</p></li>
@@ -384,8 +423,8 @@ Some more text
 <p><code>lot: true</code></p>
 </section>
 </section>
-<section id="combining-formats" class="level2">
-<h2 class="anchored" data-anchor-id="combining-formats">Combining formats</h2>
+<section id="combining-formats" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="combining-formats"><span class="header-section-number">6.2</span> Combining formats</h2>
 <p>You can also render several formats and link them together.</p>
 <p>For example:</p>
 <code>---</code>
@@ -403,8 +442,8 @@ Some more text
 </pre>
 <p><code>---</code></p>
 </section>
-<section id="getting-an-.md-file" class="level2">
-<h2 class="anchored" data-anchor-id="getting-an-.md-file">Getting an .md file</h2>
+<section id="getting-an-.md-file" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="getting-an-.md-file"><span class="header-section-number">6.3</span> Getting an .md file</h2>
 <p>We might be interested in getting a pure .md file (for example for a readme.md file for GitHub).</p>
 <p>.md is a byproduct of the rendering process, usually deleted by the end of the process.</p>
 <p>To keep it:</p>
@@ -412,8 +451,8 @@ Some more text
 <p>Try it for the <code>QMD_class_1_cut.qmd</code> file and compare QMD with MD.</p>
 </section>
 </section>
-<section id="exporting-yaml" class="level1">
-<h1>Exporting YAML</h1>
+<section id="exporting-yaml" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Exporting YAML</h1>
 <p>We’ve been editing YAML before. We can actually put the info from YAML in a separate file that will be automatically considered for all qmd documents.</p>
 <p>It’s helpful when:</p>
 <ul>
@@ -428,11 +467,11 @@ Some more text
 <p>You can create the .yml files in notepad.</p>
 <p>Mostly the options are merged rather than overwritten (so bundled together).</p>
 </section>
-<section id="rendering" class="level1">
-<h1>Rendering</h1>
+<section id="rendering" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Rendering</h1>
 <p>You can render Quarto MD files from your scripts or terminal. To do so, use:</p>
-<section id="terminal" class="level2">
-<h2 class="anchored" data-anchor-id="terminal">Terminal</h2>
+<section id="terminal" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="terminal"><span class="header-section-number">8.1</span> Terminal</h2>
 <p>For a whole project:</p>
 <p><code>quarto render</code> in current folder or <code>quarto render myproject</code> for the <code>myproject</code> project.</p>
 <p>For a file:</p>
@@ -440,16 +479,16 @@ Some more text
 <p>For a folder:</p>
 <p><code>quarto render directory/</code></p>
 </section>
-<section id="from-the-level-of-r" class="level2">
-<h2 class="anchored" data-anchor-id="from-the-level-of-r">From the level of R</h2>
+<section id="from-the-level-of-r" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="from-the-level-of-r"><span class="header-section-number">8.2</span> From the level of R</h2>
 <p><code>library(quarto)</code> <code>quarto_render()</code></p>
 <p>You can specify options for the rendering, including:</p>
 <p><code>output_format</code>, <code>output_file</code>, <code>use_freezer</code>, <code>execute_params</code>, etc.</p>
 <p>Parameters will let you specify data inputs at the document’s conception.</p>
 </section>
 </section>
-<section id="assignment" class="level1">
-<h1>Assignment</h1>
+<section id="assignment" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Assignment</h1>
 <p>Get your TV show description file from the previous week. Modify it using what we’ve learned today:</p>
 <ol type="1">
 <li><p>Render it into at least two different formats in an automated way (e.g.&nbsp;using YAML options or a script).</p></li>
@@ -483,6 +522,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -600,4 +754,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
+<script src="QMD_class_2_files/libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

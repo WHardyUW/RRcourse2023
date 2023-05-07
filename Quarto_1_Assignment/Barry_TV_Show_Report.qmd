@@ -33,7 +33,23 @@ cat("Standard deviation of viewership: ", sd_viewers, "\n")
 ```
 
 
-![Barry shot](https://github.com/RafalMisiorski/RRcourse2023/raw/main/Barry_pic.jpg "Barry shot")
+![Barry shot](https://raw.githubusercontent.com/RafalMisiorski/RRcourse2023/main/Quarto_1_Assignment/Barry_pic.jpg "Barry shot")
+
+
+3. Create a graph of viewership over time:
+
+```r
+```{r}
+library(ggplot2)
+
+
+ggplot(barry_data, aes(x = episode, y = viewers)) +
+  geom_line(color = "blue") +
+  labs(x = "Episode Number", y = "Viewership (millions)", title = "Barry Viewership Over Time")
+
+```
+
+
 
 
 

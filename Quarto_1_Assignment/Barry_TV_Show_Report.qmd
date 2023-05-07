@@ -41,6 +41,7 @@ cat("Standard deviation of viewership: ", sd_viewers, "\n")
 ```r
 ```{r}
 library(ggplot2)
+library(tidyverse)
 
 
 ggplot(barry_data, aes(x = episode, y = viewers)) +
@@ -51,6 +52,29 @@ ggplot(barry_data, aes(x = episode, y = viewers)) +
 
 
 
+4. Create a graph of episode-to-episode changes in viewership:
+
+
+```{r}
+barry_data <- barry_data %>%
+  mutate(viewership_change = viewers - lag(viewers))
+```
+
+4. The graph of the episode-to-episode (or season-to-season) changes in viewership:
+
+```{r}
+library(ggplot2)
+
+# Create a separate dataframe for the text labels
+text_data <- data.frame(x = c(8, 16, 24), y = rep(max(barry_data$viewership_change), 3), label = c("8", "16", "24"))
+
+
+ggplot(barry_data, aes(x = episode, y = viewers)) +
+  geom_line(color = "blue") +
+  geom_vline(xintercept = c(8, 16, 24), linetype = "dashed", color = "red") +
+  geom_text(aes(label = viewers), vjust = -0.5, size = 3) +
+  labs(x = "Episode Number", y = "Viewership (millions)", title = "Barry Viewership Over Time")
 
 
 
+```

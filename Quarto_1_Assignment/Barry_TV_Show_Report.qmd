@@ -52,7 +52,7 @@ ggplot(barry_data, aes(x = episode, y = viewers)) +
 
 
 
-4. Create a graph of episode-to-episode changes in viewership:
+4. The graph of the episode-to-episode (or season-to-season) changes in viewership:
 
 
 ```{r}
@@ -60,7 +60,6 @@ barry_data <- barry_data %>%
   mutate(viewership_change = viewers - lag(viewers))
 ```
 
-4. The graph of the episode-to-episode (or season-to-season) changes in viewership:
 
 ```{r}
 library(ggplot2)

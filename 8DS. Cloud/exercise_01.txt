@@ -1,0 +1,38 @@
+-----------------exercise1--------------
+hsdxyq@instance-hyq-1:~$ uname -a
+Linux instance-hyq-1 5.15.0-1030-gcp #37-Ubuntu SMP Tue Feb 14 19:37:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+hsdxyq@instance-hyq-1:~$ touch test.txt
+hsdxyq@instance-hyq-1:~$ ll
+total 44
+drwxr-x--- 6 hsdxyq hsdxyq 4096 Apr 12 10:19 ./
+drwxr-xr-x 4 root   root   4096 Apr 12 10:03 ../
+-rw-r--r-- 1 hsdxyq hsdxyq  220 Jan  6  2022 .bash_logout
+-rw-r--r-- 1 hsdxyq hsdxyq 3771 Jan  6  2022 .bashrc
+drwx------ 2 hsdxyq hsdxyq 4096 Apr 12 10:03 .cache/
+drwxrwxr-x 8 hsdxyq hsdxyq 4096 Apr 12 10:20 .git/
+-rw-rw-r-- 1 hsdxyq hsdxyq   23 Apr 12 10:19 .gitconfig
+-rw-r--r-- 1 hsdxyq hsdxyq  807 Jan  6  2022 .profile
+drwx------ 2 hsdxyq hsdxyq 4096 Apr 12 10:19 .ssh/
+-rw------- 1 hsdxyq hsdxyq  738 Apr 12 10:09 .viminfo
+drwxrwxr-x 2 hsdxyq hsdxyq 4096 Apr 12 10:10 rr/
+-rw-rw-r-- 1 hsdxyq hsdxyq    0 Apr 12 10:26 test.txt
+
+---------------exercise2----------------
+hsdxyq@instance-hyq-1:~/rr$ touch test.txt
+hsdxyq@instance-hyq-1:~/rr$ touch new.txt
+hsdxyq@instance-hyq-1:~/rr$ vim new.txt
+hsdxyq@instance-hyq-1:~/rr$ ls -ltSr
+total 4
+-rw-rw-r-- 1 hsdxyq hsdxyq  0 Apr 12 10:45 test.txt
+-rw-rw-r-- 1 hsdxyq hsdxyq 27 Apr 12 10:48 new.txt
+hsdxyq@instance-hyq-1:~/rr$ cp /etc/modules ./
+hsdxyq@instance-hyq-1:~/rr$ ls -ltSr
+total 8
+-rw-rw-r-- 1 hsdxyq hsdxyq   0 Apr 12 10:45 test.txt
+-rw-rw-r-- 1 hsdxyq hsdxyq  27 Apr 12 10:48 new.txt
+-rw-r--r-- 1 hsdxyq hsdxyq 195 Apr 12 10:48 modules
+hsdxyq@instance-hyq-1:~/rr$ vim new.txt
+hsdxyq@instance-hyq-1:~/rr$ cd ../
+hsdxyq@instance-hyq-1:~$ rmdir rr
+rmdir: failed to remove 'rr': Directory not empty
+hsdxyq@instance-hyq-1:~$ rm -rf rr

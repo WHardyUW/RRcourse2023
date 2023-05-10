@@ -1,9 +1,20 @@
 ---
 title: "TV_Show_Assignment_Game_of_Thrones"
-format: html
+author: "Odomero Omokahfe"
+date: today
+format:
+  html: 
+    toc: true
+    toc-title: Table Of Contents
+    toc-location: left
+    theme: 
+      light: lumen
+      dark: darkly
+  docx: default
 editor: visual
 execute:
   echo: fenced
+  warning: false
 ---
 
 ## Game of Thrones
@@ -22,10 +33,22 @@ views <- read_excel("US_Viewership_Game_of_Thrones.xlsx")
 views
 ```
 
-#### Plot of Average Views (Season 1 to 6)
+## Data Visualization
+
+::: panel-tabset
+### Scatter Plot of Average Views
 
 ```{r}
 #| label: fig-mpg
 #| fig-cap: "Average views (Season 1 to 6)"
-plot(views$`Average views`)
+plot(views$`Average views`, type="p")
 ```
+
+### Line Plot of Average Views
+
+```{r}
+#| label: fig-mpg2
+#| fig-cap: "Average views (Season 1 to 6)"
+plot(views$`Average views`, type="line")
+```
+:::

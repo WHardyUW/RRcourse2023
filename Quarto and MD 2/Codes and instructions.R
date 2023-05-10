@@ -5,7 +5,7 @@
 
 library(quarto)
 
-setwd("")
+setwd("/Users/huyiqing/PycharmProjects/UW_lab/RRcourse2023/Quarto and MD 2")
 
 # Converting from Rmd to Qmd
 

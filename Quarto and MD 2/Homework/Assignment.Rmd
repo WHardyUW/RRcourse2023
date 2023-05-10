@@ -1,7 +1,7 @@
 ---
 title: "Exercise"
-author: "Wojciech Hardy"
-date: "3/29/2022"
+author: "Yiqing Hu"
+date: '2022-02-01'
 output: html_document
 ---
 

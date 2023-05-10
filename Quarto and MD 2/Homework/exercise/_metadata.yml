@@ -1,0 +1,13 @@
+title: "Homeowrk for Quarto"
+author: "Yiqing Hu"
+date: today
+date-format: short
+output: html_document
+format:
+  html:
+    toc: true
+    toc-depth: 3
+theme:
+  dark: superhero
+  light: flatly
+number-sections: true

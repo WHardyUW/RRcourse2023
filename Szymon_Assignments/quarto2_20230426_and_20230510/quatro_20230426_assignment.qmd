@@ -1,7 +1,13 @@
 ---
 title: "Klan-assignment-20230426"
 author: "Szymon Socha"
-format: html
+format: 
+  html: 
+    theme: solar
+    toc: true
+    toc-depth: 1
+  docx:
+    theme: default
 editor: visual
 ---
 
@@ -23,6 +29,7 @@ Klan revolves around the fates of the multi-generation Lubicz family from Warsaw
 
 ## Basic statistics
 
+::: panel-tabset
 ### Viewers
 
 | Period    | No. views |
@@ -37,6 +44,7 @@ Klan revolves around the fates of the multi-generation Lubicz family from Warsaw
 |:---------|:------:|
 | IMdB     |  2/10  |
 | Filweb   | 2.8/10 |
+:::
 
 ## Plot over time
 

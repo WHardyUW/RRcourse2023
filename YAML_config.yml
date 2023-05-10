@@ -1,0 +1,20 @@
+---
+title: "Quarto Assignment (SUITS - A TV SERIES)"
+date: today
+author: "Ayoola Ayetigbo (444421)"
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    toc-expand: 3
+    toc-title: Table of COntents
+    toc-location: left
+    smooth-scroll: true
+editor: visual
+title-block-banner: true
+editor_options: 
+  chunk_output_type: console
+execute:
+  echo: fenced  
+theme: superhero
+---

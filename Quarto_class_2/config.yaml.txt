@@ -1,0 +1,13 @@
+---
+title: "Barry TV Show Report"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: "cosmo"
+    self_contained: true
+  pdf_document:
+    toc: true
+  word_document:
+    toc: true
+---

@@ -1,0 +1,119 @@
+---
+title: "Assignment_Barry_TV_show"
+format:
+  pdf: default
+  html:
+    theme: cosmo
+input:
+  - config.yaml
+---
+
+
+
+
+![Barry shot](https://raw.githubusercontent.com/RafalMisiorski/RRcourse2023/main/Quarto_1_Assignment/Barry_pic.jpg "Barry shot")
+
+
+::: {.tabset}
+# Tab 1: Introduction
+<!-- Add the introduction text here -->
+
+_Barrry_ is an American dark comedy-crime television series created by Alec Berg and Bill Hader that premiered on HBO. It stars Hader as the titular character, a hitman from the Midwest who travels to Los Angeles to kill someone and then finds himself joining an acting class taught by Henry Winkler's character.
+
+# Tab 2: Viewership Statistics
+<!-- Add the viewership statistics text and code here -->
+
+Here is a summary of some basic statistics on viewership (in Millions):
+
+```{r}
+# Create a data frame with the viewership data
+barry_data <- data.frame(
+  episode = c(1:28),
+  viewers = c(0.564, 0.641, 0.595, 0.511, 0.643, 0.560, 0.636, 0.548, 0.532, 0.424, 1.78, 1.94, 2.03, 1.99, 1.87, 2.21, 0.249, 0.294, 0.299, 0.270, 0.257, 0.210, 0.261, 0.221, 0.274, 0.216, 0.208, 0.303)
+)
+
+# Calculate the mean, median, minimum, maximum, and standard deviation
+mean_viewers <- mean(barry_data$viewers)
+median_viewers <- median(barry_data$viewers)
+min_viewers <- min(barry_data$viewers)
+max_viewers <- max(barry_data$viewers)
+sd_viewers <- sd(barry_data$viewers)
+
+# Display the statistics
+cat("Mean viewership: ", mean_viewers, "\n")
+cat("Median viewership: ", median_viewers, "\n")
+cat("Minimum viewership: ", min_viewers, "\n")
+cat("Maximum viewership: ", max_viewers, "\n")
+cat("Standard deviation of viewership: ", sd_viewers, "\n")
+
+```
+
+# Tab 3: Viewership Over Time
+<!-- Add the viewership over time text and code here -->
+
+3. Create a graph of viewership over time:
+
+
+```{r}
+library(ggplot2)
+library(tidyverse)
+
+
+ggplot(barry_data, aes(x = episode, y = viewers)) +
+  geom_line(color = "blue") +
+  labs(x = "Episode Number", y = "Viewership (millions)", title = "Barry Viewership Over Time")
+
+```
+
+
+
+
+# Tab 4: Episode-to-Episode Changes
+<!-- Add the episode-to-episode changes text and code here -->
+
+4. The graph of the episode-to-episode (or season-to-season) changes in viewership:
+
+
+```{r}
+barry_data <- barry_data %>%
+  mutate(viewership_change = viewers - lag(viewers))
+```
+
+
+```{r}
+library(ggplot2)
+
+# Create a separate dataframe for the text labels
+text_data <- data.frame(x = c(8, 16, 24), y = rep(max(barry_data$viewership_change), 3), label = c("8", "16", "24"))
+
+
+ggplot(barry_data, aes(x = episode, y = viewers)) +
+  geom_line(color = "blue") +
+  geom_vline(xintercept = c(8, 16, 24), linetype = "dashed", color = "red") +
+  geom_text(aes(label = viewers), vjust = -0.5, size = 3) +
+  labs(x = "Episode Number", y = "Viewership (millions)", title = "Barry Viewership Over Time")
+
+
+
+```
+
+# Tab 5: Summary
+<!-- Add the summary text here -->
+
+```{r}
+
+summary_stats <- data.frame(
+  mean_viewership = mean(barry_data$viewers, na.rm = TRUE),
+  max_viewership = max(barry_data$viewers, na.rm = TRUE),
+  min_viewership = min(barry_data$viewers, na.rm = TRUE),
+  total_episodes = nrow(barry_data)
+)
+
+```
+
+5. Write a short description of the observed changes with inline references to numbers:
+
+```markdown
+The average viewership for "Barry" is `r summary_stats$mean_viewership` million viewers per episode. The highest viewership was achieved by episode `r which.max(barry_data$viewers)` with `r summary_stats$max_viewership` million viewers, while the lowest viewership was for episode `r which.min(barry_data$viewers)` with `r summary_stats$min_viewership` million viewers. Over the course of `r summary_stats$total_episodes` episodes, there have been both increases and decreases in viewership, as shown in the graphs above.
+```
+:::

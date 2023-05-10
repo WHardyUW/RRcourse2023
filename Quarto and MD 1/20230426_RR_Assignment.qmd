@@ -19,3 +19,9 @@ execute:
 | No. of Seasons           |     2      |
 | No. of Episodes          |     16     |
 | Viewership of 1st Season | 76 million |
+
+## Distibution of Rating
+
+
+
+

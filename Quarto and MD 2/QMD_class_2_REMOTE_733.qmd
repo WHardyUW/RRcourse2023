@@ -2,15 +2,10 @@
 title: "Quarto"
 subtitle: "YAML, rendering and parameters"
 author: "Wojciech Hardy"
-title-block-banner: true
-date: today
-date-format: short
-format: pdf
-theme: quartrz
+date: "4/20/2023"
+format: html
 execute:
   echo: fenced
-  warning: false
-  freeze: true 
 ---
 
 
@@ -52,6 +47,7 @@ date: "4/20/2023"
 format: html
 </pre>
 `---`
+
 Done! You don't even need to switch to *.qmd!
 
 But if you want embedded code chunks, you should switch to .qmd.
@@ -475,11 +471,7 @@ Get your TV show description file from the previous week. Modify it using what w
 
 2) Add some features for the .html output, e.g.: add a table of contents and change the theme.
 
-<<<<<<< HEAD
-3) We skip step 3. 
-=======
 3) Include tabs.
->>>>>>> RR/main
 
 4) Browse through the documentation and pick additional configuration options on your own.
 

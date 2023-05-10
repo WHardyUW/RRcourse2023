@@ -1,17 +1,24 @@
 ---
-title: "Assignment"
+title: "Assignment 27.04.2023"
 author: ""
-date: today
+date: 27.04.2023
 output: html_document
 params:
-  season: 1
+  season: 2
 ---
+
+install.packages("quarto")
+library(quarto)
 
 ```{r}
 season_no <- params$season
 load(paste0("../Data/season_", season_no, ".RData"))
-
-     
+ 
+quarto_render("Assignment.qmd", execute_params = list(
+  season_no = 2,
+  printcode = FALSE,
+  data = "season_2.RData"
+))
 
 
 ```

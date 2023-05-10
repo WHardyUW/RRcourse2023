@@ -2,15 +2,10 @@
 title: "Quarto"
 subtitle: "YAML, rendering and parameters"
 author: "Wojciech Hardy"
-title-block-banner: true
-date: today
-date-format: short
-format: pdf
-theme: quartrz
+date: "4/20/2023"
+format: html
 execute:
   echo: fenced
-  warning: false
-  freeze: true 
 ---
 
 
@@ -52,6 +47,7 @@ date: "4/20/2023"
 format: html
 </pre>
 `---`
+
 Done! You don't even need to switch to *.qmd!
 
 But if you want embedded code chunks, you should switch to .qmd.
@@ -106,7 +102,7 @@ If that's not clear, ChatGPT makes it clearer:
 
 ### The syntax
 
-YAML requires indentation for options and suboptions (accordingly with the hierarchy). Examples:
+YAML requires indentation for options and suboptions (accordingly with the hierarchy). Examples from leaset complex to most complex:
 
 `---`
 <pre class="code-block">
@@ -116,7 +112,6 @@ format: html
 `---`
 
 Now with html-specific options:
-
 `---`
 <pre class="code-block">
 title: "My document"
@@ -141,7 +136,6 @@ or include an image for a background:
 Change the date format and make it dynamic:
 
 `date: today`
-
 `date-format: short`
 
 ### Setting default chunk options
@@ -151,13 +145,11 @@ Within the `execute` key you can set default options for code blocks. They can b
 Example:
 
 `---`
-<pre class="code-block">
 execute:
   echo: fenced
   warning: false
   cache: true 
   freeze: true
-</pre>
 `---`
 
 `freeze` specifies a more general approach for caching when rendering a bunch of files or a whole project. `true` to not recompute generated computational output during a whole project render. `false` to always recompute (default). `auto` to recompute when a source file changed.
@@ -388,7 +380,7 @@ For example:
 <pre class="code-block">
 format: 
   html: default
-  docx: default
+  ipynb: default
 </pre>
 `---`
 
@@ -426,7 +418,7 @@ It's helpful when:
 
 We have several options here:
 
-`_quarto.yml` file keeps information at a project level ([see here](https://quarto.org/docs/projects/quarto-projects.html#project-metadata))
+`_quarto.yml` file keeps information at a project level
 
 `dir/_metadata.yml` file keeps information at a directory level (e.g. within a project)
 
@@ -475,12 +467,10 @@ Get your TV show description file from the previous week. Modify it using what w
 
 2) Add some features for the .html output, e.g.: add a table of contents and change the theme.
 
-<<<<<<< HEAD
-3) We skip step 3. 
-=======
-3) Include tabs.
->>>>>>> RR/main
+3) Put the YAML options in a separate file.
 
-4) Browse through the documentation and pick additional configuration options on your own.
+4) Include tabs.
+
+5) Browse through the documentation and pick additional configuration options on your own.
 
 Note: if you didn't finish the assignment last week, you can work with the Assignment.Rmd file. You'll have to convert it to .qmd first though (use what we've learned today for that!)

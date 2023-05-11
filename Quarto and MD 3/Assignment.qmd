@@ -1,3 +1,5 @@
+
+
 ---
 title: "Assignment 27.04.2023"
 author: ""
@@ -7,10 +9,11 @@ params:
   season: 2
 ---
 
+
+```{r}
 install.packages("quarto")
 library(quarto)
 
-```{r}
 season_no <- params$season
 load(paste0("../Data/season_", season_no, ".RData"))
  

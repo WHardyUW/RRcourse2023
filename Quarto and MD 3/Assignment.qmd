@@ -19,10 +19,36 @@ load(paste0("../Data/season_", season_no, ".RData"))
  
 quarto_render("Assignment.qmd", execute_params = list(
   season_no = 2,
+  episode_no = 1, 
   printcode = FALSE,
   data = "season_2.RData"
 ))
 
+
+season_no <- 1:8
+episode_no <- 
+
+for (i in 1:8){
+  for (y ) {
+    quarto_render("Assignment.qmd", execute_params = list(
+      episode_no = e,
+      season_no = i,
+      printcode = FALSE,
+      data = "season_2.RData"
+    ), output_file = paste0("Report-", i, "-", y, ".html"))
+  }
+}
+
+reg <- 2
+y <- 4
+
+
+quarto_render("QMD_class_3_4.qmd", execute_params = list(
+  year = y,
+  region = reg,
+  printcode = FALSE,
+  data = "file.csv"
+), output_file = paste0("Report-", reg, "-", y ".html""))
 
 ```
 

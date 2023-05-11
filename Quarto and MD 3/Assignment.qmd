@@ -1,11 +1,25 @@
 ---
+
 title: "Assignment 27.04.2023"
-author: ""
+author: "Adrianna"
 date: 27.04.2023
 output: html_document
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    smooth-scroll: true
+number-sections: true
+number-depth: 2
+title-block-banner: true
+execute:
+  echo: fenced
 params:
   season: 2
   episode: 2
+  printcode: TRUE
+  data: ../Data/season_
+  
 ---
 
 

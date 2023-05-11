@@ -32,7 +32,7 @@ quarto_render("Assignment.qmd", execute_params = list(
     ), output_file = paste0("Report-", i, "-", e, ".html"))
   
 
-cat()
+cat("Season", params$season, "and episode", params$episode)
 ```
 
 # Game of Thrones - Season 1 summary in numbers

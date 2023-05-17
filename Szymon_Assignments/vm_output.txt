@@ -1,0 +1,2 @@
+total 0
+-rw-rw-r-- 1 s_socha2 s_socha2 0 Apr 12 08:36 test.txt

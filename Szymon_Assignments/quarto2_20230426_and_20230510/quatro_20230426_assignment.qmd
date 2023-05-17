@@ -1,0 +1,63 @@
+---
+title: "Klan assignment 2023-04-26 & 2023-05-10"
+author: "Szymon Socha"
+format: 
+  html: 
+    theme: solar
+    toc: true
+    toc-depth: 1
+  docx:
+    theme: default
+editor: visual
+---
+
+```{r}
+#| label = "setup",
+#| include = FALSE
+library(ggplot2)
+```
+
+## KLAN (TV Series)
+
+***Klan*** is a Polish soap opera that premiered on September 22, 1997 on the public TVP1 channel. With more than 4,000 episodes spanning 25 seasons, the show is the longest-running Polish TV series. It airs from Monday to Friday at 5.50 p.m. on TVP1.
+
+Klan revolves around the fates of the multi-generation Lubicz family from Warsaw.
+
+## Klan logo
+
+![Klan logo](https://upload.wikimedia.org/wikipedia/commons/1/1c/Logo_Serialu_Klan.png)
+
+## Basic statistics
+
+::: panel-tabset
+### Viewers
+
+| Period    | No. views |
+|:----------|:---------:|
+| 1997      |    4m     |
+| 2005      |   4.5m    |
+| 2021/2022 |   1.09    |
+
+### Ratings
+
+| Platform | Rating |
+|:---------|:------:|
+| IMdB     |  2/10  |
+| Filweb   | 2.8/10 |
+:::
+
+## Plot over time
+
+```{r echo=FALSE}
+#| label: fig-cars
+#| fig-cap: "Klan viewership"
+#| fig-width: 6
+#| fig-height: 3.5
+
+period <- c("1997", "2000", "2005", "2008", "2011", "2014", "2017")
+audience <- c(4, 7.3, 4.5, 4.66, 3.14, 2.39, 1.64)
+klan_df <- data.frame(period, audience)
+ggplot(klan_df, aes(x=period, y=audience, group=1)) +
+  geom_line() +
+  geom_point()
+```

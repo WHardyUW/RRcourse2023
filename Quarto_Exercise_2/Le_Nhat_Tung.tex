@@ -189,13 +189,15 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, breakable, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, sharp corners, breakable, interior hidden, enhanced]}{\end{tcolorbox}}\fi
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r\}}
+\CommentTok{\#install.packages(\textquotesingle{}tinytex\textquotesingle{})}
+\CommentTok{\#tinytex::install\_tinytex()}
 \FunctionTok{setwd}\NormalTok{(}\StringTok{"C:/Users/Windows/RRcourse2023/Quarto\_Exercise\_2/"}\NormalTok{)}
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
 \end{Highlighting}

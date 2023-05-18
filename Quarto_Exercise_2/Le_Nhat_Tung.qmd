@@ -17,9 +17,10 @@ format:
       dark: darkly
   pdf: default
   docx: default
+  revealjs: 
+    output-file: 'revealjs-output.html'
 execute:
   echo: fenced
-latex-tynitex: false
 ---
 
 ```{r}
@@ -32,6 +33,8 @@ library(reticulate)
 ------------------------------------------------------------------------
 
 ```{r}
+#install.packages('tinytex')
+#tinytex::install_tinytex()
 setwd("C:/Users/Windows/RRcourse2023/Quarto_Exercise_2/")
 ```
 

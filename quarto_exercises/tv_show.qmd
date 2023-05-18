@@ -8,6 +8,7 @@ format:
     code-fold: true
     code-line-numbers: true
     code-copy: true
+  pdf: default
 ---
 
 # Description

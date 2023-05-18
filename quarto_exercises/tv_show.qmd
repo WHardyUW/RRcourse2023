@@ -13,7 +13,13 @@ format:
 
 Set on the fictional continents of *Westeros* and *Essos*, *Game of Thrones* has a large ensemble cast and follows several story arcs throughout the course of the show. The first major arc concerns the *Iron Throne* of the *Seven Kingdoms* of *Westeros* through a web of political conflicts among the noble families either vying to claim the throne or fighting for independence from whoever sits on it. The second focuses on the last descendant of the realm's deposed ruling dynasty, who has been exiled to *Essos* and is plotting to return and reclaim the throne. The third follows the Night's Watch, a military order defending the realm against threats from beyond *Westeros*'s northern border.
 
+::: {.panel-tabset}
+## First image
 ![*Game of Thrones* scene](images/got.jpeg)
+
+## Second image
+![Another *Game of Thrones* scene](images/got2.jpeg)
+:::
 
 # Basic descriptive statistics of the series viewership
 ```{python}

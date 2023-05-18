@@ -1,0 +1,11 @@
+Welcome to Cloud Shell! Type "help" to get started.
+Your Cloud Platform project in this session is set to my-project-rr-383616.
+Use “gcloud config set project [PROJECT_ID]” to change to a different project.
+ma_kowalewsk@cloudshell:~ (my-project-rr-383616)$ uname -a
+Linux cs-826888866240-default 5.15.89+ #1 SMP Sat Mar 25 09:11:42 UTC 2023 x86_64 GNU/Linux
+ma_kowalewsk@cloudshell:~ (my-project-rr-383616)$ touch test.txt
+ma_kowalewsk@cloudshell:~ (my-project-rr-383616)$ ls -l
+total 4
+-rw-r--r-- 1 ma_kowalewsk ma_kowalewsk 913 Apr 13 17:07 README-cloudshell.txt
+-rw-r--r-- 1 ma_kowalewsk ma_kowalewsk   0 Apr 13 17:09 test.txt
+ma_kowalewsk@cloudshell:~ (my-project-rr-383616)$

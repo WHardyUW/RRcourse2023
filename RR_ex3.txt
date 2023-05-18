@@ -1,0 +1,29 @@
+ma_kowalewsk@rr1:~$ ps aux | grep cpu
+root          10  0.0  0.0      0     0 ?        I<   16:43   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    16:43   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    16:43   0:00 [cpuhp/1]
+ma_kowa+    1620  0.0  0.0   8168   720 pts/0    R+   17:12   0:00 grep --color=auto cpu
+ma_kowalewsk@rr1:~$ ip tail -n 3
+Object "tail" is unknown, try "ip help".
+ma_kowalewsk@rr1:~$ ip -n 3
+Cannot open network namespace "3": No such file or directory
+ma_kowalewsk@rr1:~$ ip a | tail -n 3
+       valid_lft 84284sec preferred_lft 84284sec
+    inet6 fe80::4001:aff:feb6:2/64 scope link 
+       valid_lft forever preferred_lft forever
+ma_kowalewsk@rr1:~$ cd /etc/nvme
+ma_kowalewsk@rr1:/etc/nvme$ pwd
+/etc/nvme
+ma_kowalewsk@rr1:/etc/nvme$ ls -n
+total 12
+-rw-r--r-- 1 0 0 157 Sep  7  2020 discovery.conf
+-rw-r--r-- 1 0 0  37 Mar  2 21:45 hostid
+-rw-r--r-- 1 0 0  69 Mar  2 21:45 hostnqn
+ma_kowalewsk@rr1:/etc/nvme$ ^C
+ma_kowalewsk@rr1:/etc/nvme$ cat hostid | head -n 3
+b4f502f7-94db-4302-95b7-d31208549763
+ma_kowalewsk@rr1:/etc/nvme$ cat discovery.conf | head -n 3
+# Used for extracting default parameters for discovery
+#
+# Example:
+ma_kowalewsk@rr1:/etc/nvme$ 

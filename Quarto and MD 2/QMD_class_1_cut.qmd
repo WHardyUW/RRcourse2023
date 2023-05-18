@@ -2,7 +2,7 @@
 title: "(R)Markdown"
 author: "Wojciech Hardy; Łukasz Nawaro"
 date: "3/23/2022"
-format: html
+output: html_document
 ---
 
 ```{r}

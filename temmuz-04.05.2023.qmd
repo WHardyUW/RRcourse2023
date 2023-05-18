@@ -1,12 +1,29 @@
-------------------------------------------------------------------------
+---
+title: "Quarto"
+subtitle: "YAML, rendering and parameters"
+author: "Temmuz Yavuzer"
+date: today
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    toc-expand: 3
+    toc-title: Section
+    toc-location: left
+    smooth-scroll: true
+    number-sections: true
+    number-depth: 2
+    theme: 
+      dark: darkly
+      light: solar
+  pdf: 
+    theme: 
+      dark: darkly
+execute:
+  echo: fenced
+title-block-banner: true
+---
 
-title: "TemmuzYavuzer - 444130"
-
-format: html
-
-editor: visual
-
-------------------------------------------------------------------------
 
 # Game of Thrones
 
@@ -25,6 +42,17 @@ editor: visual
 | 3 \| 1 \| 9.30 \|
 
 | 4 \| 1 \| 9.52 \|
+
+
+
+::: {.panel-tabset}
+
+## Header 1
+Text with headers
+
+## Header 2
+Some more text
+:::
 
 ## Graphs
 

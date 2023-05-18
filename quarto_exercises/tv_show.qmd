@@ -1,19 +1,21 @@
 ---
 title: "Game of Thrones"
 format: 
-    html:
-        code-fold: true
-    pdf: default
+  html:
+    toc: true
+    toc-location: body
+    number-sections: true
+    code-fold: true
 ---
 
-#### Description
+# Description
 *Game of Thrones* is an American fantasy drama television series created by David Benioff and D. B. Weiss for HBO. It is an adaptation of *A Song of Ice and Fire*, a series of fantasy novels by George R. R. Martin, the first of which is *A Game of Thrones*. The show was shot in the United Kingdom, Canada, Croatia, Iceland, Malta, Morocco, and Spain. It premiered on HBO in the United States on April 17, 2011, and concluded on May 19, 2019, with 73 episodes broadcast over eight seasons.
 
 Set on the fictional continents of *Westeros* and *Essos*, *Game of Thrones* has a large ensemble cast and follows several story arcs throughout the course of the show. The first major arc concerns the *Iron Throne* of the *Seven Kingdoms* of *Westeros* through a web of political conflicts among the noble families either vying to claim the throne or fighting for independence from whoever sits on it. The second focuses on the last descendant of the realm's deposed ruling dynasty, who has been exiled to *Essos* and is plotting to return and reclaim the throne. The third follows the Night's Watch, a military order defending the realm against threats from beyond *Westeros*'s northern border.
 
 ![*Game of Thrones* scene](images/got.jpeg)
 
-#### Basic descriptive statistics of the series viewership
+# Basic descriptive statistics of the series viewership
 ```{python}
 import pandas as pd
 data = pd.read_csv('data/viewership.csv')
@@ -21,7 +23,7 @@ print(f'Average viewers per episode, in millions: {data["viewers"].mean():.2f}')
 print(f'Std. deviation of viewers per episode, in millions: {data["viewers"].std():.2f}')
 ```
 
-#### Series viewership over time
+# Series viewership over time
 ```{python}
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -29,7 +31,7 @@ sns.lineplot(data=data, x='episode', y='viewers').set_title('Viewership in milli
 plt.show()
 ```
 
-#### Season by season comparison of viewership
+# Season by season comparison of viewership
 ```{python}
 data['season_episode'] = data.groupby('season')['episode'].rank(method='first', ascending=True)
 sns.lineplot(data=data, x='season_episode', y='viewers', hue='season', )

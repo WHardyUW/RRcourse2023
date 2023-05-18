@@ -3,6 +3,7 @@ title: "Game of Thrones"
 format: 
     html:
         code-fold: true
+    pdf: default
 ---
 
 #### Description

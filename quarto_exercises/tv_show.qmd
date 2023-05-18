@@ -6,6 +6,8 @@ format:
     toc-location: body
     number-sections: true
     code-fold: true
+    code-line-numbers: true
+    code-copy: true
 ---
 
 # Description

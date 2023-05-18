@@ -3124,7 +3124,12 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 </style>
 
-  <link rel="stylesheet" href="styles.css" type="text/css" />
+  <style type="text/css">blockquote {
+background: #f9f9f9;
+border-left: 5px solid #ccc;
+margin: 1.5em 10px;
+padding: 0.5em 1.5em;
+}</style>
 
 </head>
 
@@ -3138,7 +3143,7 @@ ul.task-list{list-style: none;}
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
       <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
       <p data-config-presenter><!-- populated from slide_config.json --></p>
-            <p style="margin-top: 6px; margin-left: -2px;">3/21/2023</p>
+            <p style="margin-top: 6px; margin-left: -2px;">3/29/2023</p>
           </hgroup>
   </slide>
 
@@ -3282,7 +3287,7 @@ If people don’t know why your project exists, they won’t use it.<br/>If peop
 </article></slide><slide class=""><hgroup><h2>Data, files, encoding</h2></hgroup><article  id="data-files-encoding">
 
 <ul>
-<li><p>come up with a structure for your files - don’t just put them all in the same folder. Various approaches possible (e.g. <a href='https://coderefinery.github.io/reproducible-research/02-organizing-projects/' title=''>this one</a>, but consistency is key.</p></li>
+<li><p>come up with a structure for your files - don’t just put them all in the same folder. Various approaches possible (e.g. <a href='https://eglerean.github.io/reproducible-research/02-organizing-projects/' title=''>this one</a>, but consistency is key.</p></li>
 <li><p>you can store raw files - these don’t have to be as neat and might contain something you needed during the development stage (e.g. some exploration, statistics, graphs, etc.). Focus on the final ones.</p></li>
 <li><p>avoid language-specific characters in names, labels, paths, etc. Use UTF-8 to minimise problems.</p></li>
 <li><p>use file formats that can be accessed by other software, e.g. CSV.</p></li>
@@ -3335,7 +3340,7 @@ If people don’t know why your project exists, they won’t use it.<br/>If peop
 
 <aside class='note'><section><p>Set default values for arguments to make functions easier to use. If a value can be calculated based on other values (that are always provided), do not include it as an argument, but calculate it within the function.</p></section></aside>
 
-</article></slide><slide class=""><hgroup><h2>Use loops</h2></hgroup><article  id="use-loops">
+</article></slide><slide class=""><hgroup><h2>Use loops (or vectors) to avoid repetitions</h2></hgroup><article  id="use-loops-or-vectors-to-avoid-repetitions">
 
 <ul>
 <li><p>don’t write multiple lines that do mostly the same and only switch one thing.</p></li>
@@ -3348,6 +3353,7 @@ If people don’t know why your project exists, they won’t use it.<br/>If peop
 <li><p>define your working directory at the very start.</p></li>
 <li><p>if using more than one directory, define the paths and refer to them later on.</p></li>
 <li><p>this will allow others to just customise this according to their needs at the start.</p></li>
+<li><p>you can also create flexible &lsquo;relative&rsquo; paths (e.g. relative to the file with the code).</p></li>
 </ul>
 
 <aside class='note'><section><p>You can have some defaults (e.g. you can have a customisable general path or path that defaults to a specific folder). And you can then have defaults that refer to subfolder (e.g. &ldquo;outputs&rdquo;, &ldquo;figures&rdquo;, &ldquo;processed data&rdquo;). But other people using your work might already have some convention for such folders - it’d be best to allow them to easily adjust the code accordingly.</p></section></aside>
@@ -3482,23 +3488,23 @@ If people don’t know why your project exists, they won’t use it.<br/>If peop
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Helpful tools</h2></hgroup><article  id="helpful-tools">
 
-</article></slide><slide class=""><hgroup><h2>Automated code cleaning</h2></hgroup><article  id="automated-code-cleaning">
+</article></slide><slide class=""><hgroup><h2>Automated code cleaning and styling</h2></hgroup><article  id="automated-code-cleaning-and-styling">
 
-<p>When pressed for time and need to clean your code, e.g.:</p>
+<p>When pressed for time and need to clean your code (or want to make it consistent in a team), e.g.:</p>
 
-<p>R:</p>
+<p>R: <a href='https://github.com/r-lib/styler' title=''>styleR</a>, <a href='https://github.com/yihui/formatR' title=''>formatR</a>, <a href='https://bookdown.org/yihui/rmarkdown-cookbook/opts-tidy.html' title=''>&lsquo;tidy = true&rsquo; option in RMarkdown</a></p>
 
-<ul>
-<li><a href='https://github.com/r-lib/styler' title=''>styleR</a></li>
-<li><a href='https://github.com/yihui/formatR' title=''>formatR</a></li>
-<li><a href='https://bookdown.org/yihui/rmarkdown-cookbook/opts-tidy.html' title=''>tidy = true option in RMarkdown</a></li>
-</ul>
+<p>Python: <a href='https://black.readthedocs.io/en/stable/' title=''>Black</a></p>
+
+<p>Java: <a href='https://prettier.io/' title=''>prettier</a></p>
+
+<p>Or online (in-browser) syntax cleaners.</p>
 
 <aside class='note'><section><p>There are pre-defined styles for code out there. You might check them out and use them, but the most important things are actually: clarity and consistency.</p></section></aside>
 
 </article></slide><slide class=""><hgroup><h2>Controlling the environment</h2></hgroup><article  id="controlling-the-environment">
 
-<p>To ensure consistency, save the versions of your software and packages or have a package do it for you. More in the next materials.</p>
+<p>To ensure consistency, save the versions of your software and packages or have a package do it for you. More in one of the next classes.</p>
 
 </article></slide><slide class=""><hgroup><h2>Use AI for help</h2></hgroup><article  id="use-ai-for-help">
 
@@ -3512,18 +3518,22 @@ If people don’t know why your project exists, they won’t use it.<br/>If peop
 <li>writing documentation</li>
 </ul>
 
-<p>Use them for quick productivity gains! But: you’re responsible for the output. Always double-check.</p>
+<p>Use them for quick productivity gains! But: you’re responsible for the output. Always double-check. More on that in one of the next classes.</p>
 
 </article></slide><slide class=""><hgroup><h2>ASSIGNMENT</h2></hgroup><article  id="assignment">
 
 <ol>
-<li><p>Take a look at the attached code document. It could use some cleaning.</p></li>
-<li><p>Try using one of the mentioned R packages to do some initial cleaning first.</p></li>
-<li><p>Make the code clearer by using a loop.</p></li>
+<li>Take a look at the attached code document. It could use some cleaning.</li>
+</ol>
+
+<p>Note: you can pick the .R or .ipynb version. Both work, but the latter is an automated translation.</p>
+
+<ol>
+<li><p>You might try using one of the mentioned R packages or another tool to do some initial cleaning first.</p></li>
+<li><p>Make the code clearer by using a loop or through working with vectors.</p></li>
 <li><p>Make the code clearer by using a function.</p></li>
 <li><p>Replace hardcoded parameters and values with something smarter.</p></li>
-<li><p>Commit -&gt; Push</p></li>
-<li><p>Go to GitHub and create a Pull Request (or try <a href='https://git-scm.com/docs/git-request-pull' title=''>doing it using CLI</a>)</p></li>
+<li><p>Commit (provide a short message on your changes) -&gt; Push to your repositories</p></li>
 </ol></article></slide>
 
 

@@ -2,7 +2,13 @@
 title: "Assignment"
 author: "Yiqing Hu"
 date: today
-output: html_document
+format: 
+  pdf: 
+    citation_package: natbib
+documentclass: article
+fontsize: 11pt
+geometry: margin=1in
+latex-tinytex: false
 params:
    season: 2
 ---
@@ -13,9 +19,6 @@ load(formatted)
 formatted <- sprintf('# Game of Thrones - Season %d summary in numbers', params$season)
 cat(formatted)
 ```
-
-
-### __(*Warning:* spoilers ahead)__
 
 ***
 

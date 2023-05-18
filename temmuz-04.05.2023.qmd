@@ -16,7 +16,7 @@ format:
     theme: 
       dark: darkly
       light: solar
-  pdf: 
+  docx: 
     theme: 
       dark: darkly
 execute:

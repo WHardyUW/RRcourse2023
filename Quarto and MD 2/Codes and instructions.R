@@ -4,8 +4,10 @@
 # Wojciech Hardy
 
 library(quarto)
+library(dplyr)
+library(tinytex)
 
-setwd("")
+setwd("C:\\Users\\HP\\Desktop\\Study\\semester_4\\ReproducibleResearch\\RRcourse2023\\Quarto and MD 2")
 
 # Converting from Rmd to Qmd
 

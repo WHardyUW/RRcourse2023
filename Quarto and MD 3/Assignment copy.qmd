@@ -8,7 +8,8 @@ params:
 ---
 
 ```{r}
-load(paste0("../Data/season_",params$season,".RData"))
+season_no <- params$season
+load(paste0("../Data/season_",season_no,".RData"))
 ```
 
 # Game of Thrones - Season 1 summary in numbers
@@ -27,12 +28,7 @@ Set on the fictional continents of Westeros and Essos, Game of Thrones has a lar
 
 ### Season 1 summary
 
-```{r}
-episodes_no <- nrow(season-data)
-avg_vims 
-```
-
-Season 1 of Game of Thrones consisted of 'r episoded_no' episodes that aired between April 17 and June 19, 2011 on HBO. The show gathered an average of 2.515 first-day TV viewers in the US, with the number growing from 2.22 to 3.04 million by the end of the season.
+Season 1 of Game of Thrones consisted of 10 episodes that aired between April 17 and June 19, 2011 on HBO. The show gathered an average of 2.515 first-day TV viewers in the US, with the number growing from 2.22 to 3.04 million by the end of the season.
 
 The most popular episode of the season was "Fire and Blood", in which:
 

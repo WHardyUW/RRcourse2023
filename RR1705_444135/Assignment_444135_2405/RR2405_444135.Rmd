@@ -1,0 +1,56 @@
+---
+title: "RR2405_444135"
+author: "Khon Hoang Nguyen"
+date: "2023-05-24"
+output: html_document
+---
+```{r}
+library(meta)
+library(metafor)
+library(dplyr)
+library(readxl)
+setwd("C:/Users/ChotC/Downloads/13. Metaanalysis")
+data <- read_excel("data/metaanalysis_data.xlsx")
+```
+
+1) Combine the effects
+```{r}
+m.raw <- metacont(n.e=N_boys,
+                  mean.e=Mean_boys_play_male,
+                  sd.e=SD_boys_play_male,
+                  n.c=N_girls,
+                  mean.c=Mean_girls_play_female,
+                  sd.c=SD_girls_play_female,
+                  data=data,
+                  studlab=paste(Study),
+                  comb.fixed = TRUE,
+                  comb.random = TRUE,
+)
+m.raw
+```
+The meta-analysis shows a statistically significant mean difference between the treatment group and control group. However, there is substantial heterogeneity among the included studies, suggesting that the true effects may vary across studies. The random effects model is likely more appropriate in this case due to the presence of heterogeneity.
+
+2) Create a funnel plot
+```{r}
+contour_levels <- c(0.90, 0.95, 0.99)
+contour_colors <- c("darkblue", "blue", "lightblue")
+funnel(m.raw, contour = contour_levels, col.contour = contour_colors)
+legend("topright", c("p < 0.10", "p < 0.05", "p < 0.01"), bty = "n", fill = contour_colors)
+```
+
+From the plot, it can be seen that there are publication bias as the plot is asymmetrical.
+
+3) Check if methods / quality affect the results
+```{r}
+m.raw %>% metareg(`NOS score`
+                  + `NOS score`)
+```
+From the result, it can be seen that the quality does not affect the result.
+
+4) Does author gender affect it?
+
+```{r}
+m.raw %>% metareg(`Female authors` + `Male authors`)
+```
+
+From the result, it can be seen that the model with the included moderators (Female authors and Male authors) shows some evidence of an association with the outcome, although the significance of the moderators is somewhat marginal.

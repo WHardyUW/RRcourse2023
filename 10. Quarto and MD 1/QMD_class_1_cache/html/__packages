@@ -1,0 +1,13 @@
+<<<<<<< HEAD:Quarto and MD 1/QMD_class_1_cache/html/__packages
+base
+methods
+datasets
+utils
+grDevices
+graphics
+stats
+=======
+>>>>>>> source/main:10. Quarto and MD 1/QMD_class_1_cache/html/__packages
+chron
+reticulate
+ggplot2

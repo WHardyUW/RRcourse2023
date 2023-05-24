@@ -1,0 +1,44 @@
+---
+title: "Assignment- TV series"
+author: "Joachim Ndhokero"
+format: html
+editor: visual
+---
+
+## 24
+
+As stated by Wikipedia, 24 is an American crime drama television series created by *Joel Surnow* and *Robert Cochran* for Fox. The series stars *Kiefer Sutherland* as US counter-terrorist federal agent *Jack Bauer*. Each season covers 24 consecutive hours in Bauer's life using the real time method of narration. Multiple interrelated plots are featured in each episode, which often include *Bauer's* contacts in perilous crisis. The show premiered on November 6, 2001, and spanned 204 episodes over nine seasons, with the series finale broadcast on July 14, 2014. In addition, the television film 24: Redemption aired between seasons six and seven, on November 23, 2008. 24 is a joint production by Imagine Television and 20th Century Fox Television.
+
+[**Logo for 24**]{.underline}
+
+![](24-Logo.svg)
+
+[**Some of the TV series reviews**]{.underline}
+
+| Season           | Rotten Tomatoes   | Metacritic      |
+|------------------|-------------------|-----------------|
+| 1                | 95% (20 reviews)  | 88 (27 reviews) |
+| 2                | 94% (17 reviews)  | 83 (23 reviews) |
+| 3                | 93% (14 reviews)  | 72 (14 reviews) |
+| 4                | 95% (20 reviews)  | 79 (19 reviews) |
+| 5                | 100% (22 reviews) | 89 (21 reviews) |
+| 6                | 73% (30 reviews)  | 79 (23 reviews) |
+| Redemption       | 80% (20 reviews)  | \-              |
+| 7                | 76% (33 reviews)  | 72 (21 reviews) |
+| 8                | 75% (40 reviews)  | 67 (19 reviews) |
+| Live Another Day | 81% (54 reviews)  | 70 (40 reviews) |
+
+```{r}
+#| echo: false
+#| # Load the ggplot2 package
+library(ggplot2)
+
+# Example data
+x <- c(2001, 2002, 2003, 2005, 2006, 2007, 2008, 2010, 2014)
+y <- c(8.6, 11.73, 10.3, 11.9, 13.78, 13, 12.62, 9.31, 6.33)
+df <- data.frame(x, y)
+
+# Create the line graph
+ggplot(data = df, aes(x = x, y = y)) +
+  geom_line() + scale_x_continuous(breaks = x, labels = x)
+```

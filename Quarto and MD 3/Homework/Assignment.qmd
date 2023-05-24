@@ -16,10 +16,10 @@ params:
 ```{r echo=FALSE, results='asis'}
 formatted <- sprintf("../../Data/season_%d.RData", params$season)
 load(formatted)
-formatted <- sprintf('# Game of Thrones - Season %d summary in numbers', params$season)
-cat(formatted)
+# formatted <- sprintf('# Game of Thrones - Season %d summary in numbers', params$season)
+# cat(formatted)
 ```
-
+# Game of Thrones - Season `r params$season` summary in numbers
 ***
 
 ### Overview

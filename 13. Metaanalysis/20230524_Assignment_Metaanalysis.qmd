@@ -1,0 +1,59 @@
+---
+title: "Assignment - Metaanalysis"
+author: "Dustin Pacholleck"
+date: today
+format:  
+  html:
+    theme: lumen
+    toc: true
+    toc_float: true
+title-block-banner: true
+execute:
+  echo: fenced
+---
+```{r}
+#| label = "setup",
+#| include = FALSE
+library(meta)
+library(metafor)
+library(dplyr)
+# install.packages("openxlsx")
+library(openxlsx)
+setwd("C:/Users/duzzi/Desktop/Reproductible Research/RRcourse2023/13. Metaanalysis")
+```
+
+## Assignment 
+Import the data
+
+```{r}
+Meta_Analysis_Data = read.xlsx("data\\metaanalysis_data.xlsx")
+```
+
+### combine the effects
+```{r}
+Meta_Analysis_Data$Mean_boys_diff <- Meta_Analysis_Data$Mean_boys_play_male - Meta_Analysis_Data$Mean_boys_play_female
+
+Meta_Analysis_Data$Mean_girls_diff <- Meta_Analysis_Data$Mean_girls_play_female - Meta_Analysis_Data$Mean_girls_play_male
+
+m.raw <- metacont(n.e=Ne,
+                  mean.e=Me,
+                  sd.e=Se,
+                  n.c=Nc,
+                  mean.c=Mc,
+                  sd.c=Sc,
+                  data=Meta_Analysis_Data,
+                  studlab=paste(Study),
+                  comb.fixed = TRUE,
+                  comb.random = TRUE,
+)
+m.raw
+```
+#### create a funnel plot (what do you see?)
+```{r}
+contour_levels <- c(0.90, 0.95, 0.99)
+contour_colors <- c("darkblue", "blue", "lightblue")
+funnel(m, contour = contour_levels, col.contour = contour_colors)
+legend("topright", c("p < 0.10", "p < 0.05", "p < 0.01"), bty = "n", fill = contour_colors)
+```
+#### check if methods / quality affect the results
+#### does author gender affect it?

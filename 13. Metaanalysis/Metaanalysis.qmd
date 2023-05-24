@@ -18,7 +18,7 @@ execute:
 library(meta)
 library(metafor)
 library(dplyr)
-#setwd("")
+setwd("C:/Users/duzzi/Desktop/Reproductible Research/RRcourse2023/13. Metaanalysis")
 ```
 
 ## Metaanalysis

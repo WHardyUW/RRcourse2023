@@ -3,13 +3,17 @@ title: "Assignment"
 author: ""
 date: today
 output: html_document
+params:
+  season_number: 4
+  
 ---
 
+
 ```{r}
-load("../Data/season_1.RData")
+load(paste0("../Data/season_",params$season_number, ".RData"))
 ```
 
-# Game of Thrones - Season 1 summary in numbers
+# Game of Thrones - Season `r params$season_number` summary in numbers
 
 ### __(*Warning:* spoilers ahead)__
 
@@ -50,3 +54,5 @@ Finally, the episodes with the above-average viewership were:
 | 8             | "The Pointy End" | Daniel Minahan      |
 | 9             | "Baelor" | Alan Taylor      |
 | 10            | "Fire and Blood" | Alan Taylor      |
+
+

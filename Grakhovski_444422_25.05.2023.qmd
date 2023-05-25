@@ -1,0 +1,30 @@
+---
+title: "Game of Thrones - Season summary in numbers"
+author: "Ivan Grakhovski"
+date: "25.05.2023"
+output: html_document
+params:
+  season: 1
+---
+
+```{r}
+load(paste0("season_", params$season, ".RData"))
+```
+
+```{r}
+# Load season data
+season_data <- read.csv(paste0("season_", params$season, ".csv"))
+
+# Combine all episode descriptions into a single season summary
+season_summary <- paste(season_data$description, collapse = "\n\n")
+```
+
+```
+Season `r params$season` Summary:
+`r season_summary`
+```
+
+```{r}
+#| label = "viewers_plot"
+plot(season_data$viewers, type="l", col="red", lwd=5, xlab = "Episode number", ylab = "1st day TV viewers in the US (millions)")
+```

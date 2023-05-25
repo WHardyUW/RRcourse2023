@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 add some textsomething
+=======
+22-03-2023
+>>>>>>> d26f35e (Assignment 1.)

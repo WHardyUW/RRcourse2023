@@ -3,13 +3,18 @@ title: "Assignment"
 author: ""
 date: today
 output: html_document
+params: 
+  season: 1
 ---
 
 ```{r}
-load("../Data/season_1.RData")
+
+load(paste0("../Data/season_",params$season,".RData"))
+
+
 ```
 
-# Game of Thrones - Season 1 summary in numbers
+# Game of Thrones - Season `r params$season` summary in numbers
 
 ### __(*Warning:* spoilers ahead)__
 
@@ -23,13 +28,30 @@ Set on the fictional continents of Westeros and Essos, Game of Thrones has a lar
 
 ***
 
-### Season 1 summary
+```{r}
 
-Season 1 of Game of Thrones consisted of 10 episodes that aired between April 17 and June 19, 2011 on HBO. The show gathered an average of 2.515 first-day TV viewers in the US, with the number growing from 2.22 to 3.04 million by the end of the season.
+no_episodes <-nrow(season_data)
 
-The most popular episode of the season was "Fire and Blood", in which:
+avg_viewers <- mean(season_data$viewers)
+min_viewers <-min(season_data$viewers)
+max_viewers <-max(season_data$viewers)
 
-> "The North secedes from the Seven Kingdoms and proclaims Robb as king. With Jaime as the Starks' prisoner and Robert's two brothers, Stannis and Renly, each challenging Joffrey's claim to the throne, Tywin appoints Tyrion as acting King's Hand, while Tywin fights to defend Joffrey's reign. Jon attempts to desert the Night's Watch to avenge Ned and join Robb, but his Night's Watch brothers convince him to honor his oath. Jon joins an expedition to search for Benjen Stark beyond the Wall. Yoren, a Night's Watch recruiter, smuggles Arya out of King's Landing disguised as a boy, while Joffrey intends to crown Sansa his queen, despite executing her father. Daenerys's baby is born deformed and dead, and Drogo is left in a vegetative state by the witch's treacherous magic. Daenerys compassionately ends Drogo's life. She places the three dragon eggs on Drogo's funeral pyre and sets it afire, also burning the witch alive. Ignoring Jorah's pleas, she walks into the flames. When the embers die the following morning, Daenerys is found in the ashes, unharmed, flanked by three newly-hatched baby dragons. Jorah and other witnesses kneel before her."
+min_date <- min(season_data$premiere_date)
+max_date <- max(season_data$premiere_date)
+
+library("dplyr")
+most_pop <- filter(season_data, season_data$viewers==max_viewers)
+
+```
+
+### Season `r params$season` summary
+
+Season `r params$season` of Game of Thrones consisted of `r no_episodes` episodes that aired between `r min_date`  and `r max_date`,  on HBO. The show gathered an average of `r avg_viewers` first-day TV viewers in the US, with the number growing from `r min_viewers` to `r max_viewers` million by the end of the season.
+
+The most popular episode of the season was `r most_pop$title`, in which: 
+
+> "`r most_pop$description`"
+
 
 ***
 
@@ -41,6 +63,7 @@ plot(season_data$viewers, type="l", col="red", lwd=5, xlab = "Episode number", y
 ```
 
 ***
+kabele
 
 Finally, the episodes with the above-average viewership were:
 

@@ -459,9 +459,44 @@ Ascertainment of behaviour: Play behaviour was clearly defined.
 Same ascertainment method for both groups: The measurement of the outcome (time spent playing with toy) was clearly defined. 
 Nonresponse rate: whether either nonuptake or dropout rates reported.
 
+```{r}
+library(readxl)
+setwd("~/Desktop/RRcourse2023/13. Metaanalysis")
+metaanalysis_data <- read_excel("data//metaanalysis_data.xlsx")
+```
+
 2) Experiment using what you've learned:
 
 a) combine the effects
 b) create a funnel plot (what do you see?)
 c) check if methods / quality affect the results
 d) does author gender affect it?
+
+```{r}
+m.meta <- metacont(n.e=N_boys,
+                  mean.e=Mean_boys_play_male,
+                  sd.e=SD_boys_play_male,
+                  n.c=N_girls,
+                  mean.c=Mean_girls_play_male,
+                  sd.c=SD_girls_play_male,
+                  data=metaanalysis_data,
+                  studlab=paste(Study),
+                  comb.fixed = TRUE,
+                  comb.random = TRUE,
+)
+m.meta
+```
+
+```{r}
+contour_levels <- c(0.90, 0.95, 0.99)
+contour_colors <- c("darkblue", "blue", "lightblue")
+funnel(m.meta, contour = contour_levels, col.contour = contour_colors)
+legend("topright", c("p < 0.10", "p < 0.05", "p < 0.01"), bty = "n", fill = contour_colors)
+```
+
+
+```{r}
+m.meta %>% metareg(`Female authors` + `Male authors`)
+```
+```
+

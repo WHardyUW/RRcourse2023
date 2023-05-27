@@ -1,0 +1,82 @@
+---
+title: "Rmarkdown_EX1"
+author: "Artur Skowroński"
+date: "2023-05-03"
+format: html
+title-block-banner: true
+theme: lumen
+lof: true
+lot: true
+---
+
+```{r}
+#| label = "setup",
+#| include = FALSE
+library(ggplot2)
+```
+
+## Trailer Park Boys (TV Series)
+
+***Trailer Park Boys *** is a Canadian mockumentary sitcom television series created by Mike Clattenburg that began airing in 2001 as a continuation of his 1999 film bearing the same name. The show follows the misadventures of a group of trailer park residents, including two lead characters in and out of prison, living in the fictional "Sunnyvale Trailer Park" in Dartmouth, Nova Scotia.
+
+## Trailer Park Boys - photo
+
+![TPB photo](https://cdn.fansided.com/wp-content/blogs.dir/340/files/2015/08/trailer-park-boys.jpg)
+
+### Ratings
+
+| Platform | Rating | Votes |
+|:---------|:------:|:------:|
+| Imdb   | 8.6/10 | 46 527 |
+
+### Viewership over time
+
+Unluckily, I couldn't find such a data. That's why I decided to use the number of search interest from google trends in order to visualise it
+
+```{r echo=FALSE}
+
+year <- c(2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021)
+
+search_interest <- c(28, 38, 61, 100, 68, 52, 44, 40, 37, 35, 49, 49, 42, 39, 36, 37, 38, 36)
+
+trailer_df <- data.frame(year, search_interest)
+ggplot(trailer_df, aes(x=year, y=search_interest, group=1)) +
+  geom_line() +
+  geom_point()
+```
+
+### A graph of season-to-season changes in viewership
+
+```{r echo=FALSE}
+
+library(ggplot2)
+
+# Season vector
+season <- c("Season 1", "Season 2", "Season 3", "Season 4", "Season 5", "Season 6", "Season 7", "Season 8", "Season 9", "Season 10", "Season 11", "Season 12")
+
+# Average rating vector
+avg_rating <- c(8.2, 8.6, 8.6, 8.7, 8.6, 8.6, 8.7, 8.5, 8.4, 8.3, 8.2, 8.1)
+
+# Create a data frame from the vectors
+tpb_data <- data.frame(season, avg_rating)
+
+# Order the factor levels of season variable
+tpb_data$season <- factor(tpb_data$season, levels = c("Season 1", "Season 2", "Season 3", "Season 4", "Season 5", "Season 6", "Season 7", "Season 8", "Season 9", "Season 10", "Season 11", "Season 12"))
+
+# Plot the data using ggplot2
+ggplot(tpb_data, aes(x=season, y=avg_rating, group=1)) +
+  geom_line() +
+  xlab("Season") +
+  ylab("Average Rating") +
+  ggtitle("Trailer Park Boys Seasons and their Average Ratings") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+### Description of the obseraved changes
+
+Trailer Park Boys had a change in writers and producers after Season 7. This change could have led to a shift (variable `avg_rating`) in the show's tone or direction, which may not have resonated well with the audience.
+
+
+
+

@@ -3,13 +3,16 @@ title: "Assignment"
 author: ""
 date: today
 output: html_document
+params:
+  season: season
+  data: data
 ---
 
 ```{r}
 load("../Data/season_1.RData")
 ```
 
-# Game of Thrones - Season 1 summary in numbers
+# Game of Thrones - Season `r params$season` summary in numbers
 
 ### __(*Warning:* spoilers ahead)__
 

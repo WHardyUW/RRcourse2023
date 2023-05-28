@@ -6,7 +6,11 @@ output: html_document
 ---
 
 ```{r}
-load("../Data/season_1.RData")
+load(paste0("../Data/season_",params$season,".RData"))
+episodes_np <- nrow(season_data)
+avg_viewers <- mean(season_data$viewers)
+popular_ep <- season_data$title[which.max(season_data$viewers)]
+descr <- season_data$description[which.max(season_data$viewers)]
 ```
 
 # Game of Thrones - Season 1 summary in numbers

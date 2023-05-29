@@ -1,15 +1,25 @@
 ---
 title: "Assignment"
-author: ""
-date: today
+author: "Muhammad Saqib Masood"
+date: 29/05/2023
 output: html_document
+params:
+  season: 1
 ---
 
-```{r}
-load("../Data/season_1.RData")
+
+
+```{r setup, include=FALSE}
+
+load(paste0("../Data/season_",params$season,".RData"))
+episodes_np <- nrow(season_data)
+avg_viewers <- mean(season_data$viewers)
+most_viewed <- season_data$title[which.max(season_data$viewers)]
+description <- season_data$description[which.max(season_data$viewers)]
+
 ```
 
-# Game of Thrones - Season 1 summary in numbers
+# Game of Thrones - Season `r params$season` summary in numbers
 
 ### __(*Warning:* spoilers ahead)__
 
@@ -23,13 +33,14 @@ Set on the fictional continents of Westeros and Essos, Game of Thrones has a lar
 
 ***
 
-### Season 1 summary
+### Season `r params$season` summary
 
-Season 1 of Game of Thrones consisted of 10 episodes that aired between April 17 and June 19, 2011 on HBO. The show gathered an average of 2.515 first-day TV viewers in the US, with the number growing from 2.22 to 3.04 million by the end of the season.
 
-The most popular episode of the season was "Fire and Blood", in which:
+Season `r params$season` of Game of Thrones consisted of `r episodes_np` episodes that aired between April 17 and June 19, 2011 on HBO. The show gathered an average of `r avg_viewers` million first-day TV viewers in the US, with the number growing from 2.22 to 3.04 million by the end of the season.
 
-> "The North secedes from the Seven Kingdoms and proclaims Robb as king. With Jaime as the Starks' prisoner and Robert's two brothers, Stannis and Renly, each challenging Joffrey's claim to the throne, Tywin appoints Tyrion as acting King's Hand, while Tywin fights to defend Joffrey's reign. Jon attempts to desert the Night's Watch to avenge Ned and join Robb, but his Night's Watch brothers convince him to honor his oath. Jon joins an expedition to search for Benjen Stark beyond the Wall. Yoren, a Night's Watch recruiter, smuggles Arya out of King's Landing disguised as a boy, while Joffrey intends to crown Sansa his queen, despite executing her father. Daenerys's baby is born deformed and dead, and Drogo is left in a vegetative state by the witch's treacherous magic. Daenerys compassionately ends Drogo's life. She places the three dragon eggs on Drogo's funeral pyre and sets it afire, also burning the witch alive. Ignoring Jorah's pleas, she walks into the flames. When the embers die the following morning, Daenerys is found in the ashes, unharmed, flanked by three newly-hatched baby dragons. Jorah and other witnesses kneel before her."
+The most popular episode of the season was `r most_viewed`, in which:
+
+> "`r description`"
 
 ***
 

@@ -1,0 +1,231 @@
+---
+title: "Reproducible Research - Toolbox #2"
+subtitle: "Data repositories, environment managers, packages, etc."
+author: "Wojciech Hardy"
+date: today
+format:
+  html:
+    toc: true
+    toc-title: Contents
+    smooth-scroll: true
+    theme:
+      light: cosmo
+      dark: superhero
+execute:
+  eval: false
+title-block-banner: true
+---
+
+# Some very good resources for RR
+
+Karl Broman's (Professor in Biostatistics and Medical Informatics at University of Wisconsin) [compilation]( https://kbroman.org/Tools4RR/pages/resources.html) of guidelines, tutorials, packages and other resources. Also check his [course materials](https://kbroman.org/Tools4RR/pages/schedule.html).
+
+Roger Peng's (Professor of Statistics and Data Sciences at the University of Texas) [video lectures on RR](https://www.youtube.com/watch?v=4rBX6r5emgQ&list=PLjTlxb-wKvXOU4WW4p3qc4VKWTI4gLNUf). Check out the ["Reproducible Research Checklist"](https://www.youtube.com/watch?v=pjL2uP-fmPY&list=PLjTlxb-wKvXOU4WW4p3qc4VKWTI4gLNUf&index=4) - might be helpful for your projects!
+
+["Reproducible and Open Science Tools" project](https://github.com/rostools), with a series of helpful packages. Also, check out [their tutorials on e.g. projects](https://r-cubed-intro.rostools.org/sessions/project-management.html ).
+
+----------------------------
+
+# Data repositories
+
+Sometimes our data is a product in itself and we might want to share it. Project repositories are not always suitable for that:
+
+- they do not treat your project as a publication
+- they do not offer too much storage space
+
+Enter [data repositories](https://www.re3data.org/). Some of the data repositories are commercially oriented, while others boost open science.
+
+![](https://coderefinery.github.io/reproducible-research/_images/Open_Science_Principles.png)
+[Source](https://coderefinery.github.io/reproducible-research/sharing/)
+
+Also: storing your outputs in a proper repository can help get you citations.
+
+## Zenodo
+
+One example of a data repository is Zenodo. Initially funded by the European Commission as part of a Horizon 2020 project of the OpenAIRE consortium. It succeeded the "OpenAIRE Orphan Records Repository". Currently operated by CERN (European Organization for Nuclear Research).
+
+Zenodo:
+
+- caters to researchers who need a repository for their data.
+- allows files of up to 50GB (you can have multiple datasets), but larger files can be negotiated.
+- you get a Digital Object Identifier (DOI): one for each specific version, one for the object in all its versions. 
+- this makes it easy to cite.
+- you can sync this with a GitHub repository.
+
+[Read more here](https://help.zenodo.org/).
+
+The name comes from Zenodotus, which is actually quite interesting! 
+
+Zenodotus was a Greek scholar and librarian at the Library of Alexandria, circa 280 BC.
+
+He's the father of metadata! He introduced:
+
+- classification (materials were assigned to rooms based on subject matter - e.g. verse or prose, literary or scientific)
+
+- ordering (alphabetically by author)
+
+- tags with metadata (to avoid having to unscroll everything just to find what's inside...)
+
+Let's take check Zenodo and see how it works with a GitHub repository.
+
+This is [Zenodo](https://zenodo.org/) and this is its official clone for testing - the [Sandbox Zenodo](https://sandbox.zenodo.org/). Let's use the latter (it looks the same).
+
+Of course, there [numerous other data repositories]((https://www.re3data.org/)), including country-specific ones. 
+
+----------------------------
+
+# Managing environments
+
+## Recall reproducible environments
+
+We learned about some R packages / Python libraries.
+
+Discussed Docker.
+
+Let's check out another environments management tool.
+
+## Enter Anaconda Navigator
+
+Comes with Anaconda installation (Miniconda + `conda install anaconda-navigator` is enough).
+
+Easy to operate from the prompt (e.g. `conda activate renv1`). Here's [a cheatsheet](https://conda.io/projects/conda/en/latest/user-guide/cheatsheet.html) (it's not long).
+
+Also has a GUI in a desktop app.
+
+You can: create new environments, export them (in .yml files!), import them, switch between them.
+
+You switch between them and can install differing software and package versions, as well as add specific apps, etc. 
+
+These distinct environments can be run simultaneously without collision.
+
+Let's take a look.
+
+----------------------------
+
+# Other handy packages
+
+## Code verification 
+
+[(From Wikipedia)](https://en.wikipedia.org/wiki/Lint_(software)) "**Lint** is the computer science term for a static code analysis tool used to flag programming errors, bugs, stylistic errors and suspicious constructs."
+
+The tool is called a "linter".
+
+Enter [`lintr`](https://github.com/r-lib/lintr) package in R.
+
+In R:
+
+```{r}
+# install.packages("lintr")
+
+lintr::lint(filename = "")
+
+lintr::lint_dir(path = "") # to apply to a whole project.
+
+lintr::lint_package() # to verify package contents.
+```
+
+Lintr can be configured according to one's needs.
+
+```{r}
+lintr::use_lintr(type = "tidyverse")
+# Check the insides of the created file
+```
+
+Also, check the list of linters enabled by default in the helpful vignette (`vignette("lintr")`)
+
+Quick exercise: use lintr_dir() on your course repository.
+
+## `lintr` pairs with [`styler`](https://github.com/r-lib/styler)
+
+`styler` takes this one step further and tries to correct the styling for you.
+
+Start by installing and loading styler:
+
+```{r}
+# install.packages("styler")
+library(styler)
+```
+
+Open a recent code file in R. Check out the "Addins" tab above and scroll down to styling options.
+
+Notice the command that got passed to the console (we can automate this and change the styles!)
+
+Open a recent code file. Right-click.
+
+In a more sophisticated workflow, we could connect our project to GitHub and make it run linting or styling as we push the commits. [See more on this here](https://r-cubed-advanced.rostools.org/sessions/smoother-collaboration.html). [And read about GitHub Actions](https://docs.github.com/en/actions).
+
+## Data loading
+
+Even if you're working with data provided in a repository, you should make sure your project does enough to:
+
+- explain what the data is about and where it comes from.
+
+- provide the source of the data so the whole procedure can be retraced (including data collection).
+
+- it's also good to tell **when** the data were last accessed from a given source. This might sometimes allow to use an archived version of the source (see e.g. [Wayback Machine and Internet Archive](https://archive.org/web/)).
+
+The more you automate the better. You can consider using:
+
+```{r}
+download.file("https://****/*.csv", destfile = "Data/*.csv")
+
+download.file("https://****/*.zip", destfile = "Data/*.zip")
+
+unzip("*.zip")
+
+load("data.RData")
+```
+
+For an automated data retrieval and loading. Besides making it faster and providing the source, you also reduce the risk that the coder will have to search through various pages for the proper dataset.
+
+## Other others
+
+### Caching
+
+Also for regular script files, via the [`R.cache` package](https://cran.r-project.org/web/packages/R.cache/R.cache.pdf).
+
+### Conflicts in packages
+
+Sometimes package methods overlap. It might be more robust to define `package::function()`. Alternatively, [`conflicted` package](https://conflicted.r-lib.org/) allows you to pick preferred versions and halts you and warns you whenever you're using a function that appears in more than one package. Example from documentation:
+
+```{r}
+library(conflicted)
+library(dplyr)
+
+filter(mtcars, cyl == 8)
+
+#> Error:
+#> ! [conflicted] filter found in 2 packages.
+#> Either pick the one you want with `::`:
+#> • dplyr::filter
+#> • stats::filter
+#> Or declare a preference with `conflicts_prefer()`:
+#> • `conflicts_prefer(dplyr::filter)`
+#> • `conflicts_prefer(stats::filter)`
+```
+
+### Here I am
+
+The [`here` package](https://here.r-lib.org/) allows you to define all your paths relative to your project directory (which is more robust then `setwd()`)
+
+### Project templates
+
+It's good to keep your files and folders in order. [`prodigenr`](https://github.com/rostools/prodigenr) starts up a new project with a 'template' for the files and folders.
+
+Install the library, load it, and create a new project in the prodigenr format.
+
+```{r}
+# install.packages("prodigenr")
+library("prodigenr")
+```
+
+----------------------------
+
+# Creating packages
+
+Creating a package is a good way of combining all contents of a project into one, easy-to-load object. A package can store datasets, codes with functions and other items. The packages `devtools` and `usethis` provide us with numerous helpful functions and methods, including ones for GitHub connection and package documentation.
+
+Some of these methods can make our work shorter and easier even without creating packages.
+
+Let's follow the [tutorial of Prof. Broman](https://kbroman.org/AdvData/18_rpack_demo.html). 
+

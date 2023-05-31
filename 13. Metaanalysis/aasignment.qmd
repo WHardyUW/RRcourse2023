@@ -12,13 +12,26 @@ execute:
   echo: fenced
 ---
 
-# ASSIGNMENT 
+```{r message=FALSE}
+library('styler')
+lintr::lint_dir('/Users/huyiqing/PycharmProjects/UW_lab/RRcourse2023/13. Metaanalysis/')
 
+library('readxl')
+library(meta)
+```
+
+# ASSIGNMENT 
+## Task 1
 1) Import the data from the `data\metaanalysis_data.xlsx` file. The data come from the meta-analysis study: [Todd et al., 2017 - Sex differences in children's toy preferences: A systematic review, meta‐regression, and meta‐analysis](https://onlinelibrary.wiley.com/doi/full/10.1002/icd.2064)
 
 The study looks at various studies of children choosing what kind of toys they play with (stereotypically 'boy-toys' or stereotypically 'girl-toys'). Mean times (in seconds) of playing are recorded, along with sample sizes and standard errors (for boys playing with each kind of toys and for girls playing with each kind of toys).
 
 There's also information about the studies (e.g. year) and a bit about quality.
+
+```{r}
+data <- readxl::read_xlsx('./data/metaanalysis_data.xlsx')
+data
+```
 
 Here's authors' descriptions to the data:
 
@@ -35,29 +48,9 @@ Ascertainment of behaviour: Play behaviour was clearly defined.
 Same ascertainment method for both groups: The measurement of the outcome (time spent playing with toy) was clearly defined. 
 Nonresponse rate: whether either nonuptake or dropout rates reported.
 
-2) Experiment using what you've learned:
-
-a) combine the effects
-b) create a funnel plot (what do you see?)
-c) check if methods / quality affect the results
-d) does author gender affect it?
-
-
-```{r message=FALSE}
-library('readxl')
-library(meta)
-```
-
-
-```{r}
-data <- readxl::read_xlsx('./data/metaanalysis_data.xlsx')
-data
-```
-
-
 ```{r}
 meta_boys <- metacont(n.e = N_boys, 
-                      mena.e=Mean_boys_play_male,
+                      mean.e=Mean_boys_play_male,
                         sd.e=Mean_boys_play_male,
                         n.c=N_boys,
                         mean.c=Mean_boys_play_female,
@@ -67,17 +60,26 @@ meta_boys <- metacont(n.e = N_boys,
                       comb.random=TRUE)
 
 meta_girls <- metacont(n.e = N_girls, 
-                        mena.e=Mean_girls_play_male,
+                        mean.e=Mean_girls_play_male,
                         sd.e=SD_girls_play_male,
                         n.c=N_girls,
                         mean.c=Mean_girls_play_male,
                         sd.c=SD_girls_play_male,
                        data=data)
 ```
+
+## Task 2
+2) Experiment using what you've learned:
+
+a) combine the effects
+b) create a funnel plot (what do you see?)
+c) check if methods / quality affect the results
+d) does author gender affect it?
+
 ```{r}
 meta_boys %>% forest(sortvar=TE)
 meta_girls %>% forest(sortvar=TE)
-meta_boys %>% funel()
+meta_boys %>% funnel()
 
 contour_levels <- c(0.90, 0.95, 0.99)
 contour_colors <- c("darkblue", "blue", "lightblue")
@@ -86,6 +88,6 @@ legend("bottomright", c("p < 0.10", "p < 0.05", "p < 0.01"), bty = "n", fill = c
 ```
  
 ```{r}
-meta_boys %>% metareg(~ 'Country'+'Paremt present'+ 'Year'+'Age (months)')
+meta_boys %>% metareg(~ `Country`+`Parent present`+ `Year`+`Age (months)`)
 ```
- 
+

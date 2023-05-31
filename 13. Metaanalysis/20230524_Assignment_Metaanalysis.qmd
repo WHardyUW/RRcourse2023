@@ -31,29 +31,56 @@ Meta_Analysis_Data = read.xlsx("data\\metaanalysis_data.xlsx")
 
 ### combine the effects
 ```{r}
-Meta_Analysis_Data$Mean_boys_diff <- Meta_Analysis_Data$Mean_boys_play_male - Meta_Analysis_Data$Mean_boys_play_female
+Meta_Analysis_Data$male_share <- Meta_Analysis_Data$Male.authors/(Meta_Analysis_Data$Female.authors+Meta_Analysis_Data$Male.authors)
 
-Meta_Analysis_Data$Mean_girls_diff <- Meta_Analysis_Data$Mean_girls_play_female - Meta_Analysis_Data$Mean_girls_play_male
-
-m.raw <- metacont(n.e=Ne,
-                  mean.e=Me,
-                  sd.e=Se,
-                  n.c=Nc,
-                  mean.c=Mc,
-                  sd.c=Sc,
+m.boys <- metacont(n.e=Meta_Analysis_Data$N_boys,
+                  mean.e=Meta_Analysis_Data$Mean_boys_play_male,
+                  sd.e=Meta_Analysis_Data$SD_boys_play_male,
+                  n.c=Meta_Analysis_Data$N_boys,
+                  mean.c=Meta_Analysis_Data$Mean_boys_play_female,
+                  sd.c=Meta_Analysis_Data$SD_boys_play_female,
                   data=Meta_Analysis_Data,
                   studlab=paste(Study),
                   comb.fixed = TRUE,
                   comb.random = TRUE,
 )
-m.raw
+m.boys
+
+
+m.girls <- metacont(n.e=Meta_Analysis_Data$N_girls,
+                  mean.e=Meta_Analysis_Data$Mean_girls_play_male,
+                  sd.e=Meta_Analysis_Data$SD_girls_play_male,
+                  n.c=Meta_Analysis_Data$N_girls,
+                  mean.c=Meta_Analysis_Data$Mean_girls_play_female,
+                  sd.c=Meta_Analysis_Data$SD_girls_play_female,
+                  data=Meta_Analysis_Data,
+                  studlab=paste(Study),
+                  comb.fixed = TRUE,
+                  comb.random = TRUE,
+)
+m.girls
+
 ```
 #### create a funnel plot (what do you see?)
 ```{r}
+
+forest(m.boys)
+
 contour_levels <- c(0.90, 0.95, 0.99)
 contour_colors <- c("darkblue", "blue", "lightblue")
-funnel(m, contour = contour_levels, col.contour = contour_colors)
+funnel(m.boys, contour = contour_levels, col.contour = contour_colors)
+legend("topright", c("p < 0.10", "p < 0.05", "p < 0.01"), bty = "n", fill = contour_colors)
+
+contour_levels <- c(0.90, 0.95, 0.99)
+contour_colors <- c("darkblue", "blue", "lightblue")
+funnel(m.girls, contour = contour_levels, col.contour = contour_colors)
 legend("topright", c("p < 0.10", "p < 0.05", "p < 0.01"), bty = "n", fill = contour_colors)
 ```
 #### check if methods / quality affect the results
+```{r}
+
+
+metareg(m.boys, "Parent.present" + "Country" + "Year" + "male_share") 
+```
+
 #### does author gender affect it?

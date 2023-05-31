@@ -18,7 +18,7 @@ library(openxlsx)
 library(meta)
 load("data/metacont.RData")
 data=read.xlsx("data/metaanalysis_data.xlsx")
-str(data)
+head(data)
 ```
 
 ### Compare boy and girl play males'toy.
@@ -57,7 +57,7 @@ The statistics related to heterogeneity are as follows:
 
 The test of heterogeneity yields the following results:
 
--   The Q-value is 216.00 with 26 degrees of freedom, and the p-value is less than 0.0001, indicating **significant heterogeneity.**
+-   The Q-value is 216.00 with 26 degrees of freedom, and the p-value is less than 0.0001, indicating **significant heterogeneity happened on girls and boys playing male's toy.**
 
 ### Compare boy and girl play females'toy.
 
@@ -79,15 +79,62 @@ m.raw02
 
 The test of heterogeneity yields the following results:
 
--   The Q-value is 129.28 with 26 degrees of freedom, and the p-value is less than 0.001, indicating **significant heterogeneity.**
+-   The Q-value is 129.28 with 26 degrees of freedom, and the p-value is less than 0.001, indicating **significant heterogeneity happened on girls and boys playing female's toy.**
 
 So we can see the sex difference in child's toys preference.
+
+## 
+Compare boy  play male and female toy.
+
+```{r}
+m.raw03 <- metacont(n.e=N_boys,
+                  mean.e=Mean_boys_play_male,
+                  sd.e=SD_boys_play_male,
+                  n.c=N_boys,
+                  mean.c=Mean_boys_play_female ,
+                  sd.c=SD_boys_play_female,
+                  data=data,
+                  studlab=paste(Study),
+                  comb.fixed = TRUE,
+                  comb.random = TRUE,
+)
+
+m.raw03
+```
+
+The test of heterogeneity yields the following results:
+
+-   The Q-value is 554.07 with 26 degrees of freedom, and the p-value is less than 0.0001, indicating **significant heterogeneity happened on boys choosing toys.**
+
+## Compare girl  play male and female toy.
+
+```{r}
+m.raw04 <- metacont(n.e=N_girls,
+                  mean.e=Mean_girls_play_male,
+                  sd.e=SD_girls_play_male,
+                  n.c=N_girls,
+                  mean.c=Mean_girls_play_female ,
+                  sd.c=SD_girls_play_female,
+                  data=data,
+                  studlab=paste(Study),
+                  comb.fixed = TRUE,
+                  comb.random = TRUE,
+)
+
+m.raw04
+```
+
+The test of heterogeneity yields the following results:
+
+-   The Q-value is 182.01 with 26 degrees of freedom, and the p-value is less than 0.0001, indicating **significant heterogeneity happend on girls choosing toys.**
 
 ## Forest plots to see the analysis
 
 ```{r}
-forest(m.raw)
+forest(m.raw,)
 forest(m.raw02)
+forest(m.raw03)
+forest(m.raw04)
 ```
 
 ## Funnel plot
@@ -95,6 +142,8 @@ forest(m.raw02)
 ```{r}
 funnel(m.raw)
 funnel(m.raw02)
+funnel(m.raw03)
+funnel(m.raw04)
 ```
 
 Funnel plot, the distribution of points reveals that some points deviate from the funnel region, indicating **substantial heterogeneity** among the studies. The funnel plot includes two dashed lines: the center line 50 and -50(mean difference), representing the expected effect size. The majority of points are concentrated on one side of the funnel plot, suggesting a tendency towards a particular direction in the study results.
@@ -105,7 +154,6 @@ The vertical axis represents the standard error, ranging from 0 to 80, which ind
 
 ```{r}
 metareg(m.raw,`Male.authors`+`Female.authors`)
-
 ```
 
 The findings indicate a high level of residual heterogeneity (I\^2 = 93.92%), suggesting significant variability among studies. The model has a relatively low explanatory power (R\^2 = 14.96%), indicating that it does not fully account for the observed heterogeneity.
@@ -115,12 +163,8 @@ When testing the influence of the moderator variables (male authors and female a
 ## Check if methods / quality affect the results
 
 ```{r}
-metareg(m.raw,`Neutral.toys`+`Parent.present`+`Setting`+`Country`)
-
+metareg(m.raw03,`Neutral.toys`+`Parent.present`+`Setting`+`Country`+`Case.definition.adequate`+`Female.authors`+`Male.authors`+`Age.(months)`+`Year`+`Representativeness.of.cases`)
+str(data)
 ```
 
-The results show QM(df = 4) = 2.9443, p-val = 0.5672, which does not indicate significant moderating effects of neutral toys, parent presence, setting, and country's gender inequality index on effect size.
-
-
-
-
+It shows the Age.(months) and Year are significant variables which affect the results.

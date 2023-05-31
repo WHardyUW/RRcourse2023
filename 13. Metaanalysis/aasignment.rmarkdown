@@ -21,6 +21,7 @@ library(meta)
 library(magrittr)
 ```
 
+
 # ASSIGNMENT 
 ## Task 1
 1) Import the data from the `data\metaanalysis_data.xlsx` file. The data come from the meta-analysis study: [Todd et al., 2017 - Sex differences in children's toy preferences: A systematic review, meta‐regression, and meta‐analysis](https://onlinelibrary.wiley.com/doi/full/10.1002/icd.2064)
@@ -29,10 +30,12 @@ The study looks at various studies of children choosing what kind of toys they p
 
 There's also information about the studies (e.g. year) and a bit about quality.
 
+
 ```{r}
 data <- readxl::read_xlsx('./data/metaanalysis_data.xlsx')
 data
 ```
+
 
 Here's authors' descriptions to the data:
 
@@ -48,6 +51,7 @@ Comparability of both groups: the toys were comparable (in size, shape, etc.) an
 Ascertainment of behaviour: Play behaviour was clearly defined. 
 Same ascertainment method for both groups: The measurement of the outcome (time spent playing with toy) was clearly defined. 
 Nonresponse rate: whether either nonuptake or dropout rates reported.
+
 
 ```{r}
 meta_boys <- metacont(n.e = N_boys, 
@@ -69,6 +73,7 @@ meta_girls <- metacont(n.e = N_girls,
                        data=data)
 ```
 
+
 ## Task 2
 2) Experiment using what you've learned:
 
@@ -76,6 +81,7 @@ a) combine the effects
 b) create a funnel plot (what do you see?)
 c) check if methods / quality affect the results
 d) does author gender affect it?
+
 
 ```{r}
 meta_boys %>% forest(sortvar=TE)
@@ -86,7 +92,7 @@ contour_colors <- c("darkblue", "blue", "lightblue")
 funnel(meta_boys, contour = contour_levels, col.contour = contour_colors)
 legend("bottomright", c("p < 0.10", "p < 0.05", "p < 0.01"), bty = "n", fill = contour_colors)
 ```
- 
+
 ```{r}
 meta_boys %>% metareg(~ `Country`+`Parent present`+ `Year`+`Age (months)`)
 ```

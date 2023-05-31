@@ -1,0 +1,126 @@
+---
+title: "metaanalysis"
+author: "TingWei"
+format: html
+editor: visual
+---
+
+## Sex differences in children's toy preferences
+
+Neutral toys (1 = neutral toys included; 2 = neutral toys not included); Parent present (1 = absent; 2 = minimal interaction; 3 = moderate or full interaction); Setting = location of study (1 = home; 2 = laboratory; 3 = nursery); Country = gender inequality index, a measure of how gender egalitarian the country was at the time the study took place.
+
+```{r}
+#install.packages("openxlsx")
+#install.packages('metafor')
+#install.packages('meta')
+library(metafor)
+library(openxlsx)
+library(meta)
+load("data/metacont.RData")
+data=read.xlsx("data/metaanalysis_data.xlsx")
+str(data)
+```
+
+### Compare boy and girl play males'toy.
+
+```{r}
+m.raw <- metacont(n.e=N_boys,
+                  mean.e=Mean_boys_play_male,
+                  sd.e=SD_boys_play_male,
+                  n.c=N_girls,
+                  mean.c=Mean_girls_play_male ,
+                  sd.c=SD_girls_play_male,
+                  data=data,
+                  studlab=paste(Study),
+                  comb.fixed = TRUE,
+                  comb.random = TRUE,
+)
+
+m.raw
+```
+
+According to the provided results, this is a summary of a meta-analysis. The results show the effect size estimates and confidence intervals for two models, as well as the quantification of heterogeneity and tests of its significance.
+
+-   In the Common effect model, the effect size estimate is 46.8758 with a 95% confidence interval of \[41.2914; 52.4602\]. The corresponding z-value is 16.45, and the p-value is less than 0.0001, indicating a significant effect size.
+
+-   In the Random effects model, the effect size estimate is 94.7832 with a 95% confidence interval of \[66.7897; 122.7766\]. The corresponding z-value is 6.64, and the p-value is less than 0.0001, also indicating a significant effect size.
+
+The statistics related to heterogeneity are as follows:
+
+-   tau\^2 represents the estimated variance of heterogeneity, which is 4678.7733 with a 95% confidence interval of \[2666.5809; 10251.8327\].
+
+-   tau represents the estimated standard deviation of heterogeneity, which is 68.4016 with a 95% confidence interval of \[51.6389; 101.2513\].
+
+-   I\^2 represents the percentage of heterogeneity, which is 88.0%, indicating substantial heterogeneity.
+
+-   H represents the standardized index of heterogeneity, which is 2.88 with a 95% confidence interval of \[2.48; 3.36\].
+
+The test of heterogeneity yields the following results:
+
+-   The Q-value is 216.00 with 26 degrees of freedom, and the p-value is less than 0.0001, indicating **significant heterogeneity.**
+
+### Compare boy and girl play females'toy.
+
+```{r}
+m.raw02 <- metacont(n.e=N_boys,
+                  mean.e=Mean_boys_play_female,
+                  sd.e=SD_boys_play_female,
+                  n.c=N_girls,
+                  mean.c=Mean_girls_play_female ,
+                  sd.c=SD_girls_play_female,
+                  data=data,
+                  studlab=paste(Study),
+                  comb.fixed = TRUE,
+                  comb.random = TRUE,
+)
+
+m.raw02
+```
+
+The test of heterogeneity yields the following results:
+
+-   The Q-value is 129.28 with 26 degrees of freedom, and the p-value is less than 0.001, indicating **significant heterogeneity.**
+
+So we can see the sex difference in child's toys preference.
+
+## Forest plots to see the analysis
+
+```{r}
+forest(m.raw)
+forest(m.raw02)
+```
+
+## Funnel plot
+
+```{r}
+funnel(m.raw)
+funnel(m.raw02)
+```
+
+Funnel plot, the distribution of points reveals that some points deviate from the funnel region, indicating **substantial heterogeneity** among the studies. The funnel plot includes two dashed lines: the center line 50 and -50(mean difference), representing the expected effect size. The majority of points are concentrated on one side of the funnel plot, suggesting a tendency towards a particular direction in the study results.
+
+The vertical axis represents the standard error, ranging from 0 to 80, which indicates the precision and reliability of the study results. The horizontal axis represents the mean difference, ranging from -100 to 300. Those with smaller standrd errors and clustered around the center line are considered more reliable. Smaller errors indicate higher accuracy of the study results, and clustering around the center line suggests consistency among these studies. Such studies are deemed more reliable because their results are relatively stable and less influenced by random errors.
+
+## Check if author gender affect the results
+
+```{r}
+metareg(m.raw,`Male.authors`+`Female.authors`)
+
+```
+
+The findings indicate a high level of residual heterogeneity (I\^2 = 93.92%), suggesting significant variability among studies. The model has a relatively low explanatory power (R\^2 = 14.96%), indicating that it does not fully account for the observed heterogeneity.
+
+When testing the influence of the moderator variables (male authors and female authors), the results show QM(df = 2) = 5.5707, p-val = 0.0617. Although the p-value is not significant, there might be a trend indicating that the gender of the researchers could have some impact on the effect size.
+
+## Check if methods / quality affect the results
+
+```{r}
+metareg(m.raw,`Neutral.toys`+`Parent.present`+`Setting`+`Country`)
+
+```
+
+The results show QM(df = 4) = 2.9443, p-val = 0.5672, which does not indicate significant moderating effects of neutral toys, parent presence, setting, and country's gender inequality index on effect size.
+
+
+
+

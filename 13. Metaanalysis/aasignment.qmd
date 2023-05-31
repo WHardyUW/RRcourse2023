@@ -78,7 +78,6 @@ d) does author gender affect it?
 
 ```{r}
 meta_boys %>% forest(sortvar=TE)
-meta_girls %>% forest(sortvar=TE)
 meta_boys %>% funnel()
 
 contour_levels <- c(0.90, 0.95, 0.99)

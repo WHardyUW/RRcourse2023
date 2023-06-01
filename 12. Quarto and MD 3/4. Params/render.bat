@@ -1,0 +1,1 @@
+FOR /L %%A IN (1, 1, 8) DO quarto render Assignment.qmd -P season:%%A --output "season_%%A.html" --to html

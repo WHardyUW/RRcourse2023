@@ -1,0 +1,32 @@
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-1030-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Apr 15 12:16:39 UTC 2023
+
+  System load:  0.0               Processes:             103
+  Usage of /:   19.5% of 9.51GB   Users logged in:       1
+  Memory usage: 25%               IPv4 address for ens4: 10.182.0.2
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Sat Apr 15 12:12:56 2023 from 35.235.242.209
+weit1399@instance-1:~$ uname -a
+Linux instance-1 5.15.0-1030-gcp #37-Ubuntu SMP Tue Feb 14 19:37:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+weit1399@instance-1:~$ touch test.txt
+weit1399@instance-1:~$ ls -l
+total 0
+-rw-rw-r-- 1 weit1399 weit1399 0 Apr 15 12:17 test.txt

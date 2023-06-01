@@ -1,0 +1,15 @@
+library(renv)
+install.packages('renv')
+.libPaths()
+renv::init()
+View(old.packages())
+install.packages('foreign')
+library(foreign)
+renv::snapshot()
+renv::history()
+renv::revert(commit = '')
+#use to grap what you want ,but not all
+install.packages('groundhog')
+library(groundhog)
+groundhog.library(c('rvest','stringi'),date = '2021-09-01')
+#use this to switch time to the privious and get the package that time

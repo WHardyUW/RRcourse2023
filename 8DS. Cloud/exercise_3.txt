@@ -1,0 +1,79 @@
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-1030-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Apr 25 07:38:37 UTC 2023
+
+  System load:  0.0               Processes:             101
+  Usage of /:   35.2% of 9.51GB   Users logged in:       0
+  Memory usage: 25%               IPv4 address for ens4: 10.182.0.2
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/gcp/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+26 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+*** System restart required ***
+Last login: Sat Apr 15 12:16:40 2023 from 35.235.242.210
+weit1399@instance-1:/$ ls
+bin   dev  home  lib32  libx32      media  opt   root  sbin  srv  tmp  var
+boot  etc  lib   lib64  lost+found  mnt    proc  run   snap  sys  usr
+weit1399@instance-1:/$ ls -l
+total 64
+lrwxrwxrwx   1 root root     7 Mar  2 02:08 bin -> usr/bin
+drwxr-xr-x   4 root root  4096 Apr 19 06:25 boot
+drwxr-xr-x  16 root root  3900 Apr 18 06:28 dev
+drwxr-xr-x  94 root root  4096 Apr 25 07:41 etc
+drwxr-xr-x   4 root root  4096 Apr 15 12:12 home
+lrwxrwxrwx   1 root root     7 Mar  2 02:08 lib -> usr/lib
+lrwxrwxrwx   1 root root     9 Mar  2 02:08 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root     9 Mar  2 02:08 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root    10 Mar  2 02:08 libx32 -> usr/libx32
+drwx------   2 root root 16384 Mar  2 02:10 lost+found
+drwxr-xr-x   2 root root  4096 Mar  2 02:08 media
+drwxr-xr-x   2 root root  4096 Mar  2 02:08 mnt
+drwxr-xr-x   2 root root  4096 Mar  2 02:08 opt
+dr-xr-xr-x 159 root root     0 Apr 15 12:08 proc
+drwx------   4 root root  4096 Apr 15 12:08 root
+drwxr-xr-x  26 root root   920 Apr 25 07:38 run
+lrwxrwxrwx   1 root root     8 Mar  2 02:08 sbin -> usr/sbin
+drwxr-xr-x   8 root root  4096 Mar  2 02:13 snap
+drwxr-xr-x   2 root root  4096 Mar  2 02:08 srv
+dr-xr-xr-x  13 root root     0 Apr 15 12:08 sys
+drwxrwxrwt  12 root root  4096 Apr 25 07:38 tmp
+drwxr-xr-x  14 root root  4096 Mar  2 02:08 usr
+drwxr-xr-x  13 root root  4096 Mar  2 02:10 var
+weit1399@instance-1:/$ ps aux|grep cpu
+root          10  0.0  0.0      0     0 ?        I<   Apr15   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    Apr15   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    Apr15   0:00 [cpuhp/1]
+weit1399  121041  0.0  0.2   7004  2080 pts/0    S+   08:04   0:00 grep --color=auto cpu
+weit1399@instance-1:/$ ip link show| tail -n 3
+2: ens4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1460 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 42:01:0a:b6:00:02 brd ff:ff:ff:ff:ff:ff
+    altname enp0s4
+weit1399@instance-1:/$ cd /etc/nvme/
+weit1399@instance-1:/etc/nvme$ pwd
+/etc/nvme
+weit1399@instance-1:/etc/nvme$ cat discovery.conf | head -n 3
+# Used for extracting default parameters for discovery
+#
+# Example:

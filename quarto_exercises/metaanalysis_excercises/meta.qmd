@@ -1,0 +1,38 @@
+---
+title: "Metanalysis RR class"
+author: "Tomasz Starakiewicz"
+format: html
+editor: visual
+---
+
+## 
+
+```{r}
+library(tidyverse)
+library(meta)
+```
+
+```{r}
+df = readxl::read_excel('data/metaanalysis_data.xlsx')
+colnames(df)
+```
+
+\
+
+```{r}
+
+mtoys <- metacont(n.e = N_girls,
+                          mean.e = Mean_girls_play_male,
+                          sd.e = SD_girls_play_male,
+                          n.c = N_boys,
+                          mean.c = Mean_boys_play_male,
+                          sd.c = SD_boys_play_male,
+                          data = df)
+mtoys
+```
+
+
+```{r}
+mtoys %>% forest(sortvar=TE)
+```
+

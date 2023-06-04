@@ -2,7 +2,19 @@
 title: "Exercise"
 author: "Wojciech Hardy"
 date: "3/29/2022"
-output: html_document
+output:
+  pdf_document:
+    highlight: tango
+  html_document:
+    toc: true
+    theme: cosmo
+    css: styles.css
+    includes:
+      in_header: custom_script.js
+    toc_depth: 2
+    number_sections: true
+    mathjax: true
+    table: "table table-striped"
 ---
 
 ```{r setup, include=FALSE}

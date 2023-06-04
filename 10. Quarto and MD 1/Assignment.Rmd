@@ -57,3 +57,20 @@ ggplot(data = df_changes, aes(x = seasons, y = changes)) +
   geom_bar(stat = "identity", fill = "blue", width = 0.5) +
   labs(x = "Season", y = "Change in Viewership (in millions)", 
        title = "Breaking Bad Changes in Viewership Season-to-Season")
+
+```
+
+**Observed Changes in Viewership:**
+
+Throughout its run, *Breaking Bad* experienced notable changes in viewership. Here is a summary of the observed changes:
+
+1. Between seasons 2 and 3, the viewership increased by approximately *0.6 million viewers per episode*.
+
+2. The following season, between seasons 3 and 4, the viewership saw a moderate increase of around *0.5 million viewers per episode*.
+
+3. The most substantial change occurred between seasons 4 and 5, where the viewership surged by a remarkable *2.2 million viewers per episode*.
+
+4. Overall, *Breaking Bad* experienced a remarkable growth in viewership over its seasons, with the most significant increase happening between seasons 4 and 5.
+
+
+

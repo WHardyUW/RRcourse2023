@@ -4,10 +4,10 @@ output: html_document
 date: "2023-06-04"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 **TV Show: Breaking Bad**
 
 *Breaking Bad* is an American television series created by Vince Gilligan that aired from 2008 to 2013. It stars *Bryan Cranston* as Walter White, a high school chemistry teacher turned methamphetamine manufacturing drug dealer, and *Aaron Paul* as his former student and business partner, Jesse Pinkman. *Breaking Bad* explores the transformation of Walter White from a mild-mannered teacher into a ruthless and feared criminal mastermind in the world of methamphetamine production. The show delves into themes of morality, identity, and the consequences of one's actions. *Breaking Bad* has been widely acclaimed for its writing, acting, and character development, becoming a cultural phenomenon and garnering a dedicated fanbase.
+
+**Logo:**
+
+![Breaking Bad Logo](Breaking_Bad_logo.svg.png){width=400}

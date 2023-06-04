@@ -28,7 +28,7 @@ library(ggplot2)
 
 # Data for viewership over seasons
 seasons <- c(1, 2, 3, 4, 5)
-viewership <- c(1.2, 1.8, 2.3, 4.5, 10.0)  # Replace with actual viewership data
+viewership <- c(1.2, 1.8, 2.3, 4.5, 10.0) 
 
 # Create data frame
 df_viewership <- data.frame(seasons, viewership)
@@ -40,3 +40,20 @@ ggplot(data = df_viewership, aes(x = seasons, y = viewership)) +
   labs(x = "Season", y = "Viewership (in millions)", title = "Breaking Bad Viewership Over Time")
 ```
 
+**Graph of Changes in Viewership:**
+
+```{r changes_in_viewership, echo=FALSE, fig.cap="Graph of Changes in Viewership", fig.width=8, fig.height=4}
+library(ggplot2)
+
+# Data for changes in viewership
+seasons <- c(2, 3, 4, 5)
+changes <- c(0.6, 0.5, 2.2, 5.5)
+
+# Create data frame
+df_changes <- data.frame(seasons, changes)
+
+# Plot changes in viewership
+ggplot(data = df_changes, aes(x = seasons, y = changes)) +
+  geom_bar(stat = "identity", fill = "blue", width = 0.5) +
+  labs(x = "Season", y = "Change in Viewership (in millions)", 
+       title = "Breaking Bad Changes in Viewership Season-to-Season")

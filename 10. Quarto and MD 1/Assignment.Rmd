@@ -21,3 +21,22 @@ Breaking Bad garnered significant viewership and critical acclaim throughout its
 - Breaking Bad's series finale, titled "Felina," drew a record-breaking audience of 10.3 million viewers.
 - The show consistently received high ratings and maintained a strong viewership base, contributing to its reputation as a cultural phenomenon.
 
+**Graph of Viewership Over Time:**
+
+```{r viewership_over_time, echo=FALSE, fig.cap="Graph of Viewership Over Time", fig.width=8, fig.height=4}
+library(ggplot2)
+
+# Data for viewership over seasons
+seasons <- c(1, 2, 3, 4, 5)
+viewership <- c(1.2, 1.8, 2.3, 4.5, 10.0)  # Replace with actual viewership data
+
+# Create data frame
+df_viewership <- data.frame(seasons, viewership)
+
+# Plot viewership over time
+ggplot(data = df_viewership, aes(x = seasons, y = viewership)) +
+  geom_line() +
+  geom_point() +
+  labs(x = "Season", y = "Viewership (in millions)", title = "Breaking Bad Viewership Over Time")
+```
+

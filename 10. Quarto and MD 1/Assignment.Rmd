@@ -1,0 +1,76 @@
+---
+title: "Assignment Breaking Bad"
+output: html_document
+date: "2023-06-04"
+---
+
+**TV Show: Breaking Bad**
+
+*Breaking Bad* is an American television series created by Vince Gilligan that aired from 2008 to 2013. It stars *Bryan Cranston* as Walter White, a high school chemistry teacher turned methamphetamine manufacturing drug dealer, and *Aaron Paul* as his former student and business partner, Jesse Pinkman. *Breaking Bad* explores the transformation of Walter White from a mild-mannered teacher into a ruthless and feared criminal mastermind in the world of methamphetamine production. The show delves into themes of morality, identity, and the consequences of one's actions. *Breaking Bad* has been widely acclaimed for its writing, acting, and character development, becoming a cultural phenomenon and garnering a dedicated fanbase.
+
+**Logo:**
+
+![Breaking Bad Logo](Breaking_Bad_logo.svg.png){width=400}
+
+**Summary of Basic Statistics:**
+
+Breaking Bad garnered significant viewership and critical acclaim throughout its run. Here are some key statistics:
+
+- The first season of Breaking Bad averaged around 1.2 million viewers per episode.
+- The viewership numbers steadily increased over the seasons, with the final season attracting over 10 million viewers per episode.
+- Breaking Bad's series finale, titled "Felina," drew a record-breaking audience of 10.3 million viewers.
+- The show consistently received high ratings and maintained a strong viewership base, contributing to its reputation as a cultural phenomenon.
+
+**Graph of Viewership Over Time:**
+
+```{r viewership_over_time, echo=FALSE, fig.cap="Graph of Viewership Over Time", fig.width=8, fig.height=4}
+library(ggplot2)
+
+# Data for viewership over seasons
+seasons <- c(1, 2, 3, 4, 5)
+viewership <- c(1.2, 1.8, 2.3, 4.5, 10.0) 
+
+# Create data frame
+df_viewership <- data.frame(seasons, viewership)
+
+# Plot viewership over time
+ggplot(data = df_viewership, aes(x = seasons, y = viewership)) +
+  geom_line() +
+  geom_point() +
+  labs(x = "Season", y = "Viewership (in millions)", title = "Breaking Bad Viewership Over Time")
+```
+
+**Graph of Changes in Viewership:**
+
+```{r changes_in_viewership, echo=FALSE, fig.cap="Graph of Changes in Viewership", fig.width=8, fig.height=4}
+library(ggplot2)
+
+# Data for changes in viewership
+seasons <- c(2, 3, 4, 5)
+changes <- c(0.6, 0.5, 2.2, 5.5)
+
+# Create data frame
+df_changes <- data.frame(seasons, changes)
+
+# Plot changes in viewership
+ggplot(data = df_changes, aes(x = seasons, y = changes)) +
+  geom_bar(stat = "identity", fill = "blue", width = 0.5) +
+  labs(x = "Season", y = "Change in Viewership (in millions)", 
+       title = "Breaking Bad Changes in Viewership Season-to-Season")
+
+```
+
+**Observed Changes in Viewership:**
+
+Throughout its run, *Breaking Bad* experienced notable changes in viewership. Here is a summary of the observed changes:
+
+1. Between seasons 2 and 3, the viewership increased by approximately *0.6 million viewers per episode*.
+
+2. The following season, between seasons 3 and 4, the viewership saw a moderate increase of around *0.5 million viewers per episode*.
+
+3. The most substantial change occurred between seasons 4 and 5, where the viewership surged by a remarkable *2.2 million viewers per episode*.
+
+4. Overall, *Breaking Bad* experienced a remarkable growth in viewership over its seasons, with the most significant increase happening between seasons 4 and 5.
+
+
+

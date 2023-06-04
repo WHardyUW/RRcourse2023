@@ -1,0 +1,45 @@
+C:\Users\User\Documents>mkdir rr
+
+C:\Users\User\Documents>cd rr
+
+C:\Users\User\Documents\rr>touch test.txt
+'touch' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\User\Documents\rr>echo > test.txt
+
+C:\Users\User\Documents\rr>dir
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is B86A-7354
+
+ Directory of C:\Users\User\Documents\rr
+
+19.04.2023  22:28    <DIR>          .
+19.04.2023  22:28    <DIR>          ..
+19.04.2023  22:28                13 test.txt
+               1 File(s)             13 bytes
+               2 Dir(s)  335 989 035 008 bytes free
+
+C:\Users\User\Documents\rr>touch "some text" > new.txt
+'touch' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\User\Documents\rr>echo > "some text" > new.txt
+
+C:\Users\User\Documents\rr>del .
+C:\Users\User\Documents\rr\*, Are you sure (Y/N)? Y
+
+C:\Users\User\Documents\rr>dir
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is B86A-7354
+
+ Directory of C:\Users\User\Documents\rr
+
+19.04.2023  22:31    <DIR>          .
+19.04.2023  22:31    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  335 984 619 520 bytes free
+
+C:\Users\User\Documents\rr>cd ..
+
+C:\Users\User\Documents>rmdir rr

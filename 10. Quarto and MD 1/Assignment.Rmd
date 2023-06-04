@@ -11,3 +11,13 @@ date: "2023-06-04"
 **Logo:**
 
 ![Breaking Bad Logo](Breaking_Bad_logo.svg.png){width=400}
+
+**Summary of Basic Statistics:**
+
+Breaking Bad garnered significant viewership and critical acclaim throughout its run. Here are some key statistics:
+
+- The first season of Breaking Bad averaged around 1.2 million viewers per episode.
+- The viewership numbers steadily increased over the seasons, with the final season attracting over 10 million viewers per episode.
+- Breaking Bad's series finale, titled "Felina," drew a record-breaking audience of 10.3 million viewers.
+- The show consistently received high ratings and maintained a strong viewership base, contributing to its reputation as a cultural phenomenon.
+

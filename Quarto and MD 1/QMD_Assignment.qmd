@@ -1,0 +1,61 @@
+---
+title: "Quarto_Assignment"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+# *How I Met Your Mother*
+
+How I Met Your Mother (often abbreviated as HIMYM) is an American sitcom, created by Craig Thomas and Carter Bays for CBS. The series, which aired from September 19, 2005 to March 31, 2014, follows the main character, Ted Mosby, and his group of friends in New York City's Manhattan. As a framing device, Ted, in 2030, recounts to his son, Luke, and daughter, Penny, the events from September 2005 to May 2013 that led him to meet their mother. How I Met Your Mother, is a joint production by Bays & Thomas Productions and 20th Century Fox Television and syndicated by 20th Television (now Disney-ABC Domestic Television).
+
+|                                                                    DVD season                                                                     |   Release dates    |     Episodes     | Additional information |
+|:---------------------------------------:|:---------:|:---------:|:---------:|
+|                                                                     Region 1                                                                      |      Region 2      |     Region 4     |                        |
+|                   [Season 1](https://en.wikipedia.org/wiki/How_I_Met_Your_Mother_(season_1) "How I Met Your Mother (season 1)")                   | November 21, 2006  |   May 7, 2007    |    January 10, 2007    |
+|                   [Season 2](https://en.wikipedia.org/wiki/How_I_Met_Your_Mother_(season_2) "How I Met Your Mother (season 2)")                   |  October 2, 2007   | February 8, 2010 |     April 8, 2008      |
+|            [The Legendary Season 3](https://en.wikipedia.org/wiki/How_I_Met_Your_Mother_(season_3) "How I Met Your Mother (season 3)")            |  October 7, 2008   |   May 10, 2010   |   February 11, 2009    |
+|             [The Awesome Season 4](https://en.wikipedia.org/wiki/How_I_Met_Your_Mother_(season_4) "How I Met Your Mother (season 4)")             | September 29, 2009 |  July 19, 2010   |    October 27, 2009    |
+| [The Complete Season 5. The Suited-Up Edition](https://en.wikipedia.org/wiki/How_I_Met_Your_Mother_(season_5) "How I Met Your Mother (season 5)") | September 21, 2010 | November 8, 2010 |    October 27, 2010    |
+
+\| Season \| Episodes \| Originally aired \| Rank \|
+
+\| \-\-\-\-\-- \| \-\-\-\-\-\-\-- \| \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-- \| \-\-\-- \|
+
+\| 1 \| 22 \| September 19, 2005 \| May 15, 2006 \| 85 \|
+
+\| 2 \| 22 \| September 18, 2006 \| May 14, 2007 \| 61 \|
+
+\| 3 \| 20 \| September 24, 2007 \| May 19, 2008 \| 70 \|
+
+\| 4 \| 24 \| September 22, 2008 \| May 18, 2009 \| 49 \|
+
+\| 5 \| 24 \| September 21, 2009 \| May 24, 2010 \| 42 \|
+
+\| 6 \| 24 \| September 20, 2010 \| May 16, 2011 \| 48 \|
+
+\| 7 \| 24 \| September 19, 2011 \| May 14, 2012 \| 45 \|
+
+\| 8 \| 24 \| September 24, 2012 \| May 13, 2013 \| 42 \|
+
+\| 9 \| 24 \| September 23, 2013 \| March 31, 2014 \| 28 \|

@@ -1,0 +1,24 @@
+
+
+Last login: Tue Apr 25 21:56:01 2023 from 35.235.243.64
+a_pandey@instance-1:~$ ps aux | grep cpu
+root          10  0.0  0.0      0     0 ?        I<   21:50   0:00 [mm_percpu_wq]
+root          18  0.0  0.0      0     0 ?        S    21:50   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    21:50   0:00 [cpuhp/1]
+a_pandey    1826  0.0  0.2   7004  2152 pts/0    S+   22:19   0:00 grep --color=auto cpu
+a_pandey@instance-1:~$ ip a | tail -3
+       valid_lft 84655sec preferred_lft 84655sec
+    inet6 fe80::4001:aff:feb6:2/64 scope link 
+       valid_lft forever preferred_lft forever
+a_pandey@instance-1:~$ cd /etc/nvme
+a_pandey@instance-1:/etc/nvme$ ls
+discovery.conf  hostid  hostnqn
+a_pandey@instance-1:/etc/nvme$ pwd
+/etc/nvme
+a_pandey@instance-1:/etc/nvme$ ls
+discovery.conf  hostid  hostnqn
+a_pandey@instance-1:/etc/nvme$ head -3 hostid
+b76c419d-f15b-40aa-ac00-590ce10c05a7
+a_pandey@instance-1:/etc/nvme$ head -3 hostnqn
+nqn.2014-08.org.nvmexpress:uuid:6ede1ab2-80d9-41c5-acd1-417d4c110e49
+a_pandey@instance-1:/etc/nvme$ 

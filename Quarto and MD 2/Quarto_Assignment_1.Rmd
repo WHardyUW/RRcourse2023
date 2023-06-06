@@ -1,0 +1,72 @@
+---
+title: "Quarta_Assignment"
+author: "Ankit"
+date: "2023-04-27"
+output:
+  xaringan: default
+  lib_dir: libs
+  css: ["default", "custom.css"]
+  html_document: default
+  pdf_document: default
+  word_document: default
+  xaringan::moon_reader: null
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+install.packages("installr")  # If not already installed
+installr::updateR()
+update.packages(ask = FALSE)
+
+library(xaringan)
+```
+
+
+# How I met your Mother
+
+How I Met Your Mother (often abbreviated as HIMYM) is an American sitcom, created by Craig Thomas and Carter Bays for CBS. The series, which aired from September 19, 2005 to March 31, 2014, follows the main character, Ted Mosby, and his group of friends in New York City's Manhattan. As a framing device, Ted, in 2030, recounts to his son, Luke, and daughter, Penny, the events from September 2005 to May 2013 that led him to meet their mother. How I Met Your Mother, is a joint production by Bays & Thomas Productions and 20th Century Fox Television and syndicated by 20th Television (now Disney-ABC Domestic Television).
+
+# Seasons information
+
+| Season | Episodes | Originally aired | Rank |
+| ------ | -------- | ---------------- | ---- |
+| 1      | 22       | September 19, 2005 | May 15, 2006 | 85 |
+| 2      | 22       | September 18, 2006 | May 14, 2007 | 61 |
+| 3      | 20       | September 24, 2007 | May 19, 2008 | 70 |
+| 4      | 24       | September 22, 2008 | May 18, 2009 | 49 |
+| 5      | 24       | September 21, 2009 | May 24, 2010 | 42 |
+| 6      | 24       | September 20, 2010 | May 16, 2011 | 48 |
+| 7      | 24       | September 19, 2011 | May 14, 2012 | 45 |
+| 8      | 24       | September 24, 2012 | May 13, 2013 | 42 |
+| 9      | 24       | September 23, 2013 | March 31, 2014 | 28 |
+
+
+## How I Met you Mother poster
+
+<img src="https://ca-times.brightspotcdn.com/dims4/default/7c48ce9/2147483647/strip/true/crop/1502x985+0+0/resize/1200x787!/format/webp/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F80%2Fd1%2Fc3fc8fe64d097a4d79f7a378be34%2Fla-104383-ca-1109-mother2-gf-jpg-20140330" alt="My Image" width="500" height="300">
+
+
+```{r}
+library(ggplot2)
+
+# create a data frame with the season and viewers data
+season_viewers <- data.frame(
+  season = c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  viewers = c(9.47, 8.94, 8.21, 9.42, 8.60, 8.79, 9.67, 9.02, 10.51)
+)
+
+# create a line graph with season on the x-axis and viewers on the y-axis
+ggplot(season_viewers, aes(x = season, y = viewers)) +
+  geom_line() +
+  geom_point() +
+  xlab("Season") +
+  ylab("Viewers (millions)") +
+  ggtitle("Viewership by Season")
+
+```
+
+The data shows that there have been significant changes in viewership throughout the nine seasons of the TV show. For example, the viewership decreased by an average of 0.27 million between seasons 1 and 2, and then increased by an average of 0.27 million between seasons 2 and 3. However, the viewership then decreased again by an average of 0.13 million between seasons 3 and 4, and this trend continued until season 6, where the viewership hit its lowest point at an average of 7.15 million viewers. After that, the viewership started to pick up again, with season 9 having the highest average viewership of 10.51 million. Overall, the viewership changes were significant and showed a clear trend of ups and downs throughout the show's run.
+

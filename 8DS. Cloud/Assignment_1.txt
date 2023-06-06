@@ -1,0 +1,6 @@
+a_pandey@instance-1:~$ uname -a
+Linux instance-1 5.15.0-1032-gcp #40-Ubuntu SMP Fri Mar 31 01:34:12 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+a_pandey@instance-1:~$ touch test.txt
+a_pandey@instance-1:~$ ls -l
+total 0
+-rw-rw-r-- 1 a_pandey a_pandey 0 Apr 25 21:54 test.txt

@@ -1,0 +1,34 @@
+
+Last login: Tue Apr 25 21:51:43 2023 from 35.235.243.66
+a_pandey@instance-1:~$ ls -l
+total 0
+-rw-rw-r-- 1 a_pandey a_pandey 0 Apr 25 21:54 test.txt
+a_pandey@instance-1:~$ pwd
+/home/a_pandey
+a_pandey@instance-1:~$ sudo apt-get install nano
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+nano is already the newest version (6.2-1).
+nano set to manually installed.
+The following package was automatically installed and is no longer required:
+  libnuma1
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+a_pandey@instance-1:~$ mkdir rr
+a_pandey@instance-1:~$ cd rr
+a_pandey@instance-1:~/rr$ touch test.txt
+a_pandey@instance-1:~/rr$ nano new.txt
+a_pandey@instance-1:~/rr$ sudo cp /etc/modules .
+a_pandey@instance-1:~/rr$ ls -lS
+total 8
+-rw-r--r-- 1 root     root     195 Apr 25 22:16 modules
+-rw-rw-r-- 1 a_pandey a_pandey  20 Apr 25 22:15 new.txt
+-rw-rw-r-- 1 a_pandey a_pandey   0 Apr 25 22:15 test.txt
+a_pandey@instance-1:~/rr$ rmdir rr
+rmdir: failed to remove 'rr': No such file or directory
+a_pandey@instance-1:~/rr$ cd ..
+a_pandey@instance-1:~$ rm -rf rr
+a_pandey@instance-1:~$ ls
+test.txt
+a_pandey@instance-1:~$ 

@@ -33,3 +33,29 @@ The show captivates viewers with deep dive in to psyche of the main characters, 
 
 ------------------------------------------------------------------------
 
+# The Sinner: A Statistical Overview
+
+The *The Sinner* has had a dynamic viewership over its four seasons. The first season was met with a great reception, averaging **1.8 million** viewers per episode. This success led to the transformation of the show from an intended mini-series to a full-fledged multi-season series.
+
+However, subsequent seasons saw a decline in viewership. The numbers fell to an average of **1.13 million** viewers per episode in the second season. The trend continued with the third season, which drew in an average of **0.65 million** viewers, and the fourth season, attracting an average of **0.45 million** viewers per episode.
+
+While I found each season's story incredibly captivating, it seems that not everyone shares my feelings towards the later seasons.
+
+To provide a more holistic view, let's consider the Rotten Tomato ratings for each season:
+
+```{r echo=FALSE}
+# Rotten Tomato ratings data
+ratings_data <- data.frame(
+  Season = c("Season 1", "Season 2", "Season 3", "Season 4"),
+  Tomatometer = c("91%", "97%", "85%", "88%"),
+  Audience_Score = c("87%", "82%", "46%", "77%")
+)
+
+# Display the data as a table
+knitr::kable(ratings_data, caption = "Rotten Tomato Ratings for Each Season")
+```
+
+As the table shows, season 3 performed the worst, according to the audience score. However, critics rated season 2 slightly higher than the first season, as per the Tomatometer score.
+
+------------------------------------------------------------------------
+

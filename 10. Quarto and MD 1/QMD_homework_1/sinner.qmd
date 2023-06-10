@@ -59,3 +59,25 @@ As the table shows, season 3 performed the worst, according to the audience scor
 
 ------------------------------------------------------------------------
 
+#### Viewership over time
+
+```{r echo=FALSE, fig.cap="Average viewership over the four seasons", warning=FALSE}
+# Viewership data
+viewership_data <- data.frame(
+  Season = factor(c("Season 1", "Season 2", "Season 3", "Season 4"), 
+                  levels = c("Season 1", "Season 2", "Season 3", "Season 4")),
+  Average_Viewership = c(1.8, 1.13, 0.65, 0.45)
+)
+
+# Create the plot
+ggplot(viewership_data, aes(x = Season, y = Average_Viewership)) +
+  geom_line(group = 1, colour = "blue", linewidth = 1) +
+  geom_point(size = 3, colour = "red") +
+  labs(
+    title = "Average Viewership Over the Four Seasons",
+    x = "Season",
+    y = "Average Viewership (in millions)"
+  ) +
+  theme_minimal()
+
+```

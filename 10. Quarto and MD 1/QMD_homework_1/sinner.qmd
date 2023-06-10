@@ -1,7 +1,7 @@
 ---
 title: "The Sinner"
 author: "Daniel Śliwiński"
-date: "10.06.2023"
+date: "06.10.2023"
 format: html
 execute:
   echo: fenced
@@ -18,6 +18,9 @@ library(reticulate)
 ------------------------------------------------------------------------
 
 # The Sinner 
+
+![](sinner_files/sinner.jpg)
+
 #### Brief Description of the TV Show
 
 _"The Sinner"_ is an American police procedural anthology television series developed by _"Derek Simonds"_ for USA Network. It is based on _"Petra Hammesfahr's"_ 1999 novel, which served as the basis for the first season. The series stars _"Bill Pullman"_ as a police detective who investigates crimes committed by unlikely culprits and attempts to uncover their motivations. Only _"Pullman"_ appears in every season, while the rest of the cast mostly changes for each season's story.
@@ -27,5 +30,6 @@ The show was intended as an eight-part miniseries, but its success led to it bei
 The first season of _"The Sinner"_ received nominations for the **Golden Globe Award** for Best Miniseries or Television Film and Best Actress – Miniseries or Television Film for _"Jessica Biel"_. _"Biel"_ was also nominated for a **Primetime Emmy Award** for Outstanding Lead Actress in a Limited Series or Movie.
 
 The show captivates viewers with deep dive in to psyche of the main characters, posing an essential question who are we and what is our dark side?
+
 ------------------------------------------------------------------------
 

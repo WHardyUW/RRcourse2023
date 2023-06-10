@@ -101,3 +101,16 @@ ggplot(viewership_change, aes(x = Season, y = Change_in_Viewership)) +
   theme_minimal() +
   coord_cartesian(ylim = c(-1.5, 1.5))  # Adjust this to fit your data
 ```
+
+
+```{r calculate_changes, echo=FALSE}
+# Calculate the changes
+change_s1_s2 <- viewership_change$Change_in_Viewership[2]
+change_s2_s3 <- viewership_change$Change_in_Viewership[3]
+change_s3_s4 <- viewership_change$Change_in_Viewership[4]
+```
+
+------------------------------------------------------------------------
+Between the first and the second season, the viewership decreased by `r round(change_s1_s2, 2)` million. The trend continued in the subsequent seasons, with a drop of `r round(change_s2_s3, 2)` million viewers between the second and the third season, and `r round(change_s3_s4, 2)` million viewers between the third and the fourth season. This consistent decrease in viewership may reflect various factors, such as changes in the series' direction, competition with other shows, or shifts in audience preferences.
+
+------------------------------------------------------------------------

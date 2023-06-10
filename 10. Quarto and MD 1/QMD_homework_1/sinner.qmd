@@ -59,7 +59,6 @@ As the table shows, season 3 performed the worst, according to the audience scor
 
 ------------------------------------------------------------------------
 
-#### Viewership over time
 
 ```{r echo=FALSE, fig.cap="Average viewership over the four seasons", warning=FALSE}
 # Viewership data
@@ -80,4 +79,25 @@ ggplot(viewership_data, aes(x = Season, y = Average_Viewership)) +
   ) +
   theme_minimal()
 
+```
+
+------------------------------------------------------------------------
+
+
+```{r echo=FALSE, fig.cap="Change in viewership from season to season", warning=FALSE}
+# Calculate the change in viewership from season to season
+viewership_change <- viewership_data %>%
+  mutate(Change_in_Viewership = c(NA, diff(Average_Viewership)))
+
+# Create the plot
+ggplot(viewership_change, aes(x = Season, y = Change_in_Viewership)) +
+  geom_bar(stat="identity", fill="steelblue") +
+  geom_text(aes(label=round(Change_in_Viewership, 2)), vjust=-0.3, size=3.5) +
+  labs(
+    title = "Change in Viewership from Season to Season",
+    x = "Season",
+    y = "Change in Viewership (in millions)"
+  ) +
+  theme_minimal() +
+  coord_cartesian(ylim = c(-1.5, 1.5))  # Adjust this to fit your data
 ```

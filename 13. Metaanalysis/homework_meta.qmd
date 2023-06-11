@@ -1,0 +1,99 @@
+---
+title: "Meta-Analysis assignment"
+author: "Daniel Śliwiński"
+date: today
+format:  
+  html:
+    theme: lumen
+    toc: true
+    toc_float: true
+title-block-banner: true
+execute:
+  echo: fenced
+---
+
+```{r label = "setup", include = FALSE}
+library(meta)
+library(metafor)
+library(dplyr)
+library(readxl)
+data <- read_excel("data/metaanalysis_data.xlsx") 
+# Extract columns list
+column_list <- names(data) 
+
+# Using colnames() function
+column_list <- colnames(data)
+```
+
+-------------------------------------------
+
+# Output from Meta-Analysis
+
+
+```{r echo = FALSE}
+
+
+# Compute the effect sizes (Standardized Mean Difference) and the corresponding variances
+escalc_data <- escalc(measure = "SMD", 
+                      m1i = Mean_boys_play_male, 
+                      sd1i = SD_boys_play_male, 
+                      n1i = N_boys, 
+                      m2i = Mean_girls_play_male, 
+                      sd2i = SD_girls_play_male, 
+                      n2i = N_girls, 
+                      data = data)
+
+# Run the random-effects model
+res <- rma(yi, vi, data = escalc_data)
+
+# Output the results
+print(res)
+
+```
+
+```{r fig.cap="Forest Plot", echo=FALSE}
+
+# Create a forest plot
+forest(res)
+
+```
+
+```{r echo = FALSE}
+meta_results <- list(
+  tau_squared = 0.2511,
+  tau_squared_se = 0.0967,
+  tau = 0.5011,
+  I2 = 76.54,
+  H2 = 4.26,
+  Q = 92.7894,
+  Q_df = 26,
+  Q_pval = "< .0001",
+  estimate = 1.0175,
+  estimate_se = 0.1143,
+  estimate_zval = 8.8997,
+  estimate_pval = "< .0001",
+  estimate_ci_lb = 0.7934,
+  estimate_ci_ub = 1.2416
+)
+```
+
+--------------------------------------------------
+
+# Meta-Analysis Results
+
+The random-effects model meta-analysis included a total of 27 studies. The estimated amount of total heterogeneity, represented by tau-squared, was `r meta_results$tau_squared` (SE = `r meta_results$tau_squared_se`), and tau (the square root of tau-squared) was `r meta_results$tau`. This indicates a substantial level of heterogeneity between studies.
+
+The I-squared statistic, which describes the percentage of variation across studies that is due to heterogeneity rather than chance, was `r meta_results$I2`%. This suggests that a substantial proportion of the variability in effect sizes is due to true differences between studies, rather than sampling error.
+
+The H-squared statistic, representing the ratio of total variability to sampling variability, was `r meta_results$H2`, supporting the presence of substantial heterogeneity.
+
+The Q statistic was `r meta_results$Q` with `r meta_results$Q_df` degrees of freedom, and the associated p-value was `r meta_results$Q_pval`, indicating that the amount of heterogeneity is statistically significant.
+
+The overall effect size estimate was `r meta_results$estimate` with a standard error of `r meta_results$estimate_se`, yielding a z-value of `r meta_results$estimate_zval` and a p-value of `r meta_results$estimate_pval`, which is highly significant. The 95% confidence interval for the effect size ranged from `r meta_results$estimate_ci_lb` to `r meta_results$estimate_ci_ub`.
+
+These results suggest that there is a significant and sizable effect of the factor under investigation, but also that there is considerable variation in this effect across studies. Further exploration of potential moderators or sources of heterogeneity are definitely appropratie in this case, but for the sake of this short assignment I will not post them here :).
+
+#### Please forgive me this long deadline overkill, I can do anything to adjust for this delay.
+
+
+----------------------------------------------------

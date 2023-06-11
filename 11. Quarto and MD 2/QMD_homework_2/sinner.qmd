@@ -1,0 +1,157 @@
+---
+title: "The Sinner"
+author: "Daniel Śliwiński"
+date: "06.10.2023"
+format: 
+  html:
+    toc: true
+    toc-depth: 2
+    toc-expand: 3
+    toc-title: Contents
+    toc-location: body
+    code-fold: true
+    theme:
+      light: flatly
+      dark: darkly
+    lof: true
+    lot: true
+execute:
+  echo: fenced
+---
+
+```{r setup, include=FALSE}
+
+library(ggplot2)
+library(dplyr)
+library(chron)
+library(reticulate)
+```
+
+------------------------------------------------------------------------
+
+# The Sinner 
+
+![](sinner_files/sinner.jpg)
+
+::: {.panel-tabset}
+
+## Brief Description of the TV Show
+
+_"The Sinner"_ is an American police procedural anthology television series developed by _"Derek Simonds"_ for USA Network. It is based on _"Petra Hammesfahr's"_ 1999 novel, which served as the basis for the first season. The series stars _"Bill Pullman"_ as a police detective who investigates crimes committed by unlikely culprits and attempts to uncover their motivations. Only _"Pullman"_ appears in every season, while the rest of the cast mostly changes for each season's story.
+
+The show was intended as an eight-part miniseries, but its success led to it being turned into an anthology series, which aired for four seasons from August 2, 2017, to December 1, 2021.
+
+The first season of _"The Sinner"_ received nominations for the **Golden Globe Award** for Best Miniseries or Television Film and Best Actress – Miniseries or Television Film for _"Jessica Biel"_. _"Biel"_ was also nominated for a **Primetime Emmy Award** for Outstanding Lead Actress in a Limited Series or Movie.
+
+The show captivates viewers with deep dive in to psyche of the main characters, posing an essential question who are we and what is our dark side?
+
+## Critics Review
+
+_Stuart Heritage_:
+
+> #### What is it: 
+> Let’s call it a _whydunnit_.
+
+> #### Why you’ll love it: 
+> A woman – a normal, slightly dissatisfied woman – goes to the beach. She goes for a swim and, out of nowhere, is gripped by a strange sensation. She returns to the shore, hugs her son, eats a pear and then stabs a man to death.
+
+> **Why?** Did she know the victim? Did his sexy seaside horseplay bring back memories of some hidden trauma? Was it her medication? Her bedroom wallpaper? Was it because – as I initially suspected – he was playing music on his phone in a crowded area? The woman herself doesn’t seem to know. _What’s going on?_ This is the central question at the heart of _The Sinner_.
+
+> A sly ratings success in the US – it has been the most-watched new cable show this year – _The Sinner_ is based on the Petra Hammesfahr novel of the same name, and takes the form of a gussied-up push and pull between the woman (played by Jessica Biel) and the detective tasked with figuring out this mess (Bill Pullman).
+
+> The problem with programmes that hinge on a gimmick as grabby as this is that the answers are often much less satisfying than the inciting incident. But the joy of _The Sinner_ is getting to watch Biel do everything in her power to just get the ordeal over with. A more traditional show would turn the relationship between her and Pullman into a cat and mouse, but that isn’t really the case here. The mouse is splayed out on the floor begging to be eaten and the cat can’t understand why.
+
+> She instantly pleads guilty to avoid a trial. But a competency evaluation is ordered, so she explains her motivation in horrific detail. But that’s quickly revealed to be a lie, so the process must begin anew. Biel would rather spend her life rotting in prison than truly examine her actions, but every detail that floats to the surface – drug problems, a cartoonishly awful childhood, sexy flashbacks of undulating bodies – starts to make that impossible. Before you know it, these flashbacks have piled up on top of more flashbacks and the whole thing edges towards the precipice. It gets to the point where the faintest prod could derail the entire series, so the fact that it doesn’t is nothing short of a miracle.
+
+> Fortunately, there are answers. This is no _Lost_-style wheel-spinning exercise, and the denouement is just as satisfying and horrible as the conclusion to the first _Broadchurch_. If you find yourself drifting away during _The Sinner’s_ midpoint, I can promise you it’s worth persevering with.
+
+> As bracingly vanity-free as Biel’s performance is, all blood and gut and scab, Pullman is the real secret weapon here. His detective is rumpled and kinky, like Columbo if old Columbo episodes were routinely interrupted by scenes of him getting pegged by a dominatrix. He’s horribly, horribly sad, and you sense that he has only seized upon this case because it’s the one part of his life that he can control. Not to give anything away, but the show ends on such a note of finality that the only way forward would be to shove Pullman into a new mystery next year. Based on this run, that would be no bad thing.
+
+[Source](https://www.theguardian.com/tv-and-radio/2017/nov/09/the-sinner-review-the-psychological-whydunnit-thats-been-a-big-us-ratings-success)
+
+:::
+
+------------------------------------------------------------------------
+
+# The Sinner: A Statistical Overview
+
+::: {.panel-tabset}
+
+#### Viewership Analysis
+
+The *The Sinner* has had a dynamic viewership over its four seasons. The first season was met with a great reception, averaging **1.8 million** viewers per episode. This success led to the transformation of the show from an intended mini-series to a full-fledged multi-season series.
+
+However, subsequent seasons saw a decline in viewership. The numbers fell to an average of **1.13 million** viewers per episode in the second season. The trend continued with the third season, which drew in an average of **0.65 million** viewers, and the fourth season, attracting an average of **0.45 million** viewers per episode.
+
+While I found each season's story incredibly captivating, it seems that not everyone shares my feelings towards the later seasons.
+
+#### Rotten Tomato ratings for each season:
+
+```{r echo=FALSE}
+# Rotten Tomato ratings data
+ratings_data <- data.frame(
+  Season = c("Season 1", "Season 2", "Season 3", "Season 4"),
+  Tomatometer = c("91%", "97%", "85%", "88%"),
+  Audience_Score = c("87%", "82%", "46%", "77%")
+)
+
+# Display the data as a table
+knitr::kable(ratings_data, caption = "Rotten Tomato Ratings for Each Season")
+```
+
+As the table shows, season 3 performed the worst, according to the audience score. However, critics rated season 2 slightly higher than the first season, as per the Tomatometer score.
+
+#### Average viewership over the four seasons
+
+```{r echo=FALSE, fig.cap="Average viewership over the four seasons", warning=FALSE}
+# Viewership data
+viewership_data <- data.frame(
+  Season = factor(c("Season 1", "Season 2", "Season 3", "Season 4"), 
+                  levels = c("Season 1", "Season 2", "Season 3", "Season 4")),
+  Average_Viewership = c(1.8, 1.13, 0.65, 0.45)
+)
+
+# Create the plot
+ggplot(viewership_data, aes(x = Season, y = Average_Viewership)) +
+  geom_line(group = 1, colour = "blue", linewidth = 1) +
+  geom_point(size = 3, colour = "red") +
+  labs(
+    title = "Average Viewership Over the Four Seasons",
+    x = "Season",
+    y = "Average Viewership (in millions)"
+  ) +
+  theme_minimal()
+
+```
+
+#### Change in viewership from season to season
+
+```{r echo=FALSE, fig.cap="Change in viewership from season to season", warning=FALSE}
+# Calculate the change in viewership from season to season
+viewership_change <- viewership_data %>%
+  mutate(Change_in_Viewership = c(NA, diff(Average_Viewership)))
+
+# Create the plot
+ggplot(viewership_change, aes(x = Season, y = Change_in_Viewership)) +
+  geom_bar(stat="identity", fill="steelblue") +
+  geom_text(aes(label=round(Change_in_Viewership, 2)), vjust=-0.3, size=3.5) +
+  labs(
+    title = "Change in Viewership from Season to Season",
+    x = "Season",
+    y = "Change in Viewership (in millions)"
+  ) +
+  theme_minimal() +
+  coord_cartesian(ylim = c(-1.5, 1.5))  # Adjust this to fit your data
+```
+
+
+```{r calculate_changes, echo=FALSE}
+# Calculate the changes
+change_s1_s2 <- viewership_change$Change_in_Viewership[2]
+change_s2_s3 <- viewership_change$Change_in_Viewership[3]
+change_s3_s4 <- viewership_change$Change_in_Viewership[4]
+```
+
+Between the first and the second season, the viewership decreased by `r round(change_s1_s2, 2)` million. The trend continued in the subsequent seasons, with a drop of `r round(change_s2_s3, 2)` million viewers between the second and the third season, and `r round(change_s3_s4, 2)` million viewers between the third and the fourth season. This consistent decrease in viewership may reflect various factors, such as changes in the series' direction, competition with other shows, or shifts in audience preferences.
+
+:::

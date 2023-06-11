@@ -1,11 +1,11 @@
 ---
 title: "Assignment"
-author: ""
+author: "Daniel Śliwiński"
 date: today
 output: html_document
 ---
 
-```{r}
+```{r include=FALSE}
 load("../Data/season_1.RData")
 ```
 

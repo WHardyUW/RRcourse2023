@@ -1,0 +1,98 @@
+---
+title: "GoT Season Report"
+author: "Daniel Śliwiński"
+date: '`r Sys.Date()`'
+output: html
+---
+
+```{r include=FALSE}
+library(quarto)
+
+for (i in 1:8) {
+  quarto_render(
+    "qmd_homework_3.qmd", 
+    output_format = "html",
+    output_file = paste0("report_season_", i, ".html"),
+    execute_params = list(season_number = i)
+  )
+}
+```
+
+```{r include=FALSE}
+season_data <- read.csv(paste0("../Data/season_", params$season_number, ".csv"))
+library(knitr)
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+library(stringr)
+Sys.setlocale("LC_TIME", "en_US")
+
+episodes_num <- nrow(season_data)
+
+first_date <- season_data %>%
+  arrange(no_season) %>%
+  slice(1) %>%
+  pull(premiere_date)
+
+last_date <- season_data %>%
+  arrange(no_season) %>%
+  tail(1) %>%
+  pull(premiere_date)
+
+# Remove the part of the date string in parentheses
+
+first_date_cleaned <- substr(first_date, start = 1, stop = 14)
+last_date_cleaned <- substr(last_date, start = 1, stop = 14)
+
+# Convert the cleaned date strings to Date objects
+first_date_parsed <- lubridate::mdy(first_date_cleaned)
+last_date_parsed <- lubridate::mdy(last_date_cleaned)
+
+# Extract month, day, and year
+month1 <-month.name[month(first_date_parsed)]
+day1 <- day(first_date_parsed)
+year1 <- year(first_date_parsed)
+
+month2 <- month.name[month(last_date_parsed)]
+day2 <- day(last_date_parsed)
+year2 <- year(last_date_parsed)
+
+avg_views <- season_data %>% pull(viewers) %>% mean()
+
+most_popular_episode <- season_data %>%
+  filter(viewers == max(viewers)) %>%
+  select(title, description)
+```
+
+***
+
+### Season `r params$season_number` summary
+
+Season `r params$season_number` of Game of Thrones consisted of `r episodes_num` episodes that aired between `r month1` `r day1` and `r month2` `r day2`, `r year2` on HBO. The show gathered an average of `r avg_views` first-day TV viewers in the US.
+
+The most popular episode of the season was `r most_popular_episode$title`, in which:
+
+> "`r most_popular_episode$description`"
+
+***
+
+You can see how the viewership of the episodes changed in Figure 1.
+
+```{r name=paste0("views_per_episode_", params$season_number), echo=FALSE, fig.cap="First day views from episode to episode"}
+plot(season_data$viewers,
+     type="l", col="red", lwd=5,
+     xlab = "Episode number",
+     ylab = "1st day TV viewers in the US (millions)")
+
+```
+***
+
+Finally, the episodes with the above-average viewership were:
+
+```{r echo=FALSE, results='asis'}
+top_episodes <- season_data[order(-season_data$viewers), ][1:4, ]
+top_episodes <- top_episodes %>% select(no_season, title, directed_by, written_by, premiere_date)
+knitr::kable(top_episodes, col.names = c("No. in Season", "Title", "Directed by", "Written by", "Premiere Date"))
+
+```
+***

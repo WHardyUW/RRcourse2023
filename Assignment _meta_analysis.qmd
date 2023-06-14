@@ -1,0 +1,96 @@
+---
+title: "Metaanalysis example  in R"
+author: "Vadym Duarenko 444820"
+date: "2023-06-14"
+output:
+  html_document:
+    theme: lumen
+    toc: true
+    toc_float: true
+    code_folding: hide
+---
+
+```{r}
+#| label = "setup",
+#| include = FALSE
+library(meta)
+library(metafor)
+library(dplyr)
+#setwd("C:/Users/Vadym/Desktop/Reproducible")
+```
+
+
+```{r}
+library(readxl)
+data <- read_excel("C:/Users/Vadym/Desktop/Reproducible/metaanalysis_data.xlsx")
+View(data)
+```
+
+
+```{r}
+FE <- meta::metagen(TE=Mean_girls_play_male,
+             seTE=SD_girls_play_male,
+             data=data,
+             studlab=paste(Study),
+             comb.fixed = TRUE,
+             comb.random = FALSE)
+
+FE
+```
+
+
+
+```{r}
+meta_boys <- meta::metacont(n.e=N_girls,
+                  mean.e=Mean_girls_play_male,
+                  sd.e=SD_girls_play_male,
+                  n.c=N_boys,
+                  mean.c=Mean_girls_play_female,
+                  sd.c=SD_girls_play_female,
+                  data=data,
+                  studlab=paste(Study),
+                  comb.fixed = TRUE,
+                  comb.random = TRUE,
+)
+meta_boys
+```
+
+```{r}
+RE <- meta::metagen(TE=Mean_girls_play_male,
+             seTE=SD_girls_play_male,
+             data=data,
+             studlab=paste(Study),
+             comb.fixed = FALSE,
+             comb.random = TRUE)
+RE
+```
+
+```{r}
+FE %>% forest(sortvar=Mean_girls_play_male)
+```
+
+
+
+# how does gender affect it?
+
+```{r}
+FE %>% metareg(~ `Female authors` + `Male authors`)
+  
+```  
+
+
+## Funnel Plot
+
+
+```{r}
+RE %>% funnel()
+```
+
+
+```{r}
+contour_levels <- c(0.90, 0.95, 0.99)
+contour_colors <- c("darkblue", "blue", "lightblue")
+funnel(RE, contour = contour_levels, col.contour = contour_colors)
+legend("topright", c("p < 0.10", "p < 0.05", "p < 0.01"), bty = "n", fill = contour_colors)
+```
+

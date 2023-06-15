@@ -1,13 +1,15 @@
 ---
 title: "Metaanalysis example  in R"
 author: "Temmuz Yavuzer 444130"
-date: "2023-06-14"
-output:
-  html_document:
+date: today
+format:  
+  html:
     theme: lumen
     toc: true
     toc_float: true
-    code_folding: hide
+title-block-banner: true
+execute:
+  echo: fenced
 ---
 
 ```{r}
@@ -17,15 +19,28 @@ library(meta)
 library(metafor)
 library(dplyr)
 ```
+## Metaanalysis assignment of RR 
 
+*Assignment.* 
+
+
+-  combine the effects for female
+
+-  create a funnel plot for female (what do you see?)
+
+-  check if methods / quality affect the results
+
+-  does author gender affect it?
+
+---
 
 ```{r}
 library(readxl)
-data <- read_excel("C:/Github-tem/RRcourse2023/13. Metaanalysis/data/metaanalysis_data.xlsx")
+data <- read_excel("C:/Users/Lanzelit/Documents/GitHub/RRcourse2023/13. Metaanalysis/data/metaanalysis_data.xlsx")
 View(data)
 ```
 
-
+# Fixed Effect
 ```{r}
 FE <- meta::metagen(TE=Mean_girls_play_female,
              seTE=SD_girls_play_female,
@@ -37,10 +52,10 @@ FE <- meta::metagen(TE=Mean_girls_play_female,
 FE
 ```
 
-
+# Meta-analysis on the effect of gender
 
 ```{r}
-meta_boys <- meta::metacont(n.e=N_girls,
+meta_girls <- meta::metacont(n.e=N_girls,
                   mean.e=Mean_girls_play_female,
                   sd.e=SD_girls_play_female,
                   n.c=N_boys,
@@ -51,9 +66,9 @@ meta_boys <- meta::metacont(n.e=N_girls,
                   comb.fixed = TRUE,
                   comb.random = TRUE,
 )
-meta_boys
+meta_girls
 ```
-
+# Random Effects 
 ```{r}
 RE <- meta::metagen(TE=Mean_girls_play_female,
              seTE=SD_girls_play_female,
@@ -64,19 +79,22 @@ RE <- meta::metagen(TE=Mean_girls_play_female,
 RE
 ```
 
+# Forest plot 
 ```{r}
 FE %>% forest(sortvar=Mean_girls_play_female)
 ```
 
 
 
-# how does gender affect it?
+# How does gender affect it?
 
 ```{r}
 FE %>% metareg(~ `Female authors` + `Male authors`)
   
 ```  
-
+-  The intercept represents the estimated effect when the moderator variables are zero. In this case, the estimated intercept is 151.2803, indicating the baseline effect.
+-  The coefficient for Female authors is -7.9308 with a standard error of 20.8577 and a p-value of 0.7038, suggesting - that the presence of female authors does not have a significant effect on the outcome.
+-  The coefficient for Male authors is -17.7918 with a standard error of 23.1683 and a p-value of 0.4425, indicating that the presence of male authors also does not have a significant effect on the outcome.
 
 ## Funnel Plot
 

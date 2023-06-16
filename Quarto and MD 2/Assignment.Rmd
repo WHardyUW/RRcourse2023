@@ -28,6 +28,8 @@ load("../Data/season_1.RData")
 ### __(*Warning:* spoilers ahead)__
 
 ***
+::: {.panel-tabset}
+
 
 ### Overview
 
@@ -64,3 +66,5 @@ Finally, the episodes with the above-average viewership were:
 | 8             | "The Pointy End" | Daniel Minahan      |
 | 9             | "Baelor" | Alan Taylor      |
 | 10            | "Fire and Blood" | Alan Taylor      |
+
+:::

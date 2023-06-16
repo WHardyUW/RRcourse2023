@@ -46,6 +46,7 @@ The most popular episode of the season was "Fire and Blood", in which:
 > "The North secedes from the Seven Kingdoms and proclaims Robb as king. With Jaime as the Starks' prisoner and Robert's two brothers, Stannis and Renly, each challenging Joffrey's claim to the throne, Tywin appoints Tyrion as acting King's Hand, while Tywin fights to defend Joffrey's reign. Jon attempts to desert the Night's Watch to avenge Ned and join Robb, but his Night's Watch brothers convince him to honor his oath. Jon joins an expedition to search for Benjen Stark beyond the Wall. Yoren, a Night's Watch recruiter, smuggles Arya out of King's Landing disguised as a boy, while Joffrey intends to crown Sansa his queen, despite executing her father. Daenerys's baby is born deformed and dead, and Drogo is left in a vegetative state by the witch's treacherous magic. Daenerys compassionately ends Drogo's life. She places the three dragon eggs on Drogo's funeral pyre and sets it afire, also burning the witch alive. Ignoring Jorah's pleas, she walks into the flames. When the embers die the following morning, Daenerys is found in the ashes, unharmed, flanked by three newly-hatched baby dragons. Jorah and other witnesses kneel before her."
 
 ***
+### Visualization of Viewership
 
 You can see how the viewership of the episodes changed in Figure 1.
 
@@ -54,7 +55,7 @@ plot(season_data$viewers, type="l", col="red", lwd=5, xlab = "Episode number", y
 ```
 
 ***
-
+### Conclusion
 Finally, the episodes with the above-average viewership were:
 
 | No. in season | Title  | Directed by  |

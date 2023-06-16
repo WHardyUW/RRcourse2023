@@ -3,6 +3,8 @@ title: "Assignment"
 author: "Anjolaoluwa Olatunbosun"
 date: 24th May 2023
 output: html_document
+params:
+  season_number: 1
 ---
 
 ```{r}

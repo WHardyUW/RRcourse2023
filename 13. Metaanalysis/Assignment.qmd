@@ -1,0 +1,118 @@
+---
+title: "Metaanalysis in R"
+author: "Muhammad SAqib Masood"
+date: today
+format:  
+  html:
+    theme: lumen
+    toc: true
+    toc_float: true
+title-block-banner: true
+execute:
+  echo: fenced
+---
+
+```{r}
+#| label = "setup",
+#| include = FALSE
+library(meta)
+library(metafor)
+library(dplyr)
+#setwd("")
+```
+
+```{r}
+install.packages("meta")
+```
+
+## Metaanalysis
+
+*a statistical analysis that combines the results of multiple scientific studies.* ([Wikipedia](https://en.wikipedia.org/wiki/Meta-analysis))
+
+Very important in e.g. medicine (where it's relatively easy to use).
+
+Can serve different goals:
+
+1) Finding the "true" size of the relationship based on multiple studies.
+2) Finding the average effect size based on multiple studies.
+3) Finding what affects the relationship:
+  - study-related (e.g. author effects, journal effects, method effects, variable selection, etc.)
+  - context-related (e.g. changes over time, sample characteristics, country, etc.)
+4) Uncovering publication biases (e.g. a meta-analysis of several studies with statistically significant results may conclude that there is not enough evidence)
+
+```{r}
+library(readxl)
+data <- read_excel("C:\\Users\\HP\\Desktop\\Study\\semester_4\\ReproducibleResearch\\RRcourse2023\\13. Metaanalysis\\metaanalysis_data.xlsx")
+
+```
+## Case 1: Fixed Effects
+
+```{r}
+fixed <- meta::metagen(TE=Mean_boys_play_male,
+             seTE=SD_boys_play_male,
+             data=data,
+             studlab=paste(Study),
+             comb.fixed = TRUE,
+             comb.random = FALSE)
+
+fixed
+```
+
+## Case 2: Combining both Fixed and Random Effects
+
+```{r}
+fixed_Random <- meta::metacont(n.e=N_boys,
+                  mean.e=Mean_boys_play_male,
+                  sd.e=SD_boys_play_male,
+                  n.c=N_boys,
+                  mean.c=Mean_girls_play_male,
+                  sd.c=SD_girls_play_male,
+                  data=data,
+                  studlab=paste(Study),
+                  comb.fixed = TRUE,
+                  comb.random = TRUE,
+)
+fixed_Random
+```
+
+## Case 3: Random Effect
+
+```{r}
+randomEffect <- meta::metagen(TE=Mean_boys_play_male,
+             seTE=SD_boys_play_male,
+             data=data,
+             studlab=paste(Study),
+             comb.fixed = FALSE,
+             comb.random = TRUE)
+randomEffect
+```
+
+```{r}
+fixed %>% forest(sortvar=Mean_boys_play_male)
+```
+
+
+
+```{r}
+fixed %>% metareg(~ `Female authors` + `Male authors`)
+  
+```  
+
+
+## Creating Funnel Plot
+
+
+```{r}
+randomEffect %>% funnel()
+```
+
+The above plot shows asymmetry or clustering of data points, it might indicate the presence of publication bias or heterogeneity.
+
+
+```{r}
+contour_levels <- c(0.70, 0.75, 0.75)
+contour_colors <- c("yellow", "green", "red")
+funnel(randomEffect, contour = contour_levels, col.contour = contour_colors)
+legend("topright", c("p < 0.10", "p < 0.05", "p < 0.01"), bty = "n", fill = contour_colors)
+```
+

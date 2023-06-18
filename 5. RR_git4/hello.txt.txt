@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+This is a new line
+=======
 add some textsomething
+>>>>>>> e14205a79579e98b30d3c7e606bf101a710e83d4

@@ -4,8 +4,9 @@
 # Wojciech Hardy
 
 library(quarto)
+library(dplyr)
 
-setwd("")
+setwd("D:\\DSBA\\4th Semester\\Reproducible Research\\repositories\\RRcourse2023\\Quarto and MD 2")
 
 # Converting from Rmd to Qmd
 

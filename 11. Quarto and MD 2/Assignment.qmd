@@ -1,11 +1,25 @@
 ---
-title: "Exercise"
-author: "Wojciech Hardy"
-date: "3/29/2022"
-output: html_document
+title: "Blog"
+title-block-banner: true
+author: "Syed Ahmad Jamal"
+date: today
+theme: solar
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    toc-expand: true
+    toc-title: Table of Contents
+    toc-location: left
+    smooth-scroll: true
+    code-fold: true
+  pdf:
+    latex-tinytex: false
 ---
 
-```{r setup, include=FALSE}
+```{r}
+#| label = "setup",
+#| include = FALSE
 knitr::opts_chunk$set(echo = FALSE)
 load("../Data/season_1.RData")
 ```
@@ -14,7 +28,10 @@ load("../Data/season_1.RData")
 
 ### **(*Warning:* spoilers ahead)**
 
+
+::: {.panel-tabset}
 ------------------------------------------------------------------------
+
 
 ### Overview
 
@@ -33,14 +50,20 @@ The most popular episode of the season was "Fire and Blood", in which:
 > "The North secedes from the Seven Kingdoms and proclaims Robb as king. With Jaime as the Starks' prisoner and Robert's two brothers, Stannis and Renly, each challenging Joffrey's claim to the throne, Tywin appoints Tyrion as acting King's Hand, while Tywin fights to defend Joffrey's reign. Jon attempts to desert the Night's Watch to avenge Ned and join Robb, but his Night's Watch brothers convince him to honor his oath. Jon joins an expedition to search for Benjen Stark beyond the Wall. Yoren, a Night's Watch recruiter, smuggles Arya out of King's Landing disguised as a boy, while Joffrey intends to crown Sansa his queen, despite executing her father. Daenerys's baby is born deformed and dead, and Drogo is left in a vegetative state by the witch's treacherous magic. Daenerys compassionately ends Drogo's life. She places the three dragon eggs on Drogo's funeral pyre and sets it afire, also burning the witch alive. Ignoring Jorah's pleas, she walks into the flames. When the embers die the following morning, Daenerys is found in the ashes, unharmed, flanked by three newly-hatched baby dragons. Jorah and other witnesses kneel before her."
 
 ------------------------------------------------------------------------
+:::
+
+### Figure
 
 You can see how the viewership of the episodes changed in Figure 1.
 
-```{r viewers_plot}
+```{r}
+#| label = "viewers_plot"
 plot(season_data$viewers, type="l", col="red", lwd=5, xlab = "Episode number", ylab = "1st day TV viewers in the US (millions)")
 ```
 
 ------------------------------------------------------------------------
+
+### Table
 
 Finally, the episodes with the above-average viewership were:
 
